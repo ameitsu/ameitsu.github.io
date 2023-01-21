@@ -1,38 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>建 站 宣 言</title>
-    <url>/2023/01/21/%E5%BB%BA%E7%AB%99%E5%AE%A3%E8%A8%80/</url>
-    <content><![CDATA[<h1 id="建-站-宣-言-！"><a href="#建-站-宣-言-！" class="headerlink" title="建 站 宣 言 ！"></a>建 站 宣 言 ！</h1><h2 id="2023年1月21日，Ameitsu-Cyberpark正式开始运作"><a href="#2023年1月21日，Ameitsu-Cyberpark正式开始运作" class="headerlink" title="2023年1月21日，Ameitsu Cyberpark正式开始运作"></a>2023年1月21日，Ameitsu Cyberpark正式开始运作</h2><p>期间，为了达成在人类互联网世界有立足之地，我，adminstrator，STY，克服了以下困难</p>
-<ul>
-<li>ssh连不上</li>
-<li>ssh连不上github的22号端口</li>
-<li>githubpages被墙</li>
-<li>bash出现极大的问题</li>
-<li>……</li>
-</ul>
-<p>但是，不论如何，Cyberpark还是开放了！<br>现规定Cyberpark的章程：</p>
-<span id="more"></span>
-<ol>
-<li>为全人类的幸福与快乐着想，记录生活中的美好与愉悦，内容不作限定</li>
-<li>严格遵守人类的正义的自我要求</li>
-<li>严格遵守宪法和法律</li>
-<li>坚决抵制信息攻击</li>
-</ol>
-<p>编辑于2023&#x2F;1&#x2F;21，春节前，STY</p>
-]]></content>
-      <tags>
-        <tag>宣言</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>live2d模型发布vol.1-浅野千华</title>
     <url>/2023/01/21/live2d%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83vol-1-%E6%B5%85%E9%87%8E%E5%8D%83%E5%8D%8E/</url>
     <content><![CDATA[<h1 id="Live2d模型发布！猫娘喜加一"><a href="#Live2d模型发布！猫娘喜加一" class="headerlink" title="Live2d模型发布！猫娘喜加一"></a>Live2d模型发布！猫娘喜加一</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>啊，live2d在vtuber火遍地球后就变得炙手可热。尤其是2000日元的订阅，我不鸡道是哪个**想出来的。什么？你想找我要破解版？想多了，版权的事水很深，我把握不住，但是我可以给草根创作者一些刁钻的创作方法</p>
 <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>既然本文是来发布模型的，那就直接上方法</p>
 <ol>
 <li>前往 <a href="https://picrew.me/">picrew</a>，找一个喜欢的模板</li>
-<li>自己挑配件组一个喜欢的人物</li>
+<li>自己挑配件组一个喜欢的人物<span id="more"></span></li>
 <li>按下 fn+f12 ，打开控制台，查找这些配件的<strong>css站url</strong></li>
 <li>下载至本地，在<a href="https://waifu2x.udp.jp/index.zh-TW.html">waifu2x</a>中放大若干次</li>
 <li>导入Photoshop叠加成’插画’</li>
@@ -62,6 +37,31 @@
 ]]></content>
       <tags>
         <tag>live2d</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>建 站 宣 言</title>
+    <url>/2023/01/21/%E5%BB%BA%E7%AB%99%E5%AE%A3%E8%A8%80/</url>
+    <content><![CDATA[<h1 id="建-站-宣-言-！"><a href="#建-站-宣-言-！" class="headerlink" title="建 站 宣 言 ！"></a>建 站 宣 言 ！</h1><h2 id="2023年1月21日，Ameitsu-Cyberpark正式开始运作"><a href="#2023年1月21日，Ameitsu-Cyberpark正式开始运作" class="headerlink" title="2023年1月21日，Ameitsu Cyberpark正式开始运作"></a>2023年1月21日，Ameitsu Cyberpark正式开始运作</h2><p>期间，为了达成在人类互联网世界有立足之地，我，adminstrator，STY，克服了以下困难</p>
+<ul>
+<li>ssh连不上</li>
+<li>ssh连不上github的22号端口</li>
+<li>githubpages被墙</li>
+<li>bash出现极大的问题</li>
+<li>……</li>
+</ul>
+<p>但是，不论如何，Cyberpark还是开放了！<br>现规定Cyberpark的章程：</p>
+<span id="more"></span>
+<ol>
+<li>为全人类的幸福与快乐着想，记录生活中的美好与愉悦，内容不作限定</li>
+<li>严格遵守人类的正义的自我要求</li>
+<li>严格遵守宪法和法律</li>
+<li>坚决抵制信息攻击</li>
+</ol>
+<p>编辑于2023&#x2F;1&#x2F;21，春节前，STY</p>
+]]></content>
+      <tags>
+        <tag>宣言</tag>
       </tags>
   </entry>
   <entry>
