@@ -2,31 +2,31 @@
 <rss version="2.0">
     <channel>
         <title>Cyberpark Nichome • Posts by &#34;游记&#34; tag</title>
-        <link>http://example.com</link>
+        <link>http://ameitsu.github.io</link>
         <description>本站基于hexo，同时部分内容来自一个在某只不愿透露姓名的猫娘上的脑机接口。没有任何猫娘因为本站而受到伤害。</description>
         <language>zh-CN</language>
         <pubDate>Sun, 22 Jan 2023 17:04:52 +0800</pubDate>
         <lastBuildDate>Sun, 22 Jan 2023 17:04:52 +0800</lastBuildDate>
-        <category>Ameitsu Orchestra</category>
-        <category>原创</category>
-        <category>重要文件</category>
         <category>Python</category>
         <category>SofTY</category>
+        <category>原创</category>
         <category>学习</category>
+        <category>Ameitsu Orchestra</category>
         <category>at STY</category>
         <category>STY的初三大事记</category>
         <category>多图杀猫</category>
         <category>唠嗑</category>
         <category>高中牲STY</category>
-        <category>铁路</category>
-        <category>冷门铁路史系列</category>
+        <category>重要文件</category>
         <category>游记</category>
         <category>北京</category>
         <category>标题党</category>
+        <category>铁路</category>
+        <category>冷门铁路史系列</category>
         <item>
-            <guid isPermalink="true">http://example.com/sightseeing/%E7%A6%BB%E8%B0%B1%E6%B8%B8%E8%AE%B0vol-1-4cba707dff81/</guid>
+            <guid isPermalink="true">http://ameitsu.github.io/uncategorized/sightseeing/%E7%A6%BB%E8%B0%B1%E6%B8%B8%E8%AE%B0vol-1/</guid>
             <title>离谱游记vol.1</title>
-            <link>http://example.com/sightseeing/%E7%A6%BB%E8%B0%B1%E6%B8%B8%E8%AE%B0vol-1-4cba707dff81/</link>
+            <link>http://ameitsu.github.io/uncategorized/sightseeing/%E7%A6%BB%E8%B0%B1%E6%B8%B8%E8%AE%B0vol-1/</link>
             <category>原创</category>
             <category>多图杀猫</category>
             <category>游记</category>
@@ -153,8 +153,8 @@
 &lt;p&gt;&lt;em&gt;（Cyberpark2 会在目前的 github pages 里的 1GB 被用完前快速上线）&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&amp;lt;hr&amp;gt;&lt;/p&gt;
 &lt;h2 id=&#34;往期经典&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#往期经典&#34;&gt;#&lt;/a&gt; 往期经典&lt;/h2&gt;
-&lt;p&gt;🔴&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzAxLzIxLyVFNyU4QyVBQiVFNSVBOCU5OCVFNiU4RiU5MiVFNyU5NCVCQnZvbC0xLw==&#34;&gt;猫娘插画 vol.1&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;🔵&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzAxLzIxL2xpdmUyZCVFNiVBOCVBMSVFNSU5RSU4QiVFNSU4RiU5MSVFNSVCOCU4M3ZvbC0xLSVFNiVCNSU4NSVFOSU4NyU4RSVFNSU4RCU4MyVFNSU4RCU4RS8=&#34;&gt;live2d 模型发布 vol.1 - 浅野千华&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;🔴&lt;a href=&#34;https://ameitsu.github.io/2023/01/21/%E7%8C%AB%E5%A8%98%E6%8F%92%E7%94%BBvol-1/&#34;&gt;猫娘插画 vol.1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;🔵&lt;a href=&#34;https://ameitsu.github.io/2023/01/21/live2d%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83vol-1-%E6%B5%85%E9%87%8E%E5%8D%83%E5%8D%8E/&#34;&gt;live2d 模型发布 vol.1 - 浅野千华&lt;/a&gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

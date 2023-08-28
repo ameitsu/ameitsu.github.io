@@ -1,29 +1,29 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://example.com</id>
+    <id>http://ameitsu.github.io</id>
     <title>Cyberpark Nichome • Posts by &#34;at sty&#34; tag</title>
-    <link href="http://example.com" />
+    <link href="http://ameitsu.github.io" />
     <updated>2023-06-23T13:35:53.000Z</updated>
-    <category term="Ameitsu Orchestra" />
-    <category term="原创" />
-    <category term="重要文件" />
     <category term="Python" />
     <category term="SofTY" />
+    <category term="原创" />
     <category term="学习" />
+    <category term="Ameitsu Orchestra" />
     <category term="at STY" />
     <category term="STY的初三大事记" />
     <category term="多图杀猫" />
     <category term="唠嗑" />
     <category term="高中牲STY" />
-    <category term="铁路" />
-    <category term="冷门铁路史系列" />
+    <category term="重要文件" />
     <category term="游记" />
     <category term="北京" />
     <category term="标题党" />
+    <category term="铁路" />
+    <category term="冷门铁路史系列" />
     <entry>
-        <id>http://example.com/at_STY/%E7%9B%B4%E5%87%BB%E4%B8%AD%E8%80%83-b2a174758d28/</id>
+        <id>http://ameitsu.github.io/uncategorized/at_STY/%E7%9B%B4%E5%87%BB%E4%B8%AD%E8%80%83/</id>
         <title>at STY vol.7|直击中考！！！</title>
-        <link rel="alternate" href="http://example.com/at_STY/%E7%9B%B4%E5%87%BB%E4%B8%AD%E8%80%83-b2a174758d28/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/at_STY/%E7%9B%B4%E5%87%BB%E4%B8%AD%E8%80%83/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;本期是难得的实时更新内容。中考开始，即 2023 年 6 月 24 日 8 点整记为 K，三天内的时间都以 &lt;code&gt;K+x&lt;/code&gt;  的形式说明&lt;/p&gt;
 &lt;/div&gt;
@@ -34,7 +34,7 @@
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;k-1025-中考前最后一晚&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#k-1025-中考前最后一晚&#34;&gt;#&lt;/a&gt; K-10.25 中考前最后一晚&lt;/h1&gt;
 &lt;p&gt;夜深人静，北京北区的一座普通的公寓楼，朝向西北方的窗前。&lt;/p&gt;
-&lt;p&gt;害，没那么煽情，但真的 STY&lt;ins&gt; 明天就要中考了啊&lt;/ins&gt;！不过好在中考已经对 STY 没啥用了，详细原因请见&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzA2LzAzL1NUWSVFNiU5RCVBNSVFNSU5NCVBMCVFNSU5NyU5MXZvbC03Lw==&#34;&gt;这篇&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;害，没那么煽情，但真的 STY&lt;ins&gt; 明天就要中考了啊&lt;/ins&gt;！不过好在中考已经对 STY 没啥用了，详细原因请见&lt;a href=&#34;https://ameitsu.github.io/2023/06/03/STY%E6%9D%A5%E5%94%A0%E5%97%91vol-7/&#34;&gt;这篇&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;明天（2023.6.24）上午考语文，下午考数学。其实这两科对于 STY 来说已经没什么悬念了，主要是数学，因为数学不会就是不会。但 STY 已经被高中&lt;ins&gt;狠狠创了&lt;/ins&gt;一个多月，心态可稳定了，毕竟中考不可能&lt;strong&gt;跳一步扣 5 分&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;语文就康康古诗词、古文和曾经的范文就得了，毕竟就这些能真的对考试有点用。&lt;/p&gt;
 &lt;p&gt;考点在曾经的初中校区，也算是老地方了，赞。&lt;/p&gt;
@@ -132,9 +132,9 @@
         <updated>2023-06-23T13:35:53.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/at_STY/%E4%B9%89%E5%8D%96%E6%99%92%E5%8D%95-5a6d858f434f/</id>
+        <id>http://ameitsu.github.io/uncategorized/at_STY/%E4%B9%89%E5%8D%96%E6%99%92%E5%8D%95/</id>
         <title>at STY vol.6|义卖晒单——论STY拿￥250预算买了些神马玩意儿</title>
-        <link rel="alternate" href="http://example.com/at_STY/%E4%B9%89%E5%8D%96%E6%99%92%E5%8D%95-5a6d858f434f/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/at_STY/%E4%B9%89%E5%8D%96%E6%99%92%E5%8D%95/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;这年头的高中生实在是过分有活力了&lt;/p&gt;
 &lt;/div&gt;
@@ -250,9 +250,9 @@
         <updated>2023-06-13T12:57:27.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/at_STY/%E4%B8%80%E6%A8%A1%E5%89%8D%E7%BA%BF-551552b4a810/</id>
+        <id>http://ameitsu.github.io/uncategorized/at_STY/%E4%B8%80%E6%A8%A1%E5%89%8D%E7%BA%BF/</id>
         <title>at STY vol.3|一模前线</title>
-        <link rel="alternate" href="http://example.com/at_STY/%E4%B8%80%E6%A8%A1%E5%89%8D%E7%BA%BF-551552b4a810/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/at_STY/%E4%B8%80%E6%A8%A1%E5%89%8D%E7%BA%BF/"/>
         <content type="html">&lt;div class=&#34;note success&#34;&gt;
 &lt;p&gt;考的害行，558 分排名朝阳区 486。唉 ——&lt;/p&gt;
 &lt;/div&gt;
@@ -350,9 +350,9 @@
         <updated>2023-04-25T14:49:42.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/at_STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%9B%B4%E5%8D%87%E8%80%83-deeb19fffde2/</id>
+        <id>http://ameitsu.github.io/uncategorized/at_STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%9B%B4%E5%8D%87%E8%80%83/</id>
         <title>at STY vol.2|第一次直升考</title>
-        <link rel="alternate" href="http://example.com/at_STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%9B%B4%E5%8D%87%E8%80%83-deeb19fffde2/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/at_STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%9B%B4%E5%8D%87%E8%80%83/"/>
         <content type="html">&lt;div class=&#34;note default&#34;&gt;
 &lt;p&gt;梦开始的地方&lt;/p&gt;
 &lt;/div&gt;
@@ -406,9 +406,9 @@
         <updated>2023-03-18T14:36:32.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/at_STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%90%AC%E8%AF%B4%E8%80%83%E8%AF%95-f5ac325eef59/</id>
+        <id>http://ameitsu.github.io/uncategorized/at_STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%90%AC%E8%AF%B4%E8%80%83%E8%AF%95/</id>
         <title>at STY vol.1|嗦嗦第一次听说考试</title>
-        <link rel="alternate" href="http://example.com/at_STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%90%AC%E8%AF%B4%E8%80%83%E8%AF%95-f5ac325eef59/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/at_STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%90%AC%E8%AF%B4%E8%80%83%E8%AF%95/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;本文涉及考试，如有不适请快速关闭页面&lt;/p&gt;
 &lt;/div&gt;

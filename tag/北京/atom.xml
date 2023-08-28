@@ -1,29 +1,29 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://example.com</id>
+    <id>http://ameitsu.github.io</id>
     <title>Cyberpark Nichome • Posts by &#34;北京&#34; tag</title>
-    <link href="http://example.com" />
+    <link href="http://ameitsu.github.io" />
     <updated>2023-01-22T09:04:52.000Z</updated>
-    <category term="Ameitsu Orchestra" />
-    <category term="原创" />
-    <category term="重要文件" />
     <category term="Python" />
     <category term="SofTY" />
+    <category term="原创" />
     <category term="学习" />
+    <category term="Ameitsu Orchestra" />
     <category term="at STY" />
     <category term="STY的初三大事记" />
     <category term="多图杀猫" />
     <category term="唠嗑" />
     <category term="高中牲STY" />
-    <category term="铁路" />
-    <category term="冷门铁路史系列" />
+    <category term="重要文件" />
     <category term="游记" />
     <category term="北京" />
     <category term="标题党" />
+    <category term="铁路" />
+    <category term="冷门铁路史系列" />
     <entry>
-        <id>http://example.com/sightseeing/%E7%A6%BB%E8%B0%B1%E6%B8%B8%E8%AE%B0vol-1-4cba707dff81/</id>
+        <id>http://ameitsu.github.io/uncategorized/sightseeing/%E7%A6%BB%E8%B0%B1%E6%B8%B8%E8%AE%B0vol-1/</id>
         <title>离谱游记vol.1</title>
-        <link rel="alternate" href="http://example.com/sightseeing/%E7%A6%BB%E8%B0%B1%E6%B8%B8%E8%AE%B0vol-1-4cba707dff81/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/sightseeing/%E7%A6%BB%E8%B0%B1%E6%B8%B8%E8%AE%B0vol-1/"/>
         <content type="html">&lt;h1 id=&#34;离谱游记vol1-假鹿鹿-假雪花-真乐子新首钢半日游&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#离谱游记vol1-假鹿鹿-假雪花-真乐子新首钢半日游&#34;&gt;#&lt;/a&gt; 离谱游记 vol.1 ：假鹿鹿、假雪花、真乐子 —— 新首钢半日游&lt;/h1&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://i.328888.xyz/2023/01/22/OF2HX.jpeg&#34; alt=&#34;OF2HX.jpeg&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
@@ -144,8 +144,8 @@
 &lt;p&gt;&lt;em&gt;（Cyberpark2 会在目前的 github pages 里的 1GB 被用完前快速上线）&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&amp;lt;hr&amp;gt;&lt;/p&gt;
 &lt;h2 id=&#34;往期经典&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#往期经典&#34;&gt;#&lt;/a&gt; 往期经典&lt;/h2&gt;
-&lt;p&gt;🔴&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzAxLzIxLyVFNyU4QyVBQiVFNSVBOCU5OCVFNiU4RiU5MiVFNyU5NCVCQnZvbC0xLw==&#34;&gt;猫娘插画 vol.1&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;🔵&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzAxLzIxL2xpdmUyZCVFNiVBOCVBMSVFNSU5RSU4QiVFNSU4RiU5MSVFNSVCOCU4M3ZvbC0xLSVFNiVCNSU4NSVFOSU4NyU4RSVFNSU4RCU4MyVFNSU4RCU4RS8=&#34;&gt;live2d 模型发布 vol.1 - 浅野千华&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;🔴&lt;a href=&#34;https://ameitsu.github.io/2023/01/21/%E7%8C%AB%E5%A8%98%E6%8F%92%E7%94%BBvol-1/&#34;&gt;猫娘插画 vol.1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;🔵&lt;a href=&#34;https://ameitsu.github.io/2023/01/21/live2d%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83vol-1-%E6%B5%85%E9%87%8E%E5%8D%83%E5%8D%8E/&#34;&gt;live2d 模型发布 vol.1 - 浅野千华&lt;/a&gt;&lt;/p&gt;
 </content>
         <category term="原创" />
         <category term="多图杀猫" />

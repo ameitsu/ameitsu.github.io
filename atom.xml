@@ -1,29 +1,29 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://example.com</id>
+    <id>http://ameitsu.github.io</id>
     <title>Cyberpark Nichome</title>
-    <link href="http://example.com" />
+    <link href="http://ameitsu.github.io" />
     <updated>2023-07-31T14:13:51.000Z</updated>
-    <category term="Ameitsu Orchestra" />
-    <category term="原创" />
-    <category term="重要文件" />
     <category term="Python" />
     <category term="SofTY" />
+    <category term="原创" />
     <category term="学习" />
+    <category term="Ameitsu Orchestra" />
     <category term="at STY" />
     <category term="STY的初三大事记" />
     <category term="多图杀猫" />
     <category term="唠嗑" />
     <category term="高中牲STY" />
-    <category term="铁路" />
-    <category term="冷门铁路史系列" />
+    <category term="重要文件" />
     <category term="游记" />
     <category term="北京" />
     <category term="标题党" />
+    <category term="铁路" />
+    <category term="冷门铁路史系列" />
     <entry>
-        <id>http://example.com/at_STY/%E8%BF%99%E6%9A%91%E5%81%87%E5%A4%AA%E7%97%9B%E4%BA%86-024578cf5ace/</id>
+        <id>http://ameitsu.github.io/uncategorized/at_STY/%E8%BF%99%E6%9A%91%E5%81%87%E5%A4%AA%E7%97%9B%E4%BA%86/</id>
         <title>at STY|这暑假太痛了</title>
-        <link rel="alternate" href="http://example.com/at_STY/%E8%BF%99%E6%9A%91%E5%81%87%E5%A4%AA%E7%97%9B%E4%BA%86-024578cf5ace/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/at_STY/%E8%BF%99%E6%9A%91%E5%81%87%E5%A4%AA%E7%97%9B%E4%BA%86/"/>
         <content type="html">&lt;div class=&#34;note warning&#34;&gt;
 &lt;p&gt;淦，我早就该意识到我一天都嗨不起来 (＃￣ω￣)&lt;/p&gt;
 &lt;/div&gt;
@@ -109,9 +109,9 @@
         <updated>2023-07-31T14:13:51.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/ameitsu_orchestra/AmeistuOrchestra%20vol-3-4795e918c27c/</id>
+        <id>http://ameitsu.github.io/uncategorized/ameitsu_orchestra/AmeistuOrchestra%20vol-3/</id>
         <title>Ameitsu Orchestra| vol.3</title>
-        <link rel="alternate" href="http://example.com/ameitsu_orchestra/AmeistuOrchestra%20vol-3-4795e918c27c/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/ameitsu_orchestra/AmeistuOrchestra%20vol-3/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;注：这还是 STY 的暑假作业之一，主要是七月三稿想不出来写什么，干脆拿着个先占个位置，后面再去补一个好东西（遥遥无期啊 www）&lt;/p&gt;
 &lt;/div&gt;
@@ -141,14 +141,14 @@
 ——《枪炮、病菌和钢铁》收场白&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
-        <category term="Ameitsu Orchestra" />
         <category term="原创" />
+        <category term="Ameitsu Orchestra" />
         <updated>2023-07-17T14:52:35.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/ameitsu_orchestra/AmeistuOrchestra%20vol-2-98fc7fe058ac/</id>
+        <id>http://ameitsu.github.io/uncategorized/ameitsu_orchestra/AmeistuOrchestra%20vol-2/</id>
         <title>Ameitsu Orchestra| vol.2</title>
-        <link rel="alternate" href="http://example.com/ameitsu_orchestra/AmeistuOrchestra%20vol-2-98fc7fe058ac/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/ameitsu_orchestra/AmeistuOrchestra%20vol-2/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;注：这是 STY 的暑假作业之一，主要是七月二稿想不出来写什么，干脆拿着个先占个位置，后面再去补一个好东西&lt;/p&gt;
 &lt;/div&gt;
@@ -165,14 +165,14 @@
 &lt;p&gt;第三个认知，是对地球力量的理解。地球的力量，仅仅是在全片的体现 “火山、大气、冰川、海洋” 也并非像核裂变一样具有毁天灭地的力量。而它们却真实地改造了地球。纪录片也揭示了这些力量的来源。以海洋为例，海洋看似只是咸水的集合体，却引发了二叠纪末期的生物大灭绝。事实上海洋内至关重要的是洋流，因为洋流串连了全世界的所有海洋。洋流依赖于热水与冷水的对流，但二叠纪末期由于气候变暖水域之间的温度差已经开始缩小，导致洋流逐渐停止，使地球的海水成为了一潭全球范围的死水塘，引发海洋物种的灭绝。同时气候变暖也因为海水升温而继续，导致陆地上蒸发量增大，大部分陆地生物也难逃灭绝的命运。所以，地球的力量来源于各个要素的因果关系，这也是人类要尽力在 21 世纪 20 年代以后控制的。&lt;/p&gt;
 &lt;p&gt;《地球的力量》无疑对于自然地理的理解有独特的价值，尤其是对于气候变暖、海平面上升，出现各种环境挑战与伴生问题的现在。这部纪录片通过对地球力量的剖析，为我们理解地球，保护地球起到了积极的作用。随着一项项环境议定书的批准，各国环境政策的出台，我们这颗有着不羁力量的蓝色行星应当会持续搏动下去。&lt;/p&gt;
 </content>
-        <category term="Ameitsu Orchestra" />
         <category term="原创" />
+        <category term="Ameitsu Orchestra" />
         <updated>2023-07-16T02:49:17.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/ameitsu_orchestra/AmeitsuOrchestra%20vol-1-ae6fc9650501/</id>
+        <id>http://ameitsu.github.io/uncategorized/ameitsu_orchestra/AmeitsuOrchestra%20vol-1/</id>
         <title>Ameitsu Orchestra| vol.1 Descending Digital Dark Ages</title>
-        <link rel="alternate" href="http://example.com/ameitsu_orchestra/AmeitsuOrchestra%20vol-1-ae6fc9650501/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/ameitsu_orchestra/AmeitsuOrchestra%20vol-1/"/>
         <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/07/07/VpaKmo.jpeg&#34; alt=&#34;VpaKmo.jpeg&#34; /&gt;&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
 &lt;img data-src=&#34;https://i.imgloc.com/2023/06/22/VICbVk.png&#34; alt=&#34;VICbVk.png&#34; /&gt;&lt;/p&gt;
@@ -243,7 +243,7 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
 &lt;h1 id=&#34;lastly&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lastly&#34;&gt;#&lt;/a&gt; Lastly&lt;/h1&gt;
 &lt;p&gt;So far, as we can all see, the digital dark age is developing. Moreover, it seems that few is done to this field, comparing the effect of it. It is sure that new information is kept being produced, nevertheless the past has the same importance. Anyway, we see a twilight. It has been proved that both low-tech applications and state-of-the-art developments can help save the precious human internet world. But what’s more, we need &lt;ins&gt;those who are determined to brighten the twilight.&lt;/ins&gt;&lt;/p&gt;
 &lt;h1 id=&#34;references&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#references&#34;&gt;#&lt;/a&gt; References&lt;/h1&gt;
-&lt;p&gt;🔴1.	&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pbw==&#34;&gt;https://ameitsu.github.io&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;🔴1.	&lt;a href=&#34;https://ameitsu.github.io&#34;&gt;https://ameitsu.github.io&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;🟠2.	&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zdHVkeS5jb20vYWNhZGVteS9sZXNzb24vdGhlLWRhcmstYWdlcy1kZWZpbml0aW9uLWhpc3RvcnktdGltZWxpbmUuaHRtbA==&#34;&gt;https://study.com/academy/lesson/the-dark-ages-definition-history-timeline.html&lt;/span&gt;&lt;br /&gt;
 🟡3.	&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuaGlzdG9yeWhpdC5jb20vd2h5LXdlcmUtdGhlLWVhcmx5LW1pZGRsZS1hZ2VzLWNhbGxlZC10aGUtZGFyay1hZ2VzLw==&#34;&gt;https://www.historyhit.com/why-were-the-early-middle-ages-called-the-dark-ages/&lt;/span&gt;&lt;br /&gt;
 🟢4.	&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cudW5yLmVkdS9uZXZhZGEtdG9kYXkvbmV3cy8yMDIyL2xpYnJhcmllcy1kaWdpdGFsLWRhcmstYWdlcw==&#34;&gt;https://www.unr.edu/nevada-today/news/2022/libraries-digital-dark-ages&lt;/span&gt;&lt;br /&gt;
@@ -253,14 +253,14 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
 &lt;h1 id=&#34;survey&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#survey&#34;&gt;#&lt;/a&gt; Survey&lt;/h1&gt;
 &lt;p&gt;This is the first time STY ever posted a English article. Why not fill in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud2p4LmNuL3ZtL1B3RFhWMTcuYXNweCM=&#34;&gt;this survey&lt;/span&gt; to help him improve some problems?&lt;/p&gt;
 </content>
-        <category term="Ameitsu Orchestra" />
         <category term="原创" />
+        <category term="Ameitsu Orchestra" />
         <updated>2023-07-03T14:21:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/at_STY/%E7%9B%B4%E5%87%BB%E4%B8%AD%E8%80%83-b2a174758d28/</id>
+        <id>http://ameitsu.github.io/uncategorized/at_STY/%E7%9B%B4%E5%87%BB%E4%B8%AD%E8%80%83/</id>
         <title>at STY vol.7|直击中考！！！</title>
-        <link rel="alternate" href="http://example.com/at_STY/%E7%9B%B4%E5%87%BB%E4%B8%AD%E8%80%83-b2a174758d28/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/at_STY/%E7%9B%B4%E5%87%BB%E4%B8%AD%E8%80%83/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;本期是难得的实时更新内容。中考开始，即 2023 年 6 月 24 日 8 点整记为 K，三天内的时间都以 &lt;code&gt;K+x&lt;/code&gt;  的形式说明&lt;/p&gt;
 &lt;/div&gt;
@@ -271,7 +271,7 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;k-1025-中考前最后一晚&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#k-1025-中考前最后一晚&#34;&gt;#&lt;/a&gt; K-10.25 中考前最后一晚&lt;/h1&gt;
 &lt;p&gt;夜深人静，北京北区的一座普通的公寓楼，朝向西北方的窗前。&lt;/p&gt;
-&lt;p&gt;害，没那么煽情，但真的 STY&lt;ins&gt; 明天就要中考了啊&lt;/ins&gt;！不过好在中考已经对 STY 没啥用了，详细原因请见&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzA2LzAzL1NUWSVFNiU5RCVBNSVFNSU5NCVBMCVFNSU5NyU5MXZvbC03Lw==&#34;&gt;这篇&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;害，没那么煽情，但真的 STY&lt;ins&gt; 明天就要中考了啊&lt;/ins&gt;！不过好在中考已经对 STY 没啥用了，详细原因请见&lt;a href=&#34;https://ameitsu.github.io/2023/06/03/STY%E6%9D%A5%E5%94%A0%E5%97%91vol-7/&#34;&gt;这篇&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;明天（2023.6.24）上午考语文，下午考数学。其实这两科对于 STY 来说已经没什么悬念了，主要是数学，因为数学不会就是不会。但 STY 已经被高中&lt;ins&gt;狠狠创了&lt;/ins&gt;一个多月，心态可稳定了，毕竟中考不可能&lt;strong&gt;跳一步扣 5 分&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;语文就康康古诗词、古文和曾经的范文就得了，毕竟就这些能真的对考试有点用。&lt;/p&gt;
 &lt;p&gt;考点在曾经的初中校区，也算是老地方了，赞。&lt;/p&gt;
@@ -369,9 +369,9 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
         <updated>2023-06-23T13:35:53.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/at_STY/%E4%B9%89%E5%8D%96%E6%99%92%E5%8D%95-5a6d858f434f/</id>
+        <id>http://ameitsu.github.io/uncategorized/at_STY/%E4%B9%89%E5%8D%96%E6%99%92%E5%8D%95/</id>
         <title>at STY vol.6|义卖晒单——论STY拿￥250预算买了些神马玩意儿</title>
-        <link rel="alternate" href="http://example.com/at_STY/%E4%B9%89%E5%8D%96%E6%99%92%E5%8D%95-5a6d858f434f/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/at_STY/%E4%B9%89%E5%8D%96%E6%99%92%E5%8D%95/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;这年头的高中生实在是过分有活力了&lt;/p&gt;
 &lt;/div&gt;
@@ -487,9 +487,9 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
         <updated>2023-06-13T12:57:27.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/at_STY/%E6%BD%A6%E8%8D%89%E7%9A%84%E4%BA%8C%E6%A8%A1-1a8cc7f0e187/</id>
+        <id>http://ameitsu.github.io/uncategorized/at_STY/%E6%BD%A6%E8%8D%89%E7%9A%84%E4%BA%8C%E6%A8%A1/</id>
         <title>at STY vol.5|潦草的二模</title>
-        <link rel="alternate" href="http://example.com/at_STY/%E6%BD%A6%E8%8D%89%E7%9A%84%E4%BA%8C%E6%A8%A1-1a8cc7f0e187/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/at_STY/%E6%BD%A6%E8%8D%89%E7%9A%84%E4%BA%8C%E6%A8%A1/"/>
         <content type="html">&lt;div class=&#34;note success&#34;&gt;
 &lt;p&gt;五月病已恢复～&lt;/p&gt;
 &lt;/div&gt;
@@ -506,9 +506,9 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
 &lt;p&gt;不管怎么着，前几次大考的结果肯定也不会差，加权平均以后 STY 排年级 30 左右。&lt;/p&gt;
 &lt;p&gt;来复习一下当时几次考试的&lt;ins&gt;盛况&lt;/ins&gt;：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;🟥&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzAzLzE4L1NUWSVFNiU5RCVBNSVFNSU5NCVBMCVFNSU5NyU5MXZvbC00Lz9oaWdobGlnaHQlM0QlRTclOUIlQjQlRTUlOEQlODc=&#34;&gt;第一次直升考&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;🟧&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzA0LzI1L1NUWSVFNiU5RCVBNSVFNSU5NCVBMCVFNSU5NyU5MXZvbC01Lz9oaWdobGlnaHQlM0QlRTQlQjglODAlRTYlQTglQTE=&#34;&gt;中考一模&lt;/span&gt;（最后以 558 分排名全朝阳区 482 名结束）&lt;/li&gt;
-&lt;li&gt;🟨 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzA1LzEzL1NUWSVFNiU5RCVBNSVFNSU5NCVBMCVFNSU5NyU5MXZvbC02Lw==&#34;&gt;第二次直升考&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;🟥&lt;a href=&#34;https://ameitsu.github.io/2023/03/18/STY%E6%9D%A5%E5%94%A0%E5%97%91vol-4/?highlight%3D%E7%9B%B4%E5%8D%87&#34;&gt;第一次直升考&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🟧&lt;a href=&#34;https://ameitsu.github.io/2023/04/25/STY%E6%9D%A5%E5%94%A0%E5%97%91vol-5/?highlight%3D%E4%B8%80%E6%A8%A1&#34;&gt;中考一模&lt;/a&gt;（最后以 558 分排名全朝阳区 482 名结束）&lt;/li&gt;
+&lt;li&gt;🟨 &lt;a href=&#34;https://ameitsu.github.io/2023/05/13/STY%E6%9D%A5%E5%94%A0%E5%97%91vol-6/&#34;&gt;第二次直升考&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;因为再也不用关心中考了，所以 STY 中考二模就当玩了（当然了 STY 不信）。&lt;/p&gt;
 &lt;h1 id=&#34;九点五年级的生活&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#九点五年级的生活&#34;&gt;#&lt;/a&gt; 九点五年级的生活&lt;/h1&gt;
@@ -531,9 +531,9 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
 &lt;/ul&gt;
 &lt;p&gt;然后捏每天的任务也变成了高中和初中都要照顾到，不管是预习还是复习。这也是本站在 5 月内没有更新的主要原因。可是咱不是在 5 月 13 号又更新了一篇嘛…… 原因请看&lt;/p&gt;
 &lt;h1 id=&#34;本站第一次危机&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本站第一次危机&#34;&gt;#&lt;/a&gt; 本站第一次危机&lt;/h1&gt;
-&lt;p&gt;在 2023 年 5 月 3 号更完&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzA0LzI4L1NvZlRZJTIwdm9sLTMv&#34;&gt; SofTY vol.3&lt;/span&gt; 之后，STY 下载了一些小插件，然鹅最后都没用上。于是为了省省 Github Pages 的空间，STY 删了它们，但是吧 —— 可能出了点未知的小问题。&lt;/p&gt;
+&lt;p&gt;在 2023 年 5 月 3 号更完&lt;a href=&#34;https://ameitsu.github.io/2023/04/28/SofTY%20vol-3/&#34;&gt; SofTY vol.3&lt;/a&gt; 之后，STY 下载了一些小插件，然鹅最后都没用上。于是为了省省 Github Pages 的空间，STY 删了它们，但是吧 —— 可能出了点未知的小问题。&lt;/p&gt;
 &lt;p&gt;到了 5 月 13 号左右有人在&lt;ins&gt;线下催更&lt;/ins&gt;的时候，STY 才发现&lt;strong&gt;啥东西都传不上去了&lt;/strong&gt;，每次都报错 &amp;quot;Spawn failed&amp;quot;。虽然前后两件事不一定有什么关联，但确实把 STY 整无语了，毕竟高中的时候还要拿这些装个 B 什么的。&lt;/p&gt;
-&lt;p&gt;此时本地已经积压了一篇文章没法上传，正是那个&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzA1LzEzL1NUWSVFNiU5RCVBNSVFNSU5NCVBMCVFNSU5NyU5MXZvbC02Lw==&#34;&gt;聊第二次直升考&lt;/span&gt;的。由于拖了四五天没有上传，里面的时间点都已被改正&lt;/p&gt;
+&lt;p&gt;此时本地已经积压了一篇文章没法上传，正是那个&lt;a href=&#34;https://ameitsu.github.io/2023/05/13/STY%E6%9D%A5%E5%94%A0%E5%97%91vol-6/&#34;&gt;聊第二次直升考&lt;/a&gt;的。由于拖了四五天没有上传，里面的时间点都已被改正&lt;/p&gt;
 &lt;h1 id=&#34;本站第二次危机&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本站第二次危机&#34;&gt;#&lt;/a&gt; 本站第二次危机&lt;/h1&gt;
 &lt;p&gt;2023 年 5 月开始，本站的图片就经常无法显示。本来 STY 以为就是因为 Github 速度慢而已，其实吧问题可大了。&lt;/p&gt;
 &lt;p&gt;2023 年 5 月 15 日，本站图片&lt;strong&gt;全挂了&lt;/strong&gt;，经检查，这是图床平台的图片链接无法访问导致的悲剧。很可惜，当时没能留下截图。&lt;/p&gt;
@@ -555,9 +555,9 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
         <updated>2023-06-03T02:48:45.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/at_STY/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%9B%B4%E5%8D%87%E8%80%83-18fee0f02e52/</id>
+        <id>http://ameitsu.github.io/uncategorized/at_STY/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%9B%B4%E5%8D%87%E8%80%83/</id>
         <title>at STY vol.4|第二次直升考</title>
-        <link rel="alternate" href="http://example.com/at_STY/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%9B%B4%E5%8D%87%E8%80%83-18fee0f02e52/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/at_STY/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%9B%B4%E5%8D%87%E8%80%83/"/>
         <content type="html">&lt;div class=&#34;note success&#34;&gt;
 &lt;p&gt;终于结束了……&lt;/p&gt;
 &lt;/div&gt;
@@ -683,9 +683,9 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
         <updated>2023-05-13T13:33:04.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/SofTY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1-7a7a651c7775/</id>
+        <id>http://ameitsu.github.io/uncategorized/SofTY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/</id>
         <title>SofTYvol.3|科技与一模</title>
-        <link rel="alternate" href="http://example.com/SofTY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1-7a7a651c7775/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/SofTY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/"/>
         <content type="html">&lt;p&gt;啊，今天是 4 月 30 号，2023 年 4 月的最后一天。就在 40 个小时之前&lt;ins&gt;举世瞩目的&lt;/ins&gt; 2023 年朝阳区初三一模结束了。SofTY 作为本站的编程 / 数学专栏真的有必要从数学压轴题里找点整活的灵感什么的。&lt;/p&gt;
 &lt;p&gt;所以嘛，本篇的主题 —— 用&lt;ins&gt;科技和人工智慧&lt;/ins&gt;攻克 16 题 (2) 和 28 题 (3)&lt;/p&gt;
 &lt;p&gt;注意哦，是人工 &lt;strong&gt;智慧&lt;/strong&gt;&lt;/p&gt;
@@ -715,7 +715,7 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
 &lt;p&gt;住不满三人间也得付全部的￥130&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;正如 STY 在愚人节那天发的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzA0LzAxL1NvZlRZJTIwdm9sLTEv&#34;&gt; SofTY vol.1 | 又一个狠活的诞生&lt;/span&gt;中提到&lt;/p&gt;
+&lt;p&gt;正如 STY 在愚人节那天发的&lt;a href=&#34;https://ameitsu.github.io/2023/04/01/SofTY%20vol-1/&#34;&gt; SofTY vol.1 | 又一个狠活的诞生&lt;/a&gt;中提到&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;center&gt;&lt;font size = 6&gt;&lt;i&gt;…但问题是Python不是准JK…&lt;/i&gt; &lt;/font&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -762,16 +762,16 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
 &lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="原创" />
         <category term="Python" />
         <category term="SofTY" />
+        <category term="原创" />
         <category term="学习" />
         <updated>2023-04-28T15:10:57.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/at_STY/%E4%B8%80%E6%A8%A1%E5%89%8D%E7%BA%BF-551552b4a810/</id>
+        <id>http://ameitsu.github.io/uncategorized/at_STY/%E4%B8%80%E6%A8%A1%E5%89%8D%E7%BA%BF/</id>
         <title>at STY vol.3|一模前线</title>
-        <link rel="alternate" href="http://example.com/at_STY/%E4%B8%80%E6%A8%A1%E5%89%8D%E7%BA%BF-551552b4a810/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/at_STY/%E4%B8%80%E6%A8%A1%E5%89%8D%E7%BA%BF/"/>
         <content type="html">&lt;div class=&#34;note success&#34;&gt;
 &lt;p&gt;考的害行，558 分排名朝阳区 486。唉 ——&lt;/p&gt;
 &lt;/div&gt;
@@ -869,9 +869,9 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
         <updated>2023-04-25T14:49:42.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/SofTY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB-e94a60c5397e/</id>
+        <id>http://ameitsu.github.io/uncategorized/SofTY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB/</id>
         <title>SofTY vol.2|凑活能用小爬虫</title>
-        <link rel="alternate" href="http://example.com/SofTY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB-e94a60c5397e/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/SofTY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB/"/>
         <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/15/i7gSdZ.png&#34; alt=&#34;i7gSdZ.png&#34; /&gt;&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
  在开发中，我们时不时就发现自己要从某网站里扣出点有用的信息 &lt;s&gt;（比如 cosplay 套图和一堆地狱笑话）&lt;/s&gt;&lt;/p&gt;
@@ -935,15 +935,15 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;向名人许愿 &lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;并不&lt;/span&gt; 能提高您的一模成绩&lt;/p&gt;
 &lt;/div&gt;
 </content>
-        <category term="原创" />
         <category term="Python" />
         <category term="SofTY" />
+        <category term="原创" />
         <updated>2023-04-14T14:25:47.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/SofTY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8-ced4a936734b/</id>
+        <id>http://ameitsu.github.io/uncategorized/SofTY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8/</id>
         <title>SofTY vol.1|代综计算器</title>
-        <link rel="alternate" href="http://example.com/SofTY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8-ced4a936734b/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/SofTY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8/"/>
         <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/01/iHV0Ny.jpeg&#34; alt=&#34;iHV0Ny.jpeg&#34; /&gt;&lt;br /&gt;
  最近的代综题好烦，先去只有&lt;ins&gt;半扇门&lt;/ins&gt;的学校厕所哭一会儿（太夸张了⑧）&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
@@ -1008,15 +1008,15 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;最后，毕竟今天是愚人节，怎么着也得参与一下吧！但是我拒绝。&lt;/p&gt;
 &lt;p&gt;但是浅野千华宇宙要进行大规模扩充了！暑假一开始就更。除了浅野双子以外还有 Scotia・Priestly, Arakansas・Yuena, 夜雨明等一堆曾经只在草稿纸上出现的人物。&lt;/p&gt;
 </content>
-        <category term="原创" />
         <category term="Python" />
         <category term="SofTY" />
+        <category term="原创" />
         <updated>2023-04-01T04:34:47.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/at_STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%9B%B4%E5%8D%87%E8%80%83-deeb19fffde2/</id>
+        <id>http://ameitsu.github.io/uncategorized/at_STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%9B%B4%E5%8D%87%E8%80%83/</id>
         <title>at STY vol.2|第一次直升考</title>
-        <link rel="alternate" href="http://example.com/at_STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%9B%B4%E5%8D%87%E8%80%83-deeb19fffde2/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/at_STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%9B%B4%E5%8D%87%E8%80%83/"/>
         <content type="html">&lt;div class=&#34;note default&#34;&gt;
 &lt;p&gt;梦开始的地方&lt;/p&gt;
 &lt;/div&gt;
@@ -1070,9 +1070,9 @@ res = requests.get(url=url,headers=headers)
         <updated>2023-03-18T14:36:32.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/at_STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%90%AC%E8%AF%B4%E8%80%83%E8%AF%95-f5ac325eef59/</id>
+        <id>http://ameitsu.github.io/uncategorized/at_STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%90%AC%E8%AF%B4%E8%80%83%E8%AF%95/</id>
         <title>at STY vol.1|嗦嗦第一次听说考试</title>
-        <link rel="alternate" href="http://example.com/at_STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%90%AC%E8%AF%B4%E8%80%83%E8%AF%95-f5ac325eef59/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/at_STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%90%AC%E8%AF%B4%E8%80%83%E8%AF%95/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;本文涉及考试，如有不适请快速关闭页面&lt;/p&gt;
 &lt;/div&gt;
@@ -1119,9 +1119,9 @@ res = requests.get(url=url,headers=headers)
         <updated>2023-02-26T02:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/railwaytales/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-4-d4aee36a786a/</id>
+        <id>http://ameitsu.github.io/uncategorized/railwaytales/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-4/</id>
         <title>冷门铁路史vol.4</title>
-        <link rel="alternate" href="http://example.com/railwaytales/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-4-d4aee36a786a/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/railwaytales/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-4/"/>
         <content type="html">&lt;h1 id=&#34;冷门铁路史vol4加拿大最努力的单线铁路&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#冷门铁路史vol4加拿大最努力的单线铁路&#34;&gt;#&lt;/a&gt; 冷门铁路史 vol.4 | 加拿大最努力的单线铁路&lt;/h1&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://i.328888.xyz/2023/02/04/NFPEU.jpeg&#34; alt=&#34;NFPEU.jpeg&#34; /&gt;&amp;lt;center&amp;gt;&amp;lt;font color=&#39;#C0C0C0&#39;&amp;gt; 雪天里的轻铁，在 cosplay 高铁 &amp;lt;/font&amp;gt;&amp;lt;/center&amp;gt;&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
@@ -1190,7 +1190,7 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;2011 年，也就是 1 号线联邦线动工后，OC 决定将延龄草线向南延伸，并且在 2016 年的修订版计划中线路会分出一条支线去往渥太华机场。2020 年，这条支线又被拆分成了 4 号线，尽管全程仅 3 站。2 号线和 4 号线形成了延龄草系统。&lt;/p&gt;
 &lt;p&gt;除此以外，2 号线还将升级车辆，FLIRT 的上线会极大提高运行效率，增多的车辆数量也会压缩行车间隔。轨道的复线化与电气化也在计划之内，可见这条本来是试验线的铁路已经获得了关注度。&amp;lt;hr&amp;gt;&lt;/p&gt;
 &lt;h2 id=&#34;有什么能学习的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#有什么能学习的&#34;&gt;#&lt;/a&gt; 有什么能学习的？&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;将重型的国家铁路升级成城市交通的方式&lt;/strong&gt;。这点在本系列的第一期&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzAxLzI1LyVFNSU4NiVCNyVFOSU5NyVBOCVFOSU5MyU4MSVFOCVCNyVBRiVFNSU4RiVCMnZvbC0xLw==&#34;&gt;冷门铁路史 vol.1 | 只活了 2 个月的奥运电车&lt;/span&gt;中就有体现 —— 由废旧铁路升级成的温哥华临时奥运电车。温哥华的奥运电车虽然只运行了 2 个月，但载客量依然很可观。而渥太华的轻轨作为长期的城市交通系统就更不用提了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;将重型的国家铁路升级成城市交通的方式&lt;/strong&gt;。这点在本系列的第一期&lt;a href=&#34;https://ameitsu.github.io/2023/01/25/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-1/&#34;&gt;冷门铁路史 vol.1 | 只活了 2 个月的奥运电车&lt;/a&gt;中就有体现 —— 由废旧铁路升级成的温哥华临时奥运电车。温哥华的奥运电车虽然只运行了 2 个月，但载客量依然很可观。而渥太华的轻轨作为长期的城市交通系统就更不用提了。&lt;/p&gt;
 &lt;p&gt;这种模式对一些北美的城市可以说是相当有用了：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;北美（尤其美加）的铁路系统里程长，大部分城市拥有铁路线&lt;/li&gt;
@@ -1210,8 +1210,8 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;🟢&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTy1UcmFpbg==&#34;&gt;https://en.wikipedia.org/wiki/O-Train&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&amp;lt;hr&amp;gt;&lt;/p&gt;
 &lt;h1 id=&#34;往期经典&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#往期经典&#34;&gt;#&lt;/a&gt; 往期经典&lt;/h1&gt;
-&lt;p&gt;🟥&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzAyLzAyLyVFNyU5OSVCRSVFNSU5MCU4OCVFNiU4RiU5MiVFNyU5NCVCQnZvbC0yLw==&#34;&gt;百合插画 vol.2&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;🟦&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzAxLzI4LyVFNSU4NiVCNyVFOSU5NyVBOCVFOSU5MyU4MSVFOCVCNyVBRiVFNSU4RiVCMnZvbC0zLw==&#34;&gt;冷门铁路史 vol.3 | 全日本最短私铁、东京最尴尬机场和全世界最支棱钉子户&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;🟥&lt;a href=&#34;https://ameitsu.github.io/2023/02/02/%E7%99%BE%E5%90%88%E6%8F%92%E7%94%BBvol-2/&#34;&gt;百合插画 vol.2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;🟦&lt;a href=&#34;https://ameitsu.github.io/2023/01/28/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-3/&#34;&gt;冷门铁路史 vol.3 | 全日本最短私铁、东京最尴尬机场和全世界最支棱钉子户&lt;/a&gt;&lt;/p&gt;
 </content>
         <category term="原创" />
         <category term="多图杀猫" />
@@ -1220,9 +1220,9 @@ res = requests.get(url=url,headers=headers)
         <updated>2023-02-04T14:52:47.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/railwaytales/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-3-2e0773ace7e0/</id>
+        <id>http://ameitsu.github.io/uncategorized/railwaytales/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-3/</id>
         <title>冷门铁路史vol.3</title>
-        <link rel="alternate" href="http://example.com/railwaytales/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-3-2e0773ace7e0/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/railwaytales/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-3/"/>
         <content type="html">&lt;h1 id=&#34;冷门铁路史vol3全日本最短私铁-东京最尴尬机场和全世界最支棱钉子户&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#冷门铁路史vol3全日本最短私铁-东京最尴尬机场和全世界最支棱钉子户&#34;&gt;#&lt;/a&gt; 冷门铁路史 vol.3 | 全日本最短私铁、东京最尴尬机场和全世界最支棱钉子户&lt;/h1&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://i.328888.xyz/2023/01/28/jny3y.jpeg&#34; alt=&#34;jny3y.jpeg&#34; /&gt;&lt;br /&gt;
 &amp;lt;center&amp;gt;&amp;lt;font color=&#39;#C0C0C0&#39;&amp;gt; 虽然但是，它能直通运行到 &amp;lt; b &amp;gt; 西马込 &amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/center&amp;gt;&lt;br /&gt;
@@ -1326,8 +1326,8 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;所以自罚中考几综 8 道 + 物理一模 1 套 + 化学一模 1 套（已兑现）&lt;br /&gt;
 &amp;lt;hr&amp;gt;&lt;/p&gt;
 &lt;h1 id=&#34;往期经典&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#往期经典&#34;&gt;#&lt;/a&gt; 往期经典&lt;/h1&gt;
-&lt;p&gt;🟥&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzAxLzI3LyVFNSU4RCU4MyVFNSU4RCU4RSVFNCVCQSU4QyVFNSU4OCU5QnZvbC0zLSVFNiVCNSU4NSVFOSU4NyU4RSVFNSVBNCU4RiVFOCVCRSU4OSVFNyU5QSU4NCVFNSVCMCU4RiVFOCU4NCU5MSVFNiVCNCU5RS8=&#34;&gt;千华二创 vol.3 - 浅野夏辉的小脑洞&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;🟦&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzAxLzI2LyVFNSU4NiVCNyVFOSU5NyVBOCVFOSU5MyU4MSVFOCVCNyVBRiVFNSU4RiVCMnZvbC0yLw==&#34;&gt;冷门铁路史 vol.2 | 加拿大曾经唯一的电气化铁路是怎样变拉胯的？&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;🟥&lt;a href=&#34;https://ameitsu.github.io/2023/01/27/%E5%8D%83%E5%8D%8E%E4%BA%8C%E5%88%9Bvol-3-%E6%B5%85%E9%87%8E%E5%A4%8F%E8%BE%89%E7%9A%84%E5%B0%8F%E8%84%91%E6%B4%9E/&#34;&gt;千华二创 vol.3 - 浅野夏辉的小脑洞&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;🟦&lt;a href=&#34;https://ameitsu.github.io/2023/01/26/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-2/&#34;&gt;冷门铁路史 vol.2 | 加拿大曾经唯一的电气化铁路是怎样变拉胯的？&lt;/a&gt;&lt;/p&gt;
 </content>
         <category term="原创" />
         <category term="多图杀猫" />
@@ -1336,9 +1336,9 @@ res = requests.get(url=url,headers=headers)
         <updated>2023-01-28T00:37:39.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/railwaytales/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-2-2ae26b12318f/</id>
+        <id>http://ameitsu.github.io/uncategorized/railwaytales/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-2/</id>
         <title>冷门铁路史vol.2</title>
-        <link rel="alternate" href="http://example.com/railwaytales/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-2-2ae26b12318f/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/railwaytales/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-2/"/>
         <content type="html">&lt;h1 id=&#34;冷门铁路史vol2加拿大曾经唯一的电气化铁路是怎样变拉胯的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#冷门铁路史vol2加拿大曾经唯一的电气化铁路是怎样变拉胯的&#34;&gt;#&lt;/a&gt; 冷门铁路史 vol.2 | 加拿大曾经唯一的电气化铁路是怎样变拉胯的？&lt;/h1&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://www.railpictures.net/images/d1/4/6/5/4465.1186488000.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
 注：现在加拿大电气化铁路（地铁轻轨电车除外）就这一条。&lt;br /&gt;
@@ -1429,8 +1429,8 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;妈耶，我把麦克唐纳山隧道的运营方记错了，其实也是加拿大太平洋铁路公司。已在原文直接修改，同时自罚中考一模一套。&lt;/p&gt;
 &lt;p&gt;&amp;lt;hr&amp;gt;&lt;/p&gt;
 &lt;h2 id=&#34;往期经典&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#往期经典&#34;&gt;#&lt;/a&gt; 往期经典&lt;/h2&gt;
-&lt;p&gt;🟥&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzAxLzI1LyVFNSU4RCU4MyVFNSU4RCU4RSVFNCVCQSU4QyVFNSU4OCU5QnZvbC0yLSVFNiVCNSU4NSVFOSU4NyU4RSVFNSU4RCU4MyVFNSU4RCU4RSVFOCVBMiVBQiVFNSU4RiU4RCVFNiU5RCU4MCVFNSU5MCU4RS8=&#34;&gt;千华二创 vol.2 - 浅野千华被反杀后&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;🟦&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzAxLzI1LyVFNSU4NiVCNyVFOSU5NyVBOCVFOSU5MyU4MSVFOCVCNyVBRiVFNSU4RiVCMnZvbC0xLw==&#34;&gt;冷门铁路史 vol.1 | 只活了 2 个月的奥运电车&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;🟥&lt;a href=&#34;https://ameitsu.github.io/2023/01/25/%E5%8D%83%E5%8D%8E%E4%BA%8C%E5%88%9Bvol-2-%E6%B5%85%E9%87%8E%E5%8D%83%E5%8D%8E%E8%A2%AB%E5%8F%8D%E6%9D%80%E5%90%8E/&#34;&gt;千华二创 vol.2 - 浅野千华被反杀后&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;🟦&lt;a href=&#34;https://ameitsu.github.io/2023/01/25/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-1/&#34;&gt;冷门铁路史 vol.1 | 只活了 2 个月的奥运电车&lt;/a&gt;&lt;/p&gt;
 </content>
         <category term="原创" />
         <category term="多图杀猫" />
@@ -1439,9 +1439,9 @@ res = requests.get(url=url,headers=headers)
         <updated>2023-01-25T23:16:39.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/railwaytales/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-1-f01501924c58/</id>
+        <id>http://ameitsu.github.io/uncategorized/railwaytales/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-1/</id>
         <title>冷门铁路史vol.1</title>
-        <link rel="alternate" href="http://example.com/railwaytales/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-1-f01501924c58/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/railwaytales/%E5%86%B7%E9%97%A8%E9%93%81%E8%B7%AF%E5%8F%B2vol-1/"/>
         <content type="html">&lt;h1 id=&#34;冷门铁路史vol1只活了2个月的奥运电车&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#冷门铁路史vol1只活了2个月的奥运电车&#34;&gt;#&lt;/a&gt; 冷门铁路史 vol.1 | 只活了 2 个月的奥运电车&lt;/h1&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://www.railwaypreservation.com/vintagetrolley/Olympic_Line_4_sm.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;从一条短短的铁路遗产说起&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#从一条短短的铁路遗产说起&#34;&gt;#&lt;/a&gt; 从一条短短的铁路遗产说起……&lt;/h2&gt;
@@ -1507,8 +1507,8 @@ Flexicity 系列全部为低地板设计，每列全长 32 米，由 5 个模块
 &lt;p&gt;(Cyberpark 不提供你想象中的某些工具 doge)&lt;/p&gt;
 &lt;p&gt;&amp;lt;hr&amp;gt;&lt;/p&gt;
 &lt;h2 id=&#34;往期经典&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#往期经典&#34;&gt;#&lt;/a&gt; 往期经典&lt;/h2&gt;
-&lt;p&gt;🔴&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzAxLzIyLyVFNyVBNiVCQiVFOCVCMCVCMSVFNiVCOCVCOCVFOCVBRSVCMHZvbC0xLyNtb3Jl&#34;&gt;离谱游记 vol.1 ：假鹿鹿、假雪花、真乐子 —— 新首钢半日游&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;🔵&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzAxLzI0LyVFNyU4QyVBQiVFNSVBOCU5OCVFNiU4RiU5MiVFNyU5NCVCQlZvbC0yLyNtb3Jl&#34;&gt;猫娘插画 Vol.2&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;🔴&lt;a href=&#34;https://ameitsu.github.io/2023/01/22/%E7%A6%BB%E8%B0%B1%E6%B8%B8%E8%AE%B0vol-1/#more&#34;&gt;离谱游记 vol.1 ：假鹿鹿、假雪花、真乐子 —— 新首钢半日游&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;🔵&lt;a href=&#34;https://ameitsu.github.io/2023/01/24/%E7%8C%AB%E5%A8%98%E6%8F%92%E7%94%BBVol-2/#more&#34;&gt;猫娘插画 Vol.2&lt;/a&gt;&lt;/p&gt;
 </content>
         <category term="原创" />
         <category term="多图杀猫" />
@@ -1517,9 +1517,9 @@ Flexicity 系列全部为低地板设计，每列全长 32 米，由 5 个模块
         <updated>2023-01-24T23:05:23.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/sightseeing/%E7%A6%BB%E8%B0%B1%E6%B8%B8%E8%AE%B0vol-1-4cba707dff81/</id>
+        <id>http://ameitsu.github.io/uncategorized/sightseeing/%E7%A6%BB%E8%B0%B1%E6%B8%B8%E8%AE%B0vol-1/</id>
         <title>离谱游记vol.1</title>
-        <link rel="alternate" href="http://example.com/sightseeing/%E7%A6%BB%E8%B0%B1%E6%B8%B8%E8%AE%B0vol-1-4cba707dff81/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/sightseeing/%E7%A6%BB%E8%B0%B1%E6%B8%B8%E8%AE%B0vol-1/"/>
         <content type="html">&lt;h1 id=&#34;离谱游记vol1-假鹿鹿-假雪花-真乐子新首钢半日游&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#离谱游记vol1-假鹿鹿-假雪花-真乐子新首钢半日游&#34;&gt;#&lt;/a&gt; 离谱游记 vol.1 ：假鹿鹿、假雪花、真乐子 —— 新首钢半日游&lt;/h1&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://i.328888.xyz/2023/01/22/OF2HX.jpeg&#34; alt=&#34;OF2HX.jpeg&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
@@ -1640,8 +1640,8 @@ Flexicity 系列全部为低地板设计，每列全长 32 米，由 5 个模块
 &lt;p&gt;&lt;em&gt;（Cyberpark2 会在目前的 github pages 里的 1GB 被用完前快速上线）&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&amp;lt;hr&amp;gt;&lt;/p&gt;
 &lt;h2 id=&#34;往期经典&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#往期经典&#34;&gt;#&lt;/a&gt; 往期经典&lt;/h2&gt;
-&lt;p&gt;🔴&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzAxLzIxLyVFNyU4QyVBQiVFNSVBOCU5OCVFNiU4RiU5MiVFNyU5NCVCQnZvbC0xLw==&#34;&gt;猫娘插画 vol.1&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;🔵&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbWVpdHN1LmdpdGh1Yi5pby8yMDIzLzAxLzIxL2xpdmUyZCVFNiVBOCVBMSVFNSU5RSU4QiVFNSU4RiU5MSVFNSVCOCU4M3ZvbC0xLSVFNiVCNSU4NSVFOSU4NyU4RSVFNSU4RCU4MyVFNSU4RCU4RS8=&#34;&gt;live2d 模型发布 vol.1 - 浅野千华&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;🔴&lt;a href=&#34;https://ameitsu.github.io/2023/01/21/%E7%8C%AB%E5%A8%98%E6%8F%92%E7%94%BBvol-1/&#34;&gt;猫娘插画 vol.1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;🔵&lt;a href=&#34;https://ameitsu.github.io/2023/01/21/live2d%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83vol-1-%E6%B5%85%E9%87%8E%E5%8D%83%E5%8D%8E/&#34;&gt;live2d 模型发布 vol.1 - 浅野千华&lt;/a&gt;&lt;/p&gt;
 </content>
         <category term="原创" />
         <category term="多图杀猫" />
@@ -1651,9 +1651,9 @@ Flexicity 系列全部为低地板设计，每列全长 32 米，由 5 个模块
         <updated>2023-01-22T09:04:52.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/miscellaneous/%E5%BB%BA%E7%AB%99%E5%AE%A3%E8%A8%80-885986540e7e/</id>
+        <id>http://ameitsu.github.io/uncategorized/miscellaneous/%E5%BB%BA%E7%AB%99%E5%AE%A3%E8%A8%80/</id>
         <title>建 站 宣 言</title>
-        <link rel="alternate" href="http://example.com/miscellaneous/%E5%BB%BA%E7%AB%99%E5%AE%A3%E8%A8%80-885986540e7e/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/miscellaneous/%E5%BB%BA%E7%AB%99%E5%AE%A3%E8%A8%80/"/>
         <content type="html">&lt;h1 id=&#34;建-站-宣-言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#建-站-宣-言&#34;&gt;#&lt;/a&gt; 建 站 宣 言 ！&lt;/h1&gt;
 &lt;h2 id=&#34;2023年1月21日ameitsu-cyberpark正式开始运作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2023年1月21日ameitsu-cyberpark正式开始运作&#34;&gt;#&lt;/a&gt; 2023 年 1 月 21 日，Ameitsu Cyberpark 正式开始运作&lt;/h2&gt;
 &lt;p&gt;期间，为了达成在人类互联网世界有立足之地，STY，克服了以下困难&lt;/p&gt;

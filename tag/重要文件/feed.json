@@ -2,11 +2,11 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "Cyberpark Nichome • All posts by \"重要文件\" tag",
     "description": "本站基于hexo，同时部分内容来自一个在某只不愿透露姓名的猫娘上的脑机接口。没有任何猫娘因为本站而受到伤害。",
-    "home_page_url": "http://example.com",
+    "home_page_url": "http://ameitsu.github.io",
     "items": [
         {
-            "id": "http://example.com/miscellaneous/%E5%BB%BA%E7%AB%99%E5%AE%A3%E8%A8%80-885986540e7e/",
-            "url": "http://example.com/miscellaneous/%E5%BB%BA%E7%AB%99%E5%AE%A3%E8%A8%80-885986540e7e/",
+            "id": "http://ameitsu.github.io/uncategorized/miscellaneous/%E5%BB%BA%E7%AB%99%E5%AE%A3%E8%A8%80/",
+            "url": "http://ameitsu.github.io/uncategorized/miscellaneous/%E5%BB%BA%E7%AB%99%E5%AE%A3%E8%A8%80/",
             "title": "建 站 宣 言",
             "date_published": "2023-01-21T10:02:03.000Z",
             "content_html": "<h1 id=\"建-站-宣-言\"><a class=\"anchor\" href=\"#建-站-宣-言\">#</a> 建 站 宣 言 ！</h1>\n<h2 id=\"2023年1月21日ameitsu-cyberpark正式开始运作\"><a class=\"anchor\" href=\"#2023年1月21日ameitsu-cyberpark正式开始运作\">#</a> 2023 年 1 月 21 日，Ameitsu Cyberpark 正式开始运作</h2>\n<p>期间，为了达成在人类互联网世界有立足之地，STY，克服了以下困难</p>\n<ul>\n<li>ssh 连不上</li>\n<li>ssh 连不上 github 的 22 号端口</li>\n<li>githubpages 被墙</li>\n<li>bash 出现极大的问题</li>\n<li>……</li>\n</ul>\n<p>但是，不论如何，Cyberpark 还是开放了！<br />\n现规定 Cyberpark 的内容<br />\n<span id=\"more\"></span></p>\n<ol>\n<li>插画 (全年龄 doge)</li>\n<li>技术问题</li>\n<li>睿智梗图</li>\n<li>离谱游记</li>\n<li>数理化离谱题（远期计划）</li>\n</ol>\n<p>编辑于 2023/1/21，春节前，STY</p>\n<p>&lt;hr&gt;</p>\n<h1 id=\"建站宣言修正案a\"><a class=\"anchor\" href=\"#建站宣言修正案a\">#</a> 建站宣言修正案 A</h1>\n<h2 id=\"更改内容\"><a class=\"anchor\" href=\"#更改内容\">#</a> 更改内容</h2>\n<ol>\n<li><strong>删除了</strong> 原文中直接的第一人称</li>\n<li><strong>删除了</strong> 内容一节中梗图的说明</li>\n<li><strong>通过了</strong> 在单独页面中编辑 Cyberpark 章程的决定</li>\n<li><strong>增加了</strong> 新章程删除条目的要求</li>\n<li><strong>确定了</strong> 未来 github pages 空间用完后的新站计划</li>\n</ol>\n<h2 id=\"内容说明\"><a class=\"anchor\" href=\"#内容说明\">#</a> 内容说明</h2>\n<ol>\n<li>建站宣言是较重要的页面，不应使用第一人称</li>\n<li>梗图的获取方式为从视频中截图，然而操作不易，难以一次更新多张图片；尽可能减少一些空间损耗</li>\n<li>独立的页面是重要页面的基本要求</li>\n<li>目前已有删除段落的操作，需要统一的规定以确保格式一致</li>\n<li>github pages 的空间为 1GB，在若干年后会耗尽</li>\n</ol>\n",
