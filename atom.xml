@@ -3,23 +3,218 @@
     <id>http://ameitsu.github.io</id>
     <title>Cyberpark Nichome</title>
     <link href="http://ameitsu.github.io" />
-    <updated>2023-08-28T08:15:03.000Z</updated>
+    <updated>2023-08-29T01:06:11.000Z</updated>
     <category term="Python" />
     <category term="SofTY" />
     <category term="原创" />
+    <category term="at STY" />
     <category term="学习" />
+    <category term="STY的初三大事记" />
+    <category term="多图杀猫" />
+    <category term="高中牲STY" />
     <category term="Ameitsu Orchestra" />
-    <category term="重要文件" />
+    <category term="重要页面" />
+    <category term="铁路" />
+    <category term="冷门铁路史系列" />
     <category term="游记" />
     <category term="北京" />
     <category term="标题党" />
-    <category term="多图杀猫" />
-    <category term="at STY" />
-    <category term="STY的初三大事记" />
-    <category term="唠嗑" />
-    <category term="高中牲STY" />
-    <category term="铁路" />
-    <category term="冷门铁路史系列" />
+    <entry>
+        <id>http://ameitsu.github.io/uncategorized/miscellaneous/%E5%AF%B9%E4%BA%8E%E9%83%A8%E5%88%86%E9%81%97%E7%95%99%E9%97%AE%E9%A2%98%E7%9A%84%E7%BB%9F%E4%B8%80%E8%A7%84%E5%AE%9A/</id>
+        <title>站内页面 | 对部分遗留问题的统一规定</title>
+        <link rel="alternate" href="http://ameitsu.github.io/uncategorized/miscellaneous/%E5%AF%B9%E4%BA%8E%E9%83%A8%E5%88%86%E9%81%97%E7%95%99%E9%97%AE%E9%A2%98%E7%9A%84%E7%BB%9F%E4%B8%80%E8%A7%84%E5%AE%9A/"/>
+        <content type="html">&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;本页面会持续更新&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;在 AC 新站成功转移到本站 github pages 仓库时，对本站曾经一些投稿中出现的含糊不清的表述进行规范和确定是很重要的，因为这算是全新的开始。&lt;/p&gt;
+&lt;p&gt;下面从网站本身和各个栏目的角度进行说明&lt;/p&gt;
+&lt;h1 id=&#34;全站&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#全站&#34;&gt;#&lt;/a&gt; 全站&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;在设定中，被改造成半机械化服务器猫娘的是浅野千华吗？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;不是&lt;/strong&gt;。她是&lt;strong&gt;西冈徇羽&lt;/strong&gt;，是未公开的浅野物语中的角色，在 STY 的 C++ 笔记中被当成各种实例的主人公。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;“建站宣言” 是否应删除？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;不会&lt;/strong&gt;。这是一个时期的见证，会作为文物存在下去。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;STY 会入手那个 &lt;code&gt;.online&lt;/code&gt;  域名吗？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;会&lt;/strong&gt;。但是不太可能在高一。主要的原因是目前的域名服务提供商要求用户实名制，还只支持支付宝上的实名制小程序，而我只有因为微信零钱而开通的微信支付。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;about 页记录的 STY 相关介绍是烟雾弹吗？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;否&lt;/strong&gt;。除了名字等敏感信息未公开外，那个页面上的内容 100% 属实，包括 xp。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;本站文章如果含有过多报废图片链接，会删除吗？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;否&lt;/strong&gt;。对于符合&lt;a href=&#34;https://ameitsu.github.io/uncategorized/at_STY/%25E5%258E%2586%25E5%258F%25B2%25E7%259A%2584%25E6%259E%25A2%25E7%25BA%25BD%25E4%25BA%2592%25E9%2580%259A%25E5%25BC%258F%25E7%25AB%258B%25E4%25BD%2593%25E4%25BA%25A4%25E5%258F%2589/&#34;&gt; at STY vol.11 | 历史的枢纽互通式立体交叉&lt;/a&gt;中栏目说明（已同步至 about 页）的投稿，STY 会依据本地文件夹记录和上下文补充图片。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;旧 AC 的结局是怎样的？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;完整保存&lt;/strong&gt;，但不会更新或重新部署。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;sty&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sty&#34;&gt;#&lt;/a&gt; @STY&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;本栏目到底叫什么名字？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;正式的标题为 “@STY”&lt;/strong&gt;，但为了避免出现特殊字符或转义不当导致生成错误，在文件名（同时是大标题）中将 “@” 转写为 “at”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;@STY 系列为什么缺少 vol.8 和 vol.9？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;有被删除的页面&lt;/strong&gt;。在暑假开始前，本系列只有 9 个页面。在 AC 迁移计划开始后，本系列的 vol.2 和 vol.3 因与学习生活无关和质量低的原因在旧 AC 被删除，vol.4-9 向前顺位补充空缺编号。迁移工作进行中，为不影响新站施工，新页面都是在旧 AC 中编辑的，而按旧 AC 顺序新写的两篇应为 vol.10 和 vol11。新写的两篇在同步到新 AC 时未考虑编号问题，所以在新 AC 中，vol.7 后面直接是 vol.10。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;在 vol.1 中，STY 真的占到小便宜了吗？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;还有我的电脑比旁边的慢一会儿，所以我在别人作答快结束了才能答题，含泪占了小便宜 233&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;否&lt;/strong&gt;。当时耳机隔音效果和自己家墙一样滴水不漏，事实上听不清旁边同学作答的清晰声音，只能根据发音的相似性姑且判断自己的答案和其他人一不一样。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;vol.2 中 “梦开始的地方” 到底指什么？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;没想好&lt;/strong&gt;。但是有以下几种备选的解释：其一，指这是最初的 “唠嗑系列” 第一篇；其二，指初三三次大考的开始；其三，STY 走的是直升路线，第一次直升考试自然可以被称作有 “梦开始的地方”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;vol.2 中这一段表述是否为意淫？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我就是那种发成绩了才有女孩纸来问成绩来排名的小透明&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;否&lt;/strong&gt;。事实上，这是有实际案例的。有一名我无法提供姓名的女生和我的一年来唯一一条微信聊天记录就是问分的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;vol.2 中这一段幸灾乐祸环节是否属实？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;据考试后隔壁考场的我一个缺德朋友表示被传成我初恋的我小学同桌错了最后一个多选，喜大普奔希望她没事。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;疑为假&lt;/strong&gt;。首先，这个消息是 “缺德朋友” 给的，有一定虚构的可能性。其次，据中考结束，也就是近 4 个月后我才知道她没有参加直升考试。但由于消息人士的说法含糊不清，我无法确定她是完全没参加直升考试还是没有参加第二次直升考试。不过，中考时候她坐我前面 (´｡・ᵕ・｡`)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;所以你 STY 和她什么关系？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;同学关系&lt;/strong&gt;。就是普普通通的同学关系嘛，谁都有可能和女同桌一起坐啊。才，才没有什么特别的关系呢，哼 (〃▽〃)&lt;br /&gt;
+&lt;img data-src=&#34;https://i.imgs.ovh/i/2023/08/29/64edcaa694c53.jpg&#34; alt=&#34;1693305444383.jpg&#34; title=&#34;如果你和STY聊这个，STY的表情和眼神会是这样（刻意避开说话人的目光，嘴唇轻轻上扬）&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;vol.3 中那个黑板真的那么难擦干净吗？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;是&lt;/strong&gt;。最后战绩为 15 分钟以后才完全干净。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;朝阳区的一模卷子真的比海淀区的难吗？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;是&lt;/strong&gt;。可以找找各位老师的评价。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;有人加入浅野千华二创吗？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;真有&lt;/strong&gt;。有一个男性朋友说他肯定加入，还要拉上另一个对共笔作品感兴趣的女同学加入。最后只有他和我合作了，一起把千浅野物语的正史设定完成了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;vol.4 最后的琐记的内容完全没有交代后续。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;行，我在这里续写一下&lt;/strong&gt;。&lt;br /&gt;
+本来想着直升名单会很快出来，结果 5 月 13 日上午我们班主任一个电话就打到我妈咪那里了。真的那是我毕业之前听见我们班主任说过的最后一句话。&lt;br /&gt;
+那个经常催更的热心读者和 STY 一起直升本校高中了。可见催更在未来的三年里躲不掉 (︶︹︺)&lt;br /&gt;
+ 不算子至今依然没有修好。不过也不用了，新 AC 里不会有访问次数统计。&lt;br /&gt;
+STY 收集的签名大概率散佚了。经过暑假期间三四回大扫除依然没有发现它的踪影。&lt;br /&gt;
+最后，STY 也没有跳书记舞。&lt;br /&gt;
+那个给物理老师翻译的视频最后派上用场了，可以说是很令人欣慰。&lt;br /&gt;
+另外，在拿到毕业照后我发现我是全校最黑的 ヽ (`⌒´ メ) ノ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;12&#34;&gt;
+&lt;li&gt;vol.5 里曾说高中部的那块黑板上的东西有点抽象。具体是怎样的？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;我回忆一下&lt;/strong&gt;。首先有很多键政的内容，STY 略过不说。剩下的基本上是宅文化的东西，但主要是原神（到处都是我滴妈）。还有冷门一点的，比如某个过几天（当前日期 2023.8.29）要过 16 岁生日的虚拟歌姬。黑板背后的白板上有一个她的涂鸦、《千本樱》副歌歌词和《呐呐呐》主歌前几行。对了，后面那两个都是 STY 写上去的。(◡‿◡ *)&lt;br /&gt;
+&lt;img data-src=&#34;https://i.imgs.ovh/i/2023/08/29/64edcaa4b9d2a.jpeg&#34; alt=&#34;1693305338751.jpeg&#34; /&gt;&lt;br /&gt;
+ 除此以外还有正常的表白和揭短环节，也是我们高中生喜闻乐见的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;13&#34;&gt;
+&lt;li&gt;新 AC 的语言选项真的有问题吗？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;没有问题&lt;/strong&gt;。Hexo 根目录的 config 文件支持的简体中文是 &lt;code&gt;zh-CN&lt;/code&gt; ，但 Shoka 主题的简体中文是 &lt;code&gt;zh_CN&lt;/code&gt; ，所以渲染的时候语言选项理论上是不会处理的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;14&#34;&gt;
+&lt;li&gt;vol.6 里这个情节属实吗？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实当天上午 STY 就戴上了那个狐狸耳朵，然后楼道里的几位过路同学都表示十分震撼。STY 在卫生间里都被拍了，还使某位持相机的女性盆友被当成变态。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰:&lt;strong&gt; 完全属实&lt;/strong&gt;。那位女同学拍的照片流出后在我们班被做成 meme 了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;15&#34;&gt;
+&lt;li&gt;STY 真的张贴百合宣传资料了吗？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;是真的&lt;/strong&gt;。由此还炸出了 7 个百合控。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;16&#34;&gt;
+&lt;li&gt;STY 在 vol.6 里声明过自己的身份。这是不是此地无银三百两？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;不是，这里纯属玩梗&lt;/strong&gt;。这些都出自同学的真实评价。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;softy&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#softy&#34;&gt;#&lt;/a&gt; SofTY&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;本系列为什么叫这个名字？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;凑出 STY 三个大写字母&lt;/strong&gt;。但是后来我想到了一个合理的解释：&lt;strong&gt;S&lt;/strong&gt;oftware-related content &lt;strong&gt;of&lt;/strong&gt; S&lt;strong&gt;TY&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;代综计算器的结局如何？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;鸽了&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;SofTY vol.4 到底哪里去了？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;答曰：&lt;strong&gt;很快能重启&lt;/strong&gt;。目前的选题有 “离子方程式计算器”“系列图片下载器”“三角函数训练程序” 这三个。但是不可能最近写完。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;游记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#游记&#34;&gt;#&lt;/a&gt; 游记&lt;/h1&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;等到问题多了再来添加&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;ameitsu-orchestra&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ameitsu-orchestra&#34;&gt;#&lt;/a&gt; Ameitsu Orchestra&lt;/h1&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;等到问题多了再来添加&lt;/p&gt;
+&lt;/div&gt;
+</content>
+        <category term="重要页面" />
+        <updated>2023-08-29T01:06:11.000Z</updated>
+    </entry>
     <entry>
         <id>http://ameitsu.github.io/uncategorized/at_STY/%E5%8E%86%E5%8F%B2%E7%9A%84%E6%9E%A2%E7%BA%BD%E4%BA%92%E9%80%9A%E5%BC%8F%E7%AB%8B%E4%BD%93%E4%BA%A4%E5%8F%89/</id>
         <title>at STY vol.11|历史的枢纽互通式立体交叉</title>
@@ -158,6 +353,9 @@
 &lt;/div&gt;
 &lt;p&gt;就酱。&lt;/p&gt;
 </content>
+        <category term="原创" />
+        <category term="at STY" />
+        <category term="高中牲STY" />
         <updated>2023-08-28T08:15:03.000Z</updated>
     </entry>
     <entry>
@@ -223,8 +421,7 @@
 &lt;/ul&gt;
 &lt;h1 id=&#34;本站第三次危机2023811解除&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本站第三次危机2023811解除&#34;&gt;#&lt;/a&gt; 本站第三次危机（2023/8/11 解除）&lt;/h1&gt;
 &lt;p&gt;&lt;s&gt;一言以蔽之：图床第二次挂了，爬了一下后返回的状态码为 521，也就是说服务器不听使唤。所以说不是自己图床就千万不要完全信任。或者，来一个百分之百能保证不挂的图床&lt;/s&gt;&lt;/p&gt;
-&lt;p&gt;&amp;lt;del&amp;gt; 但是我有一个鬼点子！我可以注册一个微信公众号，然后往上面发图片，再把图片的 url 扣下来（白嫖微信服务器）！这个计划最大的好处是在解决网页版图片缺失的情况下还可以把全站内容复制到另一个平台上。(¬‿¬ )&amp;lt;/del&amp;gt;&lt;br /&gt;
- 没事儿了，已经找到了替代品。那个图床还说自己可稳定了，我暂且相信它一下。但是我发现用户协议里居然把动漫相关的东西当做违禁内容！可见本站的插画栏目搞不下去了……&lt;/p&gt;
+&lt;p&gt;没事儿了，已经找到了替代品。那个图床还说自己可稳定了，我暂且相信它一下。但是我发现用户协议里居然把动漫相关的东西当做违禁内容！可见本站的插画栏目搞不下去了……&lt;/p&gt;
 &lt;h1 id=&#34;隆重介绍一下static-download-page-of-ameitsu-cyberpark&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#隆重介绍一下static-download-page-of-ameitsu-cyberpark&#34;&gt;#&lt;/a&gt; 隆重介绍一下 Static Download Page of Ameitsu Cyberpark©&lt;/h1&gt;
 &lt;p&gt;这就是以后的下载区！o (≧▽≦) o&lt;/p&gt;
 &lt;p&gt;在接触不少 python 第三方库下载镜像站时，STY 对这些镜像站简洁明了（简单粗暴）的设计感到十分着迷。这些镜像往往在 &lt;code&gt;&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;&lt;/code&gt;  里先用 &lt;code&gt;&amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;&lt;/code&gt;  把标题打出来，然后就是无数个 &lt;code&gt;&amp;lt;a href=&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;  插链接，甚至连 CSS 都一句不用。&lt;/p&gt;
@@ -243,13 +440,13 @@
 &lt;p&gt;希望人没事🙏（发自真心）&lt;/p&gt;
 &lt;p&gt;就酱。&lt;/p&gt;
 </content>
-        <category term="唠嗑" />
+        <category term="at STY" />
         <category term="高中牲STY" />
         <updated>2023-07-31T14:13:51.000Z</updated>
     </entry>
     <entry>
         <id>http://ameitsu.github.io/uncategorized/ameitsu_orchestra/AmeistuOrchestra%20vol-3/</id>
-        <title>Ameitsu Orchestra| vol.3</title>
+        <title>Ameitsu Orchestra vol.3|《枪炮、病菌和钢铁（Guns, Germs and Steel）》读后感</title>
         <link rel="alternate" href="http://ameitsu.github.io/uncategorized/ameitsu_orchestra/AmeistuOrchestra%20vol-3/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;注：这还是 STY 的暑假作业之一，主要是七月三稿想不出来写什么，干脆拿着个先占个位置，后面再去补一个好东西（遥遥无期啊 www）&lt;/p&gt;
@@ -286,7 +483,7 @@
     </entry>
     <entry>
         <id>http://ameitsu.github.io/uncategorized/ameitsu_orchestra/AmeistuOrchestra%20vol-2/</id>
-        <title>Ameitsu Orchestra| vol.2</title>
+        <title>Ameitsu Orchestra vol.2|《地球的力量》观后感</title>
         <link rel="alternate" href="http://ameitsu.github.io/uncategorized/ameitsu_orchestra/AmeistuOrchestra%20vol-2/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;注：这是 STY 的暑假作业之一，主要是七月二稿想不出来写什么，干脆拿着个先占个位置，后面再去补一个好东西&lt;/p&gt;
@@ -502,8 +699,8 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
 &lt;p&gt;就酱。&lt;/p&gt;
 </content>
         <category term="原创" />
-        <category term="学习" />
         <category term="at STY" />
+        <category term="学习" />
         <category term="STY的初三大事记" />
         <updated>2023-06-23T13:35:53.000Z</updated>
     </entry>
@@ -604,7 +801,7 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
 &lt;h1 id=&#34;整活吧猫娘少年注&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#整活吧猫娘少年注&#34;&gt;#&lt;/a&gt; 整活吧！猫娘少年【注】&lt;/h1&gt;
 &lt;p&gt;是的，STY 去整活了，但只是一个小活。就是把以下这张照片贴在了义卖现场&lt;br /&gt;
 &lt;img data-src=&#34;https://i.imgloc.com/2023/06/16/Vb6nLy.jpeg&#34; alt=&#34;Vb6nLy.jpeg&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;百合の妨害は死刑 &lt;ruby&gt;百合&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;ゆり&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; の&lt;rt&gt;&lt;/rt&gt;妨害&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;ぼうかい&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; は&lt;rt&gt;&lt;/rt&gt;死&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;しけ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; &lt;rt&gt;&lt;/rt&gt;刑&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;い&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ruby&gt;百合&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;ゆり&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; の&lt;rt&gt;&lt;/rt&gt;妨害&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;ぼうかい&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; は&lt;rt&gt;&lt;/rt&gt;死&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;しけ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; &lt;rt&gt;&lt;/rt&gt;刑&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;い&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/06/14/VOBvbX.jpeg&#34; alt=&#34;VOBvbX.jpeg&#34; /&gt;&lt;br /&gt;
  最后炸出来 7 个百合控，也算是找到组织啦。&lt;/p&gt;
 &lt;p&gt;同时 STY 将本站广告也进行了张贴，最后的结果是让周围的老同学直呼大为震惊。&lt;/p&gt;
@@ -620,9 +817,9 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
 &lt;p&gt;不过嘛更新频率起码可以保证，也算是好事了吧（并不）。&lt;/p&gt;
 </content>
         <category term="原创" />
-        <category term="多图杀猫" />
         <category term="at STY" />
         <category term="STY的初三大事记" />
+        <category term="多图杀猫" />
         <updated>2023-06-13T12:57:27.000Z</updated>
     </entry>
     <entry>
@@ -689,6 +886,7 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
 &lt;p&gt;就酱。&lt;/p&gt;
 </content>
         <category term="原创" />
+        <category term="at STY" />
         <category term="学习" />
         <category term="STY的初三大事记" />
         <updated>2023-06-03T02:48:45.000Z</updated>
@@ -700,11 +898,6 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
         <content type="html">&lt;div class=&#34;note success&#34;&gt;
 &lt;p&gt;终于结束了……&lt;/p&gt;
 &lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;大渣好，偶系 STY。写之前我要冷静一下&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/03/18/MOn8Z.jpeg&#34; alt=&#34;MOn8Z.jpeg&#34; /&gt;&lt;br /&gt;
-——@STY 篇 4&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;p&gt;是的，今天是 2023 年 5 月 13 号，距离第一次直升考 58 天，距离刚刚过去的一模 14 天。&lt;/p&gt;
 &lt;p&gt;然后，STY 整个初三的三场大考就这么过去了！！！！真不禁让人感慨一下 STYNB。&lt;/p&gt;
 &lt;p&gt;第二次直升考照样和第一次一样&lt;strong&gt;奇怪且恶心&lt;/strong&gt;，烦人到不知道怎么吐槽。彳亍，就按科目来吧。&lt;/p&gt;
@@ -817,6 +1010,7 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
 &lt;p&gt;就酱。&lt;/p&gt;
 </content>
         <category term="原创" />
+        <category term="at STY" />
         <category term="学习" />
         <category term="STY的初三大事记" />
         <updated>2023-05-13T13:33:04.000Z</updated>
@@ -1002,8 +1196,8 @@ Lauren Young is Science Friday&#39;s web producer and the lead reporter on a thr
 &lt;/blockquote&gt;
 </content>
         <category term="原创" />
-        <category term="学习" />
         <category term="at STY" />
+        <category term="学习" />
         <category term="STY的初三大事记" />
         <updated>2023-04-25T14:49:42.000Z</updated>
     </entry>
@@ -1203,8 +1397,8 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;就酱。&lt;/p&gt;
 </content>
         <category term="原创" />
-        <category term="学习" />
         <category term="at STY" />
+        <category term="学习" />
         <category term="STY的初三大事记" />
         <updated>2023-03-18T14:36:32.000Z</updated>
     </entry>
@@ -1252,8 +1446,8 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;就酱。&lt;/p&gt;
 </content>
         <category term="原创" />
-        <category term="学习" />
         <category term="at STY" />
+        <category term="学习" />
         <category term="STY的初三大事记" />
         <updated>2023-02-26T02:30:00.000Z</updated>
     </entry>
@@ -1783,10 +1977,10 @@ Flexicity 系列全部为低地板设计，每列全长 32 米，由 5 个模块
 &lt;p&gt;🔵&lt;a href=&#34;https://ameitsu.github.io/2023/01/21/live2d%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83vol-1-%E6%B5%85%E9%87%8E%E5%8D%83%E5%8D%8E/&#34;&gt;live2d 模型发布 vol.1 - 浅野千华&lt;/a&gt;&lt;/p&gt;
 </content>
         <category term="原创" />
+        <category term="多图杀猫" />
         <category term="游记" />
         <category term="北京" />
         <category term="标题党" />
-        <category term="多图杀猫" />
         <updated>2023-01-22T09:04:52.000Z</updated>
     </entry>
     <entry>
@@ -1804,8 +1998,8 @@ Flexicity 系列全部为低地板设计，每列全长 32 米，由 5 个模块
 &lt;li&gt;……&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;但是，不论如何，Cyberpark 还是开放了！&lt;br /&gt;
-现规定 Cyberpark 的内容&lt;br /&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+现规定 Cyberpark 的内容&lt;/p&gt;
+&lt;p&gt;&amp;lt;del&amp;gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;插画 (全年龄 doge)&lt;/li&gt;
 &lt;li&gt;技术问题&lt;/li&gt;
@@ -1814,7 +2008,8 @@ Flexicity 系列全部为低地板设计，每列全长 32 米，由 5 个模块
 &lt;li&gt;数理化离谱题（远期计划）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;编辑于 2023/1/21，春节前，STY&lt;/p&gt;
-&lt;p&gt;&amp;lt;hr&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;/del&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;del&amp;gt;&lt;/p&gt;
 &lt;h1 id=&#34;建站宣言修正案a&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#建站宣言修正案a&#34;&gt;#&lt;/a&gt; 建站宣言修正案 A&lt;/h1&gt;
 &lt;h2 id=&#34;更改内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#更改内容&#34;&gt;#&lt;/a&gt; 更改内容&lt;/h2&gt;
 &lt;ol&gt;
@@ -1832,8 +2027,12 @@ Flexicity 系列全部为低地板设计，每列全长 32 米，由 5 个模块
 &lt;li&gt;目前已有删除段落的操作，需要统一的规定以确保格式一致&lt;/li&gt;
 &lt;li&gt;github pages 的空间为 1GB，在若干年后会耗尽&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&amp;lt;/del&amp;gt;&lt;/p&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;本页面已经确认失效。目前等效的页面是&lt;a href=&#34;https://ameitsu.github.io/about/&#34;&gt;新的 about 页&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 </content>
-        <category term="重要文件" />
+        <category term="重要页面" />
         <updated>2023-01-21T10:02:03.000Z</updated>
     </entry>
 </feed>
