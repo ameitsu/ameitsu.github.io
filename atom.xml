@@ -4,18 +4,18 @@
     <title>Cyberpark Nichome</title>
     <link href="http://ameitsu.github.io" />
     <updated>2023-08-29T01:06:11.000Z</updated>
+    <category term="Ameitsu Orchestra" />
+    <category term="原创" />
     <category term="Python" />
     <category term="SofTY" />
-    <category term="原创" />
     <category term="学习" />
-    <category term="Ameitsu Orchestra" />
-    <category term="重要页面" />
     <category term="at STY" />
     <category term="STY的初三大事记" />
     <category term="多图杀猫" />
     <category term="高中牲STY" />
     <category term="铁路" />
     <category term="冷门铁路史系列" />
+    <category term="重要页面" />
     <category term="游记" />
     <entry>
         <id>http://ameitsu.github.io/%E7%AB%99%E5%86%85%E9%A1%B5%E9%9D%A2/miscellaneous/%E5%AF%B9%E4%BA%8E%E9%83%A8%E5%88%86%E9%81%97%E7%95%99%E9%97%AE%E9%A2%98%E7%9A%84%E7%BB%9F%E4%B8%80%E8%A7%84%E5%AE%9A/</id>
@@ -473,8 +473,8 @@ STY 收集的签名大概率散佚了。经过暑假期间三四回大扫除依�
 ——《枪炮、病菌和钢铁》收场白&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
-        <category term="原创" />
         <category term="Ameitsu Orchestra" />
+        <category term="原创" />
         <updated>2023-07-17T14:52:35.000Z</updated>
     </entry>
     <entry>
@@ -496,8 +496,8 @@ STY 收集的签名大概率散佚了。经过暑假期间三四回大扫除依�
 &lt;p&gt;第三个认知，是对地球力量的理解。地球的力量，仅仅是在全片的体现 “火山、大气、冰川、海洋” 也并非像核裂变一样具有毁天灭地的力量。而它们却真实地改造了地球。纪录片也揭示了这些力量的来源。以海洋为例，海洋看似只是咸水的集合体，却引发了二叠纪末期的生物大灭绝。事实上海洋内至关重要的是洋流，因为洋流串连了全世界的所有海洋。洋流依赖于热水与冷水的对流，但二叠纪末期由于气候变暖水域之间的温度差已经开始缩小，导致洋流逐渐停止，使地球的海水成为了一潭全球范围的死水塘，引发海洋物种的灭绝。同时气候变暖也因为海水升温而继续，导致陆地上蒸发量增大，大部分陆地生物也难逃灭绝的命运。所以，地球的力量来源于各个要素的因果关系，这也是人类要尽力在 21 世纪 20 年代以后控制的。&lt;/p&gt;
 &lt;p&gt;《地球的力量》无疑对于自然地理的理解有独特的价值，尤其是对于气候变暖、海平面上升，出现各种环境挑战与伴生问题的现在。这部纪录片通过对地球力量的剖析，为我们理解地球，保护地球起到了积极的作用。随着一项项环境议定书的批准，各国环境政策的出台，我们这颗有着不羁力量的蓝色行星应当会持续搏动下去。&lt;/p&gt;
 </content>
-        <category term="原创" />
         <category term="Ameitsu Orchestra" />
+        <category term="原创" />
         <updated>2023-07-16T02:49:17.000Z</updated>
     </entry>
     <entry>
@@ -578,8 +578,8 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
 🟣6.	&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud2lraXdhbmQuY29tL2VuL0RpZ2l0YWxfZGFya19hZ2U=&#34;&gt;https://www.wikiwand.com/en/Digital_dark_age&lt;/span&gt;&lt;br /&gt;
 🟤7.	&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYnJpdGFubmljYS5jb20vZXZlbnQvRGFyay1BZ2Vz&#34;&gt;https://www.britannica.com/event/Dark-Ages&lt;/span&gt;&lt;/p&gt;
 </content>
-        <category term="原创" />
         <category term="Ameitsu Orchestra" />
+        <category term="原创" />
         <updated>2023-07-03T14:21:00.000Z</updated>
     </entry>
     <entry>
@@ -1061,19 +1061,22 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
 &lt;p&gt;(2). 点 P 是线段 AB 上的的任意一点，点 C 为线段 OB 上任意一点（不与点 B 重合）. 当 r = 3√21 时，⊙O 上不存在点 P 关于点 C 的‘k 关联点‘，直接写出 k 的取值范围:________.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;根据这个什么关联点的定义，能大致画一个这样的草图。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/30/iLZ2eP.jpeg&#34; alt=&#34;iLZ2eP.jpeg&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;本部分的电子作图为 2023 年 8 月 31 日添加，仅为原始过程的电子版，3 个月以后的 STY 不对此部分文字或图片内容负责&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdnjson.com/images/2023/08/31/1.jpg&#34; alt=&#34;1.jpg&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;啊你问为什么非得往上画那个关联点点 N？因为往上画的 k 值更小。&lt;/p&gt;
 &lt;p&gt;然后再作 &lt;code&gt;ND⊥y&lt;/code&gt; ，作 &lt;code&gt;PF⊥y&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/30/iLZb0t.jpeg&#34; alt=&#34;iLZb0t.jpeg&#34; /&gt;&lt;br /&gt;
- 诶！这不是 &lt;code&gt;三垂直模型&lt;/code&gt; 的相似嘛！于是可以设 &lt;code&gt;DC=a&lt;/code&gt; 、 &lt;code&gt;ND=b&lt;/code&gt; 、 &lt;code&gt;FP=ak&lt;/code&gt; 、 &lt;code&gt;CF=bk&lt;/code&gt; &lt;br /&gt;
-&lt;img data-src=&#34;https://i.imgloc.com/2023/04/30/iLZlZE.jpeg&#34; alt=&#34;iLZlZE.jpeg&#34; /&gt;&lt;br /&gt;
-&lt;img data-src=&#34;https://i.imgloc.com/2023/04/30/iLZwOC.jpeg&#34; alt=&#34;iLZwOC.jpeg&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;再连一下 &lt;code&gt;NF&lt;/code&gt; ，这下就清楚了：终极目标是找到最小的 k，使 &lt;code&gt;NF&lt;/code&gt; =3√21。为了找最小的 k，a 和 b 都应该取最大值，因此 ak 和 bk 都要是最大值。依据题目要求，ak 最大是 3，bk 最大是 3√3。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/30/iLZHaX.jpeg&#34; alt=&#34;iLZHaX.jpeg&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;所以接下来就是在 &lt;code&gt;Rt∆DNF&lt;/code&gt;  中求一下就行。（很明显跳了亿点步骤）&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/05/03/iM5Bkb.png&#34; alt=&#34;iM5Bkb.png&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;虽然解有两个，但这里是线段！线段的长度不可能有负数，所以只能取 k = √3/3，即 k 的最小值为√3/3。&lt;/p&gt;
-&lt;p&gt;再加上点 C 不与点 B 重合，说明 bk 取不到 3√3，所以最终的答案为 &lt;code&gt;k ≥ √3/3 &lt;/code&gt; ，结束。&lt;/p&gt;
+&lt;p&gt;诶！这不是 &lt;code&gt;三垂直模型&lt;/code&gt; 的相似嘛！于是可以设 &lt;code&gt;DC=a&lt;/code&gt; 、 &lt;code&gt;ND=b&lt;/code&gt; 、 &lt;code&gt;FP=ak&lt;/code&gt; 、 &lt;code&gt;CF=bk&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://cdnjson.com/images/2023/08/31/2.jpg&#34; alt=&#34;2.jpg&#34; /&gt;&lt;br /&gt;
+ 再连一下 &lt;code&gt;NF&lt;/code&gt; ，这下就清楚了：终极目标是找到最小的 k，使 &lt;code&gt;NF&lt;/code&gt; =3√21。为了找最小的 k，a 和 b 都应该取最大值，因此 ak 和 bk 都要是最大值。依据题目要求，ak 最大是 3，bk 最大是 3√3。&lt;br /&gt;
+&lt;img data-src=&#34;https://cdnjson.com/images/2023/08/31/3.jpg&#34; alt=&#34;3.jpg&#34; /&gt;&lt;br /&gt;
+ 所以接下来就是在 &lt;code&gt;Rt∆DNF&lt;/code&gt;  中求一下就行。（很明显跳了亿点步骤）&lt;br /&gt;
+&lt;img data-src=&#34;https://cdnjson.com/images/2023/08/31/-2023-08-31-113123.jpg&#34; alt=&#34;-2023-08-31-113123.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdnjson.com/images/2023/08/31/4.jpg&#34; alt=&#34;4.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;虽然解有两个，但这里是线段！线段的长度不可能有负数，所以只能取 k = √3/3，即 k 的最小值为√3/3。&lt;br /&gt;
+&lt;img data-src=&#34;https://i.imgs.ovh/i/2023/08/31/64f01a6e0f7a4.png&#34; alt=&#34;真正的.png&#34; /&gt;&lt;br /&gt;
+ 再加上点 C 不与点 B 重合，说明 bk 取不到 3√3，所以最终的答案为 &lt;code&gt;k ≥ √3/3 &lt;/code&gt; ，结束。&lt;/p&gt;
 &lt;p&gt;你看吧，确实用了不少  &lt;em&gt;&lt;strong&gt;人工智慧&lt;/strong&gt;&lt;/em&gt;。&lt;/p&gt;
 &lt;h1 id=&#34;免责声明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#免责声明&#34;&gt;#&lt;/a&gt; 免责声明&lt;/h1&gt;
 &lt;ol&gt;
@@ -1085,9 +1088,9 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
 &lt;/li&gt;
 &lt;/ol&gt;
 </content>
+        <category term="原创" />
         <category term="Python" />
         <category term="SofTY" />
-        <category term="原创" />
         <category term="学习" />
         <updated>2023-04-28T15:10:57.000Z</updated>
     </entry>
@@ -1258,9 +1261,9 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;向名人许愿 &lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;并不&lt;/span&gt; 能提高您的一模成绩&lt;/p&gt;
 &lt;/div&gt;
 </content>
+        <category term="原创" />
         <category term="Python" />
         <category term="SofTY" />
-        <category term="原创" />
         <updated>2023-04-14T14:25:47.000Z</updated>
     </entry>
     <entry>
@@ -1331,9 +1334,9 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;最后，毕竟今天是愚人节，怎么着也得参与一下吧！但是我拒绝。&lt;/p&gt;
 &lt;p&gt;但是浅野千华宇宙要进行大规模扩充了！暑假一开始就更。除了浅野双子以外还有 Scotia・Priestly, Arakansas・Yuena, 夜雨明等一堆曾经只在草稿纸上出现的人物。&lt;/p&gt;
 </content>
+        <category term="原创" />
         <category term="Python" />
         <category term="SofTY" />
-        <category term="原创" />
         <updated>2023-04-01T04:34:47.000Z</updated>
     </entry>
     <entry>

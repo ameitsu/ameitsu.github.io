@@ -7,18 +7,18 @@
         <language>zh-CN</language>
         <pubDate>Tue, 29 Aug 2023 09:06:11 +0800</pubDate>
         <lastBuildDate>Tue, 29 Aug 2023 09:06:11 +0800</lastBuildDate>
+        <category>Ameitsu Orchestra</category>
+        <category>原创</category>
         <category>Python</category>
         <category>SofTY</category>
-        <category>原创</category>
         <category>学习</category>
-        <category>Ameitsu Orchestra</category>
-        <category>重要页面</category>
         <category>at STY</category>
         <category>STY的初三大事记</category>
         <category>多图杀猫</category>
         <category>高中牲STY</category>
         <category>铁路</category>
         <category>冷门铁路史系列</category>
+        <category>重要页面</category>
         <category>游记</category>
         <item>
             <guid isPermalink="true">http://ameitsu.github.io/%E7%AB%99%E5%86%85%E9%A1%B5%E9%9D%A2/miscellaneous/%E5%AF%B9%E4%BA%8E%E9%83%A8%E5%88%86%E9%81%97%E7%95%99%E9%97%AE%E9%A2%98%E7%9A%84%E7%BB%9F%E4%B8%80%E8%A7%84%E5%AE%9A/</guid>
@@ -448,8 +448,8 @@ STY 收集的签名大概率散佚了。经过暑假期间三四回大扫除依�
             <guid isPermalink="true">http://ameitsu.github.io/Ameitsu-Orchestra/ameitsu-orchestra/AmeistuOrchestra%20vol-3/</guid>
             <title>Ameitsu Orchestra vol.3|《枪炮、病菌和钢铁（Guns, Germs and Steel）》读后感</title>
             <link>http://ameitsu.github.io/Ameitsu-Orchestra/ameitsu-orchestra/AmeistuOrchestra%20vol-3/</link>
-            <category>原创</category>
             <category>Ameitsu Orchestra</category>
+            <category>原创</category>
             <pubDate>Mon, 17 Jul 2023 22:52:35 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;注：这还是 STY 的暑假作业之一，主要是七月三稿想不出来写什么，干脆拿着个先占个位置，后面再去补一个好东西（遥遥无期啊 www）&lt;/p&gt;
@@ -484,8 +484,8 @@ STY 收集的签名大概率散佚了。经过暑假期间三四回大扫除依�
             <guid isPermalink="true">http://ameitsu.github.io/Ameitsu-Orchestra/ameitsu-orchestra/AmeistuOrchestra%20vol-2/</guid>
             <title>Ameitsu Orchestra vol.2|《地球的力量》观后感</title>
             <link>http://ameitsu.github.io/Ameitsu-Orchestra/ameitsu-orchestra/AmeistuOrchestra%20vol-2/</link>
-            <category>原创</category>
             <category>Ameitsu Orchestra</category>
+            <category>原创</category>
             <pubDate>Sun, 16 Jul 2023 10:49:17 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;注：这是 STY 的暑假作业之一，主要是七月二稿想不出来写什么，干脆拿着个先占个位置，后面再去补一个好东西&lt;/p&gt;
@@ -507,8 +507,8 @@ STY 收集的签名大概率散佚了。经过暑假期间三四回大扫除依�
             <guid isPermalink="true">http://ameitsu.github.io/Ameitsu-Orchestra/ameitsu-orchestra/AmeitsuOrchestra%20vol-1/</guid>
             <title>Ameitsu Orchestra vol.1 | Descending Digital Dark Ages</title>
             <link>http://ameitsu.github.io/Ameitsu-Orchestra/ameitsu-orchestra/AmeitsuOrchestra%20vol-1/</link>
-            <category>原创</category>
             <category>Ameitsu Orchestra</category>
+            <category>原创</category>
             <pubDate>Mon, 03 Jul 2023 22:21:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://cdnjson.com/images/2023/08/11/painting.digitaldarkages.jpg&#34; alt=&#34;painting.digitaldarkages.jpg&#34; /&gt;&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -1012,9 +1012,9 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
             <guid isPermalink="true">http://ameitsu.github.io/SofTY/SofTY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/</guid>
             <title>SofTYvol.3|科技与一模</title>
             <link>http://ameitsu.github.io/SofTY/SofTY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/</link>
+            <category>原创</category>
             <category>Python</category>
             <category>SofTY</category>
-            <category>原创</category>
             <category>学习</category>
             <pubDate>Fri, 28 Apr 2023 23:10:57 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;啊，今天是 4 月 30 号，2023 年 4 月的最后一天。就在 40 个小时之前&lt;ins&gt;举世瞩目的&lt;/ins&gt; 2023 年朝阳区初三一模结束了。SofTY 作为本站的编程 / 数学专栏真的有必要从数学压轴题里找点整活的灵感什么的。&lt;/p&gt;
@@ -1069,19 +1069,22 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
 &lt;p&gt;(2). 点 P 是线段 AB 上的的任意一点，点 C 为线段 OB 上任意一点（不与点 B 重合）. 当 r = 3√21 时，⊙O 上不存在点 P 关于点 C 的‘k 关联点‘，直接写出 k 的取值范围:________.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;根据这个什么关联点的定义，能大致画一个这样的草图。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/30/iLZ2eP.jpeg&#34; alt=&#34;iLZ2eP.jpeg&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;本部分的电子作图为 2023 年 8 月 31 日添加，仅为原始过程的电子版，3 个月以后的 STY 不对此部分文字或图片内容负责&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdnjson.com/images/2023/08/31/1.jpg&#34; alt=&#34;1.jpg&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;啊你问为什么非得往上画那个关联点点 N？因为往上画的 k 值更小。&lt;/p&gt;
 &lt;p&gt;然后再作 &lt;code&gt;ND⊥y&lt;/code&gt; ，作 &lt;code&gt;PF⊥y&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/30/iLZb0t.jpeg&#34; alt=&#34;iLZb0t.jpeg&#34; /&gt;&lt;br /&gt;
- 诶！这不是 &lt;code&gt;三垂直模型&lt;/code&gt; 的相似嘛！于是可以设 &lt;code&gt;DC=a&lt;/code&gt; 、 &lt;code&gt;ND=b&lt;/code&gt; 、 &lt;code&gt;FP=ak&lt;/code&gt; 、 &lt;code&gt;CF=bk&lt;/code&gt; &lt;br /&gt;
-&lt;img data-src=&#34;https://i.imgloc.com/2023/04/30/iLZlZE.jpeg&#34; alt=&#34;iLZlZE.jpeg&#34; /&gt;&lt;br /&gt;
-&lt;img data-src=&#34;https://i.imgloc.com/2023/04/30/iLZwOC.jpeg&#34; alt=&#34;iLZwOC.jpeg&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;再连一下 &lt;code&gt;NF&lt;/code&gt; ，这下就清楚了：终极目标是找到最小的 k，使 &lt;code&gt;NF&lt;/code&gt; =3√21。为了找最小的 k，a 和 b 都应该取最大值，因此 ak 和 bk 都要是最大值。依据题目要求，ak 最大是 3，bk 最大是 3√3。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/30/iLZHaX.jpeg&#34; alt=&#34;iLZHaX.jpeg&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;所以接下来就是在 &lt;code&gt;Rt∆DNF&lt;/code&gt;  中求一下就行。（很明显跳了亿点步骤）&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/05/03/iM5Bkb.png&#34; alt=&#34;iM5Bkb.png&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;虽然解有两个，但这里是线段！线段的长度不可能有负数，所以只能取 k = √3/3，即 k 的最小值为√3/3。&lt;/p&gt;
-&lt;p&gt;再加上点 C 不与点 B 重合，说明 bk 取不到 3√3，所以最终的答案为 &lt;code&gt;k ≥ √3/3 &lt;/code&gt; ，结束。&lt;/p&gt;
+&lt;p&gt;诶！这不是 &lt;code&gt;三垂直模型&lt;/code&gt; 的相似嘛！于是可以设 &lt;code&gt;DC=a&lt;/code&gt; 、 &lt;code&gt;ND=b&lt;/code&gt; 、 &lt;code&gt;FP=ak&lt;/code&gt; 、 &lt;code&gt;CF=bk&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://cdnjson.com/images/2023/08/31/2.jpg&#34; alt=&#34;2.jpg&#34; /&gt;&lt;br /&gt;
+ 再连一下 &lt;code&gt;NF&lt;/code&gt; ，这下就清楚了：终极目标是找到最小的 k，使 &lt;code&gt;NF&lt;/code&gt; =3√21。为了找最小的 k，a 和 b 都应该取最大值，因此 ak 和 bk 都要是最大值。依据题目要求，ak 最大是 3，bk 最大是 3√3。&lt;br /&gt;
+&lt;img data-src=&#34;https://cdnjson.com/images/2023/08/31/3.jpg&#34; alt=&#34;3.jpg&#34; /&gt;&lt;br /&gt;
+ 所以接下来就是在 &lt;code&gt;Rt∆DNF&lt;/code&gt;  中求一下就行。（很明显跳了亿点步骤）&lt;br /&gt;
+&lt;img data-src=&#34;https://cdnjson.com/images/2023/08/31/-2023-08-31-113123.jpg&#34; alt=&#34;-2023-08-31-113123.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdnjson.com/images/2023/08/31/4.jpg&#34; alt=&#34;4.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;虽然解有两个，但这里是线段！线段的长度不可能有负数，所以只能取 k = √3/3，即 k 的最小值为√3/3。&lt;br /&gt;
+&lt;img data-src=&#34;https://i.imgs.ovh/i/2023/08/31/64f01a6e0f7a4.png&#34; alt=&#34;真正的.png&#34; /&gt;&lt;br /&gt;
+ 再加上点 C 不与点 B 重合，说明 bk 取不到 3√3，所以最终的答案为 &lt;code&gt;k ≥ √3/3 &lt;/code&gt; ，结束。&lt;/p&gt;
 &lt;p&gt;你看吧，确实用了不少  &lt;em&gt;&lt;strong&gt;人工智慧&lt;/strong&gt;&lt;/em&gt;。&lt;/p&gt;
 &lt;h1 id=&#34;免责声明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#免责声明&#34;&gt;#&lt;/a&gt; 免责声明&lt;/h1&gt;
 &lt;ol&gt;
@@ -1198,9 +1201,9 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
             <guid isPermalink="true">http://ameitsu.github.io/SofTY/SofTY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB/</guid>
             <title>SofTY vol.2|凑活能用小爬虫</title>
             <link>http://ameitsu.github.io/SofTY/SofTY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB/</link>
+            <category>原创</category>
             <category>Python</category>
             <category>SofTY</category>
-            <category>原创</category>
             <pubDate>Fri, 14 Apr 2023 22:25:47 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/15/i7gSdZ.png&#34; alt=&#34;i7gSdZ.png&#34; /&gt;&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
@@ -1270,9 +1273,9 @@ res = requests.get(url=url,headers=headers)
             <guid isPermalink="true">http://ameitsu.github.io/SofTY/SofTY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8/</guid>
             <title>SofTY vol.1|代综计算器</title>
             <link>http://ameitsu.github.io/SofTY/SofTY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8/</link>
+            <category>原创</category>
             <category>Python</category>
             <category>SofTY</category>
-            <category>原创</category>
             <pubDate>Sat, 01 Apr 2023 12:34:47 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/01/iHV0Ny.jpeg&#34; alt=&#34;iHV0Ny.jpeg&#34; /&gt;&lt;br /&gt;
  最近的代综题好烦，先去只有&lt;ins&gt;半扇门&lt;/ins&gt;的学校厕所哭一会儿（太夸张了⑧）&lt;br /&gt;

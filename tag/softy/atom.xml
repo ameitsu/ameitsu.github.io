@@ -4,18 +4,18 @@
     <title>Cyberpark Nichome • Posts by &#34;softy&#34; tag</title>
     <link href="http://ameitsu.github.io" />
     <updated>2023-04-28T15:10:57.000Z</updated>
+    <category term="Ameitsu Orchestra" />
+    <category term="原创" />
     <category term="Python" />
     <category term="SofTY" />
-    <category term="原创" />
     <category term="学习" />
-    <category term="Ameitsu Orchestra" />
-    <category term="重要页面" />
     <category term="at STY" />
     <category term="STY的初三大事记" />
     <category term="多图杀猫" />
     <category term="高中牲STY" />
     <category term="铁路" />
     <category term="冷门铁路史系列" />
+    <category term="重要页面" />
     <category term="游记" />
     <entry>
         <id>http://ameitsu.github.io/SofTY/SofTY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/</id>
@@ -73,19 +73,22 @@
 &lt;p&gt;(2). 点 P 是线段 AB 上的的任意一点，点 C 为线段 OB 上任意一点（不与点 B 重合）. 当 r = 3√21 时，⊙O 上不存在点 P 关于点 C 的‘k 关联点‘，直接写出 k 的取值范围:________.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;根据这个什么关联点的定义，能大致画一个这样的草图。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/30/iLZ2eP.jpeg&#34; alt=&#34;iLZ2eP.jpeg&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;本部分的电子作图为 2023 年 8 月 31 日添加，仅为原始过程的电子版，3 个月以后的 STY 不对此部分文字或图片内容负责&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdnjson.com/images/2023/08/31/1.jpg&#34; alt=&#34;1.jpg&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;啊你问为什么非得往上画那个关联点点 N？因为往上画的 k 值更小。&lt;/p&gt;
 &lt;p&gt;然后再作 &lt;code&gt;ND⊥y&lt;/code&gt; ，作 &lt;code&gt;PF⊥y&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/30/iLZb0t.jpeg&#34; alt=&#34;iLZb0t.jpeg&#34; /&gt;&lt;br /&gt;
- 诶！这不是 &lt;code&gt;三垂直模型&lt;/code&gt; 的相似嘛！于是可以设 &lt;code&gt;DC=a&lt;/code&gt; 、 &lt;code&gt;ND=b&lt;/code&gt; 、 &lt;code&gt;FP=ak&lt;/code&gt; 、 &lt;code&gt;CF=bk&lt;/code&gt; &lt;br /&gt;
-&lt;img data-src=&#34;https://i.imgloc.com/2023/04/30/iLZlZE.jpeg&#34; alt=&#34;iLZlZE.jpeg&#34; /&gt;&lt;br /&gt;
-&lt;img data-src=&#34;https://i.imgloc.com/2023/04/30/iLZwOC.jpeg&#34; alt=&#34;iLZwOC.jpeg&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;再连一下 &lt;code&gt;NF&lt;/code&gt; ，这下就清楚了：终极目标是找到最小的 k，使 &lt;code&gt;NF&lt;/code&gt; =3√21。为了找最小的 k，a 和 b 都应该取最大值，因此 ak 和 bk 都要是最大值。依据题目要求，ak 最大是 3，bk 最大是 3√3。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/30/iLZHaX.jpeg&#34; alt=&#34;iLZHaX.jpeg&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;所以接下来就是在 &lt;code&gt;Rt∆DNF&lt;/code&gt;  中求一下就行。（很明显跳了亿点步骤）&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/05/03/iM5Bkb.png&#34; alt=&#34;iM5Bkb.png&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;虽然解有两个，但这里是线段！线段的长度不可能有负数，所以只能取 k = √3/3，即 k 的最小值为√3/3。&lt;/p&gt;
-&lt;p&gt;再加上点 C 不与点 B 重合，说明 bk 取不到 3√3，所以最终的答案为 &lt;code&gt;k ≥ √3/3 &lt;/code&gt; ，结束。&lt;/p&gt;
+&lt;p&gt;诶！这不是 &lt;code&gt;三垂直模型&lt;/code&gt; 的相似嘛！于是可以设 &lt;code&gt;DC=a&lt;/code&gt; 、 &lt;code&gt;ND=b&lt;/code&gt; 、 &lt;code&gt;FP=ak&lt;/code&gt; 、 &lt;code&gt;CF=bk&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://cdnjson.com/images/2023/08/31/2.jpg&#34; alt=&#34;2.jpg&#34; /&gt;&lt;br /&gt;
+ 再连一下 &lt;code&gt;NF&lt;/code&gt; ，这下就清楚了：终极目标是找到最小的 k，使 &lt;code&gt;NF&lt;/code&gt; =3√21。为了找最小的 k，a 和 b 都应该取最大值，因此 ak 和 bk 都要是最大值。依据题目要求，ak 最大是 3，bk 最大是 3√3。&lt;br /&gt;
+&lt;img data-src=&#34;https://cdnjson.com/images/2023/08/31/3.jpg&#34; alt=&#34;3.jpg&#34; /&gt;&lt;br /&gt;
+ 所以接下来就是在 &lt;code&gt;Rt∆DNF&lt;/code&gt;  中求一下就行。（很明显跳了亿点步骤）&lt;br /&gt;
+&lt;img data-src=&#34;https://cdnjson.com/images/2023/08/31/-2023-08-31-113123.jpg&#34; alt=&#34;-2023-08-31-113123.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdnjson.com/images/2023/08/31/4.jpg&#34; alt=&#34;4.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;虽然解有两个，但这里是线段！线段的长度不可能有负数，所以只能取 k = √3/3，即 k 的最小值为√3/3。&lt;br /&gt;
+&lt;img data-src=&#34;https://i.imgs.ovh/i/2023/08/31/64f01a6e0f7a4.png&#34; alt=&#34;真正的.png&#34; /&gt;&lt;br /&gt;
+ 再加上点 C 不与点 B 重合，说明 bk 取不到 3√3，所以最终的答案为 &lt;code&gt;k ≥ √3/3 &lt;/code&gt; ，结束。&lt;/p&gt;
 &lt;p&gt;你看吧，确实用了不少  &lt;em&gt;&lt;strong&gt;人工智慧&lt;/strong&gt;&lt;/em&gt;。&lt;/p&gt;
 &lt;h1 id=&#34;免责声明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#免责声明&#34;&gt;#&lt;/a&gt; 免责声明&lt;/h1&gt;
 &lt;ol&gt;
@@ -97,9 +100,9 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 </content>
+        <category term="原创" />
         <category term="Python" />
         <category term="SofTY" />
-        <category term="原创" />
         <category term="学习" />
         <updated>2023-04-28T15:10:57.000Z</updated>
     </entry>
@@ -170,9 +173,9 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;向名人许愿 &lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;并不&lt;/span&gt; 能提高您的一模成绩&lt;/p&gt;
 &lt;/div&gt;
 </content>
+        <category term="原创" />
         <category term="Python" />
         <category term="SofTY" />
-        <category term="原创" />
         <updated>2023-04-14T14:25:47.000Z</updated>
     </entry>
     <entry>
@@ -243,9 +246,9 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;最后，毕竟今天是愚人节，怎么着也得参与一下吧！但是我拒绝。&lt;/p&gt;
 &lt;p&gt;但是浅野千华宇宙要进行大规模扩充了！暑假一开始就更。除了浅野双子以外还有 Scotia・Priestly, Arakansas・Yuena, 夜雨明等一堆曾经只在草稿纸上出现的人物。&lt;/p&gt;
 </content>
+        <category term="原创" />
         <category term="Python" />
         <category term="SofTY" />
-        <category term="原创" />
         <updated>2023-04-01T04:34:47.000Z</updated>
     </entry>
 </feed>
