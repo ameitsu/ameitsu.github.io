@@ -12,13 +12,15 @@
         <category>Python</category>
         <category>SofTY</category>
         <category>学习</category>
+        <category>转载</category>
+        <category>新系列对应tag</category>
         <category>at STY</category>
         <category>STY的初三大事记</category>
         <category>多图杀猫</category>
         <category>高中牲STY</category>
+        <category>重要页面</category>
         <category>铁路</category>
         <category>冷门铁路史系列</category>
-        <category>重要页面</category>
         <category>游记</category>
         <item>
             <guid isPermalink="true">http://ameitsu.github.io/%E7%AB%99%E5%86%85%E9%A1%B5%E9%9D%A2/miscellaneous/%E5%AF%B9%E4%BA%8E%E9%83%A8%E5%88%86%E9%81%97%E7%95%99%E9%97%AE%E9%A2%98%E7%9A%84%E7%BB%9F%E4%B8%80%E8%A7%84%E5%AE%9A/</guid>
@@ -36,7 +38,7 @@
 &lt;li&gt;在设定中，被改造成半机械化服务器猫娘的是浅野千华吗？&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
-&lt;li&gt;答曰：&lt;strong&gt;不是&lt;/strong&gt;。她是&lt;strong&gt;西冈徇羽&lt;/strong&gt;，是未公开的浅野物语中的角色，在 STY 的 C++ 笔记中被当成各种实例的主人公。&lt;/li&gt;
+&lt;li&gt;答曰：&lt;strong&gt;不是&lt;/strong&gt;。她是&lt;ruby&gt;西岡絢羽&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;にしおかあやは&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt; ，是未公开的浅野物语中的角色，在 STY 的 C++ 笔记中被当成各种实例的主人公。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;“建站宣言” 是否应删除？&lt;/li&gt;
@@ -137,7 +139,7 @@
 &lt;li&gt;有人加入浅野千华二创吗？&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
-&lt;li&gt;答曰：&lt;strong&gt;真有&lt;/strong&gt;。有一个男性朋友说他肯定加入，还要拉上另一个对共笔作品感兴趣的女同学加入。最后只有他和我合作了，一起把千浅野物语的正史设定完成了。&lt;/li&gt;
+&lt;li&gt;答曰：&lt;strong&gt;真有&lt;/strong&gt;。有一个男性朋友说他肯定加入，还要拉上另一个对共笔作品感兴趣的女同学加入。最后只有他和我合作了，一起把浅野物语的正史设定完成了。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol start=&#34;11&#34;&gt;
 &lt;li&gt;vol.4 最后的琐记的内容完全没有交代后续。&lt;/li&gt;
@@ -164,7 +166,7 @@ STY 收集的签名大概率散佚了。经过暑假期间三四回大扫除依�
 &lt;li&gt;新 AC 的语言选项真的有问题吗？&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
-&lt;li&gt;答曰：&lt;strong&gt;没有问题&lt;/strong&gt;。Hexo 根目录的 config 文件支持的简体中文是 &lt;code&gt;zh-CN&lt;/code&gt; ，但 Shoka 主题的简体中文是 &lt;code&gt;zh_CN&lt;/code&gt; ，所以渲染的时候语言选项理论上是不会处理的。&lt;/li&gt;
+&lt;li&gt;答曰：&lt;strong&gt;没有问题&lt;/strong&gt;。Hexo 根目录的 config 文件支持的简体中文是 &lt;code&gt;zh-CN&lt;/code&gt; ，但 Shoka 主题的简体中文是 &lt;code&gt;zh_CN&lt;/code&gt; ，所以渲染的时候语言选项理论上渲染器看⑧懂。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol start=&#34;14&#34;&gt;
 &lt;li&gt;vol.6 里这个情节属实吗？&lt;/li&gt;
