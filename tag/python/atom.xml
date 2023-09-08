@@ -4,25 +4,27 @@
     <title>Cyberpark Nichome • Posts by &#34;python&#34; tag</title>
     <link href="http://ameitsu.github.io" />
     <updated>2023-04-28T15:10:57.000Z</updated>
-    <category term="Python" />
-    <category term="SofTY" />
-    <category term="原创" />
     <category term="Ameitsu Orchestra" />
-    <category term="学习" />
-    <category term="高中牲STY-番外" />
-    <category term="非原创" />
+    <category term="原创" />
     <category term="at STY" />
     <category term="STY的初三大事记" />
-    <category term="高中牲STY" />
     <category term="多图杀猫" />
+    <category term="学习" />
+    <category term="高中牲STY" />
+    <category term="高中牲STY-番外" />
+    <category term="非原创" />
     <category term="重要页面" />
     <category term="铁路" />
     <category term="冷门铁路史系列" />
     <category term="游记" />
+    <category term="站内页面" />
+    <category term="Notorial" />
+    <category term="SofTY" />
+    <category term="Python" />
     <entry>
-        <id>http://ameitsu.github.io/SofTY/SofTY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/</id>
+        <id>http://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/</id>
         <title>SofTYvol.3|科技与一模</title>
-        <link rel="alternate" href="http://ameitsu.github.io/SofTY/SofTY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/"/>
         <content type="html">&lt;p&gt;啊，今天是 4 月 30 号，2023 年 4 月的最后一天。就在 40 个小时之前&lt;ins&gt;举世瞩目的&lt;/ins&gt; 2023 年朝阳区初三一模结束了。SofTY 作为本站的编程 / 数学专栏真的有必要从数学压轴题里找点整活的灵感什么的。&lt;/p&gt;
 &lt;p&gt;所以嘛，本篇的主题 —— 用&lt;ins&gt;科技和人工智慧&lt;/ins&gt;攻克 16 题 (2) 和 28 题 (3)&lt;/p&gt;
 &lt;p&gt;注意哦，是人工 &lt;strong&gt;智慧&lt;/strong&gt;&lt;/p&gt;
@@ -102,16 +104,16 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="Python" />
-        <category term="SofTY" />
         <category term="原创" />
         <category term="学习" />
+        <category term="SofTY" />
+        <category term="Python" />
         <updated>2023-04-28T15:10:57.000Z</updated>
     </entry>
     <entry>
-        <id>http://ameitsu.github.io/SofTY/SofTY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB/</id>
+        <id>http://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB/</id>
         <title>SofTY vol.2|凑活能用小爬虫</title>
-        <link rel="alternate" href="http://ameitsu.github.io/SofTY/SofTY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB/"/>
         <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/15/i7gSdZ.png&#34; alt=&#34;i7gSdZ.png&#34; /&gt;&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
  在开发中，我们时不时就发现自己要从某网站里扣出点有用的信息 &lt;s&gt;（比如 cosplay 套图和一堆地狱笑话）&lt;/s&gt;&lt;/p&gt;
@@ -175,15 +177,15 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;向名人许愿 &lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;并不&lt;/span&gt; 能提高您的一模成绩&lt;/p&gt;
 &lt;/div&gt;
 </content>
-        <category term="Python" />
-        <category term="SofTY" />
         <category term="原创" />
+        <category term="SofTY" />
+        <category term="Python" />
         <updated>2023-04-14T14:25:47.000Z</updated>
     </entry>
     <entry>
-        <id>http://ameitsu.github.io/SofTY/SofTY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8/</id>
+        <id>http://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8/</id>
         <title>SofTY vol.1|代综计算器</title>
-        <link rel="alternate" href="http://ameitsu.github.io/SofTY/SofTY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8/"/>
         <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/01/iHV0Ny.jpeg&#34; alt=&#34;iHV0Ny.jpeg&#34; /&gt;&lt;br /&gt;
  最近的代综题好烦，先去只有&lt;ins&gt;半扇门&lt;/ins&gt;的学校厕所哭一会儿（太夸张了⑧）&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
@@ -248,9 +250,9 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;最后，毕竟今天是愚人节，怎么着也得参与一下吧！但是我拒绝。&lt;/p&gt;
 &lt;p&gt;但是浅野千华宇宙要进行大规模扩充了！暑假一开始就更。除了浅野双子以外还有 Scotia・Priestly, Arakansas・Yuena, 夜雨明等一堆曾经只在草稿纸上出现的人物。&lt;/p&gt;
 </content>
-        <category term="Python" />
-        <category term="SofTY" />
         <category term="原创" />
+        <category term="SofTY" />
+        <category term="Python" />
         <updated>2023-04-01T04:34:47.000Z</updated>
     </entry>
 </feed>

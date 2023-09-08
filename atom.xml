@@ -3,22 +3,86 @@
     <id>http://ameitsu.github.io</id>
     <title>Cyberpark Nichome</title>
     <link href="http://ameitsu.github.io" />
-    <updated>2023-09-02T11:09:33.000Z</updated>
-    <category term="Python" />
-    <category term="SofTY" />
-    <category term="原创" />
+    <updated>2023-09-08T14:17:01.000Z</updated>
     <category term="Ameitsu Orchestra" />
-    <category term="学习" />
-    <category term="高中牲STY-番外" />
-    <category term="非原创" />
+    <category term="原创" />
     <category term="at STY" />
     <category term="STY的初三大事记" />
-    <category term="高中牲STY" />
     <category term="多图杀猫" />
+    <category term="学习" />
+    <category term="高中牲STY" />
+    <category term="高中牲STY-番外" />
+    <category term="非原创" />
     <category term="重要页面" />
     <category term="铁路" />
     <category term="冷门铁路史系列" />
     <category term="游记" />
+    <category term="站内页面" />
+    <category term="Notorial" />
+    <category term="SofTY" />
+    <category term="Python" />
+    <entry>
+        <id>http://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-print/</id>
+        <title>Notorial vol.1|Prompt toolkit库第一集：打印文本</title>
+        <link rel="alternate" href="http://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-print/"/>
+        <content type="html">&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;此为 &lt;code&gt;Prompt toolkit&lt;/code&gt;  系列的页面。本系列其他文章如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（空）&lt;/li&gt;
+&lt;li&gt;（空）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note default&#34;&gt;
+&lt;p&gt;在下文中，Prompt toolkit 简称为 PT。&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;写在前面&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#写在前面&#34;&gt;#&lt;/a&gt; 写在前面&lt;/h1&gt;
+&lt;p&gt;Python 的第三方库 prompt_toolkit 用于打造交互式命令行。本系列主要参考它的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9weXRob24tcHJvbXB0LXRvb2xraXQucmVhZHRoZWRvY3MuaW8vZW4vc3RhYmxlL2luZGV4Lmh0bWw=&#34;&gt;官方文档&lt;/span&gt;。&lt;/p&gt;
+&lt;h1 id=&#34;下载pt&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载pt&#34;&gt;#&lt;/a&gt; 下载 PT&lt;/h1&gt;
+&lt;p&gt;可以用 &lt;code&gt;pip&lt;/code&gt;  或者 &lt;code&gt;anaconda&lt;/code&gt; 。但是 STY 主要使用前者。&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pip install prompt_toolkit&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;打印普通文本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#打印普通文本&#34;&gt;#&lt;/a&gt; 打印普通文本&lt;/h1&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; print_formatted_text&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;print_formatted_text&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;Hello world&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://cdnjson.com/images/2023/09/08/1.jpg&#34; alt=&#34;1.jpg&#34; /&gt;&lt;br /&gt;
+ &lt;code&gt;print_formatted_text()&lt;/code&gt;  可以用来打印普通文本。如果想以假乱真，可以酱紫：&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; print_formatted_text &lt;span class=&#34;token keyword&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;Hello world&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;打印格式化文本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#打印格式化文本&#34;&gt;#&lt;/a&gt; 打印格式化文本&lt;/h1&gt;
+&lt;p&gt;打印格式化文本需要这三种方法之一：创建 HTML 对象、创建 ANSI 对象、创建 &lt;code&gt;(样式,文本)&lt;/code&gt;  元组或使用 &lt;code&gt;pygments&lt;/code&gt;  库。STY 主要使用 HTML，毕竟已经学过了。&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; print_formatted_text&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; HTML&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;print_formatted_text&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;HTML&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&amp;lt;b&gt;This is bold&amp;lt;/b&gt;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;print_formatted_text&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;HTML&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&amp;lt;i&gt;This is italic&amp;lt;/i&gt;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;print_formatted_text&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;HTML&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&amp;lt;u&gt;This is underlined&amp;lt;/u&gt;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://cdnjson.com/images/2023/09/08/2.jpg&#34; alt=&#34;2.jpg&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;实际上，这里的 &lt;code&gt;&amp;lt;i&amp;gt;&amp;lt;/i&amp;gt;&lt;/code&gt;  标签没有被渲染成斜体，现在这大概率是个未解之谜。&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;使用 HTML 对象时，需要先 import 到程序中。这样一来，就可以直接使用 HTML 标签了。&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;print_formatted_text&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;HTML&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&amp;lt;skyblue&gt;This is sky blue&amp;lt;/skyblue&gt;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;print_formatted_text&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;HTML&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&amp;lt;seagreen&gt;This is sea green&amp;lt;/seagreen&gt;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;print_formatted_text&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;HTML&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&amp;lt;violet&gt;This is violet&amp;lt;/violet&gt;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://cdnjson.com/images/2023/09/08/3.jpg&#34; alt=&#34;3.jpg&#34; /&gt;&lt;br /&gt;
+ 也可以用颜色标签设置背景色。&lt;br /&gt;
+为了更好编辑格式信息，可以将格式内容在一个字典中编写：&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; print_formatted_text&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; HTML&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;styles &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; Style&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;style &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; Style&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;from_dict&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token string&#34;&gt;&#39;aaa&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;#ff0066&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token string&#34;&gt;&#39;bbb&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;#44ff00 italic&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;print_formatted_text&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;HTML&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&amp;lt;aaa&gt;Hello&amp;lt;/aaa&gt; &amp;lt;bbb&gt;world&amp;lt;/bbb&gt;!&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; style&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;style&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://cdnjson.com/images/2023/09/08/4.jpg&#34; alt=&#34;4.jpg&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;在上一个实例中，像 &lt;code&gt;&amp;lt;aaa&amp;gt;&amp;lt;/aaa&amp;gt;&lt;/code&gt;  的标签是自定义的。在 PT 中，可以使用自定义的标签，前提是和样式字典匹配。&lt;/p&gt;
+&lt;/div&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; print_formatted_text&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;formatted_text &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; FormattedText&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;text &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; FormattedText&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;#ff0066&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;Hello&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39; &#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;#44ff00 italic&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;World&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;print_formatted_text&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;text&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;和 HTML 很像的方法是样式元组。此方法的大致内容与 HTML 对象类似，不再赘述。&lt;/p&gt;
+&lt;p&gt;一个有用的函数是 &lt;code&gt;to_formatted_text()&lt;/code&gt; 。它可以使输入符合格式化文本的要求：&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;formatted_text &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; to_formatted_text&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; HTML&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; print_formatted_text&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;html &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; HTML&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&amp;lt;aaa&gt;Hello&amp;lt;/aaa&gt; &amp;lt;bbb&gt;world&amp;lt;/bbb&gt;!&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;text &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; to_formatted_text&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;html&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; style&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;class:my_html bg:#00ff00 italic&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;print_formatted_text&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;text&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="Notorial" />
+        <category term="SofTY" />
+        <updated>2023-09-08T14:17:01.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/index/</id>
+        <title>Notorial系列介绍与索引</title>
+        <link rel="alternate" href="http://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/index/"/>
+        <content type="html">&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;此页面待补充 o (T ヘ To)&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;STY 经过深思熟虑后认为原先的 SofTY 系列的 “有趣程度” 不够，原因是其中的调侃成分与真正的技术部分掺杂在一起，而且涉及的技术难度不大。于是，SofTY 系列将拆分为 &lt;code&gt;SofTY-STorY&lt;/code&gt;  和 &lt;code&gt;Notorial&lt;/code&gt;  子系列，其中前者是即为原 SofTY 系列。现特别说明后者的主要内容并列出索引。&lt;/p&gt;
+&lt;h1 id=&#34;notorial是个什么东西&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#notorial是个什么东西&#34;&gt;#&lt;/a&gt; Notorial 是个什么东西？&lt;/h1&gt;
+&lt;p&gt;Notorial 是 note 和 tutorial 的派生词。这个子系列中是 STY 学习某种技术时的笔记，但同时也可起到教程的作用，所以才有这个命名。&lt;/p&gt;
+&lt;h1 id=&#34;notorial现在有哪些内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#notorial现在有哪些内容&#34;&gt;#&lt;/a&gt; Notorial 现在有哪些内容？&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Prompt-toolkit（一个 python 命令行库）&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="站内页面" />
+        <category term="Notorial" />
+        <category term="SofTY" />
+        <updated>2023-09-07T15:33:55.000Z</updated>
+    </entry>
     <entry>
         <id>http://ameitsu.github.io/%E9%86%89%E7%9C%A0%E7%A7%8B%E5%85%B1%E8%A2%AB/dormitory-stories/%E9%86%89%20%E7%9C%A0%20%E7%A7%8B%20%E5%85%B1%20%E8%A2%AB/</id>
         <title>醉 眠 秋 共 被</title>
@@ -525,8 +589,8 @@ STY 收集的签名大概率散佚了。经过暑假期间三四回大扫除依�
 ——《枪炮、病菌和钢铁》收场白&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
-        <category term="原创" />
         <category term="Ameitsu Orchestra" />
+        <category term="原创" />
         <updated>2023-07-17T14:52:35.000Z</updated>
     </entry>
     <entry>
@@ -548,8 +612,8 @@ STY 收集的签名大概率散佚了。经过暑假期间三四回大扫除依�
 &lt;p&gt;第三个认知，是对地球力量的理解。地球的力量，仅仅是在全片的体现 “火山、大气、冰川、海洋” 也并非像核裂变一样具有毁天灭地的力量。而它们却真实地改造了地球。纪录片也揭示了这些力量的来源。以海洋为例，海洋看似只是咸水的集合体，却引发了二叠纪末期的生物大灭绝。事实上海洋内至关重要的是洋流，因为洋流串连了全世界的所有海洋。洋流依赖于热水与冷水的对流，但二叠纪末期由于气候变暖水域之间的温度差已经开始缩小，导致洋流逐渐停止，使地球的海水成为了一潭全球范围的死水塘，引发海洋物种的灭绝。同时气候变暖也因为海水升温而继续，导致陆地上蒸发量增大，大部分陆地生物也难逃灭绝的命运。所以，地球的力量来源于各个要素的因果关系，这也是人类要尽力在 21 世纪 20 年代以后控制的。&lt;/p&gt;
 &lt;p&gt;《地球的力量》无疑对于自然地理的理解有独特的价值，尤其是对于气候变暖、海平面上升，出现各种环境挑战与伴生问题的现在。这部纪录片通过对地球力量的剖析，为我们理解地球，保护地球起到了积极的作用。随着一项项环境议定书的批准，各国环境政策的出台，我们这颗有着不羁力量的蓝色行星应当会持续搏动下去。&lt;/p&gt;
 </content>
-        <category term="原创" />
         <category term="Ameitsu Orchestra" />
+        <category term="原创" />
         <updated>2023-07-16T02:49:17.000Z</updated>
     </entry>
     <entry>
@@ -630,8 +694,8 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
 🟣6.	&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud2lraXdhbmQuY29tL2VuL0RpZ2l0YWxfZGFya19hZ2U=&#34;&gt;https://www.wikiwand.com/en/Digital_dark_age&lt;/span&gt;&lt;br /&gt;
 🟤7.	&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYnJpdGFubmljYS5jb20vZXZlbnQvRGFyay1BZ2Vz&#34;&gt;https://www.britannica.com/event/Dark-Ages&lt;/span&gt;&lt;/p&gt;
 </content>
-        <category term="原创" />
         <category term="Ameitsu Orchestra" />
+        <category term="原创" />
         <updated>2023-07-03T14:21:00.000Z</updated>
     </entry>
     <entry>
@@ -742,9 +806,9 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
 &lt;p&gt;就酱。&lt;/p&gt;
 </content>
         <category term="原创" />
-        <category term="学习" />
         <category term="at STY" />
         <category term="STY的初三大事记" />
+        <category term="学习" />
         <updated>2023-06-23T13:35:53.000Z</updated>
     </entry>
     <entry>
@@ -927,9 +991,9 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
 &lt;p&gt;就酱。&lt;/p&gt;
 </content>
         <category term="原创" />
-        <category term="学习" />
         <category term="at STY" />
         <category term="STY的初三大事记" />
+        <category term="学习" />
         <updated>2023-06-03T02:48:45.000Z</updated>
     </entry>
     <entry>
@@ -1052,15 +1116,15 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
 &lt;p&gt;就酱。&lt;/p&gt;
 </content>
         <category term="原创" />
-        <category term="学习" />
         <category term="at STY" />
         <category term="STY的初三大事记" />
+        <category term="学习" />
         <updated>2023-05-13T13:33:04.000Z</updated>
     </entry>
     <entry>
-        <id>http://ameitsu.github.io/SofTY/SofTY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/</id>
+        <id>http://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/</id>
         <title>SofTYvol.3|科技与一模</title>
-        <link rel="alternate" href="http://ameitsu.github.io/SofTY/SofTY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/"/>
         <content type="html">&lt;p&gt;啊，今天是 4 月 30 号，2023 年 4 月的最后一天。就在 40 个小时之前&lt;ins&gt;举世瞩目的&lt;/ins&gt; 2023 年朝阳区初三一模结束了。SofTY 作为本站的编程 / 数学专栏真的有必要从数学压轴题里找点整活的灵感什么的。&lt;/p&gt;
 &lt;p&gt;所以嘛，本篇的主题 —— 用&lt;ins&gt;科技和人工智慧&lt;/ins&gt;攻克 16 题 (2) 和 28 题 (3)&lt;/p&gt;
 &lt;p&gt;注意哦，是人工 &lt;strong&gt;智慧&lt;/strong&gt;&lt;/p&gt;
@@ -1140,10 +1204,10 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
 &lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="Python" />
-        <category term="SofTY" />
         <category term="原创" />
         <category term="学习" />
+        <category term="SofTY" />
+        <category term="Python" />
         <updated>2023-04-28T15:10:57.000Z</updated>
     </entry>
     <entry>
@@ -1241,15 +1305,15 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
 &lt;/blockquote&gt;
 </content>
         <category term="原创" />
-        <category term="学习" />
         <category term="at STY" />
         <category term="STY的初三大事记" />
+        <category term="学习" />
         <updated>2023-04-25T14:49:42.000Z</updated>
     </entry>
     <entry>
-        <id>http://ameitsu.github.io/SofTY/SofTY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB/</id>
+        <id>http://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB/</id>
         <title>SofTY vol.2|凑活能用小爬虫</title>
-        <link rel="alternate" href="http://ameitsu.github.io/SofTY/SofTY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB/"/>
         <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/15/i7gSdZ.png&#34; alt=&#34;i7gSdZ.png&#34; /&gt;&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
  在开发中，我们时不时就发现自己要从某网站里扣出点有用的信息 &lt;s&gt;（比如 cosplay 套图和一堆地狱笑话）&lt;/s&gt;&lt;/p&gt;
@@ -1313,15 +1377,15 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;向名人许愿 &lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;并不&lt;/span&gt; 能提高您的一模成绩&lt;/p&gt;
 &lt;/div&gt;
 </content>
-        <category term="Python" />
-        <category term="SofTY" />
         <category term="原创" />
+        <category term="SofTY" />
+        <category term="Python" />
         <updated>2023-04-14T14:25:47.000Z</updated>
     </entry>
     <entry>
-        <id>http://ameitsu.github.io/SofTY/SofTY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8/</id>
+        <id>http://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8/</id>
         <title>SofTY vol.1|代综计算器</title>
-        <link rel="alternate" href="http://ameitsu.github.io/SofTY/SofTY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8/"/>
+        <link rel="alternate" href="http://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8/"/>
         <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/01/iHV0Ny.jpeg&#34; alt=&#34;iHV0Ny.jpeg&#34; /&gt;&lt;br /&gt;
  最近的代综题好烦，先去只有&lt;ins&gt;半扇门&lt;/ins&gt;的学校厕所哭一会儿（太夸张了⑧）&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
@@ -1386,9 +1450,9 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;最后，毕竟今天是愚人节，怎么着也得参与一下吧！但是我拒绝。&lt;/p&gt;
 &lt;p&gt;但是浅野千华宇宙要进行大规模扩充了！暑假一开始就更。除了浅野双子以外还有 Scotia・Priestly, Arakansas・Yuena, 夜雨明等一堆曾经只在草稿纸上出现的人物。&lt;/p&gt;
 </content>
-        <category term="Python" />
-        <category term="SofTY" />
         <category term="原创" />
+        <category term="SofTY" />
+        <category term="Python" />
         <updated>2023-04-01T04:34:47.000Z</updated>
     </entry>
     <entry>
@@ -1439,9 +1503,9 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;就酱。&lt;/p&gt;
 </content>
         <category term="原创" />
-        <category term="学习" />
         <category term="at STY" />
         <category term="STY的初三大事记" />
+        <category term="学习" />
         <updated>2023-03-18T14:36:32.000Z</updated>
     </entry>
     <entry>
@@ -1487,9 +1551,9 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;就酱。&lt;/p&gt;
 </content>
         <category term="原创" />
-        <category term="学习" />
         <category term="at STY" />
         <category term="STY的初三大事记" />
+        <category term="学习" />
         <updated>2023-02-26T02:30:00.000Z</updated>
     </entry>
     <entry>
