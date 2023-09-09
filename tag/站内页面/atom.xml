@@ -6,21 +6,21 @@
     <updated>2023-09-07T15:33:55.000Z</updated>
     <category term="Ameitsu Orchestra" />
     <category term="原创" />
+    <category term="高中牲STY-番外" />
+    <category term="非原创" />
     <category term="at STY" />
     <category term="学习" />
     <category term="STY的初三大事记" />
-    <category term="高中牲STY" />
     <category term="多图杀猫" />
-    <category term="非原创" />
-    <category term="高中牲STY-番外" />
+    <category term="高中牲STY" />
     <category term="重要页面" />
     <category term="铁路" />
     <category term="冷门铁路史系列" />
     <category term="游记" />
+    <category term="Python" />
+    <category term="SofTY" />
     <category term="站内页面" />
     <category term="Notorial" />
-    <category term="SofTY" />
-    <category term="Python" />
     <entry>
         <id>http://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/index/</id>
         <title>Notorial系列介绍与索引</title>
@@ -46,9 +46,9 @@
  ova：有价值的内容与结束语 &lt;em&gt;未更新&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
+        <category term="SofTY" />
         <category term="站内页面" />
         <category term="Notorial" />
-        <category term="SofTY" />
         <updated>2023-09-07T15:33:55.000Z</updated>
     </entry>
 </feed>
