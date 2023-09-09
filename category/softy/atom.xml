@@ -7,12 +7,12 @@
     <category term="Ameitsu Orchestra" />
     <category term="原创" />
     <category term="at STY" />
-    <category term="STY的初三大事记" />
-    <category term="多图杀猫" />
     <category term="学习" />
+    <category term="STY的初三大事记" />
     <category term="高中牲STY" />
-    <category term="高中牲STY-番外" />
+    <category term="多图杀猫" />
     <category term="非原创" />
+    <category term="高中牲STY-番外" />
     <category term="重要页面" />
     <category term="铁路" />
     <category term="冷门铁路史系列" />
@@ -26,11 +26,15 @@
         <title>Notorial vol.1|Prompt toolkit库第一集：打印文本</title>
         <link rel="alternate" href="http://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-print/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;此为 &lt;code&gt;Prompt toolkit&lt;/code&gt;  系列的页面。本系列其他文章如下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;（空）&lt;/li&gt;
-&lt;li&gt;（空）&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;此为 &lt;code&gt;Prompt toolkit&lt;/code&gt;  系列的页面。本系列其他文章如下：&lt;br /&gt;
+第一集：&lt;strong&gt;打印文本&lt;/strong&gt;&lt;br /&gt;
+第二集：输入文本 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+第三集：对话框 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+第四集：进度条 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+第五集：全屏程序制作 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+第六集：拓展内容 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+第七集：一些实例 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+ ova：有价值的内容与结束语 &lt;em&gt;未更新&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;note default&#34;&gt;
 &lt;p&gt;在下文中，Prompt toolkit 简称为 PT。&lt;/p&gt;
@@ -75,7 +79,17 @@
 &lt;p&gt;Notorial 是 note 和 tutorial 的派生词。这个子系列中是 STY 学习某种技术时的笔记，但同时也可起到教程的作用，所以才有这个命名。&lt;/p&gt;
 &lt;h1 id=&#34;notorial现在有哪些内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#notorial现在有哪些内容&#34;&gt;#&lt;/a&gt; Notorial 现在有哪些内容？&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;Prompt-toolkit（一个 python 命令行库）&lt;/li&gt;
+&lt;li&gt;Prompt-toolkit（一个 python 命令行库）&lt;br /&gt;
+第一集：打印文本 &lt;a href=&#34;https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-print/&#34;&gt;前往&lt;/a&gt;&lt;br /&gt;
+关于普通文本和格式化文本的输出。&lt;br /&gt;
+第二集：输入文本 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+一些与输入文本有关的功能，如多行编辑、底部工具栏、自动补全等。&lt;br /&gt;
+第三集：对话框 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+第四集：进度条 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+第五集：全屏程序制作 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+第六集：拓展内容 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+第七集：一些实例 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+ ova：有价值的内容与结束语 &lt;em&gt;未更新&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
         <category term="站内页面" />
