@@ -6,21 +6,21 @@
     <updated>2023-04-28T15:10:57.000Z</updated>
     <category term="Ameitsu Orchestra" />
     <category term="原创" />
-    <category term="高中牲STY-番外" />
-    <category term="非原创" />
     <category term="at STY" />
     <category term="学习" />
     <category term="STY的初三大事记" />
     <category term="多图杀猫" />
     <category term="高中牲STY" />
-    <category term="重要页面" />
+    <category term="非原创" />
+    <category term="高中牲STY-番外" />
     <category term="铁路" />
     <category term="冷门铁路史系列" />
+    <category term="重要页面" />
     <category term="游记" />
-    <category term="Python" />
-    <category term="SofTY" />
-    <category term="站内页面" />
     <category term="Notorial" />
+    <category term="SofTY" />
+    <category term="Python" />
+    <category term="站内页面" />
     <entry>
         <id>http://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/</id>
         <title>SofTYvol.3|科技与一模</title>
@@ -106,8 +106,8 @@
 </content>
         <category term="原创" />
         <category term="学习" />
-        <category term="Python" />
         <category term="SofTY" />
+        <category term="Python" />
         <updated>2023-04-28T15:10:57.000Z</updated>
     </entry>
     <entry>
@@ -178,8 +178,8 @@ res = requests.get(url=url,headers=headers)
 &lt;/div&gt;
 </content>
         <category term="原创" />
-        <category term="Python" />
         <category term="SofTY" />
+        <category term="Python" />
         <updated>2023-04-14T14:25:47.000Z</updated>
     </entry>
     <entry>
@@ -251,8 +251,8 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;但是浅野千华宇宙要进行大规模扩充了！暑假一开始就更。除了浅野双子以外还有 Scotia・Priestly, Arakansas・Yuena, 夜雨明等一堆曾经只在草稿纸上出现的人物。&lt;/p&gt;
 </content>
         <category term="原创" />
-        <category term="Python" />
         <category term="SofTY" />
+        <category term="Python" />
         <updated>2023-04-01T04:34:47.000Z</updated>
     </entry>
 </feed>

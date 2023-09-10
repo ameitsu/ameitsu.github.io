@@ -6,21 +6,21 @@
     <updated>2023-09-08T14:17:01.000Z</updated>
     <category term="Ameitsu Orchestra" />
     <category term="原创" />
-    <category term="高中牲STY-番外" />
-    <category term="非原创" />
     <category term="at STY" />
     <category term="学习" />
     <category term="STY的初三大事记" />
     <category term="多图杀猫" />
     <category term="高中牲STY" />
-    <category term="重要页面" />
+    <category term="非原创" />
+    <category term="高中牲STY-番外" />
     <category term="铁路" />
     <category term="冷门铁路史系列" />
+    <category term="重要页面" />
     <category term="游记" />
-    <category term="Python" />
-    <category term="SofTY" />
-    <category term="站内页面" />
     <category term="Notorial" />
+    <category term="SofTY" />
+    <category term="Python" />
+    <category term="站内页面" />
     <entry>
         <id>http://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-print/</id>
         <title>Notorial vol.1|Prompt toolkit库第一集：打印文本</title>
@@ -63,8 +63,8 @@
 &lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; print_formatted_text&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;formatted_text &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; FormattedText&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;text &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; FormattedText&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;#ff0066&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;Hello&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39; &#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;#44ff00 italic&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;World&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;print_formatted_text&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;text&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;和 HTML 很像的方法是样式元组。此方法的大致内容与 HTML 对象类似，不再赘述。&lt;/p&gt;
 &lt;p&gt;一个有用的函数是 &lt;code&gt;to_formatted_text()&lt;/code&gt; 。它可以使输入符合格式化文本的要求：&lt;/p&gt;
 &lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;formatted_text &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; to_formatted_text&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; HTML&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; print_formatted_text&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;html &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; HTML&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&amp;lt;aaa&gt;Hello&amp;lt;/aaa&gt; &amp;lt;bbb&gt;world&amp;lt;/bbb&gt;!&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;text &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; to_formatted_text&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;html&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; style&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;class:my_html bg:#00ff00 italic&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;print_formatted_text&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;text&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-        <category term="SofTY" />
         <category term="Notorial" />
+        <category term="SofTY" />
         <updated>2023-09-08T14:17:01.000Z</updated>
     </entry>
     <entry>
@@ -92,9 +92,9 @@
  ova：有价值的内容与结束语 &lt;em&gt;未更新&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
+        <category term="Notorial" />
         <category term="SofTY" />
         <category term="站内页面" />
-        <category term="Notorial" />
         <updated>2023-09-07T15:33:55.000Z</updated>
     </entry>
     <entry>
@@ -182,8 +182,8 @@
 </content>
         <category term="原创" />
         <category term="学习" />
-        <category term="Python" />
         <category term="SofTY" />
+        <category term="Python" />
         <updated>2023-04-28T15:10:57.000Z</updated>
     </entry>
     <entry>
@@ -254,8 +254,8 @@ res = requests.get(url=url,headers=headers)
 &lt;/div&gt;
 </content>
         <category term="原创" />
-        <category term="Python" />
         <category term="SofTY" />
+        <category term="Python" />
         <updated>2023-04-14T14:25:47.000Z</updated>
     </entry>
     <entry>
@@ -327,8 +327,8 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;但是浅野千华宇宙要进行大规模扩充了！暑假一开始就更。除了浅野双子以外还有 Scotia・Priestly, Arakansas・Yuena, 夜雨明等一堆曾经只在草稿纸上出现的人物。&lt;/p&gt;
 </content>
         <category term="原创" />
-        <category term="Python" />
         <category term="SofTY" />
+        <category term="Python" />
         <updated>2023-04-01T04:34:47.000Z</updated>
     </entry>
 </feed>
