@@ -5,25 +5,67 @@
         <link>http://ameitsu.github.io</link>
         <description>本站基于hexo，同时部分内容来自一个在某只不愿透露姓名的猫娘上的脑机接口。没有任何猫娘因为本站而受到伤害。</description>
         <language>zh-CN</language>
-        <pubDate>Sat, 09 Sep 2023 18:02:55 +0800</pubDate>
-        <lastBuildDate>Sat, 09 Sep 2023 18:02:55 +0800</lastBuildDate>
-        <category>Ameitsu Orchestra</category>
-        <category>原创</category>
+        <pubDate>Fri, 15 Sep 2023 22:17:01 +0800</pubDate>
+        <lastBuildDate>Fri, 15 Sep 2023 22:17:01 +0800</lastBuildDate>
         <category>at STY</category>
-        <category>高中牲STY</category>
         <category>学习</category>
+        <category>原创</category>
         <category>STY的初三大事记</category>
         <category>多图杀猫</category>
+        <category>高中牲STY</category>
+        <category>Ameitsu Orchestra</category>
+        <category>重要页面</category>
         <category>非原创</category>
         <category>高中牲STY-番外</category>
-        <category>重要页面</category>
-        <category>游记</category>
         <category>铁路</category>
         <category>冷门铁路史系列</category>
-        <category>Notorial</category>
-        <category>SofTY</category>
-        <category>站内页面</category>
+        <category>游记</category>
         <category>Python</category>
+        <category>SofTY</category>
+        <category>Notorial</category>
+        <category>站内页面</category>
+        <item>
+            <guid isPermalink="true">http://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-prompts/</guid>
+            <title>Notorial vol.2|Prompt toolkit库第二集：获取输入-上</title>
+            <link>http://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-prompts/</link>
+            <category>SofTY</category>
+            <category>Notorial</category>
+            <pubDate>Fri, 15 Sep 2023 22:17:01 +0800</pubDate>
+            <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;此为 &lt;code&gt;Prompt toolkit&lt;/code&gt;  系列的页面。本系列其他文章如下：&lt;br /&gt;
+第一集：&lt;a href=&#34;https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-print/&#34;&gt;打印文本&lt;/a&gt;&lt;br /&gt;
+第二集： &lt;strong&gt;输入文本&lt;/strong&gt;&lt;br /&gt;
+第三集：对话框 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+第四集：进度条 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+第五集：全屏程序制作 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+第六集：拓展内容 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+第七集：一些实例 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+ ova：有价值的内容与结束语 &lt;em&gt;未更新&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note default&#34;&gt;
+&lt;p&gt;在下文中，Prompt toolkit 简称为 PT。&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;前期提要&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前期提要&#34;&gt;#&lt;/a&gt; 前期提要&lt;/h1&gt;
+&lt;p&gt;在【&lt;a href=&#34;https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-print/&#34;&gt;Notorial vol.1|Prompt toolkit 库第一集：打印文本&lt;/a&gt;】中，我们记录了打印格式化文本的方法。但命令行程序需要用户输入指令，所以我们需要知道如何获取用户输入的信息。&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;PT 库中关于获取文本的功能较多，这里仅是一些。完整版见&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9weXRob24tcHJvbXB0LXRvb2xraXQucmVhZHRoZWRvY3MuaW8vZW4vc3RhYmxlL3BhZ2VzL2Fza2luZ19mb3JfaW5wdXQuaHRtbA==&#34;&gt;官方页面&lt;/span&gt;。&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;获取输入&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#获取输入&#34;&gt;#&lt;/a&gt; 获取输入&lt;/h1&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; prompt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;text &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; prompt&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;Give me some input: &#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;You said: %s&#39;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt; text&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;用 &lt;code&gt;prompt()&lt;/code&gt;  获取输入，类似于 &lt;code&gt;input()&lt;/code&gt; 。&lt;/p&gt;
+&lt;h1 id=&#34;提示文本上色&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#提示文本上色&#34;&gt;#&lt;/a&gt; 提示文本上色&lt;/h1&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;shortcuts &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; prompt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;styles &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; Style&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;style &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; Style&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;from_dict&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# User input (default text).&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token string&#34;&gt;&#39;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;          &lt;span class=&#34;token string&#34;&gt;&#39;#ff0066&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# Prompt.&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token string&#34;&gt;&#39;username&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;#884444&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token string&#34;&gt;&#39;at&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;       &lt;span class=&#34;token string&#34;&gt;&#39;#00aa00&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token string&#34;&gt;&#39;colon&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;    &lt;span class=&#34;token string&#34;&gt;&#39;#0000aa&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token string&#34;&gt;&#39;pound&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;    &lt;span class=&#34;token string&#34;&gt;&#39;#00aa00&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token string&#34;&gt;&#39;host&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;     &lt;span class=&#34;token string&#34;&gt;&#39;#00ffff bg:#444400&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token string&#34;&gt;&#39;path&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;     &lt;span class=&#34;token string&#34;&gt;&#39;ansicyan underline&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;message &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;class:username&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;john&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;class:at&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;       &lt;span class=&#34;token string&#34;&gt;&#39;@&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;class:host&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;     &lt;span class=&#34;token string&#34;&gt;&#39;localhost&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;class:colon&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;    &lt;span class=&#34;token string&#34;&gt;&#39;:&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;class:path&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;     &lt;span class=&#34;token string&#34;&gt;&#39;/user/john&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;class:pound&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;    &lt;span class=&#34;token string&#34;&gt;&#39;# &#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;text &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; prompt&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;message&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; style&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;style&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;类似打印文本时的相关操作，在此不再赘述。&lt;/p&gt;
+&lt;h1 id=&#34;补全&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#补全&#34;&gt;#&lt;/a&gt; 补全&lt;/h1&gt;
+&lt;h2 id=&#34;自动补全&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#自动补全&#34;&gt;#&lt;/a&gt; 自动补全&lt;/h2&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; prompt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;completion &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; WordCompleter&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;html_completer &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; WordCompleter&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&amp;lt;html&gt;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;&amp;lt;body&gt;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;&amp;lt;head&gt;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;&amp;lt;title&gt;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;text &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; prompt&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;Enter HTML: &#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; completer&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;html_completer&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;You said: %s&#39;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt; text&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;创建自动补全的方法是在 &lt;code&gt;WordCompleter([])&lt;/code&gt;  的列表中将所有可能涉及的指令全部添加。&lt;/p&gt;
+&lt;h2 id=&#34;嵌套补全&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#嵌套补全&#34;&gt;#&lt;/a&gt; 嵌套补全&lt;/h2&gt;
+&lt;p&gt;嵌套补全是一种依据前文来提示关键词的自动补全方式。选择地址时的城市 - 区域 - 社区选项就是一种嵌套补全。&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; prompt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; prompt_toolkit&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;completion &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; NestedCompleter&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;completer &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; NestedCompleter&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;from_nested_dict&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token string&#34;&gt;&#39;show&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token string&#34;&gt;&#39;version&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token string&#34;&gt;&#39;clock&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token string&#34;&gt;&#39;ip&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token string&#34;&gt;&#39;interface&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;brief&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token string&#34;&gt;&#39;exit&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;text &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; prompt&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;# &#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; completer&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;completer&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;You said: %s&#39;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt; text&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;当输入 &lt;code&gt;show&lt;/code&gt;  时， &lt;code&gt;version&lt;/code&gt;   &lt;code&gt;clock&lt;/code&gt;   &lt;code&gt;ip&lt;/code&gt;  这三个选项就会弹出。特别的，如果输入 &lt;code&gt;show&lt;/code&gt; + &lt;code&gt;ip&lt;/code&gt;  时又有 &lt;code&gt;interface&lt;/code&gt;  显示。&lt;/p&gt;
+&lt;h2 id=&#34;输入时补全&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#输入时补全&#34;&gt;#&lt;/a&gt; 输入时补全&lt;/h2&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;text &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; prompt&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;Enter HTML: &#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; completer&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;my_completer&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;              complete_while_typing&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token boolean&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;这样可以在按下 &lt;code&gt;tab&lt;/code&gt;  键或正常输入时弹出补全。&lt;/p&gt;
+&lt;h2 id=&#34;异步补全&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#异步补全&#34;&gt;#&lt;/a&gt; 异步补全&lt;/h2&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;text &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; prompt&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&gt; &#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; completer&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;MyCustomCompleter&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; complete_in_thread&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token boolean&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#&#34;&gt;#&lt;/a&gt; &lt;/h1&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://ameitsu.github.io/%E9%86%89%E7%9C%A0%E7%A7%8B%E5%85%B1%E8%A2%AB/dormitory-stories/%E4%BD%8F%E5%AE%BF%E5%9B%9E%E5%BD%92/</guid>
             <title>住🔥宿🔥回🔥归🔥</title>
@@ -68,8 +110,8 @@ Ps. 九万里是每天都会洗澡的那种人，此前一直以为所有女生�
             <guid isPermalink="true">http://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-print/</guid>
             <title>Notorial vol.1|Prompt toolkit库第一集：打印文本</title>
             <link>http://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-print/</link>
-            <category>Notorial</category>
             <category>SofTY</category>
+            <category>Notorial</category>
             <pubDate>Fri, 08 Sep 2023 22:17:01 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;此为 &lt;code&gt;Prompt toolkit&lt;/code&gt;  系列的页面。本系列其他文章如下：&lt;br /&gt;
@@ -114,8 +156,8 @@ Ps. 九万里是每天都会洗澡的那种人，此前一直以为所有女生�
             <guid isPermalink="true">http://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/index/</guid>
             <title>Notorial系列介绍与索引</title>
             <link>http://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/index/</link>
-            <category>Notorial</category>
             <category>SofTY</category>
+            <category>Notorial</category>
             <category>站内页面</category>
             <pubDate>Thu, 07 Sep 2023 23:33:55 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note warning&#34;&gt;
@@ -390,8 +432,8 @@ STY 收集的签名大概率散佚了。经过暑假期间三四回大扫除依�
             <guid isPermalink="true">http://ameitsu.github.io/at-STY/at-STY/%E5%8E%86%E5%8F%B2%E7%9A%84%E6%9E%A2%E7%BA%BD%E4%BA%92%E9%80%9A%E5%BC%8F%E7%AB%8B%E4%BD%93%E4%BA%A4%E5%8F%89/</guid>
             <title>at STY vol.11|历史的枢纽互通式立体交叉</title>
             <link>http://ameitsu.github.io/at-STY/at-STY/%E5%8E%86%E5%8F%B2%E7%9A%84%E6%9E%A2%E7%BA%BD%E4%BA%92%E9%80%9A%E5%BC%8F%E7%AB%8B%E4%BD%93%E4%BA%A4%E5%8F%89/</link>
-            <category>原创</category>
             <category>at STY</category>
+            <category>原创</category>
             <category>高中牲STY</category>
             <pubDate>Mon, 28 Aug 2023 16:15:03 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://i.imgs.ovh/i/2023/08/28/64ec58d656537.png&#34; alt=&#34;I-cloverleaf.svg.png&#34; /&gt;&lt;/p&gt;
@@ -618,8 +660,8 @@ STY 收集的签名大概率散佚了。经过暑假期间三四回大扫除依�
             <guid isPermalink="true">http://ameitsu.github.io/Ameitsu-Orchestra/ameitsu-orchestra/AmeistuOrchestra%20vol-3/</guid>
             <title>Ameitsu Orchestra vol.3|《枪炮、病菌和钢铁（Guns, Germs and Steel）》读后感</title>
             <link>http://ameitsu.github.io/Ameitsu-Orchestra/ameitsu-orchestra/AmeistuOrchestra%20vol-3/</link>
-            <category>Ameitsu Orchestra</category>
             <category>原创</category>
+            <category>Ameitsu Orchestra</category>
             <pubDate>Mon, 17 Jul 2023 22:52:35 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;注：这还是 STY 的暑假作业之一，主要是七月三稿想不出来写什么，干脆拿着个先占个位置，后面再去补一个好东西（遥遥无期啊 www）&lt;/p&gt;
@@ -654,8 +696,8 @@ STY 收集的签名大概率散佚了。经过暑假期间三四回大扫除依�
             <guid isPermalink="true">http://ameitsu.github.io/Ameitsu-Orchestra/ameitsu-orchestra/AmeistuOrchestra%20vol-2/</guid>
             <title>Ameitsu Orchestra vol.2|《地球的力量》观后感</title>
             <link>http://ameitsu.github.io/Ameitsu-Orchestra/ameitsu-orchestra/AmeistuOrchestra%20vol-2/</link>
-            <category>Ameitsu Orchestra</category>
             <category>原创</category>
+            <category>Ameitsu Orchestra</category>
             <pubDate>Sun, 16 Jul 2023 10:49:17 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;注：这是 STY 的暑假作业之一，主要是七月二稿想不出来写什么，干脆拿着个先占个位置，后面再去补一个好东西&lt;/p&gt;
@@ -677,8 +719,8 @@ STY 收集的签名大概率散佚了。经过暑假期间三四回大扫除依�
             <guid isPermalink="true">http://ameitsu.github.io/Ameitsu-Orchestra/ameitsu-orchestra/AmeitsuOrchestra%20vol-1/</guid>
             <title>Ameitsu Orchestra vol.1 | Descending Digital Dark Ages</title>
             <link>http://ameitsu.github.io/Ameitsu-Orchestra/ameitsu-orchestra/AmeitsuOrchestra%20vol-1/</link>
-            <category>Ameitsu Orchestra</category>
             <category>原创</category>
+            <category>Ameitsu Orchestra</category>
             <pubDate>Mon, 03 Jul 2023 22:21:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://cdnjson.com/images/2023/08/11/painting.digitaldarkages.jpg&#34; alt=&#34;painting.digitaldarkages.jpg&#34; /&gt;&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -759,9 +801,9 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
             <guid isPermalink="true">http://ameitsu.github.io/at-STY/at-STY/%E7%9B%B4%E5%87%BB%E4%B8%AD%E8%80%83/</guid>
             <title>at STY vol.7|直击中考！！！</title>
             <link>http://ameitsu.github.io/at-STY/at-STY/%E7%9B%B4%E5%87%BB%E4%B8%AD%E8%80%83/</link>
-            <category>原创</category>
             <category>at STY</category>
             <category>学习</category>
+            <category>原创</category>
             <category>STY的初三大事记</category>
             <pubDate>Fri, 23 Jun 2023 21:35:53 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
@@ -872,8 +914,8 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
             <guid isPermalink="true">http://ameitsu.github.io/at-STY/at-STY/%E4%B9%89%E5%8D%96%E6%99%92%E5%8D%95/</guid>
             <title>at STY vol.6|义卖晒单——论STY拿￥250预算买了些神马玩意儿</title>
             <link>http://ameitsu.github.io/at-STY/at-STY/%E4%B9%89%E5%8D%96%E6%99%92%E5%8D%95/</link>
-            <category>原创</category>
             <category>at STY</category>
+            <category>原创</category>
             <category>STY的初三大事记</category>
             <category>多图杀猫</category>
             <pubDate>Tue, 13 Jun 2023 20:57:27 +0800</pubDate>
@@ -987,9 +1029,9 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
             <guid isPermalink="true">http://ameitsu.github.io/at-STY/at-STY/%E6%BD%A6%E8%8D%89%E7%9A%84%E4%BA%8C%E6%A8%A1/</guid>
             <title>at STY vol.5|潦草的二模</title>
             <link>http://ameitsu.github.io/at-STY/at-STY/%E6%BD%A6%E8%8D%89%E7%9A%84%E4%BA%8C%E6%A8%A1/</link>
-            <category>原创</category>
             <category>at STY</category>
             <category>学习</category>
+            <category>原创</category>
             <category>STY的初三大事记</category>
             <pubDate>Sat, 03 Jun 2023 10:48:45 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note success&#34;&gt;
@@ -1057,9 +1099,9 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
             <guid isPermalink="true">http://ameitsu.github.io/at-STY/at-STY/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%9B%B4%E5%8D%87%E8%80%83/</guid>
             <title>at STY vol.4|第二次直升考</title>
             <link>http://ameitsu.github.io/at-STY/at-STY/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%9B%B4%E5%8D%87%E8%80%83/</link>
-            <category>原创</category>
             <category>at STY</category>
             <category>学习</category>
+            <category>原创</category>
             <category>STY的初三大事记</category>
             <pubDate>Sat, 13 May 2023 21:33:04 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;注：封面图与全文无关。&lt;/p&gt;
@@ -1182,10 +1224,10 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
             <guid isPermalink="true">http://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/</guid>
             <title>SofTYvol.3|科技与一模</title>
             <link>http://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/</link>
-            <category>原创</category>
             <category>学习</category>
-            <category>SofTY</category>
+            <category>原创</category>
             <category>Python</category>
+            <category>SofTY</category>
             <pubDate>Fri, 28 Apr 2023 23:10:57 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;啊，今天是 4 月 30 号，2023 年 4 月的最后一天。就在 40 个小时之前&lt;ins&gt;举世瞩目的&lt;/ins&gt; 2023 年朝阳区初三一模结束了。SofTY 作为本站的编程 / 数学专栏真的有必要从数学压轴题里找点整活的灵感什么的。&lt;/p&gt;
 &lt;p&gt;所以嘛，本篇的主题 —— 用&lt;ins&gt;科技和人工智慧&lt;/ins&gt;攻克 16 题 (2) 和 28 题 (3)&lt;/p&gt;
@@ -1271,9 +1313,9 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
             <guid isPermalink="true">http://ameitsu.github.io/at-STY/at-STY/%E4%B8%80%E6%A8%A1%E5%89%8D%E7%BA%BF/</guid>
             <title>at STY vol.3|一模前线</title>
             <link>http://ameitsu.github.io/at-STY/at-STY/%E4%B8%80%E6%A8%A1%E5%89%8D%E7%BA%BF/</link>
-            <category>原创</category>
             <category>at STY</category>
             <category>学习</category>
+            <category>原创</category>
             <category>STY的初三大事记</category>
             <pubDate>Tue, 25 Apr 2023 22:49:42 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note success&#34;&gt;
@@ -1372,8 +1414,8 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
             <title>SofTY vol.2|凑活能用小爬虫</title>
             <link>http://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB/</link>
             <category>原创</category>
-            <category>SofTY</category>
             <category>Python</category>
+            <category>SofTY</category>
             <pubDate>Fri, 14 Apr 2023 22:25:47 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/15/i7gSdZ.png&#34; alt=&#34;i7gSdZ.png&#34; /&gt;&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
@@ -1444,8 +1486,8 @@ res = requests.get(url=url,headers=headers)
             <title>SofTY vol.1|代综计算器</title>
             <link>http://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8/</link>
             <category>原创</category>
-            <category>SofTY</category>
             <category>Python</category>
+            <category>SofTY</category>
             <pubDate>Sat, 01 Apr 2023 12:34:47 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/01/iHV0Ny.jpeg&#34; alt=&#34;iHV0Ny.jpeg&#34; /&gt;&lt;br /&gt;
  最近的代综题好烦，先去只有&lt;ins&gt;半扇门&lt;/ins&gt;的学校厕所哭一会儿（太夸张了⑧）&lt;br /&gt;
@@ -1516,9 +1558,9 @@ res = requests.get(url=url,headers=headers)
             <guid isPermalink="true">http://ameitsu.github.io/at-STY/at-STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%9B%B4%E5%8D%87%E8%80%83/</guid>
             <title>at STY vol.2|第一次直升考</title>
             <link>http://ameitsu.github.io/at-STY/at-STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%9B%B4%E5%8D%87%E8%80%83/</link>
-            <category>原创</category>
             <category>at STY</category>
             <category>学习</category>
+            <category>原创</category>
             <category>STY的初三大事记</category>
             <pubDate>Sat, 18 Mar 2023 22:36:32 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note default&#34;&gt;
@@ -1569,9 +1611,9 @@ res = requests.get(url=url,headers=headers)
             <guid isPermalink="true">http://ameitsu.github.io/at-STY/at-STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%90%AC%E8%AF%B4%E8%80%83%E8%AF%95/</guid>
             <title>at STY vol.1|嗦嗦第一次听说考试</title>
             <link>http://ameitsu.github.io/at-STY/at-STY/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%90%AC%E8%AF%B4%E8%80%83%E8%AF%95/</link>
-            <category>原创</category>
             <category>at STY</category>
             <category>学习</category>
+            <category>原创</category>
             <category>STY的初三大事记</category>
             <pubDate>Sun, 26 Feb 2023 10:30:00 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
