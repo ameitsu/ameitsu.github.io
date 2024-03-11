@@ -7,18 +7,18 @@
         <language>zh-CN</language>
         <pubDate>Sat, 02 Mar 2024 11:38:03 +0800</pubDate>
         <lastBuildDate>Sat, 02 Mar 2024 11:38:03 +0800</lastBuildDate>
-        <category>铁路</category>
-        <category>冷门铁路史系列</category>
-        <category>原创</category>
         <category>at STY</category>
+        <category>原创</category>
         <category>高中牲STY-番外</category>
         <category>STY的初三大事记</category>
         <category>高中牲STY</category>
+        <category>铁路</category>
+        <category>冷门铁路史系列</category>
         <category>Ameitsu Orchestra</category>
         <category>水水水</category>
-        <category>非原创</category>
-        <category>多图杀猫</category>
         <category>学习</category>
+        <category>多图杀猫</category>
+        <category>非原创</category>
         <category>站庆</category>
         <category>重要页面</category>
         <category>游记</category>
@@ -61,6 +61,16 @@
 &lt;p&gt;现在看来，纪念齐白石这位雨儿胡同的故人，更是纪念艺术本身，呼唤艺术在某种程度上的重归。&lt;/p&gt;
 &lt;h2 id=&#34;10&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#10&#34;&gt;#&lt;/a&gt; 10&lt;/h2&gt;
 &lt;p&gt;夜幕降临，行人逐渐减少，雨儿胡同也逐渐平静下来。离巷口不远的地方，一座三合院的灯火依然通明，如同那个曾经住过的故人在艺术上发出的光芒。&lt;/p&gt;
+&lt;p&gt;
+&lt;script src=&#34;https://utteranc.es/client.js&#34;
+        repo=&#34;ameitsu/ameitsu.github.io&#34;
+        issue-term=&#34;title&#34;
+        label=&#34;Comments&#34;
+        theme=&#34;github-light&#34;
+        crossorigin=&#34;anonymous&#34;
+        async&gt;
+&lt;/script&gt;
+&lt;/p&gt;
  ]]></description>
         </item>
         <item>
