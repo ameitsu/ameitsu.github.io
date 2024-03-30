@@ -7,33 +7,33 @@
         <language>zh-CN</language>
         <pubDate>Fri, 28 Apr 2023 23:10:57 +0800</pubDate>
         <lastBuildDate>Fri, 28 Apr 2023 23:10:57 +0800</lastBuildDate>
-        <category>at STY</category>
-        <category>原创</category>
-        <category>高中牲STY-番外</category>
-        <category>STY的初三大事记</category>
+        <category>Notorial</category>
+        <category>SofTY</category>
         <category>高中牲STY</category>
+        <category>原创</category>
         <category>铁路</category>
         <category>冷门铁路史系列</category>
-        <category>学习</category>
-        <category>多图杀猫</category>
+        <category>at STY</category>
+        <category>高中牲STY-番外</category>
+        <category>STY的初三大事记</category>
         <category>Ameitsu Orchestra</category>
         <category>水水水</category>
-        <category>非原创</category>
         <category>站庆</category>
+        <category>非原创</category>
         <category>重要页面</category>
+        <category>多图杀猫</category>
+        <category>学习</category>
         <category>游记</category>
         <category>实践活动</category>
         <category>站内页面</category>
-        <category>Notorial</category>
-        <category>SofTY</category>
         <category>Python</category>
         <item>
             <guid isPermalink="true">https://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/</guid>
             <title>SofTYvol.3|科技与一模</title>
             <link>https://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/</link>
+            <category>SofTY</category>
             <category>原创</category>
             <category>学习</category>
-            <category>SofTY</category>
             <category>Python</category>
             <pubDate>Fri, 28 Apr 2023 23:10:57 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;啊，今天是 4 月 30 号，2023 年 4 月的最后一天。就在 40 个小时之前&lt;ins&gt;举世瞩目的&lt;/ins&gt; 2023 年朝阳区初三一模结束了。SofTY 作为本站的编程 / 数学专栏真的有必要从数学压轴题里找点整活的灵感什么的。&lt;/p&gt;
@@ -114,14 +114,14 @@
 &lt;p&gt;所有答案 STY 都对过标答了，但是有些步骤纯属现场重写，不排除出点什么错的可能性。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
- ]]></description>
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/spoiler.css&#34; type=&#34;text/css&#34;&gt;&lt;script src=&#34;/js/spoiler.js&#34; type=&#34;text/javascript&#34; async&gt;&lt;/script&gt; ]]></description>
         </item>
         <item>
             <guid isPermalink="true">https://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB/</guid>
             <title>SofTY vol.2|凑活能用小爬虫</title>
             <link>https://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB/</link>
-            <category>原创</category>
             <category>SofTY</category>
+            <category>原创</category>
             <category>Python</category>
             <pubDate>Fri, 14 Apr 2023 22:25:47 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/15/i7gSdZ.png&#34; alt=&#34;i7gSdZ.png&#34; /&gt;&lt;br /&gt;
@@ -186,14 +186,14 @@ res = requests.get(url=url,headers=headers)
 &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;向名人许愿 &lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;并不&lt;/span&gt; 能提高您的一模成绩&lt;/p&gt;
 &lt;/div&gt;
- ]]></description>
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/spoiler.css&#34; type=&#34;text/css&#34;&gt;&lt;script src=&#34;/js/spoiler.js&#34; type=&#34;text/javascript&#34; async&gt;&lt;/script&gt; ]]></description>
         </item>
         <item>
             <guid isPermalink="true">https://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8/</guid>
             <title>SofTY vol.1|代综计算器</title>
             <link>https://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8/</link>
-            <category>原创</category>
             <category>SofTY</category>
+            <category>原创</category>
             <category>Python</category>
             <pubDate>Sat, 01 Apr 2023 12:34:47 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/01/iHV0Ny.jpeg&#34; alt=&#34;iHV0Ny.jpeg&#34; /&gt;&lt;br /&gt;
@@ -259,7 +259,7 @@ res = requests.get(url=url,headers=headers)
 &lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/01/iHVCd5.png&#34; alt=&#34;iHVCd5.png&#34; title=&#34;图文无关，但是真的好好笑啊23333&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;最后，毕竟今天是愚人节，怎么着也得参与一下吧！但是我拒绝。&lt;/p&gt;
 &lt;p&gt;但是浅野千华宇宙要进行大规模扩充了！暑假一开始就更。除了浅野双子以外还有 Scotia・Priestly, Arakansas・Yuena, 夜雨明等一堆曾经只在草稿纸上出现的人物。&lt;/p&gt;
- ]]></description>
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/spoiler.css&#34; type=&#34;text/css&#34;&gt;&lt;script src=&#34;/js/spoiler.js&#34; type=&#34;text/javascript&#34; async&gt;&lt;/script&gt; ]]></description>
         </item>
     </channel>
 </rss>

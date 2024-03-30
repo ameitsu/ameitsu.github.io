@@ -7,33 +7,33 @@
         <language>zh-CN</language>
         <pubDate>Thu, 07 Sep 2023 23:33:55 +0800</pubDate>
         <lastBuildDate>Thu, 07 Sep 2023 23:33:55 +0800</lastBuildDate>
-        <category>at STY</category>
-        <category>原创</category>
-        <category>高中牲STY-番外</category>
-        <category>STY的初三大事记</category>
+        <category>Notorial</category>
+        <category>SofTY</category>
         <category>高中牲STY</category>
+        <category>原创</category>
         <category>铁路</category>
         <category>冷门铁路史系列</category>
-        <category>学习</category>
-        <category>多图杀猫</category>
+        <category>at STY</category>
+        <category>高中牲STY-番外</category>
+        <category>STY的初三大事记</category>
         <category>Ameitsu Orchestra</category>
         <category>水水水</category>
-        <category>非原创</category>
         <category>站庆</category>
+        <category>非原创</category>
         <category>重要页面</category>
+        <category>多图杀猫</category>
+        <category>学习</category>
         <category>游记</category>
         <category>实践活动</category>
         <category>站内页面</category>
-        <category>Notorial</category>
-        <category>SofTY</category>
         <category>Python</category>
         <item>
             <guid isPermalink="true">https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/index/</guid>
             <title>Notorial系列介绍与索引</title>
             <link>https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/index/</link>
-            <category>站内页面</category>
             <category>Notorial</category>
             <category>SofTY</category>
+            <category>站内页面</category>
             <pubDate>Thu, 07 Sep 2023 23:33:55 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note warning&#34;&gt;
 &lt;p&gt;此页面待补充 o (T ヘ To)&lt;/p&gt;
@@ -55,7 +55,7 @@
 第七集：一些实例 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
  ova：有价值的内容与结束语 &lt;em&gt;未更新&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
- ]]></description>
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/spoiler.css&#34; type=&#34;text/css&#34;&gt;&lt;script src=&#34;/js/spoiler.js&#34; type=&#34;text/javascript&#34; async&gt;&lt;/script&gt; ]]></description>
         </item>
     </channel>
 </rss>
