@@ -14,19 +14,20 @@
         <category>高中牲STY</category>
         <category>铁路</category>
         <category>冷门铁路史系列</category>
-        <category>Notorial</category>
-        <category>SofTY</category>
-        <category>非原创</category>
         <category>Ameitsu Orchestra</category>
         <category>水水水</category>
-        <category>学习</category>
-        <category>多图杀猫</category>
-        <category>游记</category>
-        <category>实践活动</category>
         <category>站庆</category>
         <category>重要页面</category>
-        <category>站内页面</category>
+        <category>多图杀猫</category>
+        <category>学习</category>
+        <category>非原创</category>
+        <category>游记</category>
+        <category>实践活动</category>
         <category>Python</category>
+        <category>SofTY</category>
+        <category>Notorial</category>
+        <category>麦斯</category>
+        <category>站内页面</category>
         <item>
             <guid isPermalink="true">https://ameitsu.github.io/Ameitsu-Orchestra/ameitsu-orchestra/AmeistuOrchestra%20vol-10/</guid>
             <title>Ameitsu Orchestra vol.10 | The day after tomorrow in a certain point of view</title>
@@ -138,6 +139,73 @@
         crossorigin=&#34;anonymous&#34;
         async&gt;
 &lt;/script&gt;
+&lt;/p&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/spoiler.css&#34; type=&#34;text/css&#34;&gt;&lt;script src=&#34;/js/spoiler.js&#34; type=&#34;text/javascript&#34; async&gt;&lt;/script&gt; ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/integral-1/</guid>
+            <title>Notorial vol.3|微积分第一集：极限</title>
+            <link>https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/integral-1/</link>
+            <category>原创</category>
+            <category>高中牲STY</category>
+            <category>SofTY</category>
+            <category>Notorial</category>
+            <category>麦斯</category>
+            <pubDate>Mon, 25 Mar 2024 20:24:09 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;sth-2-say&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sth-2-say&#34;&gt;#&lt;/a&gt; sth 2 say&lt;/h1&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;本站现在（学期里）没活了，只能更点学习资料了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;虽然猫娘挺可爱，但微积分却是真实存在的。 ——（估计是）牛顿&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;函数的极限&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#函数的极限&#34;&gt;#&lt;/a&gt; 函数的极限&lt;/h1&gt;
+&lt;h2 id=&#34;有限点处的极限&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#有限点处的极限&#34;&gt;#&lt;/a&gt; 有限点处的极限&lt;/h2&gt;
+&lt;p&gt;有一个函数，如果在自变量 x 无限接近某个确定的值 x0 时（记为 x→x0，x≠x0），函数值 f (x) 无限趋近于确定的常数 A，就可以说&lt;/p&gt;
+&lt;p&gt;
+&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;munder&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo accent=&#34;false&#34; stretchy=&#34;false&#34;&gt;→&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/munder&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mrow data-mjx-texclass=&#34;INNER&#34;&gt;&lt;mo data-mjx-texclass=&#34;OPEN&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;CLOSE&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt;
+&lt;/p&gt;
+&lt;p&gt;幂函数、指数函数、对数函数等初级基本函数在定义域内每一点处的极限相当于此处的函数值。&lt;/p&gt;
+&lt;h2 id=&#34;无限大处的极限&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#无限大处的极限&#34;&gt;#&lt;/a&gt; 无限大处的极限&lt;/h2&gt;
+&lt;p&gt;有一个函数，如果在自变量 x 无限增大时（记为 x→x0，x≠x0），函数值 f (x) 无限趋近于确定的常数 A，就可以说&lt;br /&gt;
+ 
+&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;munder&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo accent=&#34;false&#34; stretchy=&#34;false&#34;&gt;→&lt;/mo&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;∞&lt;/mi&gt;&lt;/mrow&gt;&lt;/munder&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mrow data-mjx-texclass=&#34;INNER&#34;&gt;&lt;mo data-mjx-texclass=&#34;OPEN&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;CLOSE&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;函数极限的运算法则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#函数极限的运算法则&#34;&gt;#&lt;/a&gt; 函数极限的运算法则&lt;/h1&gt;
+&lt;p&gt;
+&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mrow data-mjx-texclass=&#34;INNER&#34;&gt;&lt;mo data-mjx-texclass=&#34;OPEN&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mrow data-mjx-texclass=&#34;INNER&#34;&gt;&lt;mo data-mjx-texclass=&#34;OPEN&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;CLOSE&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;±&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mrow data-mjx-texclass=&#34;INNER&#34;&gt;&lt;mo data-mjx-texclass=&#34;OPEN&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;CLOSE&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo data-mjx-texclass=&#34;CLOSE&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mrow data-mjx-texclass=&#34;INNER&#34;&gt;&lt;mo data-mjx-texclass=&#34;OPEN&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;CLOSE&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;±&lt;/mo&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mrow data-mjx-texclass=&#34;INNER&#34;&gt;&lt;mo data-mjx-texclass=&#34;OPEN&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;CLOSE&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mrow data-mjx-texclass=&#34;INNER&#34;&gt;&lt;mo data-mjx-texclass=&#34;OPEN&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mrow data-mjx-texclass=&#34;INNER&#34;&gt;&lt;mo data-mjx-texclass=&#34;OPEN&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;CLOSE&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mrow data-mjx-texclass=&#34;INNER&#34;&gt;&lt;mo data-mjx-texclass=&#34;OPEN&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;CLOSE&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo data-mjx-texclass=&#34;CLOSE&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mrow data-mjx-texclass=&#34;INNER&#34;&gt;&lt;mo data-mjx-texclass=&#34;OPEN&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;CLOSE&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mrow data-mjx-texclass=&#34;INNER&#34;&gt;&lt;mo data-mjx-texclass=&#34;OPEN&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;CLOSE&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mrow data-mjx-texclass=&#34;INNER&#34;&gt;&lt;mo data-mjx-texclass=&#34;OPEN&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;CLOSE&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mrow data-mjx-texclass=&#34;INNER&#34;&gt;&lt;mo data-mjx-texclass=&#34;OPEN&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;CLOSE&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mrow data-mjx-texclass=&#34;INNER&#34;&gt;&lt;mo data-mjx-texclass=&#34;OPEN&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;CLOSE&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mrow data-mjx-texclass=&#34;INNER&#34;&gt;&lt;mo data-mjx-texclass=&#34;OPEN&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;CLOSE&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;
+&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;暂时跳过示例&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;无穷小&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#无穷小&#34;&gt;#&lt;/a&gt; 无穷小&lt;/h1&gt;
+&lt;h2 id=&#34;定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#定义&#34;&gt;#&lt;/a&gt; 定义&lt;/h2&gt;
+&lt;p&gt;当 x→x0 时或 x→∞ 时，f (x) → 0，则这时 f (x) 叫做  x→x0 时的无穷小。即&lt;/p&gt;
+&lt;p&gt;
+&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;munder&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo accent=&#34;false&#34; stretchy=&#34;false&#34;&gt;→&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/munder&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mrow data-mjx-texclass=&#34;INNER&#34;&gt;&lt;mo data-mjx-texclass=&#34;OPEN&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;CLOSE&#34;&gt;) = 0&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt;
+&lt;br /&gt;
+ 时的函数值&lt;/p&gt;
+&lt;h2 id=&#34;无穷小的比较&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#无穷小的比较&#34;&gt;#&lt;/a&gt; 无穷小的比较&lt;/h2&gt;
+&lt;p&gt;如果 &lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;munder&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo accent=&#34;false&#34; stretchy=&#34;false&#34;&gt;→&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/munder&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/math&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;munder&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo accent=&#34;false&#34; stretchy=&#34;false&#34;&gt;→&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/munder&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/math&gt; &lt;/p&gt;
+&lt;p&gt;
+&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;mo&gt;若&lt;/mo&gt;&lt;munder&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo accent=&#34;false&#34; stretchy=&#34;false&#34;&gt;→&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/munder&gt;&lt;mfrac&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo&gt;，那么&lt;/mo&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mo&gt;是比&lt;/mo&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mo&gt;高阶的无穷小&lt;/mo&gt;&lt;/math&gt;
+&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;mo&gt;若&lt;/mo&gt;&lt;munder&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo accent=&#34;false&#34; stretchy=&#34;false&#34;&gt;→&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/munder&gt;&lt;mfrac&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;∞&lt;/mi&gt;&lt;mo&gt;，那么&lt;/mo&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mo&gt;是比&lt;/mo&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mo&gt;高阶的无穷小&lt;/mo&gt;&lt;/math&gt;
+&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;mo&gt;若&lt;/mo&gt;&lt;munder&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo accent=&#34;false&#34; stretchy=&#34;false&#34;&gt;→&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/munder&gt;&lt;mfrac&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mo&gt;≠&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo&gt;，那么&lt;/mo&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mo&gt;是比&lt;/mo&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mo&gt;同阶的无穷小&lt;/mo&gt;&lt;/math&gt;
+&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;mo&gt;若&lt;/mo&gt;&lt;munder&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo accent=&#34;false&#34; stretchy=&#34;false&#34;&gt;→&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/munder&gt;&lt;mfrac&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;，那么&lt;/mo&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mo&gt;是比&lt;/mo&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mo&gt;等阶的无穷小，记为&lt;/mo&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mo&gt;∼&lt;/mo&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;/math&gt;
+&lt;/p&gt;
+&lt;p&gt;常用的近似：&lt;br /&gt;
+
+&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;mo&gt;当&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo accent=&#34;false&#34; stretchy=&#34;false&#34;&gt;→&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo&gt;时&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;∼&lt;/mo&gt;&lt;mi&gt;sin&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;NONE&#34;&gt;⁡&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;∼&lt;/mo&gt;&lt;mi&gt;tan&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;NONE&#34;&gt;⁡&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;∼&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;sin&lt;/mi&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mo data-mjx-texclass=&#34;NONE&#34;&gt;⁡&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;∼&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;tan&lt;/mi&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mo data-mjx-texclass=&#34;NONE&#34;&gt;⁡&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/math&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;等阶无穷小的变换&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#等阶无穷小的变换&#34;&gt;#&lt;/a&gt; 等阶无穷小的变换&lt;/h2&gt;
+&lt;p&gt;
+&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;mo&gt;如果&lt;/mo&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mo&gt;∼&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mo&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mo&gt;∼&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mo&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;∃&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mfrac&gt;&lt;msup&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mo&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;/mfrac&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo&gt;则&lt;/mo&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mfrac&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mfrac&gt;&lt;msup&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mo&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mrow&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mo&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;
 &lt;/p&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/spoiler.css&#34; type=&#34;text/css&#34;&gt;&lt;script src=&#34;/js/spoiler.js&#34; type=&#34;text/javascript&#34; async&gt;&lt;/script&gt; ]]></description>
         </item>
@@ -774,8 +842,8 @@ STY 所在包间里就有一位大叔，他看见其他人熬夜打音游时内�
             <guid isPermalink="true">https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-prompts/</guid>
             <title>Notorial vol.2|Prompt toolkit库第二集：获取输入-上</title>
             <link>https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-prompts/</link>
-            <category>Notorial</category>
             <category>SofTY</category>
+            <category>Notorial</category>
             <pubDate>Fri, 15 Sep 2023 22:17:01 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;此为 &lt;code&gt;Prompt toolkit&lt;/code&gt;  系列的页面。本系列其他文章如下：&lt;br /&gt;
@@ -855,8 +923,8 @@ Ps. 九万里是每天都会洗澡的那种人，此前一直以为所有女生�
             <guid isPermalink="true">https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-print/</guid>
             <title>Notorial vol.1|Prompt toolkit库第一集：打印文本</title>
             <link>https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-print/</link>
-            <category>Notorial</category>
             <category>SofTY</category>
+            <category>Notorial</category>
             <pubDate>Fri, 08 Sep 2023 22:17:01 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;此为 &lt;code&gt;Prompt toolkit&lt;/code&gt;  系列的页面。本系列其他文章如下：&lt;br /&gt;
@@ -901,8 +969,8 @@ Ps. 九万里是每天都会洗澡的那种人，此前一直以为所有女生�
             <guid isPermalink="true">https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/index/</guid>
             <title>Notorial系列介绍与索引</title>
             <link>https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/index/</link>
-            <category>Notorial</category>
             <category>SofTY</category>
+            <category>Notorial</category>
             <category>站内页面</category>
             <pubDate>Thu, 07 Sep 2023 23:33:55 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note warning&#34;&gt;
@@ -1453,7 +1521,6 @@ STY 收集的签名大概率散佚了。经过暑假期间三四回大扫除依�
 &lt;/div&gt;
 &lt;h1 id=&#34;蓝色惑星的不羁搏动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#蓝色惑星的不羁搏动&#34;&gt;#&lt;/a&gt; 蓝色惑星的不羁搏动&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;——《地球的力量》观后感&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;说到地球的力量，2023 年的人类最直观的感受就是极端天气频发与反常高温，在高温预警中北半球又战战兢兢地过着一个又一个难熬的夏日。现在，全球变暖的效果已经如此明显，21 世纪 10 年代以来几乎每个半球的夏天里都会传出对应极点超过 20-30 摄氏度的新闻，崩塌的冰川也几乎无法挽回，而人类已经开始真正见证地球紊乱时的失控力量 —— 温室气体浓度升高会影响整个生物圈。&lt;/p&gt;
 &lt;p&gt;而在这个北京 40 多年来最热的一个夏天里，我观看了地理老师推荐的纪录片《地球的力量》，一部近 16 年前的经典作品。尽管片中部分数据和事实已经过时，但整部纪录片带来的对自然地理和地球的理解是更为可贵的。&lt;/p&gt;
 &lt;p&gt;纪录片着眼于那些地球上的 “无形力量”。火山、大气、冰川、海洋，这些是编导眼中的地球之力。从埃塞俄比亚阿法州尔塔阿雷火山永不融化的熔岩湖到新西兰南岛南阿尔卑斯山，第一集讲述了炽热的地核如何推动了生命的产生；从一代代航空先驱勇探上层大气，到遍布世界的叠层石制造氧气，第二集揭示了曾经充满一氧化碳和甲烷的大气如何成为生命的天地的原因；从阿拉斯加狭地的冰河遗址到挪威破碎的峡湾，第三集展示了看似脆弱的冰是如何塑造了世界的外貌；从周游世界的塑料鸭子，到摧毁世界 90% 生命的二叠纪大灭绝，第四集分析了海洋除了支持水生生命外还有多少显著的作用：构建世界的几种力量在四个角度中展示地淋漓尽致。&lt;/p&gt;
@@ -1995,9 +2062,9 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
             <title>SofTYvol.3|科技与一模</title>
             <link>https://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/</link>
             <category>原创</category>
-            <category>SofTY</category>
             <category>学习</category>
             <category>Python</category>
+            <category>SofTY</category>
             <pubDate>Fri, 28 Apr 2023 23:10:57 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;啊，今天是 4 月 30 号，2023 年 4 月的最后一天。就在 40 个小时之前&lt;ins&gt;举世瞩目的&lt;/ins&gt; 2023 年朝阳区初三一模结束了。SofTY 作为本站的编程 / 数学专栏真的有必要从数学压轴题里找点整活的灵感什么的。&lt;/p&gt;
 &lt;p&gt;所以嘛，本篇的主题 —— 用&lt;ins&gt;科技和人工智慧&lt;/ins&gt;攻克 16 题 (2) 和 28 题 (3)&lt;/p&gt;
@@ -2186,8 +2253,8 @@ Besides grandparent-style technologies, fancier ones are also considered. Some r
             <title>SofTY vol.2|凑活能用小爬虫</title>
             <link>https://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB/</link>
             <category>原创</category>
-            <category>SofTY</category>
             <category>Python</category>
+            <category>SofTY</category>
             <pubDate>Fri, 14 Apr 2023 22:25:47 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/15/i7gSdZ.png&#34; alt=&#34;i7gSdZ.png&#34; /&gt;&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
@@ -2258,8 +2325,8 @@ res = requests.get(url=url,headers=headers)
             <title>SofTY vol.1|代综计算器</title>
             <link>https://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8/</link>
             <category>原创</category>
-            <category>SofTY</category>
             <category>Python</category>
+            <category>SofTY</category>
             <pubDate>Sat, 01 Apr 2023 12:34:47 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/01/iHV0Ny.jpeg&#34; alt=&#34;iHV0Ny.jpeg&#34; /&gt;&lt;br /&gt;
  最近的代综题好烦，先去只有&lt;ins&gt;半扇门&lt;/ins&gt;的学校厕所哭一会儿（太夸张了⑧）&lt;br /&gt;
