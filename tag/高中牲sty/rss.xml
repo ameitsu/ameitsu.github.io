@@ -16,18 +16,18 @@
         <category>冷门铁路史系列</category>
         <category>Ameitsu Orchestra</category>
         <category>水水水</category>
-        <category>站庆</category>
-        <category>重要页面</category>
         <category>多图杀猫</category>
         <category>学习</category>
+        <category>站庆</category>
+        <category>重要页面</category>
         <category>非原创</category>
         <category>游记</category>
         <category>实践活动</category>
-        <category>Python</category>
-        <category>SofTY</category>
-        <category>Notorial</category>
-        <category>麦斯</category>
         <category>站内页面</category>
+        <category>Notorial</category>
+        <category>SofTY</category>
+        <category>麦斯</category>
+        <category>Python</category>
         <item>
             <guid isPermalink="true">https://ameitsu.github.io/Ameitsu-Orchestra/ameitsu-orchestra/AmeistuOrchestra%20vol-10/</guid>
             <title>Ameitsu Orchestra vol.10 | The day after tomorrow in a certain point of view</title>
@@ -148,8 +148,8 @@
             <link>https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/integral-1/</link>
             <category>原创</category>
             <category>高中牲STY</category>
-            <category>SofTY</category>
             <category>Notorial</category>
+            <category>SofTY</category>
             <category>麦斯</category>
             <pubDate>Mon, 25 Mar 2024 20:24:09 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;sth-2-say&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sth-2-say&#34;&gt;#&lt;/a&gt; sth 2 say&lt;/h1&gt;
@@ -206,6 +206,16 @@
 &lt;h2 id=&#34;等阶无穷小的变换&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#等阶无穷小的变换&#34;&gt;#&lt;/a&gt; 等阶无穷小的变换&lt;/h2&gt;
 &lt;p&gt;
 &lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;mo&gt;如果&lt;/mo&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mo&gt;∼&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mo&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mo&gt;∼&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mo&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;∃&lt;/mi&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mfrac&gt;&lt;msup&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mo&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;/mfrac&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo&gt;则&lt;/mo&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mfrac&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo data-mjx-texclass=&#34;OP&#34; movablelimits=&#34;true&#34;&gt;lim&lt;/mo&gt;&lt;mfrac&gt;&lt;msup&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mo&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mrow&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mo&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;script src=&#34;https://utteranc.es/client.js&#34;
+        repo=&#34;ameitsu/ameitsu.github.io&#34;
+        issue-term=&#34;title&#34;
+        label=&#34;Comments&#34;
+        theme=&#34;github-light&#34;
+        crossorigin=&#34;anonymous&#34;
+        async&gt;
+&lt;/script&gt;
 &lt;/p&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/spoiler.css&#34; type=&#34;text/css&#34;&gt;&lt;script src=&#34;/js/spoiler.js&#34; type=&#34;text/javascript&#34; async&gt;&lt;/script&gt; ]]></description>
         </item>

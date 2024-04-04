@@ -11,9 +11,9 @@
             "date_published": "2023-09-07T15:33:55.000Z",
             "content_html": "<div class=\"note warning\">\n<p>此页面待补充 o (T ヘ To)</p>\n</div>\n<p>STY 经过深思熟虑后认为原先的 SofTY 系列的 “有趣程度” 不够，原因是其中的调侃成分与真正的技术部分掺杂在一起，而且涉及的技术难度不大。于是，SofTY 系列将拆分为 <code>SofTY-STorY</code>  和 <code>Notorial</code>  子系列，其中前者是即为原 SofTY 系列。现特别说明后者的主要内容并列出索引。</p>\n<h1 id=\"notorial是个什么东西\"><a class=\"anchor\" href=\"#notorial是个什么东西\">#</a> Notorial 是个什么东西？</h1>\n<p>Notorial 是 note 和 tutorial 的派生词。这个子系列中是 STY 学习某种技术时的笔记，但同时也可起到教程的作用，所以才有这个命名。</p>\n<h1 id=\"notorial现在有哪些内容\"><a class=\"anchor\" href=\"#notorial现在有哪些内容\">#</a> Notorial 现在有哪些内容？</h1>\n<ul>\n<li>Prompt-toolkit（一个 python 命令行库）<br />\n第一集：打印文本 <a href=\"https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-print/\">前往</a><br />\n关于普通文本和格式化文本的输出。<br />\n第二集：输入文本 <em>未更新</em><br />\n一些与输入文本有关的功能，如多行编辑、底部工具栏、自动补全等。<br />\n第三集：对话框 <em>未更新</em><br />\n第四集：进度条 <em>未更新</em><br />\n第五集：全屏程序制作 <em>未更新</em><br />\n第六集：拓展内容 <em>未更新</em><br />\n第七集：一些实例 <em>未更新</em><br />\n ova：有价值的内容与结束语 <em>未更新</em></li>\n</ul>\n<link rel=\"stylesheet\" href=\"/css/spoiler.css\" type=\"text/css\"><script src=\"/js/spoiler.js\" type=\"text/javascript\" async></script>",
             "tags": [
-                "SofTY",
+                "站内页面",
                 "Notorial",
-                "站内页面"
+                "SofTY"
             ]
         }
     ]
