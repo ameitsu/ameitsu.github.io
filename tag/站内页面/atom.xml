@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ameitsu.github.io</id>
+    <title>Cyberpark Nichome • Posts by &#34;站内页面&#34; tag</title>
+    <link href="https://ameitsu.github.io" />
+    <updated>2023-09-07T15:33:55.000Z</updated>
+    <category term="at STY" />
+    <category term="原创" />
+    <category term="高中牲STY-番外" />
+    <category term="STY的初三大事记" />
+    <category term="高中牲STY" />
+    <category term="铁路" />
+    <category term="冷门铁路史系列" />
+    <category term="Ameitsu Orchestra" />
+    <category term="水水水" />
+    <category term="站庆" />
+    <category term="重要页面" />
+    <category term="非原创" />
+    <category term="学习" />
+    <category term="多图杀猫" />
+    <category term="游记" />
+    <category term="实践活动" />
+    <category term="Notorial" />
+    <category term="SofTY" />
+    <category term="麦斯" />
+    <category term="站内页面" />
+    <category term="Python" />
+    <entry>
+        <id>https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/index/</id>
+        <title>Notorial系列介绍与索引</title>
+        <link rel="alternate" href="https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/index/"/>
+        <content type="html">&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;此页面待补充 o (T ヘ To)&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;STY 经过深思熟虑后认为原先的 SofTY 系列的 “有趣程度” 不够，原因是其中的调侃成分与真正的技术部分掺杂在一起，而且涉及的技术难度不大。于是，SofTY 系列将拆分为 &lt;code&gt;SofTY-STorY&lt;/code&gt;  和 &lt;code&gt;Notorial&lt;/code&gt;  子系列，其中前者是即为原 SofTY 系列。现特别说明后者的主要内容并列出索引。&lt;/p&gt;
+&lt;h1 id=&#34;notorial是个什么东西&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#notorial是个什么东西&#34;&gt;#&lt;/a&gt; Notorial 是个什么东西？&lt;/h1&gt;
+&lt;p&gt;Notorial 是 note 和 tutorial 的派生词。这个子系列中是 STY 学习某种技术时的笔记，但同时也可起到教程的作用，所以才有这个命名。&lt;/p&gt;
+&lt;h1 id=&#34;notorial现在有哪些内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#notorial现在有哪些内容&#34;&gt;#&lt;/a&gt; Notorial 现在有哪些内容？&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Prompt-toolkit（一个 python 命令行库）&lt;br /&gt;
+第一集：打印文本 &lt;a href=&#34;https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-print/&#34;&gt;前往&lt;/a&gt;&lt;br /&gt;
+关于普通文本和格式化文本的输出。&lt;br /&gt;
+第二集：输入文本 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+一些与输入文本有关的功能，如多行编辑、底部工具栏、自动补全等。&lt;br /&gt;
+第三集：对话框 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+第四集：进度条 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+第五集：全屏程序制作 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+第六集：拓展内容 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+第七集：一些实例 &lt;em&gt;未更新&lt;/em&gt;&lt;br /&gt;
+ ova：有价值的内容与结束语 &lt;em&gt;未更新&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/spoiler.css&#34; type=&#34;text/css&#34;&gt;&lt;script src=&#34;/js/spoiler.js&#34; type=&#34;text/javascript&#34; async&gt;&lt;/script&gt;</content>
+        <category term="Notorial" />
+        <category term="SofTY" />
+        <category term="站内页面" />
+        <updated>2023-09-07T15:33:55.000Z</updated>
+    </entry>
+</feed>
