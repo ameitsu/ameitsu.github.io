@@ -6,7 +6,7 @@
   <link href="https://ameitsu.github.io/atom.xml" rel="self"/>
   
   <link href="https://ameitsu.github.io/"/>
-  <updated>2024-06-23T15:30:44.065Z</updated>
+  <updated>2024-06-24T15:20:56.736Z</updated>
   <id>https://ameitsu.github.io/</id>
   
   <author>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>站内页面 | Constitution of Cyberpark</title>
-    <link href="https://ameitsu.github.io/%E7%AB%99%E5%86%85%E9%A1%B5%E9%9D%A2/miscellaneous/regulations/"/>
-    <id>https://ameitsu.github.io/%E7%AB%99%E5%86%85%E9%A1%B5%E9%9D%A2/miscellaneous/regulations/</id>
+    <link href="https://ameitsu.github.io/%E7%AB%99%E5%86%85%E9%A1%B5%E9%9D%A2/miscellaneous/constitution/"/>
+    <id>https://ameitsu.github.io/%E7%AB%99%E5%86%85%E9%A1%B5%E9%9D%A2/miscellaneous/constitution/</id>
     <published>2024-06-23T14:59:51.000Z</published>
-    <updated>2024-06-23T15:30:44.065Z</updated>
+    <updated>2024-06-24T15:20:56.736Z</updated>
     
-    <content type="html"><![CDATA[<div class="note info"><p>正在施工中！</p></div><div class="note default"><p>是的，这玩意儿是拿 18 年宪法改编的。</p></div><p>(2024 年 6 月 23 日 STY 自己阅读通过，2024 年 &lt; 空&gt; STY 确定试行。 根据 2023 年 1 月 21 日 STY 通过的建站宣言、2024 年 8 月 29 日发送在 at STY 专栏的文章 “ at STY vol.11 | 历史的枢纽互通式立体交叉” 和 2023 年 8 月 29 日 STY 发送在站内页面区的对部分细节的回答修正)</p><h1 id="总纲"><a class="anchor" href="#总纲">#</a> 总纲</h1><p>Cyberpark 并不是世界上历史最悠久的网站之一。STY 自己一个人创造了 Cyberpark，具有悠久的与 bug 干仗的运维传统。</p><p>2022 年前后，有点实力的 STY 想搞一个网站出来。STY 为这个小破站建立做出了称不上前仆后继的英勇奋斗。</p><p>2023 年，Cyberpark 计划发生了翻天覆地的伟大历史变革。</p><p>2023 年 STY 自己在期末考试后的下午造出的 Cyberpark Prototype，成功创立了 Cyberpark 的网络基础。但是，STY 建立真正的博客网站的小心愿还妹有完成。</p><h1 id="sty的权利与义务"><a class="anchor" href="#sty的权利与义务">#</a> STY 的权利与义务</h1><h1 id="站内机构"><a class="anchor" href="#站内机构">#</a> 站内机构</h1><h2 id="更新组"><a class="anchor" href="#更新组">#</a> 更新组</h2><h2 id="编辑组"><a class="anchor" href="#编辑组">#</a> 编辑组</h2><h2 id="站长"><a class="anchor" href="#站长">#</a> 站长</h2><h2 id="媒体资源组"><a class="anchor" href="#媒体资源组">#</a> 媒体资源组</h2><h2 id="技术组"><a class="anchor" href="#技术组">#</a> 技术组</h2><h1 id="站标编辑规范约定俗成的规则其他事项"><a class="anchor" href="#站标编辑规范约定俗成的规则其他事项">#</a> 站标，编辑规范，约定俗成的规则，其他事项</h1><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    <content type="html"><![CDATA[<div class="note info"><p>正在施工中！</p></div><p>(2024 年 6 月 23 日 STY 自己阅读通过，2024 年 &lt; 空&gt; STY 确定试行。 根据 2023 年 1 月 21 日 STY 通过的建站宣言、2024 年 8 月 29 日发送在 at STY 专栏的文章 “ at STY vol.11 | 历史的枢纽互通式立体交叉” 和 2023 年 8 月 29 日 STY 发送在站内页面区的对部分细节的回答修正)</p><h1 id="序言"><a class="anchor" href="#序言">#</a> 序言</h1><p>Cyberpark 并不是世界上历史最悠久的网站之一。STY 自己一个人创造了 Cyberpark，具有悠久的与 bug 干仗的运维传统。</p><p>2022 年前后，有点实力的 STY 想搞一个网站出来。STY 为这个小破站建立做出了称不上前仆后继的英勇奋斗。</p><p>2023 年，Cyberpark 计划发生了翻天覆地的伟大历史变革。</p><p>2023 年 STY 自己在期末考试后的下午造出的 Cyberpark Prototype，成功创立了 Cyberpark 的网络基础。但是，STY 建立真正的博客网站的小心愿还妹有完成。</p><p>2023 年 1 月 21 日，STY 在经历了 ssh 连不上等问题的折磨之后，终于建立了 Cyberpark，取得了个人网站全面建成的伟大胜利。从此，STY 有了自己的互联网宅基地。</p><p>Cyberpark 建立之后，STY 实现了从内向小宝宝到内向闷骚大宝宝的过渡。</p><p>Cyberpark 的成功运营，是 STY 心系自己的小破站，在 Markdown 语法、Git Bash 指令的指引下，坚持不拖更，修正 tag 和错字儿，战胜许多破事儿而取得的。Cyberpark 的根本任务是，沿着 STY 特色写稿道路，记录 STY 的学习生活。</p><p>本页面以站规的方式确认了 STY 的奋斗成果，规定了 Cyberpark 的根本架构和根本运营准则，是 Cyberpark 的根本法，具有最高的内容效力。STY，以及他创造出来的各种虚拟人物，都必须以站规为根本的活动准则，并且负有维护站规尊严，保证站规实施的职责。</p><h1 id="总纲"><a class="anchor" href="#总纲">#</a> 总纲</h1><p><strong>第一条</strong> Cyberpark 是 STY 创立的，STY 拥有的，以 hexo.js 为基础的静态网站。<br />hexo.js 是 Cyberpark 的根本信息技术基础。由 STY 拥有是 Cyberpark 的最本质的特征。禁止任何组织和个人破坏 STY 对 Cyberpark 的所有权。<br /><strong>第二条</strong> Cyberpark 的一切权力属于 STY。STY 自己决定所有事情。<br /><strong>第三条</strong> Cyberpark 的站内活动实行 STY 一个人说了算的原则。<br /><strong>第四条</strong> Cyberpark 内的所有虚拟人物一律平等。STY 保证各虚拟人物的合法权利和利益。禁止对任何虚拟人物的歧视与压迫。</p><p>虚拟人物在设定页实行区域自治，照样实行 STY 一个人说了算原则。<br /><strong>第五条</strong> Cyberpark 实行依规治站，建设赛博法治网站。</p><p>STY 维护 Cyberpark 站规体系的统一和尊严。</p><p>任何组织或者个人都不得有超越站规和细分规定的特权。</p><h1 id="sty的权利与义务"><a class="anchor" href="#sty的权利与义务">#</a> STY 的权利与义务</h1><h1 id="站内活动"><a class="anchor" href="#站内活动">#</a> 站内活动</h1><h2 id="更新"><a class="anchor" href="#更新">#</a> 更新</h2><h2 id="编辑"><a class="anchor" href="#编辑">#</a> 编辑</h2><h2 id="站长"><a class="anchor" href="#站长">#</a> 站长</h2><h2 id="媒体资源"><a class="anchor" href="#媒体资源">#</a> 媒体资源</h2><h2 id="技术"><a class="anchor" href="#技术">#</a> 技术</h2><h1 id="站标编辑规范约定俗成的规则其他事项"><a class="anchor" href="#站标编辑规范约定俗成的规则其他事项">#</a> 站标，编辑规范，约定俗成的规则，其他事项</h1><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
     
       
@@ -31,10 +31,7 @@
     <summary type="html">&lt;div class=&quot;note info&quot;&gt;
 &lt;p&gt;正在施工中！&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;note default&quot;&gt;
-&lt;p&gt;是的，这玩意儿是拿 18 年宪法改编的。&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;(2024 年 6 月 23 日 STY 自己阅读通过，20</summary>
+&lt;p&gt;(2024 年 6 月 23 日 STY 自己阅读通过，2024 年 &amp;lt; 空&amp;gt; STY 确定试行。 根据 2023 年 1 月 21 日 STY 通过的建站宣言、2024 </summary>
       
     
     
