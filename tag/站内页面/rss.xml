@@ -16,17 +16,18 @@
         <category>冷门铁路史系列</category>
         <category>Ameitsu Orchestra</category>
         <category>水水水</category>
+        <category>非原创</category>
         <category>多图杀猫</category>
         <category>学习</category>
-        <category>非原创</category>
         <category>站内页面</category>
         <category>重要页面</category>
         <category>站庆</category>
         <category>游记</category>
-        <category>实践活动</category>
         <category>包含发电语录</category>
         <category>猫猫</category>
         <category>晒单</category>
+        <category>骑行</category>
+        <category>实践活动</category>
         <category>Notorial</category>
         <category>SofTY</category>
         <category>麦斯</category>
@@ -48,7 +49,7 @@
 &lt;p&gt;2023 年，Cyberpark 计划发生了翻天覆地的伟大历史变革。&lt;/p&gt;
 &lt;p&gt;2023 年 STY 自己在期末考试后的下午造出的 Cyberpark Prototype，成功创立了 Cyberpark 的网络基础。但是，STY 建立真正的博客网站的小心愿还妹有完成。&lt;/p&gt;
 &lt;p&gt;2023 年 1 月 21 日，STY 在经历了 ssh 连不上等问题的折磨之后，终于建立了 Cyberpark，取得了个人网站全面建成的伟大胜利。从此，STY 有了自己的互联网宅基地。&lt;/p&gt;
-&lt;p&gt;Cyberpark 建立之后，STY 实现了从内向小宝宝到内向闷骚大宝宝的过渡。&lt;/p&gt;
+&lt;p&gt;Cyberpark 建立之后，STY 实现了从内向小宝宝到内向闷骚男子高生的过渡。&lt;/p&gt;
 &lt;p&gt;Cyberpark 的成功运营，是 STY 心系自己的小破站，在 Markdown 语法、Git Bash 指令的指引下，坚持不拖更，修正 tag 和错字儿，战胜许多破事儿而取得的。Cyberpark 的根本任务是，沿着 STY 特色写稿道路，记录 STY 的学习生活。&lt;/p&gt;
 &lt;p&gt;本页面以站规的方式确认了 STY 的奋斗成果，规定了 Cyberpark 的根本架构和根本运营准则，是 Cyberpark 的根本法，具有最高的内容效力。STY，以及他创造出来的各种虚拟人物，都必须以站规为根本的活动准则，并且负有维护站规尊严，保证站规实施的职责。&lt;/p&gt;
 &lt;h1 id=&#34;总纲&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总纲&#34;&gt;#&lt;/a&gt; 总纲&lt;/h1&gt;
@@ -72,16 +73,30 @@ hexo.js 是 Cyberpark 的根本信息技术基础。由 STY 拥有是 Cyberpark 
 &lt;p&gt;&lt;strong&gt;第十二条&lt;/strong&gt; STY 在必要时设立特别专栏。在特别专栏中实行的站规由 STY 决定。&lt;br /&gt;
 &lt;strong&gt;第十三条&lt;/strong&gt; STY 关心在 Cyberpark 里的游客的心理健康，在 Cyberpark 里的游客不必遵守站规。&lt;/p&gt;
 &lt;h1 id=&#34;sty的权利与义务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sty的权利与义务&#34;&gt;#&lt;/a&gt; STY 的权利与义务&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;第十四条&lt;/strong&gt; 具有 Cyberpark 管理员或常客称号的都是 Cyberpark 人。Cyberpark 人在站规面前一律平等。任何 Cyberpark 人享有站规规定的权利，同时必须履行站规规定的义务。&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;第十四条&lt;/strong&gt; 具有 Cyberpark 管理员称号的是 Cyberpark 人。Cyberpark 人在站规面前一律平等。任何 Cyberpark 人享有站规规定的权利，同时必须履行站规规定的义务。&lt;br /&gt;
 STY 尊重和保障猫娘的权利。&lt;br /&gt;
-&lt;strong&gt;第十五条&lt;/strong&gt; STY 是 Cyberpark 唯一的管理员，继承人将继承这一名号。目前禁止颁发常客称号。&lt;br /&gt;
+&lt;strong&gt;第十五条&lt;/strong&gt; STY 是 Cyberpark 唯一的管理员，继承人将继承这一名号。&lt;br /&gt;
 &lt;strong&gt;第十六条&lt;/strong&gt; STY 及在未来被指定的继承人都有操作 Cyberpark 的权利。&lt;br /&gt;
 &lt;strong&gt;第十七条&lt;/strong&gt; STY 有 XP 自由。任何人不得歧视 STY 的 XP。&lt;br /&gt;
-&lt;strong&gt;第十八条&lt;/strong&gt; STY 有更新的权利和义务。STY 通过各种方式，及时更新文章。&lt;/p&gt;
-&lt;h1 id=&#34;站内活动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#站内活动&#34;&gt;#&lt;/a&gt; 站内活动&lt;/h1&gt;
-&lt;h2 id=&#34;更新&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#更新&#34;&gt;#&lt;/a&gt; 更新&lt;/h2&gt;
-&lt;h2 id=&#34;编辑&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编辑&#34;&gt;#&lt;/a&gt; 编辑&lt;/h2&gt;
+&lt;strong&gt;第十八条&lt;/strong&gt; STY 有更新的权利和义务。STY 通过各种方式，及时更新文章。&lt;br /&gt;
+&lt;strong&gt;第十九条&lt;/strong&gt; STY 有休息的权利。&lt;br /&gt;
+&lt;strong&gt;第二十条&lt;/strong&gt; STY 的小心灵受 Cyberpark 保护。&lt;br /&gt;
+&lt;strong&gt;第二十一条&lt;/strong&gt; STY 有给文章刷评论的义务。&lt;/p&gt;
+&lt;h1 id=&#34;站内活动分组&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#站内活动分组&#34;&gt;#&lt;/a&gt; 站内活动分组&lt;/h1&gt;
+&lt;h2 id=&#34;更新组&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#更新组&#34;&gt;#&lt;/a&gt; 更新组&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;第二十二条&lt;/strong&gt; 更新组是 Cyberpark 的最高职能机构。STY 通过更新组行使和履行更新的权利和义务。&lt;br /&gt;
+&lt;strong&gt;第二十三条&lt;/strong&gt; 更新组的固定成员为 STY。允许接纳他人成为更新组成员，但有限期。&lt;br /&gt;
+&lt;strong&gt;第二十四条&lt;/strong&gt; 更新组选材建议会每月一日举行，如有必要则会临时举行。&lt;br /&gt;
+&lt;strong&gt;第二十五条&lt;/strong&gt; 更新组行使下列职权：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（一）依据站长指示修改发布站规和 Cyberpark 操作手册；&lt;/li&gt;
+&lt;li&gt;（二）维护本地文章和媒体资源；&lt;/li&gt;
+&lt;li&gt;（三）更新文章和 chatbox；&lt;/li&gt;
+&lt;li&gt;（四）存档和备份内容。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;站长&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#站长&#34;&gt;#&lt;/a&gt; 站长&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;第二十六条&lt;/strong&gt; 站长是 Cyberpark 的所有者，决定全站一切事务。&lt;br /&gt;
+&lt;strong&gt;第二十七条&lt;/strong&gt; STY 是永久站长。如果&lt;/p&gt;
 &lt;h2 id=&#34;媒体资源&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#媒体资源&#34;&gt;#&lt;/a&gt; 媒体资源&lt;/h2&gt;
 &lt;h2 id=&#34;技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#技术&#34;&gt;#&lt;/a&gt; 技术&lt;/h2&gt;
 &lt;h1 id=&#34;站标编辑规范约定俗成的规则其他事项&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#站标编辑规范约定俗成的规则其他事项&#34;&gt;#&lt;/a&gt; 站标，编辑规范，约定俗成的规则，其他事项&lt;/h1&gt;

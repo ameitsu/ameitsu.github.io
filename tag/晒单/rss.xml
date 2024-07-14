@@ -16,17 +16,18 @@
         <category>冷门铁路史系列</category>
         <category>Ameitsu Orchestra</category>
         <category>水水水</category>
+        <category>非原创</category>
         <category>多图杀猫</category>
         <category>学习</category>
-        <category>非原创</category>
         <category>站内页面</category>
         <category>重要页面</category>
         <category>站庆</category>
         <category>游记</category>
-        <category>实践活动</category>
         <category>包含发电语录</category>
         <category>猫猫</category>
         <category>晒单</category>
+        <category>骑行</category>
+        <category>实践活动</category>
         <category>Notorial</category>
         <category>SofTY</category>
         <category>麦斯</category>
@@ -112,6 +113,16 @@
 &lt;img data-src=&#34;https://img2.imgtp.com/2024/05/22/iw8zq1TW.JPG&#34; alt=&#34;alt text&#34; /&gt;&lt;br /&gt;
  就酱。&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://cdnjson.com/images/2023/11/28/_20231127213638.jpg&#34; alt=&#34;_20231127213638.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;script src=&#34;https://utteranc.es/client.js&#34;
+        repo=&#34;ameitsu/ameitsu.github.io&#34;
+        issue-term=&#34;title&#34;
+        label=&#34;Comments&#34;
+        theme=&#34;github-light&#34;
+        crossorigin=&#34;anonymous&#34;
+        async&gt;
+&lt;/script&gt;
+&lt;/p&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/spoiler.css&#34; type=&#34;text/css&#34;&gt;&lt;script src=&#34;/js/spoiler.js&#34; type=&#34;text/javascript&#34; async&gt;&lt;/script&gt; ]]></description>
         </item>
     </channel>
