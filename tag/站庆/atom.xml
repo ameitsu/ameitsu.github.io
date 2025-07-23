@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ameitsu.github.io</id>
+    <title>Cyberpark Nichōme • Posts by &#34;站庆&#34; tag</title>
+    <link href="https://ameitsu.github.io" />
+    <updated>2024-01-21T10:02:03.000Z</updated>
+    <category term="Ameitsu Orchestra" />
+    <category term="原创" />
+    <category term="水水水" />
+    <category term="高中牲STY" />
+    <category term="at STY" />
+    <category term="高中牲STY-番外" />
+    <category term="STY的初三大事记" />
+    <category term="铁路" />
+    <category term="冷门铁路史系列" />
+    <category term="猫看了变猫娘" />
+    <category term="非原创" />
+    <category term="九万里" />
+    <category term="Cyberpark Weekly" />
+    <category term="排球" />
+    <category term="游记" />
+    <category term="研学" />
+    <category term="学习" />
+    <category term="多图杀猫" />
+    <category term="背景图" />
+    <category term="补充资料" />
+    <category term="chatbox存档" />
+    <category term="站内页面" />
+    <category term="重要页面" />
+    <category term="视频" />
+    <category term="站庆" />
+    <category term="包含发电语录" />
+    <category term="猫猫" />
+    <category term="晒单" />
+    <category term="实践活动" />
+    <category term="骑行" />
+    <category term="Notorial" />
+    <category term="SofTY" />
+    <category term="Python" />
+    <category term="麦斯" />
+    <entry>
+        <id>https://ameitsu.github.io/%E7%AB%99%E5%86%85%E9%A1%B5%E9%9D%A2/miscellaneous/%E4%B8%80%E5%91%A8%E5%B9%B4%E7%AB%99%E5%BA%86/</id>
+        <title>站庆 | 一周年啦~</title>
+        <link rel="alternate" href="https://ameitsu.github.io/%E7%AB%99%E5%86%85%E9%A1%B5%E9%9D%A2/miscellaneous/%E4%B8%80%E5%91%A8%E5%B9%B4%E7%AB%99%E5%BA%86/"/>
+        <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://i0.imgs.ovh/2024/01/20/sOPDU.jpeg&#34; alt=&#34;sOPDU.jpeg&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;to-begin-with&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#to-begin-with&#34;&gt;#&lt;/a&gt; To begin with……&lt;/h1&gt;
+&lt;p&gt;终于，这个小破站撑到了一周年。在一周年之际，写点特别的东西是肯定的。只是 STY 刚考完期末考试，物理化学生物集体难度 upup，其他文科的题目怪让人疑神疑鬼的，所以 STY 已经处于萎靡不振的状态了，也自然煽情不起来。&lt;span class=&#34;spoiler&#34; title=&#34;没见过吧？这是赛博涂改带。&#34;&gt;谁™出的破卷子 (` 皿 ´＃)&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;这一年&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#这一年&#34;&gt;#&lt;/a&gt; 这一年&lt;/h1&gt;
+&lt;p&gt;本站是一个普普通通的，拿 Hexo 整出来的一个个人网站。Hexo 一个月 116k 下载，去除掉数量可观的失败案例外，剩下的正在运行的也不在少数。STY 用的是 Github Pages 部署，还保留 Github Pages 的原始仓库 url，让这个小破站更显得更加破了。&lt;/p&gt;
+&lt;p&gt;虽然它又小又破，但是 —— 已经&lt;strong&gt;一周年了&lt;/strong&gt;！这说明 Cyberpark 在 STY 心中的地位还是不一样的。&lt;/p&gt;
+&lt;p&gt;STY 想建一个个人网站的计划始于 2021 年。当时 STY 知道要解决服务器问题，但资金确实看起来挺捉襟见肘。在 2022 年左右，STY 接触到了 Hexo，一种轻量化的静态网站生成框架 —— 而且可部署在 Github Pages 上！&lt;/p&gt;
+&lt;p&gt;建设计划从 2022 年下半年开始实施。但遇到的问题挺多：有时 SSH 会报错，Github Pages 也经常失联，几乎每一次 Git 都会报错。因此，建设计划被迫暂时停止，直到 2023 年初。经过一系列的推倒重做，最终 STY 建成了第一个属于自己的网站 ——Ameitsu Cyberpark。Ameitsu 取自自己名字的诡异日语训读，Cyberpark 其实就是 Cyberpunk 的变体，意为这是一个开辟在信息世界中 STY 的后花园。&lt;/p&gt;
+&lt;p&gt;最初的 Cyberpark 采用的是黑白配色很 contemporary 的 Next 主题。但是 STY 其实想要的是更花里胡哨的 Shoka 主题，不过因为初代 Cyberpark 仅为实验品，STY 先用简单的功能试一试。&lt;/p&gt;
+&lt;p&gt;在 2023 年 1 月 21 日晚，壬寅年的最后一天，Cyberpark 正式上线。当时，我们就有了第一位观众 —— 后来线下催更这些事也都是 ta 做的。&lt;/p&gt;
+&lt;p&gt;建站初的九天，STY 更新了 7 篇。最重要的是第一篇游记，STY 仍然觉得那天首钢的天空和湖水难以忘怀。&lt;/p&gt;
+&lt;p&gt;后来，初三下学期开始了。最后的四个月里，各种大考分割了时间。STY 认为保持更新不现实 —— 但很明显我错了。那篇 “断更宣言” 也成了笑话。更新网站和专注学习并不是冲突的，毕竟我™还是能掂量自己几斤几两。&lt;br /&gt;
+大考后，STY 都会发一篇 @STY 锐评试题，有时也有 SofTY 文章分享一下 STY 做的技术狠活…… 那也是快乐的日子。&lt;/p&gt;
+&lt;p&gt;直升后，Cyberpark 依旧是业余生活中重要的一环。STY 也是在这时打出了本站的第一个广告。据目前追踪到的消息，那个广告在我年级受到了一定的关注，也难怪分班后新同学也认得那个 url。&lt;/p&gt;
+&lt;p&gt;暑假开始后，STY 才真正感到内容产出有多难。首先，全暑假最重量级的 Ameitsu Orchestra 第一篇耗费了三个晚上的苦思冥想才最终完成；其次，AO 真正的第二篇也胎死腹中，AO 暂时沦为水刊，成了作业和破作文的集散地；更别提，预定的更新计划完全没有得到实施……&lt;/p&gt;
+&lt;p&gt;而且这种混沌的状态持续到了高一。虽然这时的 Cyberpark 已经改为 Shoka 主题，甚至是 STY 爆改的，有了一位 “撰稿人”，分出了专题，安装了多个插件，但 STY 能感觉出这个小破站是在走下坡路了。多个专栏被鸽了，整个 12 月只有一篇占位置的文章 —— 不太乐观的亚子。&lt;/p&gt;
+&lt;p&gt;但是，我们有&lt;strong&gt;信心&lt;/strong&gt;！这是唯一属于 STY 的电子后花园！&lt;/p&gt;
+&lt;p&gt;愿这座后花园能在寒假时光的滋润中重开色彩。&lt;/p&gt;
+&lt;p&gt;愿在未来的 365 天中她能继续走下去。&lt;/p&gt;
+&lt;p&gt;Cyberpark 明天会更好！&lt;/p&gt;
+&lt;p&gt;&lt;hr&gt;&lt;br /&gt;
+&lt;strong&gt;Ameitsu&lt;/strong&gt;，写于 2024 年 1 月 21 日&lt;/p&gt;
+&lt;p&gt;就酱。&lt;/p&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/spoiler.css&#34; type=&#34;text/css&#34;&gt;&lt;script src=&#34;/js/spoiler.js&#34; type=&#34;text/javascript&#34; async&gt;&lt;/script&gt;</content>
+        <category term="站庆" />
+        <updated>2024-01-21T10:02:03.000Z</updated>
+    </entry>
+</feed>
