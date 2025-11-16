@@ -7,17 +7,19 @@
         <language>zh-CN</language>
         <pubDate>Mon, 25 Mar 2024 20:24:09 +0800</pubDate>
         <lastBuildDate>Mon, 25 Mar 2024 20:24:09 +0800</lastBuildDate>
-        <category>铁路</category>
-        <category>冷门铁路史系列</category>
-        <category>原创</category>
         <category>at STY</category>
+        <category>原创</category>
         <category>高中牲STY-番外</category>
         <category>STY的初三大事记</category>
         <category>高中牲STY</category>
-        <category>猫看了变猫娘</category>
-        <category>Cyberpark Weekly</category>
+        <category>Ameitsu Orchestra</category>
+        <category>水水水</category>
+        <category>铁路</category>
+        <category>冷门铁路史系列</category>
         <category>非原创</category>
+        <category>猫看了变猫娘</category>
         <category>九万里</category>
+        <category>Cyberpark Weekly</category>
         <category>年级活动</category>
         <category>学校</category>
         <category>游记</category>
@@ -29,8 +31,6 @@
         <category>研学</category>
         <category>学习</category>
         <category>多图杀猫</category>
-        <category>Ameitsu Orchestra</category>
-        <category>水水水</category>
         <category>站内页面</category>
         <category>重要页面</category>
         <category>背景图</category>
@@ -41,18 +41,18 @@
         <category>包含发电语录</category>
         <category>猫猫</category>
         <category>晒单</category>
-        <category>Python</category>
-        <category>SofTY</category>
         <category>Notorial</category>
+        <category>SofTY</category>
         <category>麦斯</category>
+        <category>Python</category>
         <item>
             <guid isPermalink="true">https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/integral-1/</guid>
             <title>Notorial vol.3|微积分第一集：极限</title>
             <link>https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/integral-1/</link>
             <category>原创</category>
             <category>高中牲STY</category>
-            <category>SofTY</category>
             <category>Notorial</category>
+            <category>SofTY</category>
             <category>麦斯</category>
             <pubDate>Mon, 25 Mar 2024 20:24:09 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;sth-2-say&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sth-2-say&#34;&gt;#&lt;/a&gt; sth 2 say&lt;/h1&gt;
@@ -126,8 +126,8 @@
             <guid isPermalink="true">https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-prompts/</guid>
             <title>Notorial vol.2|Prompt toolkit库第二集：获取输入-上</title>
             <link>https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-prompts/</link>
-            <category>SofTY</category>
             <category>Notorial</category>
+            <category>SofTY</category>
             <pubDate>Fri, 15 Sep 2023 22:17:01 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;此为 &lt;code&gt;Prompt toolkit&lt;/code&gt;  系列的页面。本系列其他文章如下：&lt;br /&gt;
@@ -167,8 +167,8 @@
             <guid isPermalink="true">https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-print/</guid>
             <title>Notorial vol.1|Prompt toolkit库第一集：打印文本</title>
             <link>https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/prompt-toolkit-print/</link>
-            <category>SofTY</category>
             <category>Notorial</category>
+            <category>SofTY</category>
             <pubDate>Fri, 08 Sep 2023 22:17:01 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;此为 &lt;code&gt;Prompt toolkit&lt;/code&gt;  系列的页面。本系列其他文章如下：&lt;br /&gt;
@@ -214,8 +214,8 @@
             <title>Notorial系列介绍与索引</title>
             <link>https://ameitsu.github.io/SofTY/Notorial/SofTY/Notorial/index/</link>
             <category>站内页面</category>
-            <category>SofTY</category>
             <category>Notorial</category>
+            <category>SofTY</category>
             <pubDate>Thu, 07 Sep 2023 23:33:55 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note warning&#34;&gt;
 &lt;p&gt;此页面待补充 o (T ヘ To)&lt;/p&gt;
@@ -245,8 +245,8 @@
             <link>https://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%B8%80%E6%A8%A1/</link>
             <category>原创</category>
             <category>学习</category>
-            <category>Python</category>
             <category>SofTY</category>
+            <category>Python</category>
             <pubDate>Fri, 28 Apr 2023 23:10:57 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;啊，今天是 4 月 30 号，2023 年 4 月的最后一天。就在 40 个小时之前&lt;ins&gt;举世瞩目的&lt;/ins&gt; 2023 年朝阳区初三一模结束了。SofTY 作为本站的编程 / 数学专栏真的有必要从数学压轴题里找点整活的灵感什么的。&lt;/p&gt;
 &lt;p&gt;所以嘛，本篇的主题 —— 用&lt;ins&gt;科技和人工智慧&lt;/ins&gt;攻克 16 题 (2) 和 28 题 (3)&lt;/p&gt;
@@ -333,8 +333,8 @@
             <title>SofTY vol.2|凑活能用小爬虫</title>
             <link>https://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E5%87%91%E6%B4%BB%E8%83%BD%E7%94%A8%E5%B0%8F%E7%88%AC%E8%99%AB/</link>
             <category>原创</category>
-            <category>Python</category>
             <category>SofTY</category>
+            <category>Python</category>
             <pubDate>Fri, 14 Apr 2023 22:25:47 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/15/i7gSdZ.png&#34; alt=&#34;i7gSdZ.png&#34; /&gt;&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
@@ -405,8 +405,8 @@ res = requests.get(url=url,headers=headers)
             <title>SofTY vol.1|代综计算器</title>
             <link>https://ameitsu.github.io/SofTY/SofTY-STorY/SofTY/SofTY-STorY/%E4%BB%A3%E7%BB%BC%E8%AE%A1%E7%AE%97%E5%99%A8/</link>
             <category>原创</category>
-            <category>Python</category>
             <category>SofTY</category>
+            <category>Python</category>
             <pubDate>Sat, 01 Apr 2023 12:34:47 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://i.imgloc.com/2023/04/01/iHV0Ny.jpeg&#34; alt=&#34;iHV0Ny.jpeg&#34; /&gt;&lt;br /&gt;
  最近的代综题好烦，先去只有&lt;ins&gt;半扇门&lt;/ins&gt;的学校厕所哭一会儿（太夸张了⑧）&lt;br /&gt;
