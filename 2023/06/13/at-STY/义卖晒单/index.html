@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    
+    <meta name="author" content="STY">
+    
+    <!-- Completely eliminate flash of wrong theme -->
+    <script>
+        (function() {
+            const THEME_KEY = "REDEFINE-THEME-STATUS";
+            const DARK = "dark", LIGHT = "light";
+            
+            // Get preferred theme
+            function getTheme() {
+                try {
+                    const saved = localStorage.getItem(THEME_KEY);
+                    if (saved) {
+                        const { isDark } = JSON.parse(saved);
+                        return isDark ? DARK : LIGHT;
+                    }
+                } catch (e) {}
+                
+                return matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+            }
+            
+            // Apply theme to document
+            function applyTheme(theme) {
+                const isDark = theme === DARK;
+                const root = document.documentElement;
+                
+                // Set classes for compatibility
+                root.classList.add(theme);
+                root.classList.remove(isDark ? LIGHT : DARK);
+                root.style.colorScheme = theme;
+            }
+            
+            // Initial application
+            const theme = getTheme();
+            applyTheme(theme);
+            
+            // Listen for system preference changes
+            matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+                // Only update if using system preference (no localStorage entry)
+                if (!localStorage.getItem(THEME_KEY)) {
+                    applyTheme(matches ? DARK : LIGHT);
+                }
+            });
+            
+            // Set body classes ASAP (before DOMContentLoaded)
+            (function() {
+                const addBodyClass = () => {
+                    const b = document.body;
+                    if (!b) return false;
+                    b.classList.add(theme + "-mode");
+                    return true;
+                };
+
+                // Try immediately
+                if (addBodyClass()) return;
+
+                // Observe until body exists
+                const mo = new MutationObserver(() => {
+                    if (addBodyClass()) mo.disconnect();
+                });
+                mo.observe(document.documentElement, { childList: true, subtree: true });
+            })();
+        })();
+    </script>
+    
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://ameitsu.github.io/2023/06/13/at-sty/义卖晒单/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="at STY vol.6|义卖晒单——论STY拿￥250预算买了些神马玩意儿">
+<meta property="og:url" content="http://ameitsu.github.io/2023/06/13/at-STY/%E4%B9%89%E5%8D%96%E6%99%92%E5%8D%95/index.html">
+<meta property="og:site_name" content="Ameitsu Cyberpark">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://ameitsu.github.io/images/redefine-og.webp">
+<meta property="article:published_time" content="2023-06-13T12:57:27.000Z">
+<meta property="article:modified_time" content="2025-07-11T13:51:10.000Z">
+<meta property="article:author" content="Ameitsu">
+<meta property="article:tag" content="STY的初三大事记">
+<meta property="article:tag" content="at STY">
+<meta property="article:tag" content="原创">
+<meta property="article:tag" content="多图杀猫">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ameitsu.github.io/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            at STY vol.6|义卖晒单——论STY拿￥250预算买了些神马玩意儿 | Ameitsu Cyberpark
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+        <link href="" rel="stylesheet">
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"ameitsu.github.io","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":true,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"side_tools":{"gear_rotation":true,"auto_expand":false},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Cynerpark Nichome II","subtitle":{"text":[],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":[{"icon":"fa-brands fa-github","url":null},{"icon":"fa-brands fa-twitter","url":null},{"icon":"fa-solid fa-at","url":"you@example.com"},{"icon":"fa-brands fa-telegram","url":null},{"icon":"/images/custom-icon.svg","url":null}],"qrs":[{"icon":"fa-brands fa-weixin","qr":null},{"icon":"/images/custom-icon.svg","qr":null}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1","theme":{"light":"default","dark":"dark"}}},"version":"2.9.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house","categories":"path:/categories icon:fa-solid fa-folder"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur","masonry":{"batch_size":12,"initial_batch_size":24}},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footer":{"runtime":true,"icon":"<i class=\"fa-solid fa-heart fa-beat\" style=\"--fa-animation-duration: 0.5s; color: #f54545\"></i>","start":"2023/1/21 19:30:00","statistics":true,"customize":null,"icp":{"enable":false,"number":null,"url":null}},"footerStart":"2023/1/21 19:30:00","mermaid":{"style":{"light":"default","dark":"dark"}}};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.i18n = {"search":"站内搜索您需要的内容...","toc":"目录","prev":"上一页","next":"下一页","prev_posts":"上一篇","next_posts":"下一篇","page":"第 %d 页","recent_posts":"最新文章","share":"分享","powered_by":"由 %s 驱动","theme":"主题","rss_feed":"RSS Feed","category":"分类","categories":"分类","tag":"标签","tags":"标签","post":"文章","posts":"文章","tagcloud":"标签云","comment":"评论","comments":"评论","top":"置顶","sticky":"置顶","go-back-home":"回到首页","masonry_loading":"照片加载中...","image_viewer":"图片查看器","close":"关闭","exif":{"title":"EXIF","cards":{"camera":"相机","lens":"镜头","exposure":"曝光","other":"其他"},"fields":{"make":"品牌","model":"机型","date_taken":"拍摄时间","lens_model":"镜头","focal_length":"焦距","focus_mode":"对焦模式","shutter":"快门","aperture":"光圈","iso":"感光度","exposure_program":"曝光程序","exposure_compensation":"曝光补偿","metering_mode":"测光模式","flash":"闪光灯","white_balance":"白平衡","latitude":"纬度","longitude":"经度","altitude":"海拔"},"status":{"loading":"加载中...","no_exif":"无 EXIF 信息","library_missing":"EXIF 库未加载","image_source_missing":"图片地址不可用","unavailable":"EXIF 不可用（可能被 CORS 阻止或缺少元数据）","flag_unavailable":"EXIF 不可用"}},"home":"首页","archive":"归档","archives":"归档","about":"关于","links":"链接","link":"链接","friends":"友情链接","friend":"友情链接","timeline":"时间轴","shuoshuo":"说说","bookmarks":"书签","site_uv":"访问人数","site_pv":"总访问量","read_more":"阅读全文","wordcount":"字","min2read":"分钟","changelog":"更新日志","status":"状态","runtime":"博客已运行","days":"天","hours":"小时","minutes":"分钟","seconds":"秒","optimized_by":"并由 Evan 进行优化","rights":"版权所有","site_posts":"共撰写了 %s 篇文章","site_wordcount":"共 %s 字","copyright":{"title":"标题","author":"作者","link":"链接","create_time":"创建于","update_time":"更新于","license_title":"版权声明","license_content":"本文章采用 %s 进行许可。","all_rights_reserved":"版权所有 &#169 %s，禁止转载。","public_domain":"本文为公有领域作品，可自由转载、引用。"},"ago":{"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"},"create_time":"创建","update_time":"更新","expired":"这篇文章最后更新于 %s 天前，内容可能已经过时。"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Ameitsu Cyberpark
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">41</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">12</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">112</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			
+			
+			<img src="https://i.imgs.ovh/i/2023/08/30/64ef59d76b6a5.jpg" alt="at STY vol.6|义卖晒单——论STY拿￥250预算买了些神马玩意儿" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			
+			<div class="w-full flex items-center absolute bottom-0 justify-start">
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">at STY vol.6|义卖晒单——论STY拿￥250预算买了些神马玩意儿</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] shrink-0 rounded-medium border border-border-color p-px">
+				<img src="/images/redefine-avatar.svg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">STY</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv5</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-06-13 20:57:27</span>
+        <span class="mobile">2023-06-13 20:57:27</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-07-11 21:51:10</span>
+            <span class="mobile">2025-07-11 21:51:10</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/at-STY/">at-STY</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/at-STY/">at STY</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%8E%9F%E5%88%9B/">原创</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/STY%E7%9A%84%E5%88%9D%E4%B8%89%E5%A4%A7%E4%BA%8B%E8%AE%B0/">STY的初三大事记</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%A4%9A%E5%9B%BE%E6%9D%80%E7%8C%AB/">多图杀猫</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<p>:::info<br>这年头的高中生实在是过分有活力了<br>:::</p>
+<p>:::default<br>本文是对现实的记述<br>:::</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef598274e4b.jpg"
+                      alt="VOBHrd.jpeg" title="注意看，这里有两个初音未来（以及STY祖传垫板）"
+                ></p>
+<span id="more"></span>
+
+
+
+
+<p>自从直升本校高中后，STY便觉得自己像是上了别的学校，因为初三的气氛超级压抑，而且天天都刷题 !!（虽然他们能提前我们差不多20天放假）!!。</p>
+<p>到了高中，STY才认识到我校学生的活力++有多么旺盛++。这不，直升考试整一个月后就有了真正的大型活动——义卖，让STY见识了一下新时代高中生们的整活能力。</p>
+<h1 id="啊？义卖是干啥的？"><a href="#啊？义卖是干啥的？" class="headerlink" title="啊？义卖是干啥的？"></a>啊？义卖是干啥的？</h1><p>额……就是普普通通地卖东西，只不过每个摊位的收入都归公，然后什么时候都捐了。</p>
+<p>老师说这些钱都会捐给内蒙古的某所小学来修建图书馆 !!，但是STY认为++还是我校更需要图++书馆 !!。</p>
+<h1 id="义卖的盛况"><a href="#义卖的盛况" class="headerlink" title="义卖的盛况"></a>义卖的盛况</h1><p>学校活动自然缺不了整活。义卖的主会场里遍地都是&#x3D;&#x3D;女装&#x3D;&#x3D;的高中盆友们，但是由于某些同学曾在楼道里穿女仆装到处转，其实我们都++见怪不怪++了。只不过有人拿广播大声喊谁女装了，总是让人感觉很尴尬。</p>
+<p>Cosplay的盆友也挺多，主要是高三考完高考以后放飞自我的同学们。除了正常一点的cos以外，还有cos成道士卖彩票算卦的，可以说是非常赛博朋克。</p>
+<p>STY的某位女性同学cos了狐娘，还团伙作案卖合影。其实当天上午STY就戴上了那个狐狸耳朵，然后楼道里的几位过路同学都表示十分震撼。STY在卫生间里都被拍了，还使某位持相机的女性盆友被当成变态。</p>
+<p>:::info<br>此处的“某位女性同学”是九万里老师。（2025年7月11日21:51:01）<br>:::</p>
+<p>!!哦对了，那个狐娘就是线下和线上多次催更的那位，记住了嗷!!</p>
+<p>义卖主会场在报告厅里，自然多媒体设施非常齐全，于是我校就推出了付费点歌和付费念宣传稿的业务。想不到这个明显骗钱的服务居然有人买。</p>
+<p>卖的商品种类很齐全，包括但不限于教辅、老师照片、学校周边文创、立牌、钥匙链、课外书、学习用品、笔记扫描版、老师自己的毕业论文……甚至还有气球这种古老的玩意儿。</p>
+<h1 id="晒单"><a href="#晒单" class="headerlink" title="晒单"></a>晒单</h1><p>okay，来康康STY买了些什么东西</p>
+<h2 id="1-初音未来钥匙链-￥5-个"><a href="#1-初音未来钥匙链-￥5-个" class="headerlink" title="1.初音未来钥匙链 ￥5&#x2F;个"></a>1.初音未来钥匙链 ￥5&#x2F;个</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef598274e4b.jpg"
+                      alt="IMG_20230613_225028.jpg"
+                ><br>这两个东西绝对血赚，如果在网上买的话邮费怎么着也没法低于￥10。</p>
+<p>当然了，血赚是一方面，更重要的是钥匙链上画的是谁。真的很难得在学校里能买到这种小东西。</p>
+<p>还有一点是我校的VOCALOID受众不甚广泛，能有人卖这个就起码说明有同道中人了，好耶。</p>
+<p>初音未来今年（以及永远）是16岁，今年9月STY也即将16岁 !!，可见初音未来可以是STY姐姐（还是嫂子吧）!! 。</p>
+<h2 id="2-阿尼亚夹子-￥5-个"><a href="#2-阿尼亚夹子-￥5-个" class="headerlink" title="2.阿尼亚夹子 ￥5&#x2F;个"></a>2.阿尼亚夹子 ￥5&#x2F;个</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef59eb2d702.jpg"
+                      alt="IMG_20230613_225039.jpg"
+                ><br>这个熟悉的脸让STY想起了2022年后两个月天天憋家里线上学习的生活。刷题多了需要一些好康的夏季新番缓解一下。</p>
+<p>表面上是怀念往事，实际上是STY只剩最后一点资金了，得赶紧找个好东西消费掉。</p>
+<p>（注：STY的特殊体质——康动漫非常容易emo，比如说2022年4月份STY看《街角魔族2》就成功把自己伤心了，虽然那只是一个百合番呐）</p>
+<h2 id="3-某老师肖像钥匙链-￥15-个"><a href="#3-某老师肖像钥匙链-￥15-个" class="headerlink" title="3.某老师肖像钥匙链 ￥15&#x2F;个"></a>3.某老师肖像钥匙链 ￥15&#x2F;个</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef5a12ba7b4.jpg"
+                      alt="IMG_20230613_225103.jpg"
+                ><br>这……知道这是某位书法老师就行，是我校风云人物。</p>
+<h2 id="4-某老师肖像胸针-￥10-个"><a href="#4-某老师肖像胸针-￥10-个" class="headerlink" title="4.某老师肖像胸针 ￥10&#x2F;个"></a>4.某老师肖像胸针 ￥10&#x2F;个</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef598397019.jpg"
+                      alt="IMG_20230613_225228.jpg"
+                ><br>这位是STY初中3年的重量级人物，年级组长。虽然他不教我们班，但他用广播的方式极大增强了初中孩子们的感知度。</p>
+<p>哦对了，有人给他建了一个百度贴吧，里面全是他照片，当时STY看了就感到了&#x3D;&#x3D;深深的不解&#x3D;&#x3D;。</p>
+<h2 id="5-高二某班原创徽章-￥10-个"><a href="#5-高二某班原创徽章-￥10-个" class="headerlink" title="5.高二某班原创徽章 ￥10&#x2F;个"></a>5.高二某班原创徽章 ￥10&#x2F;个</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef5994cde01.jpg"
+                      alt="IMG_20230613_225333.jpg"
+                ><br>第一个的人物暂时无法考证。第二个来源于我校男生<del>常见不合格发型</del>理想中的形象，也是这个摊位的海报的主体。STY抢了最后一个，好耶。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef594668826.jpg"
+                      alt="微信图片_20230616215344.jpg"
+                ><br>这个海报着实是好活！ !!只是这造型不太像卖正经东西的样子。!!</p>
+<h2 id="6-我校某公众号周边相片-￥5-张"><a href="#6-我校某公众号周边相片-￥5-张" class="headerlink" title="6.我校某公众号周边相片 ￥5&#x2F;张"></a>6.我校某公众号周边相片 ￥5&#x2F;张</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef599725122.jpg"
+                      alt="IMG_20230613_225518.jpg"
+                ><br>虽然STY对前面每个商品的关键要素（比如校徽、校服条纹、学校名称）都进行了马赛克处理，可到这里就已经完全遮不住了啊！！！但凡住北京朝阳北部的都该猜出来了。</p>
+<p>额……这些照片全是以我校几个角落为背景再次创作的，看起来⑧错。</p>
+<p>这个公众号里的一大特色是++表白墙++（而且是真正的表白），甚至还在正常运作。</p>
+<p>这四张相片最大且唯一的用途就是给练习册当书签，重点是讨个母校的吉利。</p>
+<h2 id="7-贴纸-￥2-张"><a href="#7-贴纸-￥2-张" class="headerlink" title="7.贴纸 ￥2&#x2F;张"></a>7.贴纸 ￥2&#x2F;张</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef599cb23e1.jpg"
+                      alt="IMG_20230613_225545.jpg"
+                ><br>妹有啥可说的，过。</p>
+<h2 id="8-我校特色钥匙链-￥15-个"><a href="#8-我校特色钥匙链-￥15-个" class="headerlink" title="8.我校特色钥匙链 ￥15&#x2F;个"></a>8.我校特色钥匙链 ￥15&#x2F;个</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef596471b89.jpg"
+                      alt="IMG_20230613_225701.jpg"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef59e31b861.jpg"
+                      alt="IMG_20230613_225848.jpg"
+                ><br>第一个是逢考必过的祝福。但凡它有一点用，STY也不会买它。只不过STY真的不知道那是个什么生物，就当是母校传说得了。<br>第二个图案中心的是我校钟楼。如果不是别人提醒STY还真看不出来。不过为什么要写个WARNING上去捏？<em>一定是钟楼上有学生幽怨的诡异声响,鬼片里都是这么演的。</em></p>
+<h2 id="9-咖啡-￥5-件"><a href="#9-咖啡-￥5-件" class="headerlink" title="9. 咖啡 ￥5&#x2F;件"></a>9. 咖啡 ￥5&#x2F;件</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef59abe1159.jpg"
+                      alt="IMG_20230613_225717.jpg"
+                ><br>可爱滴捏。而且它真的是咖啡！有时间STY可以品鉴一下什么的<br>:::default<br>品鉴结果：苦味指数为(ᗒᗣᗕ)՞<br>:::</p>
+<h2 id="10-高一年级前五的物理知识点总结-￥15-份"><a href="#10-高一年级前五的物理知识点总结-￥15-份" class="headerlink" title="10.高一年级前五的物理知识点总结 ￥15&#x2F;份"></a>10.高一年级前五的物理知识点总结 ￥15&#x2F;份</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef595364a6f.jpg"
+                      alt="IMG_20230613_225824.jpg"
+                ><br>原来这件商品的主策划在班车上就坐STY前面，于是STY预知了他们密谋把5页纸卖到￥15的阴谋（甚至他们说原价是￥20）。当然了STY身体是诚实的，直接来了一句 ++’Shut up and take my money!’++ (并没有，纯属意淫)</p>
+<h2 id="11-散装教辅-￥15-本"><a href="#11-散装教辅-￥15-本" class="headerlink" title="11.散装教辅 ￥15&#x2F;本"></a>11.散装教辅 ￥15&#x2F;本</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef596f23739.jpg"
+                      alt="IMG_20230613_225905.jpg"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef59b0abe27.jpg"
+                      alt="IMG_20230613_225859.jpg"
+                ><br>没事儿，以后就知道能有啥用了</p>
+<p>对了，后面的那本原价￥165，STY血赚￥150，好耶</p>
+<h2 id="12-化学必修二-￥10-本"><a href="#12-化学必修二-￥10-本" class="headerlink" title="12.化学必修二 ￥10&#x2F;本"></a>12.化学必修二 ￥10&#x2F;本</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef59bc23b47.jpg"
+                      alt="IMG_20230613_225910.jpg"
+                ><br>确实是全新的，只不过正常情况下必修二就是￥10.21，STY买的真的只是少了￥0.21而已</p>
+<p>对于必修二嘛……STY觉得还是把有机化合物的术语都会读了再说吧233</p>
+<h2 id="13-荧光笔-￥20-套"><a href="#13-荧光笔-￥20-套" class="headerlink" title="13.荧光笔 ￥20&#x2F;套"></a>13.荧光笔 ￥20&#x2F;套</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef59d2d7433.jpg"
+                      alt="IMG_20230613_225924.jpg"
+                ><br>不错不错，STY正愁荧光笔大规模失踪呢。</p>
+<h2 id="14-我校特色扇子-￥15-个"><a href="#14-我校特色扇子-￥15-个" class="headerlink" title="14.我校特色扇子 ￥15&#x2F;个"></a>14.我校特色扇子 ￥15&#x2F;个</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef59d76b6a5.jpg"
+                      alt="IMG_20230613_230010.jpg"
+                ><br>充分展现了我校学生++蔷薇百合遍地走++的现状。对了，百合控也多。</p>
+<h2 id="15-智障套圈游戏-￥5-个"><a href="#15-智障套圈游戏-￥5-个" class="headerlink" title="15.智障套圈游戏 ￥5&#x2F;个"></a>15.智障套圈游戏 ￥5&#x2F;个</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef59c1672b0.jpg"
+                      alt="IMG_20230613_230151.jpg"
+                ><br>呜哇，已经无法形容了，STY不知道怎么着买的这个玩意儿</p>
+<h2 id="16-某同学的笔记电子版-￥15-份"><a href="#16-某同学的笔记电子版-￥15-份" class="headerlink" title="16.某同学的笔记电子版 ￥15&#x2F;份"></a>16.某同学的笔记电子版 ￥15&#x2F;份</h2><p>嘿嘿，已经放到了下载区：)</p>
+<h1 id="整活吧！猫娘少年【注】"><a href="#整活吧！猫娘少年【注】" class="headerlink" title="整活吧！猫娘少年【注】"></a>整活吧！猫娘少年【注】</h1><p>是的，STY去整活了，但只是一个小活。就是把以下这张照片贴在了义卖现场</p>
+<p> {百合の妨害は死 刑^ゆりのぼうかいはしけい}</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgs.ovh/i/2023/08/30/64ef595e32842.jpg"
+                      alt="IMG_20230613_230213.jpg"
+                ><br>最后炸出来7个百合控，也算是找到组织啦。</p>
+<p>同时STY将本站广告也进行了张贴，最后的结果是让周围的老同学直呼大为震惊。</p>
+<h1 id="【注】对STY身份的常见误区"><a href="#【注】对STY身份的常见误区" class="headerlink" title="【注】对STY身份的常见误区"></a>【注】对STY身份的常见误区</h1><p>✅正常健康的人类男性，2023年时16周岁<br>❌耳朵和尾巴动过手术的猫娘，正在流落人间<br>❌过不了多久就会变成猫娘的人类<br>❌生理性别为男性、心理性别为女性的伪娘<br>❌是现实中不存在的扶他（ふたなり）<br>❌死傲娇+死病娇</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>什么时候才能放假呐……初三他们考完中考就直接嗨了，STY这些害得再上到7月15号，生气气。</p>
+<p>不过嘛更新频率起码可以保证，也算是好事了吧（并不）。</p>
+<p>就酱。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/11/28/_20231127213638.jpg"
+                      alt="_20231127213638.jpg"
+                ></p>
+
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> at STY vol.6|义卖晒单——论STY拿￥250预算买了些神马玩意儿</li>
+        <li><strong>作者:</strong> STY</li>
+        <li><strong>创建于
+                :</strong> 2023-06-13 20:57:27</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2025-07-11 21:51:10
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://ameitsu.github.io/2023/06/13/at-STY/义卖晒单/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/at-STY/">#at STY</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%8E%9F%E5%88%9B/">#原创</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/STY%E7%9A%84%E5%88%9D%E4%B8%89%E5%A4%A7%E4%BA%8B%E8%AE%B0/">#STY的初三大事记</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%A4%9A%E5%9B%BE%E6%9D%80%E7%8C%AB/">#多图杀猫</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/2023/06/23/at-STY/%E7%9B%B4%E5%87%BB%E4%B8%AD%E8%80%83/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">at STY vol.7|直击中考！！！</span>
+						<span class="post-nav-item">上一篇</span>
+					</span>
+				</a>
+			</div>
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2023/06/03/at-STY/%E6%BD%A6%E8%8D%89%E7%9A%84%E4%BA%8C%E6%A8%A1/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">at STY vol.5|潦草的二模</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.js';
+
+      (function() {
+        const startPath = location.pathname;
+        const startTime = Date.now();
+        const retryDelay = 200;
+        const retryLimit = 5000;
+
+        const runWaline = () => {
+          if (location.pathname !== startPath) {
+            return;
+          }
+
+          const container = document.getElementById('waline');
+          if (!container) {
+            if (Date.now() - startTime < retryLimit) {
+              setTimeout(runWaline, retryDelay);
+            }
+            return;
+          }
+
+          if (window.redefineWalineInstance?.destroy) {
+            window.redefineWalineInstance.destroy();
+          }
+
+          container.innerHTML = '';
+          window.redefineWalineInstance = init({
+            el: '#waline',
+            serverURL: 'https://example.example.com',
+            path: location.pathname,
+            dark: 'body[class~="dark-mode"]',
+            reaction: false,
+            requiredMeta: ['nick', 'mail'],
+            emoji: [],
+                      lang: 'zh-CN',
+          });
+        };
+
+        runWaline();
+      })();
+    </script>
+
+
+
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">目录</div>
+		<div class="page-title">at STY vol.6|义卖晒单——论STY拿￥250预算买了些神马玩意儿</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%95%8A%EF%BC%9F%E4%B9%89%E5%8D%96%E6%98%AF%E5%B9%B2%E5%95%A5%E7%9A%84%EF%BC%9F"><span class="nav-text">啊？义卖是干啥的？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%89%E5%8D%96%E7%9A%84%E7%9B%9B%E5%86%B5"><span class="nav-text">义卖的盛况</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%99%92%E5%8D%95"><span class="nav-text">晒单</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A5%E9%92%A5%E5%8C%99%E9%93%BE-%EF%BF%A55-%E4%B8%AA"><span class="nav-text">1.初音未来钥匙链 ￥5&#x2F;个</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E9%98%BF%E5%B0%BC%E4%BA%9A%E5%A4%B9%E5%AD%90-%EF%BF%A55-%E4%B8%AA"><span class="nav-text">2.阿尼亚夹子 ￥5&#x2F;个</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%9F%90%E8%80%81%E5%B8%88%E8%82%96%E5%83%8F%E9%92%A5%E5%8C%99%E9%93%BE-%EF%BF%A515-%E4%B8%AA"><span class="nav-text">3.某老师肖像钥匙链 ￥15&#x2F;个</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%9F%90%E8%80%81%E5%B8%88%E8%82%96%E5%83%8F%E8%83%B8%E9%92%88-%EF%BF%A510-%E4%B8%AA"><span class="nav-text">4.某老师肖像胸针 ￥10&#x2F;个</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E9%AB%98%E4%BA%8C%E6%9F%90%E7%8F%AD%E5%8E%9F%E5%88%9B%E5%BE%BD%E7%AB%A0-%EF%BF%A510-%E4%B8%AA"><span class="nav-text">5.高二某班原创徽章 ￥10&#x2F;个</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E6%88%91%E6%A0%A1%E6%9F%90%E5%85%AC%E4%BC%97%E5%8F%B7%E5%91%A8%E8%BE%B9%E7%9B%B8%E7%89%87-%EF%BF%A55-%E5%BC%A0"><span class="nav-text">6.我校某公众号周边相片 ￥5&#x2F;张</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E8%B4%B4%E7%BA%B8-%EF%BF%A52-%E5%BC%A0"><span class="nav-text">7.贴纸 ￥2&#x2F;张</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E6%88%91%E6%A0%A1%E7%89%B9%E8%89%B2%E9%92%A5%E5%8C%99%E9%93%BE-%EF%BF%A515-%E4%B8%AA"><span class="nav-text">8.我校特色钥匙链 ￥15&#x2F;个</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%E5%92%96%E5%95%A1-%EF%BF%A55-%E4%BB%B6"><span class="nav-text">9. 咖啡 ￥5&#x2F;件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E9%AB%98%E4%B8%80%E5%B9%B4%E7%BA%A7%E5%89%8D%E4%BA%94%E7%9A%84%E7%89%A9%E7%90%86%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93-%EF%BF%A515-%E4%BB%BD"><span class="nav-text">10.高一年级前五的物理知识点总结 ￥15&#x2F;份</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-%E6%95%A3%E8%A3%85%E6%95%99%E8%BE%85-%EF%BF%A515-%E6%9C%AC"><span class="nav-text">11.散装教辅 ￥15&#x2F;本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-%E5%8C%96%E5%AD%A6%E5%BF%85%E4%BF%AE%E4%BA%8C-%EF%BF%A510-%E6%9C%AC"><span class="nav-text">12.化学必修二 ￥10&#x2F;本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-%E8%8D%A7%E5%85%89%E7%AC%94-%EF%BF%A520-%E5%A5%97"><span class="nav-text">13.荧光笔 ￥20&#x2F;套</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-%E6%88%91%E6%A0%A1%E7%89%B9%E8%89%B2%E6%89%87%E5%AD%90-%EF%BF%A515-%E4%B8%AA"><span class="nav-text">14.我校特色扇子 ￥15&#x2F;个</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-%E6%99%BA%E9%9A%9C%E5%A5%97%E5%9C%88%E6%B8%B8%E6%88%8F-%EF%BF%A55-%E4%B8%AA"><span class="nav-text">15.智障套圈游戏 ￥5&#x2F;个</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-%E6%9F%90%E5%90%8C%E5%AD%A6%E7%9A%84%E7%AC%94%E8%AE%B0%E7%94%B5%E5%AD%90%E7%89%88-%EF%BF%A515-%E4%BB%BD"><span class="nav-text">16.某同学的笔记电子版 ￥15&#x2F;份</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B4%E6%B4%BB%E5%90%A7%EF%BC%81%E7%8C%AB%E5%A8%98%E5%B0%91%E5%B9%B4%E3%80%90%E6%B3%A8%E3%80%91"><span class="nav-text">整活吧！猫娘少年【注】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E3%80%90%E6%B3%A8%E3%80%91%E5%AF%B9STY%E8%BA%AB%E4%BB%BD%E7%9A%84%E5%B8%B8%E8%A7%81%E8%AF%AF%E5%8C%BA"><span class="nav-text">【注】对STY身份的常见误区</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%80%E5%90%8E"><span class="nav-text">最后</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2026&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">STY</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 112 篇文章
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.9.0</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container" role="dialog" aria-modal="true" aria-label="图片查看器">
+	<button class="image-viewer-close" type="button" aria-label="关闭">
+		<i class="fa-solid fa-xmark"></i>
+	</button>
+	<button class="image-viewer-prev" type="button" aria-label="上一页">
+		<i class="fa-solid fa-chevron-left"></i>
+	</button>
+	<div class="image-viewer-frame">
+		<img src="" alt="">
+	</div>
+	<div class="image-viewer-exif-panel hidden absolute left-1/2 bottom-20 -translate-x-1/2 w-[min(92vw,420px)] max-h-[60vh] overflow-hidden rounded-2xl bg-background-color-transparent-80 p-4 text-left shadow-redefine-flat backdrop-blur-md" role="dialog" aria-label="EXIF" aria-hidden="true">
+		<div class="flex items-center justify-between mb-3">
+			<span class="text-sm font-semibold text-first-text-color">EXIF</span>
+			<button class="image-viewer-exif-close flex h-8 w-8 items-center justify-center rounded-full bg-background-color-transparent-80 text-first-text-color transition hover:bg-background-color-transparent-40" type="button" aria-label="关闭">
+				<i class="fa-solid fa-xmark text-[0.65rem]"></i>
+			</button>
+		</div>
+		<div class="image-viewer-exif-cards grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[50vh] overflow-y-auto pr-1 scrollbar-hide"></div>
+		<template class="image-viewer-exif-card-template">
+			<div class="rounded-lg bg-background-color-transparent-40 px-3 py-2">
+				<div class="image-viewer-exif-card-header flex items-center gap-2 mb-1">
+					<i class="image-viewer-exif-card-icon fa-solid fa-circle-info text-xs text-third-text-color"></i>
+					<div class="image-viewer-exif-card-title text-xs font-semibold text-first-text-color"></div>
+				</div>
+				<div class="image-viewer-exif-card-items flex flex-col gap-1"></div>
+			</div>
+		</template>
+	</div>
+	<button class="image-viewer-exif-toggle flex items-center gap-2 hidden absolute left-1/2 bottom-6 -translate-x-1/2 rounded-full border border-border-color bg-background-color-transparent-80 px-4 py-2 text-first-text-color backdrop-blur-md transition hover:bg-background-color-transparent-40" type="button" aria-label="EXIF" aria-expanded="false">
+		<i class="fa-solid fa-circle-info text-xs"></i>
+		<span class="text-xs font-semibold uppercase tracking-wider">EXIF</span>
+	</button>
+	<button class="image-viewer-next" type="button" aria-label="下一页">
+		<i class="fa-solid fa-chevron-right"></i>
+	</button>
+</div>
+
+
+	
+
+</main>
+
+
+
+<script src="/js/build/libs/Swup.min.js"></script>
+
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    window.swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+
+    window.dispatchEvent(
+        new CustomEvent("redefine:swup:ready", {
+            detail: {
+                swup: window.swup,
+            },
+        }),
+    );
+</script>
+
+
+
+
+	
+<script src="/js/build/main.js" type="module"></script>
+
+
+
+    
+<script src="/js/build/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+
+	
+</body>
+
+</html>

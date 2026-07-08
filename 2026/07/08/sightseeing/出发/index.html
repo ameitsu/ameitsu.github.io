@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    
+    <meta name="author" content="STY">
+    
+    <!-- Completely eliminate flash of wrong theme -->
+    <script>
+        (function() {
+            const THEME_KEY = "REDEFINE-THEME-STATUS";
+            const DARK = "dark", LIGHT = "light";
+            
+            // Get preferred theme
+            function getTheme() {
+                try {
+                    const saved = localStorage.getItem(THEME_KEY);
+                    if (saved) {
+                        const { isDark } = JSON.parse(saved);
+                        return isDark ? DARK : LIGHT;
+                    }
+                } catch (e) {}
+                
+                return matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+            }
+            
+            // Apply theme to document
+            function applyTheme(theme) {
+                const isDark = theme === DARK;
+                const root = document.documentElement;
+                
+                // Set classes for compatibility
+                root.classList.add(theme);
+                root.classList.remove(isDark ? LIGHT : DARK);
+                root.style.colorScheme = theme;
+            }
+            
+            // Initial application
+            const theme = getTheme();
+            applyTheme(theme);
+            
+            // Listen for system preference changes
+            matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+                // Only update if using system preference (no localStorage entry)
+                if (!localStorage.getItem(THEME_KEY)) {
+                    applyTheme(matches ? DARK : LIGHT);
+                }
+            });
+            
+            // Set body classes ASAP (before DOMContentLoaded)
+            (function() {
+                const addBodyClass = () => {
+                    const b = document.body;
+                    if (!b) return false;
+                    b.classList.add(theme + "-mode");
+                    return true;
+                };
+
+                // Try immediately
+                if (addBodyClass()) return;
+
+                // Observe until body exists
+                const mo = new MutationObserver(() => {
+                    if (addBodyClass()) mo.disconnect();
+                });
+                mo.observe(document.documentElement, { childList: true, subtree: true });
+            })();
+        })();
+    </script>
+    
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://ameitsu.github.io/2026/07/08/sightseeing/出发/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="游记 × at STY |半夜两点起来看火车过黄河，结果……">
+<meta property="og:url" content="http://ameitsu.github.io/2026/07/08/sightseeing/%E5%87%BA%E5%8F%91/index.html">
+<meta property="og:site_name" content="Ameitsu Cyberpark">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://ameitsu.github.io/images/redefine-og.webp">
+<meta property="article:published_time" content="2026-07-08T08:37:17.530Z">
+<meta property="article:modified_time" content="2023-10-14T05:04:16.000Z">
+<meta property="article:author" content="Ameitsu">
+<meta property="article:tag" content="at STY">
+<meta property="article:tag" content="原创">
+<meta property="article:tag" content="多图杀猫">
+<meta property="article:tag" content="实践活动">
+<meta property="article:tag" content="游记">
+<meta property="article:tag" content="高中牲STY">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ameitsu.github.io/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            游记 × at STY |半夜两点起来看火车过黄河，结果…… | Ameitsu Cyberpark
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+        <link href="" rel="stylesheet">
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"ameitsu.github.io","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":true,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"side_tools":{"gear_rotation":true,"auto_expand":false},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Cynerpark Nichome II","subtitle":{"text":[],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":[{"icon":"fa-brands fa-github","url":null},{"icon":"fa-brands fa-twitter","url":null},{"icon":"fa-solid fa-at","url":"you@example.com"},{"icon":"fa-brands fa-telegram","url":null},{"icon":"/images/custom-icon.svg","url":null}],"qrs":[{"icon":"fa-brands fa-weixin","qr":null},{"icon":"/images/custom-icon.svg","qr":null}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1","theme":{"light":"default","dark":"dark"}}},"version":"2.9.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house","categories":"path:/categories icon:fa-solid fa-folder"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur","masonry":{"batch_size":12,"initial_batch_size":24}},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footer":{"runtime":true,"icon":"<i class=\"fa-solid fa-heart fa-beat\" style=\"--fa-animation-duration: 0.5s; color: #f54545\"></i>","start":"2023/1/21 19:30:00","statistics":true,"customize":null,"icp":{"enable":false,"number":null,"url":null}},"footerStart":"2023/1/21 19:30:00","mermaid":{"style":{"light":"default","dark":"dark"}}};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.i18n = {"search":"站内搜索您需要的内容...","toc":"目录","prev":"上一页","next":"下一页","prev_posts":"上一篇","next_posts":"下一篇","page":"第 %d 页","recent_posts":"最新文章","share":"分享","powered_by":"由 %s 驱动","theme":"主题","rss_feed":"RSS Feed","category":"分类","categories":"分类","tag":"标签","tags":"标签","post":"文章","posts":"文章","tagcloud":"标签云","comment":"评论","comments":"评论","top":"置顶","sticky":"置顶","go-back-home":"回到首页","masonry_loading":"照片加载中...","image_viewer":"图片查看器","close":"关闭","exif":{"title":"EXIF","cards":{"camera":"相机","lens":"镜头","exposure":"曝光","other":"其他"},"fields":{"make":"品牌","model":"机型","date_taken":"拍摄时间","lens_model":"镜头","focal_length":"焦距","focus_mode":"对焦模式","shutter":"快门","aperture":"光圈","iso":"感光度","exposure_program":"曝光程序","exposure_compensation":"曝光补偿","metering_mode":"测光模式","flash":"闪光灯","white_balance":"白平衡","latitude":"纬度","longitude":"经度","altitude":"海拔"},"status":{"loading":"加载中...","no_exif":"无 EXIF 信息","library_missing":"EXIF 库未加载","image_source_missing":"图片地址不可用","unavailable":"EXIF 不可用（可能被 CORS 阻止或缺少元数据）","flag_unavailable":"EXIF 不可用"}},"home":"首页","archive":"归档","archives":"归档","about":"关于","links":"链接","link":"链接","friends":"友情链接","friend":"友情链接","timeline":"时间轴","shuoshuo":"说说","bookmarks":"书签","site_uv":"访问人数","site_pv":"总访问量","read_more":"阅读全文","wordcount":"字","min2read":"分钟","changelog":"更新日志","status":"状态","runtime":"博客已运行","days":"天","hours":"小时","minutes":"分钟","seconds":"秒","optimized_by":"并由 Evan 进行优化","rights":"版权所有","site_posts":"共撰写了 %s 篇文章","site_wordcount":"共 %s 字","copyright":{"title":"标题","author":"作者","link":"链接","create_time":"创建于","update_time":"更新于","license_title":"版权声明","license_content":"本文章采用 %s 进行许可。","all_rights_reserved":"版权所有 &#169 %s，禁止转载。","public_domain":"本文为公有领域作品，可自由转载、引用。"},"ago":{"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"},"create_time":"创建","update_time":"更新","expired":"这篇文章最后更新于 %s 天前，内容可能已经过时。"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Ameitsu Cyberpark
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">41</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">12</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">112</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			
+			
+			<img src="https://cdnjson.com/images/2023/10/13/_20231013222101.jpg" alt="游记 × at STY |半夜两点起来看火车过黄河，结果……" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			
+			<div class="w-full flex items-center absolute bottom-0 justify-start">
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">游记 × at STY |半夜两点起来看火车过黄河，结果……</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] shrink-0 rounded-medium border border-border-color p-px">
+				<img src="/images/redefine-avatar.svg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">STY</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv5</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2026-07-08 16:37:17</span>
+        <span class="mobile">2026-07-08 16:37:17</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-10-14 13:04:16</span>
+            <span class="mobile">2023-10-14 13:04:16</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/sightseeing/">游记</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/sightseeing/%E6%B8%B8%E8%AE%B0-%C3%97-at-STY/">游记 × at STY</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/at-STY/">at STY</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%8E%9F%E5%88%9B/">原创</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E9%AB%98%E4%B8%AD%E7%89%B2STY/">高中牲STY</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%B8%B8%E8%AE%B0/">游记</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%AE%9E%E8%B7%B5%E6%B4%BB%E5%8A%A8/">实践活动</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%A4%9A%E5%9B%BE%E6%9D%80%E7%8C%AB/">多图杀猫</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<p>:::info<br>本篇是<code>实践活动系列</code>的一部分，采取回忆方式记述。因每篇容量大约在2k字，所以分<strong>7</strong>次更新。<br>第零集：半夜两点起来看火车过黄河，结果……<br>第一集：什么叫现学现用啊？<br>第二集：众所周知，东方树叶是一种土特产<br>第三集：关于有一位练了两个月力量的元气JK想徒步上下山这件事<br>第四集：你见过仙人翻桌嘛？<br>第五集：10块钱一盒的黄山毛峰<br>第六集：提前十几年体验高铁上加班<br>:::<br>:::warning<br>为确保图片不会泄露隐私，STY挑的都是一些打了很厚很厚的码的图片或视角独特（为避开人）的图片。<br>:::</p>
+<h1 id="只把10月7作9月30"><a href="#只把10月7作9月30" class="headerlink" title="只把10月7作9月30"></a>只把10月7作9月30</h1><p>2023年10月7日19:26，渲染了快一个月的实践活动<strong>终于</strong>开始了……<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/10/07/IMG_20231007_191943.jpg"
+                      alt="IMG_20231007_191943.jpg"
+                ><br>:::default<br>关于实践活动的最早记录<a href="https://ameitsu.github.io/chatbox/#000001">在此</a><br>:::<br>集合地点自然是学校，但这一决定使得在国庆假期刚刚过去的10月7号里的■■区道路变得跟9月30号一样——毕竟也有两三百个爸比妈咪想开车送娃。13号线的几列列车驶过了低矮的混凝土桥，车流在下方的夜幕中向前方涌。</p>
+<p>STY第一次知道了学校竟然有操场的照明灯。忽明忽暗的黄白灯光下人流开始聚集，围栏外是各位爸比妈咪和吃瓜群众——三年了学校终于来个实践活动了。</p>
+<p>预计的时间过去了十几分钟，而队伍迟迟没有开拔。晚点二十多分钟后终于上了车，大巴车沿着校门口的小巷向南驶去。</p>
+<h1 id="横穿北京"><a href="#横穿北京" class="headerlink" title="横穿北京"></a>横穿北京</h1><p>路线：北五环—京承高速—北三环—西三环</p>
+<p>沿途自然没什么有意思的，毕竟当时已经快八点了。路上STY看见了不少一见如故的北京西部“地标”：大钟寺、联想桥、学院桥、外研社、公主坟……</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/10/13/_20231013221603.jpg"
+                      alt="_20231013221603.jpg" title="这是金中都南路，想和完颜阿骨打拜把子的可以来这里"
+                ></p>
+<h1 id="大隐隐于市（确信）"><a href="#大隐隐于市（确信）" class="headerlink" title="大隐隐于市（确信）"></a>大隐隐于市（确信）</h1><p>我们的始发站是北京丰台。STY根本想不到这里居然能塞下一个这么大个儿的火车站。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/10/13/IMG_20231007_205627.jpg"
+                      alt="IMG_20231007_205627.jpg"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/10/13/_20231013221602.jpg"
+                      alt="_20231013221602.jpg"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/10/13/_20231013221603_2.jpg"
+                      alt="_20231013221603_2.jpg"
+                ></p>
+<p>丰台站新得不像话，感觉是昨天刚开门的。进站停靠区的风格也很当代。<br>由于国庆假期返程高峰刚刚结束，再加上已经八点多了，火车站内部冷清得像中午人全跑光了的教室。虽然STY学校人不多，但是——<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/10/13/_20231013221602_1.jpg"
+                      alt="_20231013221602_1.jpg"
+                ><br>我们有<strong>VIP</strong>通道！专门有两个安检通道给我们学校开放。<br>一进火车站，STY就感受到我们的校服有多么扎眼——除了我们没人穿普鲁士蓝的衣服。虽然但是，STY学校的校服至今没有统一，有新旧两大套，每种又分为T恤衫、长裤和外套，甚至两半校服的蓝色都不是一个色号的（旧：#1e50a2 新：#007bbb）<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/10/13/_20231013221601.jpg"
+                      alt="_20231013221601.jpg"
+                ><br>丰台站的厕所也是STY见过<strong>最漂亮的之一</strong>，仅次于故宫太和殿边上的那个。</p>
+<p>现在，整个2A检票口都是STY校友，就差半个小时以后上车了。</p>
+<h1 id="时隔10年再上硬卧"><a href="#时隔10年再上硬卧" class="headerlink" title="时隔10年再上硬卧"></a>时隔10年再上硬卧</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/10/13/_20231013221601_1.jpg"
+                      alt="_20231013221601_1.jpg"
+                ><br>学校几乎包了Z225次列车。不过也不是完全塞满，在我校师生之间还留了散客的位置。<br>STY所在包间里就有一位大叔，他看见其他人熬夜打音游时内心肯定是绝望的。</p>
+<p>上车第一步——<strong>聚餐</strong>。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/10/14/_20231013222103.jpg"
+                      alt="_20231013222103.jpg"
+                ><br>为彰显STY的品味，STY整了一瓶茉莉花茶味的东方茶叶。悲剧的是那包薯片神秘失踪了，损失惨重。还有人贡献了肉松月饼，想不到世界上还有这么令人感到痛苦的食物。对了，请记住那瓶东方树叶……<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/10/13/_20231013222059.jpg"
+                      alt="_20231013222059.jpg"
+                ><br>《百年孤独》读者聚会。能在一个包间里看到两本完全一致的书这种事情STY头一回体验。对了，也请记住这一版《百年孤独》……<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/10/13/_20231013222053.jpg"
+                      alt="_20231013222053.jpg" title="现在还一个人没有的走廊"
+                ><br>是时候放出第一天的行程了！<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/10/13/_20231013213831.jpg"
+                      alt="_20231013213831.jpg"
+                ><br>:::</p>
+<h1 id="出发！"><a href="#出发！" class="headerlink" title="出发！"></a>出发！</h1><p>如线路图所示，列车在21:59分离开了北京丰台——就不能把时间改成22:00吗？火车消失在丰台西南的月色中，沿京九线南下，不久就进入了河北省。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/10/13/_20231013222104_1.jpg"
+                      alt="_20231013222104_1.jpg" title="虽然但是，这是衡水"
+                ><br>同包间的舍友想到火车要经过黄河，所以STY大致根据地图上了一个凌晨2:00的闹铃来轰我们起床。</p>
+<p>STY被分到了实践活动总结视频的制作组，而我们在去程上就开工了。STY虽然被指定成负责人，但由于携带的设备太拉跨了，只有一部某品牌的<strong>青春版手机</strong>，而其他人有云台和单反，所以没法产出太多能用的素材，只能退居二线来整理分类所有素材并给点意见。</p>
+<p>在熄灯后STY等人的电脑同时启动的场景是炸裂的，尤其是好像只有我们几个带电脑。不过，STY根本没处理什么素材或者剪辑，而是修U盘。具体来说，STY的U盘有Type-3接口，所以能很轻松地从手机上复制媒体文件。但是，有一个文件操作岔劈了，导致根本没写入，是一个幽灵文件。在第二次将U盘插入手机时手机她不认了。这个幽灵文件最神奇的是无法移动且无法删除。STY发现这个幽灵文件可以用VS Code打开，所以采取了随便写入一点字符或者硬改扩展名的方式来处理——然并卵这个文件还在。</p>
+<p>临近23:00时STY终于能躺一下——其实⑧行。走廊里怎么一堆熬通宵的啊！！！吵死。</p>
+<p>在2:00时，手机闹铃久违地准时响了。然后——火车刚刚越过黄河进入河南。真的，但凡我把预计到黄河大桥的运行时间少约一位也不至于。</p>
+<h1 id="吃个早饭吧，骚年！"><a href="#吃个早饭吧，骚年！" class="headerlink" title="吃个早饭吧，骚年！"></a>吃个早饭吧，骚年！</h1><p>从23:00到5:00，每隔一个小时就有一个人在包间口大声密谋。</p>
+<p>5:50，STY实在扛不住了，赶紧面对新的一天吧。</p>
+<p>早饭带的是汤○人豚骨拉面方便面。考虑到在包间里吃这个<strong>扣功德</strong>，所以STY觉得去餐车吃更好。唯一的问题是STY在一车厢，而餐车很明显是七车厢……没事，长途跋涉！</p>
+<p>STY抄起方便面和除了茉莉花茶味东方茶叶以外的其他战略物资向七车厢走去。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/10/13/_20231013222104_2.jpg"
+                      alt="_20231013222104_2.jpg"
+                ></p>
+<p>吃方便面有很多种心碎时刻，比如说少调料包，叉子断了……以及<strong>忘了把调料包拿出来</strong>！STY以为这种东西不可能给什么肉的，直到STY在水浴加热（确信）泡面三分钟后在碗底发现了小小的一块还在塑料包中的肉肉……</p>
+<p>火车的餐车不只是一个担心因在包间吃泡面而被扣功德的人的避难所，它本身就是一个餐厅。让我们看看餐车都卖点啥……<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/10/13/_20231013222103_1.jpg"
+                      alt="_20231013222103_1.jpg"
+                ></p>
+<ul>
+<li><strong>蛋炒饭套餐</strong>：一碗蛋炒饭，外加四个小菜：花生一碟，难以辨认的俩咸菜共一碟，鸡蛋一个。有一说一，这是STY头一次知道鸡蛋算小菜。</li>
+<li><strong>小米粥套餐</strong>：一碗小米粥，但工作人员待会儿又说是稀饭，加上刚才提到的四种小菜。</li>
+</ul>
+<p>总的来说：<strong>都比学校的好吃</strong>。我校以成绩优异和伙食忧抑闻名■■区。</p>
+<p>火车在江北的土地上颤抖着，在水田的喘息和阴云的吟哦中穿过了一座座无名的小站，从更高、更灰暗、更粗壮的高架桥下穿梭过去。这看起来是多么的赛博朋克，但请注意——本站站名和cyberpunk一点关系没有。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/10/13/_20231013222102.jpg"
+                      alt="_20231013222102.jpg"
+                ></p>
+<h1 id="大湖名城"><a href="#大湖名城" class="headerlink" title="大湖名城"></a>大湖名城</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/10/13/_20231013222102_1.jpg"
+                      alt="_20231013222102_1.jpg"
+                ><br>合肥，巢湖边的古城。虽然但是，本次实践活动全程离巢湖最近的地方仅有2km少点，但我们根本连湖水的影子都没见着。<br>终点站是合肥站。竟有一个瞬间STY觉得这里是北京北。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/10/13/_20231013222102_2.jpg"
+                      alt="_20231013222102_2.jpg"
+                ></p>
+<p><em><strong>终于，我们到了</strong></em></p>
+
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> 游记 × at STY |半夜两点起来看火车过黄河，结果……</li>
+        <li><strong>作者:</strong> STY</li>
+        <li><strong>创建于
+                :</strong> 2026-07-08 16:37:17</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2023-10-14 13:04:16
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://ameitsu.github.io/2026/07/08/sightseeing/出发/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/at-STY/">#at STY</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%8E%9F%E5%88%9B/">#原创</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E9%AB%98%E4%B8%AD%E7%89%B2STY/">#高中牲STY</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E6%B8%B8%E8%AE%B0/">#游记</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%AE%9E%E8%B7%B5%E6%B4%BB%E5%8A%A8/">#实践活动</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%A4%9A%E5%9B%BE%E6%9D%80%E7%8C%AB/">#多图杀猫</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2026/04/03/at-STY/cw_51/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">Cyberpark Weekly vol.51 (@STY vol.75) | 高三下Part 1</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.js';
+
+      (function() {
+        const startPath = location.pathname;
+        const startTime = Date.now();
+        const retryDelay = 200;
+        const retryLimit = 5000;
+
+        const runWaline = () => {
+          if (location.pathname !== startPath) {
+            return;
+          }
+
+          const container = document.getElementById('waline');
+          if (!container) {
+            if (Date.now() - startTime < retryLimit) {
+              setTimeout(runWaline, retryDelay);
+            }
+            return;
+          }
+
+          if (window.redefineWalineInstance?.destroy) {
+            window.redefineWalineInstance.destroy();
+          }
+
+          container.innerHTML = '';
+          window.redefineWalineInstance = init({
+            el: '#waline',
+            serverURL: 'https://example.example.com',
+            path: location.pathname,
+            dark: 'body[class~="dark-mode"]',
+            reaction: false,
+            requiredMeta: ['nick', 'mail'],
+            emoji: [],
+                      lang: 'zh-CN',
+          });
+        };
+
+        runWaline();
+      })();
+    </script>
+
+
+
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">目录</div>
+		<div class="page-title">游记 × at STY |半夜两点起来看火车过黄河，结果……</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%AA%E6%8A%8A10%E6%9C%887%E4%BD%9C9%E6%9C%8830"><span class="nav-text">只把10月7作9月30</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%AA%E7%A9%BF%E5%8C%97%E4%BA%AC"><span class="nav-text">横穿北京</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%A7%E9%9A%90%E9%9A%90%E4%BA%8E%E5%B8%82%EF%BC%88%E7%A1%AE%E4%BF%A1%EF%BC%89"><span class="nav-text">大隐隐于市（确信）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%B6%E9%9A%9410%E5%B9%B4%E5%86%8D%E4%B8%8A%E7%A1%AC%E5%8D%A7"><span class="nav-text">时隔10年再上硬卧</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BA%E5%8F%91%EF%BC%81"><span class="nav-text">出发！</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%83%E4%B8%AA%E6%97%A9%E9%A5%AD%E5%90%A7%EF%BC%8C%E9%AA%9A%E5%B9%B4%EF%BC%81"><span class="nav-text">吃个早饭吧，骚年！</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%A7%E6%B9%96%E5%90%8D%E5%9F%8E"><span class="nav-text">大湖名城</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2026&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">STY</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 112 篇文章
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.9.0</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container" role="dialog" aria-modal="true" aria-label="图片查看器">
+	<button class="image-viewer-close" type="button" aria-label="关闭">
+		<i class="fa-solid fa-xmark"></i>
+	</button>
+	<button class="image-viewer-prev" type="button" aria-label="上一页">
+		<i class="fa-solid fa-chevron-left"></i>
+	</button>
+	<div class="image-viewer-frame">
+		<img src="" alt="">
+	</div>
+	<div class="image-viewer-exif-panel hidden absolute left-1/2 bottom-20 -translate-x-1/2 w-[min(92vw,420px)] max-h-[60vh] overflow-hidden rounded-2xl bg-background-color-transparent-80 p-4 text-left shadow-redefine-flat backdrop-blur-md" role="dialog" aria-label="EXIF" aria-hidden="true">
+		<div class="flex items-center justify-between mb-3">
+			<span class="text-sm font-semibold text-first-text-color">EXIF</span>
+			<button class="image-viewer-exif-close flex h-8 w-8 items-center justify-center rounded-full bg-background-color-transparent-80 text-first-text-color transition hover:bg-background-color-transparent-40" type="button" aria-label="关闭">
+				<i class="fa-solid fa-xmark text-[0.65rem]"></i>
+			</button>
+		</div>
+		<div class="image-viewer-exif-cards grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[50vh] overflow-y-auto pr-1 scrollbar-hide"></div>
+		<template class="image-viewer-exif-card-template">
+			<div class="rounded-lg bg-background-color-transparent-40 px-3 py-2">
+				<div class="image-viewer-exif-card-header flex items-center gap-2 mb-1">
+					<i class="image-viewer-exif-card-icon fa-solid fa-circle-info text-xs text-third-text-color"></i>
+					<div class="image-viewer-exif-card-title text-xs font-semibold text-first-text-color"></div>
+				</div>
+				<div class="image-viewer-exif-card-items flex flex-col gap-1"></div>
+			</div>
+		</template>
+	</div>
+	<button class="image-viewer-exif-toggle flex items-center gap-2 hidden absolute left-1/2 bottom-6 -translate-x-1/2 rounded-full border border-border-color bg-background-color-transparent-80 px-4 py-2 text-first-text-color backdrop-blur-md transition hover:bg-background-color-transparent-40" type="button" aria-label="EXIF" aria-expanded="false">
+		<i class="fa-solid fa-circle-info text-xs"></i>
+		<span class="text-xs font-semibold uppercase tracking-wider">EXIF</span>
+	</button>
+	<button class="image-viewer-next" type="button" aria-label="下一页">
+		<i class="fa-solid fa-chevron-right"></i>
+	</button>
+</div>
+
+
+	
+
+</main>
+
+
+
+<script src="/js/build/libs/Swup.min.js"></script>
+
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    window.swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+
+    window.dispatchEvent(
+        new CustomEvent("redefine:swup:ready", {
+            detail: {
+                swup: window.swup,
+            },
+        }),
+    );
+</script>
+
+
+
+
+	
+<script src="/js/build/main.js" type="module"></script>
+
+
+
+    
+<script src="/js/build/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+
+	
+</body>
+
+</html>

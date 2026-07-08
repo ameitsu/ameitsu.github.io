@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    
+    <meta name="author" content="STY">
+    
+    <!-- Completely eliminate flash of wrong theme -->
+    <script>
+        (function() {
+            const THEME_KEY = "REDEFINE-THEME-STATUS";
+            const DARK = "dark", LIGHT = "light";
+            
+            // Get preferred theme
+            function getTheme() {
+                try {
+                    const saved = localStorage.getItem(THEME_KEY);
+                    if (saved) {
+                        const { isDark } = JSON.parse(saved);
+                        return isDark ? DARK : LIGHT;
+                    }
+                } catch (e) {}
+                
+                return matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+            }
+            
+            // Apply theme to document
+            function applyTheme(theme) {
+                const isDark = theme === DARK;
+                const root = document.documentElement;
+                
+                // Set classes for compatibility
+                root.classList.add(theme);
+                root.classList.remove(isDark ? LIGHT : DARK);
+                root.style.colorScheme = theme;
+            }
+            
+            // Initial application
+            const theme = getTheme();
+            applyTheme(theme);
+            
+            // Listen for system preference changes
+            matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+                // Only update if using system preference (no localStorage entry)
+                if (!localStorage.getItem(THEME_KEY)) {
+                    applyTheme(matches ? DARK : LIGHT);
+                }
+            });
+            
+            // Set body classes ASAP (before DOMContentLoaded)
+            (function() {
+                const addBodyClass = () => {
+                    const b = document.body;
+                    if (!b) return false;
+                    b.classList.add(theme + "-mode");
+                    return true;
+                };
+
+                // Try immediately
+                if (addBodyClass()) return;
+
+                // Observe until body exists
+                const mo = new MutationObserver(() => {
+                    if (addBodyClass()) mo.disconnect();
+                });
+                mo.observe(document.documentElement, { childList: true, subtree: true });
+            })();
+        })();
+    </script>
+    
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://ameitsu.github.io/2025/07/10/miscellaneous/kubanri/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="九万里老师合集">
+<meta property="og:url" content="http://ameitsu.github.io/2025/07/10/miscellaneous/kubanri/index.html">
+<meta property="og:site_name" content="Ameitsu Cyberpark">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://ameitsu.github.io/images/redefine-og.webp">
+<meta property="article:published_time" content="2025-07-10T14:02:05.000Z">
+<meta property="article:modified_time" content="2025-08-17T02:57:44.000Z">
+<meta property="article:author" content="Ameitsu">
+<meta property="article:tag" content="九万里">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ameitsu.github.io/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            九万里老师合集 | Ameitsu Cyberpark
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+        <link href="" rel="stylesheet">
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"ameitsu.github.io","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":true,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"side_tools":{"gear_rotation":true,"auto_expand":false},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Cynerpark Nichome II","subtitle":{"text":[],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":[{"icon":"fa-brands fa-github","url":null},{"icon":"fa-brands fa-twitter","url":null},{"icon":"fa-solid fa-at","url":"you@example.com"},{"icon":"fa-brands fa-telegram","url":null},{"icon":"/images/custom-icon.svg","url":null}],"qrs":[{"icon":"fa-brands fa-weixin","qr":null},{"icon":"/images/custom-icon.svg","qr":null}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1","theme":{"light":"default","dark":"dark"}}},"version":"2.9.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house","categories":"path:/categories icon:fa-solid fa-folder"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur","masonry":{"batch_size":12,"initial_batch_size":24}},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footer":{"runtime":true,"icon":"<i class=\"fa-solid fa-heart fa-beat\" style=\"--fa-animation-duration: 0.5s; color: #f54545\"></i>","start":"2023/1/21 19:30:00","statistics":true,"customize":null,"icp":{"enable":false,"number":null,"url":null}},"footerStart":"2023/1/21 19:30:00","mermaid":{"style":{"light":"default","dark":"dark"}}};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.i18n = {"search":"站内搜索您需要的内容...","toc":"目录","prev":"上一页","next":"下一页","prev_posts":"上一篇","next_posts":"下一篇","page":"第 %d 页","recent_posts":"最新文章","share":"分享","powered_by":"由 %s 驱动","theme":"主题","rss_feed":"RSS Feed","category":"分类","categories":"分类","tag":"标签","tags":"标签","post":"文章","posts":"文章","tagcloud":"标签云","comment":"评论","comments":"评论","top":"置顶","sticky":"置顶","go-back-home":"回到首页","masonry_loading":"照片加载中...","image_viewer":"图片查看器","close":"关闭","exif":{"title":"EXIF","cards":{"camera":"相机","lens":"镜头","exposure":"曝光","other":"其他"},"fields":{"make":"品牌","model":"机型","date_taken":"拍摄时间","lens_model":"镜头","focal_length":"焦距","focus_mode":"对焦模式","shutter":"快门","aperture":"光圈","iso":"感光度","exposure_program":"曝光程序","exposure_compensation":"曝光补偿","metering_mode":"测光模式","flash":"闪光灯","white_balance":"白平衡","latitude":"纬度","longitude":"经度","altitude":"海拔"},"status":{"loading":"加载中...","no_exif":"无 EXIF 信息","library_missing":"EXIF 库未加载","image_source_missing":"图片地址不可用","unavailable":"EXIF 不可用（可能被 CORS 阻止或缺少元数据）","flag_unavailable":"EXIF 不可用"}},"home":"首页","archive":"归档","archives":"归档","about":"关于","links":"链接","link":"链接","friends":"友情链接","friend":"友情链接","timeline":"时间轴","shuoshuo":"说说","bookmarks":"书签","site_uv":"访问人数","site_pv":"总访问量","read_more":"阅读全文","wordcount":"字","min2read":"分钟","changelog":"更新日志","status":"状态","runtime":"博客已运行","days":"天","hours":"小时","minutes":"分钟","seconds":"秒","optimized_by":"并由 Evan 进行优化","rights":"版权所有","site_posts":"共撰写了 %s 篇文章","site_wordcount":"共 %s 字","copyright":{"title":"标题","author":"作者","link":"链接","create_time":"创建于","update_time":"更新于","license_title":"版权声明","license_content":"本文章采用 %s 进行许可。","all_rights_reserved":"版权所有 &#169 %s，禁止转载。","public_domain":"本文为公有领域作品，可自由转载、引用。"},"ago":{"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"},"create_time":"创建","update_time":"更新","expired":"这篇文章最后更新于 %s 天前，内容可能已经过时。"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Ameitsu Cyberpark
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">41</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">12</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">112</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			<div class="w-full flex items-center pt-6 justify-start">
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">九万里老师合集</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] shrink-0 rounded-medium border border-border-color p-px">
+				<img src="/images/redefine-avatar.svg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">STY</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv5</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-07-10 22:02:05</span>
+        <span class="mobile">2025-07-10 22:02:05</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-08-17 10:57:44</span>
+            <span class="mobile">2025-08-17 10:57:44</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E7%AB%99%E5%86%85%E9%A1%B5%E9%9D%A2/">站内页面</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E7%AB%99%E5%86%85%E9%A1%B5%E9%9D%A2/%E5%90%88%E9%9B%86/">合集</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E7%AB%99%E5%86%85%E9%A1%B5%E9%9D%A2/%E5%90%88%E9%9B%86/%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/">长期更新</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E4%B9%9D%E4%B8%87%E9%87%8C/">九万里</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<p>:::info<br>我超喜欢九万里老师的，所以咱把全站里和她相关的东西全挑出来啦~<br>:::</p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="九万里第一次出场"><a href="#九万里第一次出场" class="headerlink" title="九万里第一次出场"></a>九万里第一次出场</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%9B%B4%E5%8D%87%E8%80%83/">at STY vol.4|第二次直升考</a><br>AC（本站简称）已经开始发展壮大了。甚至STY在现实世界里都被两个热心读者盆友催更了。一个要催浅野千华系列，另一个催本周的更新（也就是本篇）。</p>
+<p>:::info<br>催更新的正是<strong>九万里</strong>老师。这是她首次在AC里出镜。（2025年7月11日21:43:22）<br>:::</p>
+<h2 id="九万里再次线下催更"><a href="#九万里再次线下催更" class="headerlink" title="九万里再次线下催更"></a>九万里再次线下催更</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/%E6%BD%A6%E8%8D%89%E7%9A%84%E4%BA%8C%E6%A8%A1/">at STY vol.5|潦草的二模</a><br>到了5月13号左右有人在++线下催更++的时候，STY才发现<strong>啥东西都传不上去了</strong>，每次都报错”Spawn failed”。虽然前后两件事不一定有什么关联，但确实把STY整无语了，毕竟高中的时候还要拿这些装个B什么的。</p>
+<p>:::info<br>催更新的还是<strong>九万里</strong>老师。（2025年7月11日21:47:07）<br>:::</p>
+<h2 id="九万里试图让STY变成狐娘"><a href="#九万里试图让STY变成狐娘" class="headerlink" title="九万里试图让STY变成狐娘"></a>九万里试图让STY变成狐娘</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/%E4%B9%89%E5%8D%96%E6%99%92%E5%8D%95/">at STY vol.6|义卖晒单——论STY拿￥250预算买了些神马玩意儿</a><br>STY 的某位女性同学 cos 了狐娘，还团伙作案卖合影。其实当天上午 STY 就戴上了那个狐狸耳朵，然后楼道里的几位过路同学都表示十分震撼。STY 在卫生间里都被拍了，还使某位持相机的女性盆友被当成变态。</p>
+<p>:::info<br>此处的“某位女性同学”是九万里老师。（2025年7月11日21:51:01）<br>:::</p>
+<h2 id="九万里尝试投稿"><a href="#九万里尝试投稿" class="headerlink" title="九万里尝试投稿"></a>九万里尝试投稿</h2><p>来源：<a href="https://ameitsu.github.io/%E9%86%89%E7%9C%A0%E7%A7%8B%E5%85%B1%E8%A2%AB/dormitory-stories/%E8%BF%99%E6%98%AF%E5%95%A5%E7%8E%A9%E6%84%8F%EF%BC%9F/">这是啥玩意？</a></p>
+<p>本站将加入一个新的专栏！我校一名不愿意透露姓名的 JK 想通过本站发表她住宿的体验（以及少男少女们夜里发生的一些可以讲和不可告人的秘密）。她已经预定好这个分区了，但是我忘了她给这个专栏取的标题！Never mind，等第一篇文章出来的时候我就可以把标签和分区的名字都改回来。<br>:::info<br>此处的“一名不愿意透露姓名的 JK”是九万里老师。（2025年7月11日21:53:38）<br>:::</p>
+<h2 id="醉眠秋共被（“九万里”笔名首次出现）"><a href="#醉眠秋共被（“九万里”笔名首次出现）" class="headerlink" title="醉眠秋共被（“九万里”笔名首次出现）"></a>醉眠秋共被（“九万里”笔名首次出现）</h2><p>即<a href="https://ameitsu.github.io/%E9%86%89%E7%9C%A0%E7%A7%8B%E5%85%B1%E8%A2%AB/dormitory-stories/%E9%86%89%20%E7%9C%A0%20%E7%A7%8B%20%E5%85%B1%20%E8%A2%AB/">醉眠秋共被</a>和<a href="https://ameitsu.github.io/%E9%86%89%E7%9C%A0%E7%A7%8B%E5%85%B1%E8%A2%AB/dormitory-stories/%E4%BD%8F%E5%AE%BF%E5%9B%9E%E5%BD%92/">住宿回归</a></p>
+<h2 id="九万里在STY本子上画画"><a href="#九万里在STY本子上画画" class="headerlink" title="九万里在STY本子上画画"></a>九万里在STY本子上画画</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/cw_2/">Cyberpark Weekly vol.2 (@ STY vol.25)| 2025年第10周</a><br>九万里老师喜欢在我的各种笔记本上画画。最近她整了一对 CP，名字未定，还拉我入股。</p>
+<h2 id="九万里摧毁应急灯"><a href="#九万里摧毁应急灯" class="headerlink" title="九万里摧毁应急灯"></a>九万里摧毁应急灯</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/cw_4/">Cyberpark Weekly vol.4(@ STY vol.27) | 2025年第12周</a><br>而我们的九万里老师认为这个应急灯纯纯是欠调教，只要踹一脚就没事儿了。果然，在她使出黄金右脚后，应急灯果然…… 碎了！玻璃渣飞溅出来，周围走动的同学立马都回过头看发生甚么事了。有老师过来问肇事者是谁，结果没人吭声，明显是我们在装瞎掩护她，最后九万里自首了。</p>
+<h2 id="九万里文化节cosplay"><a href="#九万里文化节cosplay" class="headerlink" title="九万里文化节cosplay"></a>九万里文化节cosplay</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/cw_8/">Cyberpark Weekly vol.8 (@STY vol.31) | 2025年第16周</a><br>文化节最瞩目的莫过于整活环节。九万里老师就来了一身…… 哦忘了她不让我发出来。</p>
+<h2 id="STY想和九万里老师整活"><a href="#STY想和九万里老师整活" class="headerlink" title="STY想和九万里老师整活"></a>STY想和九万里老师整活</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/cw_9/">Cyberpark Weekly vol.9 (@STY vol.33) | 2025年第17-18周</a><br>说不定可以和九万里老师整个活儿什么的。</p>
+<h2 id="九万里老师主持红五月"><a href="#九万里老师主持红五月" class="headerlink" title="九万里老师主持红五月"></a>九万里老师主持红五月</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/cw_10/">Cyberpark Weekly vol.10 (@STY vol.34) | 2025年第19周</a><br>赛前STY才知道<strong>九万里</strong>老师是主持人之一。她穿西装来学校，我小组的各位女生都觉得她超帅，再次证明了刚才这句话的准确性：</p>
+<blockquote>
+<p>可见，在我校不管男生女生大家都喜欢漂亮帅气大姐姐</p>
+</blockquote>
+<p>在同学录的合唱比赛全程视频下的评论区里，她亲自说“主持挺帅的”。😉（不过也确实）<br>:::info<br>STY在2025年5月2日版about页中说“<strong>因为我比较可爱</strong>”，九万里在我面前说“<strong>可能我比较帅</strong>”，这不得合张影？<br>:::<br>是的，我们的九万里老师太帅了！</p>
+<h2 id="九万里演奏《春日影》"><a href="#九万里演奏《春日影》" class="headerlink" title="九万里演奏《春日影》"></a>九万里演奏《春日影》</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/cw_11/">Cyberpark Weekly vol.11 (@STY vol.35) | 2025年第20周</a></p>
+
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114511361281746&bvid=BV1dbE2zRExa&cid=29973154474&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+
+<h2 id="九万里被柠檬酸折磨"><a href="#九万里被柠檬酸折磨" class="headerlink" title="九万里被柠檬酸折磨"></a>九万里被柠檬酸折磨</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/%E4%B9%9D%E4%B8%87%E9%87%8C/at-STY/cw_11/">Cyberpark Weekly vol.11 (@STY vol.35) | 2025年第20周</a></p>
+<p><strong>九万里</strong>老师就是上述的第一种人。她干了好几杯，但最后有点矜持不住了，只能喷薄而出了，有gif为证：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img.picui.cn/free/2025/05/18/6829cd6b19611.gif"
+                      alt="WeChat_20250518200230.gif"
+                ><br>幸亏以九万里老师为首的一些人把大半盒柠檬酸搞定了，否则它们就会出现在周五的实践活动上。致敬！</p>
+<h2 id="九万里的实践活动（STY第一次觉得九万里好可爱）"><a href="#九万里的实践活动（STY第一次觉得九万里好可爱）" class="headerlink" title="九万里的实践活动（STY第一次觉得九万里好可爱）"></a>九万里的实践活动（STY第一次觉得九万里好可爱）</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/%E4%B9%9D%E4%B8%87%E9%87%8C/at-STY/cw_11/">Cyberpark Weekly vol.11 (@STY vol.35) | 2025年第20周</a></p>
+<p>说到罚款，STY 又想起来了寒假里九万里老师骑车到和平东桥那边因为逆行被罚款了二十块。</p>
+
+<div>
+
+
+
+<p>所以说全程最有趣的是和九万里老师聊天儿。她超可爱的，特别是她高猿长啸（剧烈地发出怪声）。</p>
+
+<div>
+
+
+<p>当然了全程也聊不了什么正经的东西，包括但不限于神秘的能量（重力势能），男生不用伪音就能学的猫叫声，如何折磨一包方便面，毕完业的vtuber……<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://www.helloimg.com/i/2025/05/17/6828a5a5cfcf8.jpg"
+                      alt="alt text"
+                ></p>
+
+<div>
+
+
+<p>当时九万里老师躺在矮墙上的样子超可爱的。</p>
+
+<div>
+
+
+<p>其次是活动。走栈道很好的弥补了今天的拉体能体育课被占的问题，而且走的时候自由度也比较高，可以和九万里老师贴贴，以及拿出手机跟别人宣传一下 cyberpark（当然是给大家看看那些逆天发电语录了）什么的。</p>
+
+<div>
+
+
+<p>九万里老师建议我什么时候 cos 一下站娘，我觉得挺悬的，考虑到我可能是全校皮肤反射率最低（人话：太黑了）的人。但假如咱穿个 kig 呢？</p>
+<h2 id="九万里和STY的神秘纸条"><a href="#九万里和STY的神秘纸条" class="headerlink" title="九万里和STY的神秘纸条"></a>九万里和STY的神秘纸条</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/cw_12/">Cyberpark Weekly vol.12 (@STY vol.36) | 2025年第21周</a><br>当时STY着实被震撼到了。我开始想身边到底有哪些人会喜欢我：同性不太可能，我虽然被人（没错，还是九万里老师）问过想不想当小男娘但我确实是直的；本班的女生也不可能，我和某些女生仅仅是熟人关系；隔壁班那就更算了。再考虑到纸条上没有落款，背后还有一个痞老板，我更倾向于这玩意是个整活的。</p>
+
+<div>
+
+
+<p>此时我看到边上一个刻上“我喜欢你”并且有我们组另一个女生名字的<strong>香蕉皮</strong>时，我便觉得这玩意儿有可能是钓鱼的。不过有一说一，有这样一次体验也挺不错的，正如九万里老师了解这件事儿后说：</p>
+<blockquote>
+<p>你们怎么不给我写一个让我装一下啊……</p>
+</blockquote>
+
+<div>
+
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img.picui.cn/free/2025/05/25/68329146e59c0.jpg"
+                      alt="放学别走.jpg"
+                ><br>还是没人承认。但这字迹不得不说和九万里老师的相当一致。<strong>嗯！？（⊙ｏ⊙）</strong></p>
+
+<div>
+
+
+<h2 id="九万里和心理游园会"><a href="#九万里和心理游园会" class="headerlink" title="九万里和心理游园会"></a>九万里和心理游园会</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/cw_12/">Cyberpark Weekly vol.12 (@STY vol.36) | 2025年第21周</a><br>先聊一下报告厅的活动。报告厅内一进门有一个大大的留言墙，给大家一个抒发困扰和给出建议的平台。但由于某些志愿者的引导（九万里，还是她），一大片留言都变成了少女乐队番整活儿了，请看——</p>
+<p>九万里老师要和高一高二一些人组一辈子乐队，而且他们将在下周的音乐节上debut。他们乐队的名字叫，额……your go。（他们全员应该mygo看的比我看猫娘贴贴插画还勤快）</p>
+<h2 id="九万里客串Cyberpark-Tales"><a href="#九万里客串Cyberpark-Tales" class="headerlink" title="九万里客串Cyberpark Tales"></a>九万里客串Cyberpark Tales</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/cw_13/">Cyberpark Weekly vol.13 (@STY vol.37) | 2025年第22周</a></p>
+<p><strong>AMEITSU</strong><br>我想想……哦！周一周二是我们学校的音乐节，九万里老师和她的乐队上台演奏了《秦皇岛》和《春日影》。</p>
+<p><strong>YUKIKA</strong><br>九万里姐姐好厉害啊！要是能和她贴贴就好了。</p>
+<p><strong>AMEITSU</strong><br>难怪设定里写你是涩涩自私小猫咪呢，到处都想着自己和漂亮大姐姐贴贴，就是不让自己心爱的希尔薇去。反正九万里老师他们的乐队一言以蔽之就是“古今中外”，我很难想象二胡、古筝、电吉他、小提琴、架子鼓和单簧管是怎么组合到一起的，但九万里老师他们就给了一个完美的示范。而且他们乐队叫Your Go，中文名叫“不迷途乐队”，可见mygo看多了。有一说一，我也不知道是谁把mygo翻译成“迷途之子”的，说不定咱能学习一下这种意识流翻译法来给Cyberpark取个正经的中文名。你在学校里经历了什么有趣的事情捏千华酱~</p>
+<h2 id="九万里老师整活继续"><a href="#九万里老师整活继续" class="headerlink" title="九万里老师整活继续"></a>九万里老师整活继续</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/cw_14/">Cyberpark Weekly vol.14 (@STY vol.38) | 2025年第23周</a><br>本周，九万里老师的两件抽象事儿让STY感到十分震撼。端的是——</p>
+<ul>
+<li><p><strong>“台”球</strong>：九万里老师和另一位同学在报告厅讲<strong>台</strong>上拿伸缩棍当台球棍，把乒乓球和板擦当台球，打台球玩儿。!!九万里老师抽象起来的时候超可爱的!! 你知道吗？伸缩棍是两周前<a href="https://ameitsu.github.io/at-STY/at-STY/cw_12/">文化节</a>时候支撑那面留言墙用的。</p>
+</li>
+<li><p><strong>身败名裂</strong>：有人带手机，九万里老师把在他手机上看到的丰川祥子<strong>低俗cos图</strong>（作者注：原话如此）转发给了他微信私信列表上的十余人，而且他最后跟这些人说这张图是九万里发的。有点小尴尬哈，就像STY的猫娘图收藏被班主任看到一样。</p>
+</li>
+</ul>
+<p>她说下周义卖的时候还要继续整活，Cyberpark 将跟进此事。over。</p>
+<h2 id="九万里的新高三"><a href="#九万里的新高三" class="headerlink" title="九万里的新高三"></a>九万里的新高三</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/cw_15/">Cyberpark Weekly vol.15 (@STY vol.39) | 2025年第24周</a><br>5层的中厅好歹有了点装修。中厅南面是玻璃幕墙，防跳楼装置全部就位，而且玻璃相当清洁，日光直照，归有光肯定超级羡慕；幕墙两侧摆放了祈福小树，挂满了wishlist；两边的墙上则嵌入了书架，我一看，原来已经近十年没更新过了；中厅内有三张桌子，靠西的上有一新能源鱼缸（由于无插座而被迫使用太阳能电池板），水质似紫菜蛋花汤，是<strong>九万里老师</strong>赞助的。</p>
+
+<div>
+
+
+<p>:::info<br>哦差点忘了，九万里老师本来说要穿女仆装cos波奇酱的来着，她衣服都带过来给我们看了，只可惜正日子里她没来。😥😥😥</p>
+<p>:::</p>
+<h2 id="九万里和STY的信息课"><a href="#九万里和STY的信息课" class="headerlink" title="九万里和STY的信息课"></a>九万里和STY的信息课</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/cw_16/">Cyberpark Weekly vol.16 (@STY vol.40) | 2025年第25周</a><br>课上，STY光速完成任务，然后就火速打开浏览器。每次我都会Cyberpark刷阅读量，再给周围人瞅瞅咱们的黑历史。我也也经常玩游戏，比如说那个<a class="link"   target="_blank" rel="noopener" href="https://yorg.io/" >yorg.io<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>，曾经有个同学下机前没关网页，给我留了一个三百万水晶的巨型基地，给孩子乐坏了。STY永远忘不了和九万里老师一起玩视觉小说的那次，她像只猫一样趴我后背上看剧情。九万里老师还激动地看我们的背景图合集，能看出她是真馋了。STY和别人聊起前任信息老师藏在书架里的日本男模画册，结果她隔了快十米就听见了……</p>
+<p>然后就是本月的合格考。老师知道我们<strong>根 · 本 · 没 · 听 · 过 · 讲</strong>，所以就印了复习卷子让我们背。最难绷的是他们干脆直接把编程题的标答印出来让我们跟背课文一样复习。到了考前那天，看着周围同学奋笔疾书写小抄，九万里老师一本正经地向别的同学讲解那段统共连30行都不到的代码的逻辑时，STY就可以一边幸灾乐祸一边解决人生小事儿了——Python可是咱电子母语啊！</p>
+<h2 id="STY可能暗恋九万里"><a href="#STY可能暗恋九万里" class="headerlink" title="STY可能暗恋九万里"></a>STY可能暗恋九万里</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/cw_16/">Cyberpark Weekly vol.16 (@STY vol.40) | 2025年第25周</a></p>
+<ol start="5">
+<li>跟班里哪些同学关系比较好呀？</li>
+</ol>
+<ul>
+<li><strong>九万里</strong>。</li>
+</ul>
+<ol start="28">
+<li>有喜欢的人吗？</li>
+</ol>
+<ul>
+<li>!!九万里!!</li>
+</ul>
+<ol start="39">
+<li>活到现在你觉得:“遇见ta真幸运”的人有？</li>
+</ol>
+<ul>
+<li><strong>九万里</strong>。</li>
+</ul>
+<ol start="52">
+<li>觉得年级里最好看的女生是？</li>
+</ol>
+<ul>
+<li><strong>九万里</strong>。</li>
+</ul>
+<ol start="78">
+<li>上次让你感叹“能遇见你真好”的人是谁？</li>
+</ol>
+<ul>
+<li><strong>九万里</strong>。再上一次是初二时候考语文写的作文里</li>
+</ul>
+<h2 id="STY对九万里说了逆天的话"><a href="#STY对九万里说了逆天的话" class="headerlink" title="STY对九万里说了逆天的话"></a>STY对九万里说了逆天的话</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/cw_17/">Cyberpark Weekly vol.17 (@STY vol.41) | 2025年第26-27周</a><br>STY和九万里老师从初中就开始是同学。但至今我想不起来我们俩的友谊是怎么建立起来的，反正我在2021年2月加了她的微信，然后就开始了4年的抽象生涯。</p>
+<p>我也不知道我们是怎么着聊到一块儿的。STY喜欢的东西和九万里老师喜欢的<del>几乎没有交集</del>交集为空集（正在一模复习的同学们注意哦，别忘了空集。）仔细想一下，首先我们都挺抽象的，其次都喜欢可爱的小猫娘，然后本身就是同学，时不常也会交流生活什么的。</p>
+<p>写以上这些有什么用呢？除了<em><strong>宕开一笔，增加波澜；设下悬念，吸引读者；丰富细节，使叙事更充实</strong></em> 以外，主要是方便说下面的事儿……</p>
+
+<center ><i><b><font size = 30>我夸九万里可爱，她说我口味太重了</font></i></b></center>
+
+
+<center ><i><b><font size = 30>我说九万里我喜欢你，她说兄弟你不要这样</font></i></b></center>
+
+
+<center ><i><b><font size = 30>我想让九万里把我吃掉，她说她要心梗了</font></i></b></center>
+
+
+<p>更重要的是：</p>
+
+<center ><i><b><font size = 20>以上这些在Cyberpark中都有记载……</font></i></b></center>
+
+
+
+<p>反思一下，我觉得这是我最近编辑 <strong>Cyberpark Tales</strong> 导致的，感觉有点沉浸其中了。不是说每时每刻挂念着它，而是因为它开始萌发了多余的情感……然后毕竟浅野千华他们是我写出来的，九万里老师是现实的，于是就迁移过去了……😢😢😢</p>
+<h2 id="九万里骑车逆行被抓"><a href="#九万里骑车逆行被抓" class="headerlink" title="九万里骑车逆行被抓"></a>九万里骑车逆行被抓</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/cw_18/">Cyberpark Weekly vol.18 (@STY vol.42) | 2025年第28周</a><br>而此时<strong>骑车从来不逆行</strong>的STY为了不像九万里老师一样被罚二十块只能去兜胡同了。</p>
+<h2 id="九万里评价“九万里合集”"><a href="#九万里评价“九万里合集”" class="headerlink" title="九万里评价“九万里合集”"></a>九万里评价“九万里合集”</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/cw_18/">Cyberpark Weekly vol.18 (@STY vol.42) | 2025年第28周</a></p>
+<p>其中，九万里老师看了<a href="https://ameitsu.github.io/%E7%AB%99%E5%86%85%E9%A1%B5%E9%9D%A2/%E5%90%88%E9%9B%86/miscellaneous/kubanri/">九万里合集</a> 后专门找我澄清说我们之间只是纯洁而美好的朋友关系。（然后我跟她说了我因为她哭了一下午的事儿）</p>
+<h2 id="STY差点痛失九万里美图"><a href="#STY差点痛失九万里美图" class="headerlink" title="STY差点痛失九万里美图"></a>STY差点痛失九万里美图</h2><p>来源：<a href="https://ameitsu.github.io/at-STY/at-STY/cw_19/">Cyberpark Weekly vol.19 (@STY vol.43) | 2025年第29周</a><br>更重要的是：STY珍藏的九万里老师朋友圈美图就这么没了啊！</p>
+<h2 id="《九万里本纪》"><a href="#《九万里本纪》" class="headerlink" title="《九万里本纪》"></a>《九万里本纪》</h2><p>全文见<a href="https://ameitsu.github.io/at-STY/at-STY/cw_19/#%E4%B8%8D%E8%A1%8C%E6%88%91%E7%9C%9F%E7%9A%84%E5%BE%88%E6%83%B3%E5%BE%88%E6%83%B3%E5%86%8D%E5%86%99%E7%82%B9%E5%85%B3%E4%BA%8E%E4%B9%9D%E4%B8%87%E9%87%8C%E8%80%81%E5%B8%88%E7%9A%84%E4%B8%9C%E8%A5%BF">此</a></p>
+<h2 id="九万里的丰宁之行"><a href="#九万里的丰宁之行" class="headerlink" title="九万里的丰宁之行"></a>九万里的丰宁之行</h2><p>全文见<a href="https://ameitsu.github.io/at-STY/at-STY/cheng-de/">此</a></p>
+<h1 id="chatbox"><a href="#chatbox" class="headerlink" title="chatbox"></a>chatbox</h1><h2 id="000002-九万里首次在chatbox里登场"><a href="#000002-九万里首次在chatbox里登场" class="headerlink" title="000002 九万里首次在chatbox里登场"></a>000002 九万里首次在chatbox里登场</h2><p>本来我知道我校的百合数量有点多，但我妹想到居然才几天就碰着了！</p>
+<p>我旁边一位女性盆友（注：九万里 2025年7月7日19:50:10）被她女舍友表白了。她说那个舍友从来没有和她有过交流，然而那位同学居然直接说她是自己的理想型。我当时就震惊了。后来的结果是我旁边的女性盆友被收成贵妃了……(´▽&#96;)太神奇啦！</p>
+<p>++2023-9-16 13:24:50++</p>
+<h2 id="000006-九万里0-5论"><a href="#000006-九万里0-5论" class="headerlink" title="000006 九万里0.5论"></a>000006 九万里0.5论</h2><p>在<a href="#000002">#000002</a>中的女同桌在寝室里又经历了一些难以评价的事情：她的女舍友A和B争论她是0还是1。她个人认为自己介于0和1之间，是个0.5，但AB两位同学立马就赶她走了，说这件事与她无瓜。</p>
+<p>另外AB两位同学中有一个要去她家玩，她比较担心她会被攻略。</p>
+<p>对了今天还是她生日，我校有同学要送给她花圈（写着“<strong>奠</strong>”）的那种，不知道结果怎样。</p>
+<p>++2023-9-19 20:23:19++</p>
+<h2 id="000015-醉眠秋共被完结"><a href="#000015-醉眠秋共被完结" class="headerlink" title="000015 醉眠秋共被完结"></a>000015 醉眠秋共被完结</h2><p>本站现在已经换上了全新的涂装——不在家颜色主题。当STY即将或已经离开本市辖区时将触发此颜色主题。不在家版颜色主题大致和常规颜色主题一致，只是顶部彩条的颜色左右互换。</p>
+<p>明天晚上STY就要去学校集合了，本站的更新……还可以继续！STY已经决定带电脑去了，电脑上啥都有，打开Git以后就像到家了一样。在出行的时候STY用手机上的Markdown编辑器写稿子，晚上转移到电脑上部署。</p>
+<p>以下是本站信息播报。<code>醉眠秋共被</code>系列提前完结了，因为原作者不想写了。为了使这件事更加有戏剧性，STY决定这么编几段：一是结合我校特色把九万里小姐写死；二是把九万里小姐写过的东西搞成圣经，发几篇解读；三是把她和本站猫娘服务器设定结合一下。</p>
+<h2 id="000099-九万里偷偷发了个七夕手书被我发现了（原视频已删除）"><a href="#000099-九万里偷偷发了个七夕手书被我发现了（原视频已删除）" class="headerlink" title="000099 九万里偷偷发了个七夕手书被我发现了（原视频已删除）"></a>000099 九万里偷偷发了个七夕手书被我发现了（原视频已删除）</h2>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=112935863062391&bvid=BV1mpY5eFEnG&cid=500001644477262&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+
+<p>支持一下cyberpark的老朋友。</p>
+<p>++2024-8-10 20:02:14++</p>
+<h2 id="000119-九万里爱上学"><a href="#000119-九万里爱上学" class="headerlink" title="000119 九万里爱上学"></a>000119 九万里爱上学</h2><p>九万里本来生病了，去完医院回来路过学校居然就水灵灵地捎带手上楼了！明明还有两节课就放学了啊！她说这是行为艺术。<br>++2025-4-10 20:26:03++</p>
+<h2 id="000129-九万里虚构论"><a href="#000129-九万里虚构论" class="headerlink" title="000129 九万里虚构论"></a>000129 九万里虚构论</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://www.helloimg.com/i/2025/05/10/681f5415d520c.jpg"
+                      alt="alt text"
+                ><br>也许九万里老师根本不存在？<br>或者说，眼前的一切到底是不是真的？<br>为什么这里有个小网站？<br>STY到底是不是异世界猫娘？<br>里面讲的事情到底是事实还是虚构？<br>即使是所谓的“虚构”，那会不会是另一个世界线里的事实？<br>也许这一切都没有发生过。</p>
+<p>++2025-5-10 21:50:03++</p>
+<h2 id="000131-“九万里cyberpark”"><a href="#000131-“九万里cyberpark”" class="headerlink" title="000131 “九万里cyberpark”"></a>000131 “九万里cyberpark”</h2><p>本站最近和九万里老师相关的东西好多啊。干脆改名叫 Kyubanri Cyberpark得了。<br>++2025-5-16 23:06:09++</p>
+<h2 id="000145-STY第一次表达想被她吃掉的愿望"><a href="#000145-STY第一次表达想被她吃掉的愿望" class="headerlink" title="000145 STY第一次表达想被她吃掉的愿望"></a>000145 STY第一次表达想被她吃掉的愿望</h2><p>我 想 被 九 万 里 老 师 吃 掉 ！！！<br>++2025-6-30 22:51:58++</p>
+<h2 id="000146-STY第二次表达想被她吃掉的愿望"><a href="#000146-STY第二次表达想被她吃掉的愿望" class="headerlink" title="000146 STY第二次表达想被她吃掉的愿望"></a>000146 STY第二次表达想被她吃掉的愿望</h2><p><strong>【北京市朝阳区来广营乡（地区）清河营中街1号院1号楼，2025年7月2日】</strong><br><strong>STY</strong><br>九万里我想被你吃掉！</p>
+<p><strong>九万里</strong><br>（对着<em>千日行</em>）就是这位，最近一见着我就说“我喜欢你”。</p>
+<p><strong>千日行</strong><br>哦，干脆STY你也复刻一下520那天的纸条吧！</p>
+<p><strong>九万里</strong><br>这真不是人类了。</p>
+<p><strong>STY</strong><br>那确实，因为我是朝阳区最可爱的猫娘呐~</p>
+<p><strong>九万里</strong><br>（苦笑）兄弟你说话要让我心梗了……</p>
+<p><strong>STY</strong><br>有什么问题嘛？</p>
+<p><strong>九万里</strong><br>以后请你和我保证一米的社交安全距离，否则我就<em>报警</em>了。</p>
+<p><strong>STY</strong><br><em>抱紧</em>？！😃😃😃</p>
+<p>++2025-7-2 19:46:18++</p>
+<h2 id="000152-九万里圣遗物"><a href="#000152-九万里圣遗物" class="headerlink" title="000152 九万里圣遗物"></a>000152 九万里圣遗物</h2><p>九万里老师送我了——一件<strong>女仆装</strong>！我将速速穿上然后拍一张扔到 Pictorial 上。<br>++2025-7-10 18:33:21++</p>
+<h2 id="000153-STY因九万里而哭"><a href="#000153-STY因九万里而哭" class="headerlink" title="000153 STY因九万里而哭"></a>000153 STY因九万里而哭</h2><p>STY本周已经因为九万里老师而断断续续地以常人无法察觉【注】的方式哭了一下午。😢😢😢九万里老师超帅超可爱超温柔的捏……<strong>(⌯˃̶᷄ ﹏ ˂̶᷄⌯)</strong>  </p>
+<p>另外之前<a href="https://ameitsu.github.io/at-STY/at-STY/cw_16/">Cyberpark Weekly vol.16 (@STY vol.40) | 2025年第25周</a>里的“为异性哭过吗”的答案估计得更新了。第一代浅野千华死的时候STY其实也没伤感过，毕竟这是为了确保 Cyberpark Tales 的设定完备性而进行的程序性死亡。但这次对九万里的可就是真情实感了。</p>
+<p>【注】：指在男厕所包间里哭，保证没人看得到。事实上，STY有时候去厕所纯粹是为了缩在墙角里哭。</p>
+<p>++2025-7-13 22:23:54++</p>
+<h2 id="000165-九万里是犬系女生"><a href="#000165-九万里是犬系女生" class="headerlink" title="000165 九万里是犬系女生"></a>000165 九万里是犬系女生</h2><p>STY其实把身边的人当小动物对待的，这也是STY没有深交的原因之一。我经常见，还经常说话的朋友对于我来说是小猫，话少一点的朋友就是小狗。</p>
+<p>虽然毫不相关，但九万里她是犬系女生。望周知。</p>
+<p>++2025-7-24 23:17:34++</p>
+<h2 id="000167-千万别让九万里看到这条"><a href="#000167-千万别让九万里看到这条" class="headerlink" title="000167 千万别让九万里看到这条"></a>000167 千万别让九万里看到这条</h2><p>!!其实我高二上曾经真的想过和九万里表白来着，但因为期中考试进步很大，孩子硬生生给忘了！!!</p>
+<p>++2025-7-25 22:50:29++</p>
+<h1 id="000174-九万里站娘论"><a href="#000174-九万里站娘论" class="headerlink" title="000174 九万里站娘论"></a>000174 九万里站娘论</h1><p>九万里出场次数比Halifax妹妹还多，那实际上本站的站娘是九万里💫<br>++2025-8-10 21:45:20++</p>
+
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> 九万里老师合集</li>
+        <li><strong>作者:</strong> STY</li>
+        <li><strong>创建于
+                :</strong> 2025-07-10 22:02:05</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2025-08-17 10:57:44
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://ameitsu.github.io/2025/07/10/miscellaneous/kubanri/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E4%B9%9D%E4%B8%87%E9%87%8C/">#九万里</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/2025/07/12/at-STY/cw_18/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">Cyberpark Weekly vol.18 (@STY vol.42) | 2025年第28周</span>
+						<span class="post-nav-item">上一篇</span>
+					</span>
+				</a>
+			</div>
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2025/07/04/miscellaneous/background_3/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">Cyberpark Nichome 背景图合集三</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.js';
+
+      (function() {
+        const startPath = location.pathname;
+        const startTime = Date.now();
+        const retryDelay = 200;
+        const retryLimit = 5000;
+
+        const runWaline = () => {
+          if (location.pathname !== startPath) {
+            return;
+          }
+
+          const container = document.getElementById('waline');
+          if (!container) {
+            if (Date.now() - startTime < retryLimit) {
+              setTimeout(runWaline, retryDelay);
+            }
+            return;
+          }
+
+          if (window.redefineWalineInstance?.destroy) {
+            window.redefineWalineInstance.destroy();
+          }
+
+          container.innerHTML = '';
+          window.redefineWalineInstance = init({
+            el: '#waline',
+            serverURL: 'https://example.example.com',
+            path: location.pathname,
+            dark: 'body[class~="dark-mode"]',
+            reaction: false,
+            requiredMeta: ['nick', 'mail'],
+            emoji: [],
+                      lang: 'zh-CN',
+          });
+        };
+
+        runWaline();
+      })();
+    </script>
+
+
+
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">目录</div>
+		<div class="page-title">九万里老师合集</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A3%E6%96%87"><span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%87%BA%E5%9C%BA"><span class="nav-text">九万里第一次出场</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E5%86%8D%E6%AC%A1%E7%BA%BF%E4%B8%8B%E5%82%AC%E6%9B%B4"><span class="nav-text">九万里再次线下催更</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E8%AF%95%E5%9B%BE%E8%AE%A9STY%E5%8F%98%E6%88%90%E7%8B%90%E5%A8%98"><span class="nav-text">九万里试图让STY变成狐娘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E5%B0%9D%E8%AF%95%E6%8A%95%E7%A8%BF"><span class="nav-text">九万里尝试投稿</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%86%89%E7%9C%A0%E7%A7%8B%E5%85%B1%E8%A2%AB%EF%BC%88%E2%80%9C%E4%B9%9D%E4%B8%87%E9%87%8C%E2%80%9D%E7%AC%94%E5%90%8D%E9%A6%96%E6%AC%A1%E5%87%BA%E7%8E%B0%EF%BC%89"><span class="nav-text">醉眠秋共被（“九万里”笔名首次出现）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E5%9C%A8STY%E6%9C%AC%E5%AD%90%E4%B8%8A%E7%94%BB%E7%94%BB"><span class="nav-text">九万里在STY本子上画画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E6%91%A7%E6%AF%81%E5%BA%94%E6%80%A5%E7%81%AF"><span class="nav-text">九万里摧毁应急灯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E6%96%87%E5%8C%96%E8%8A%82cosplay"><span class="nav-text">九万里文化节cosplay</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STY%E6%83%B3%E5%92%8C%E4%B9%9D%E4%B8%87%E9%87%8C%E8%80%81%E5%B8%88%E6%95%B4%E6%B4%BB"><span class="nav-text">STY想和九万里老师整活</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E8%80%81%E5%B8%88%E4%B8%BB%E6%8C%81%E7%BA%A2%E4%BA%94%E6%9C%88"><span class="nav-text">九万里老师主持红五月</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E6%BC%94%E5%A5%8F%E3%80%8A%E6%98%A5%E6%97%A5%E5%BD%B1%E3%80%8B"><span class="nav-text">九万里演奏《春日影》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E8%A2%AB%E6%9F%A0%E6%AA%AC%E9%85%B8%E6%8A%98%E7%A3%A8"><span class="nav-text">九万里被柠檬酸折磨</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E7%9A%84%E5%AE%9E%E8%B7%B5%E6%B4%BB%E5%8A%A8%EF%BC%88STY%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%A7%89%E5%BE%97%E4%B9%9D%E4%B8%87%E9%87%8C%E5%A5%BD%E5%8F%AF%E7%88%B1%EF%BC%89"><span class="nav-text">九万里的实践活动（STY第一次觉得九万里好可爱）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E5%92%8CSTY%E7%9A%84%E7%A5%9E%E7%A7%98%E7%BA%B8%E6%9D%A1"><span class="nav-text">九万里和STY的神秘纸条</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E5%92%8C%E5%BF%83%E7%90%86%E6%B8%B8%E5%9B%AD%E4%BC%9A"><span class="nav-text">九万里和心理游园会</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E5%AE%A2%E4%B8%B2Cyberpark-Tales"><span class="nav-text">九万里客串Cyberpark Tales</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E8%80%81%E5%B8%88%E6%95%B4%E6%B4%BB%E7%BB%A7%E7%BB%AD"><span class="nav-text">九万里老师整活继续</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E7%9A%84%E6%96%B0%E9%AB%98%E4%B8%89"><span class="nav-text">九万里的新高三</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E5%92%8CSTY%E7%9A%84%E4%BF%A1%E6%81%AF%E8%AF%BE"><span class="nav-text">九万里和STY的信息课</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STY%E5%8F%AF%E8%83%BD%E6%9A%97%E6%81%8B%E4%B9%9D%E4%B8%87%E9%87%8C"><span class="nav-text">STY可能暗恋九万里</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STY%E5%AF%B9%E4%B9%9D%E4%B8%87%E9%87%8C%E8%AF%B4%E4%BA%86%E9%80%86%E5%A4%A9%E7%9A%84%E8%AF%9D"><span class="nav-text">STY对九万里说了逆天的话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E9%AA%91%E8%BD%A6%E9%80%86%E8%A1%8C%E8%A2%AB%E6%8A%93"><span class="nav-text">九万里骑车逆行被抓</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E8%AF%84%E4%BB%B7%E2%80%9C%E4%B9%9D%E4%B8%87%E9%87%8C%E5%90%88%E9%9B%86%E2%80%9D"><span class="nav-text">九万里评价“九万里合集”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STY%E5%B7%AE%E7%82%B9%E7%97%9B%E5%A4%B1%E4%B9%9D%E4%B8%87%E9%87%8C%E7%BE%8E%E5%9B%BE"><span class="nav-text">STY差点痛失九万里美图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%8A%E4%B9%9D%E4%B8%87%E9%87%8C%E6%9C%AC%E7%BA%AA%E3%80%8B"><span class="nav-text">《九万里本纪》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%B8%87%E9%87%8C%E7%9A%84%E4%B8%B0%E5%AE%81%E4%B9%8B%E8%A1%8C"><span class="nav-text">九万里的丰宁之行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chatbox"><span class="nav-text">chatbox</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#000002-%E4%B9%9D%E4%B8%87%E9%87%8C%E9%A6%96%E6%AC%A1%E5%9C%A8chatbox%E9%87%8C%E7%99%BB%E5%9C%BA"><span class="nav-text">000002 九万里首次在chatbox里登场</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#000006-%E4%B9%9D%E4%B8%87%E9%87%8C0-5%E8%AE%BA"><span class="nav-text">000006 九万里0.5论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#000015-%E9%86%89%E7%9C%A0%E7%A7%8B%E5%85%B1%E8%A2%AB%E5%AE%8C%E7%BB%93"><span class="nav-text">000015 醉眠秋共被完结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#000099-%E4%B9%9D%E4%B8%87%E9%87%8C%E5%81%B7%E5%81%B7%E5%8F%91%E4%BA%86%E4%B8%AA%E4%B8%83%E5%A4%95%E6%89%8B%E4%B9%A6%E8%A2%AB%E6%88%91%E5%8F%91%E7%8E%B0%E4%BA%86%EF%BC%88%E5%8E%9F%E8%A7%86%E9%A2%91%E5%B7%B2%E5%88%A0%E9%99%A4%EF%BC%89"><span class="nav-text">000099 九万里偷偷发了个七夕手书被我发现了（原视频已删除）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#000119-%E4%B9%9D%E4%B8%87%E9%87%8C%E7%88%B1%E4%B8%8A%E5%AD%A6"><span class="nav-text">000119 九万里爱上学</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#000129-%E4%B9%9D%E4%B8%87%E9%87%8C%E8%99%9A%E6%9E%84%E8%AE%BA"><span class="nav-text">000129 九万里虚构论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#000131-%E2%80%9C%E4%B9%9D%E4%B8%87%E9%87%8Ccyberpark%E2%80%9D"><span class="nav-text">000131 “九万里cyberpark”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#000145-STY%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%A1%A8%E8%BE%BE%E6%83%B3%E8%A2%AB%E5%A5%B9%E5%90%83%E6%8E%89%E7%9A%84%E6%84%BF%E6%9C%9B"><span class="nav-text">000145 STY第一次表达想被她吃掉的愿望</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#000146-STY%E7%AC%AC%E4%BA%8C%E6%AC%A1%E8%A1%A8%E8%BE%BE%E6%83%B3%E8%A2%AB%E5%A5%B9%E5%90%83%E6%8E%89%E7%9A%84%E6%84%BF%E6%9C%9B"><span class="nav-text">000146 STY第二次表达想被她吃掉的愿望</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#000152-%E4%B9%9D%E4%B8%87%E9%87%8C%E5%9C%A3%E9%81%97%E7%89%A9"><span class="nav-text">000152 九万里圣遗物</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#000153-STY%E5%9B%A0%E4%B9%9D%E4%B8%87%E9%87%8C%E8%80%8C%E5%93%AD"><span class="nav-text">000153 STY因九万里而哭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#000165-%E4%B9%9D%E4%B8%87%E9%87%8C%E6%98%AF%E7%8A%AC%E7%B3%BB%E5%A5%B3%E7%94%9F"><span class="nav-text">000165 九万里是犬系女生</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#000167-%E5%8D%83%E4%B8%87%E5%88%AB%E8%AE%A9%E4%B9%9D%E4%B8%87%E9%87%8C%E7%9C%8B%E5%88%B0%E8%BF%99%E6%9D%A1"><span class="nav-text">000167 千万别让九万里看到这条</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#000174-%E4%B9%9D%E4%B8%87%E9%87%8C%E7%AB%99%E5%A8%98%E8%AE%BA"><span class="nav-text">000174 九万里站娘论</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2026&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">STY</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 112 篇文章
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.9.0</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container" role="dialog" aria-modal="true" aria-label="图片查看器">
+	<button class="image-viewer-close" type="button" aria-label="关闭">
+		<i class="fa-solid fa-xmark"></i>
+	</button>
+	<button class="image-viewer-prev" type="button" aria-label="上一页">
+		<i class="fa-solid fa-chevron-left"></i>
+	</button>
+	<div class="image-viewer-frame">
+		<img src="" alt="">
+	</div>
+	<div class="image-viewer-exif-panel hidden absolute left-1/2 bottom-20 -translate-x-1/2 w-[min(92vw,420px)] max-h-[60vh] overflow-hidden rounded-2xl bg-background-color-transparent-80 p-4 text-left shadow-redefine-flat backdrop-blur-md" role="dialog" aria-label="EXIF" aria-hidden="true">
+		<div class="flex items-center justify-between mb-3">
+			<span class="text-sm font-semibold text-first-text-color">EXIF</span>
+			<button class="image-viewer-exif-close flex h-8 w-8 items-center justify-center rounded-full bg-background-color-transparent-80 text-first-text-color transition hover:bg-background-color-transparent-40" type="button" aria-label="关闭">
+				<i class="fa-solid fa-xmark text-[0.65rem]"></i>
+			</button>
+		</div>
+		<div class="image-viewer-exif-cards grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[50vh] overflow-y-auto pr-1 scrollbar-hide"></div>
+		<template class="image-viewer-exif-card-template">
+			<div class="rounded-lg bg-background-color-transparent-40 px-3 py-2">
+				<div class="image-viewer-exif-card-header flex items-center gap-2 mb-1">
+					<i class="image-viewer-exif-card-icon fa-solid fa-circle-info text-xs text-third-text-color"></i>
+					<div class="image-viewer-exif-card-title text-xs font-semibold text-first-text-color"></div>
+				</div>
+				<div class="image-viewer-exif-card-items flex flex-col gap-1"></div>
+			</div>
+		</template>
+	</div>
+	<button class="image-viewer-exif-toggle flex items-center gap-2 hidden absolute left-1/2 bottom-6 -translate-x-1/2 rounded-full border border-border-color bg-background-color-transparent-80 px-4 py-2 text-first-text-color backdrop-blur-md transition hover:bg-background-color-transparent-40" type="button" aria-label="EXIF" aria-expanded="false">
+		<i class="fa-solid fa-circle-info text-xs"></i>
+		<span class="text-xs font-semibold uppercase tracking-wider">EXIF</span>
+	</button>
+	<button class="image-viewer-next" type="button" aria-label="下一页">
+		<i class="fa-solid fa-chevron-right"></i>
+	</button>
+</div>
+
+
+	
+
+</main>
+
+
+
+<script src="/js/build/libs/Swup.min.js"></script>
+
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    window.swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+
+    window.dispatchEvent(
+        new CustomEvent("redefine:swup:ready", {
+            detail: {
+                swup: window.swup,
+            },
+        }),
+    );
+</script>
+
+
+
+
+	
+<script src="/js/build/main.js" type="module"></script>
+
+
+
+    
+<script src="/js/build/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+
+	
+</body>
+
+</html>

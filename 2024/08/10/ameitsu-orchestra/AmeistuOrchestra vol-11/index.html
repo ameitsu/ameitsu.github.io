@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    
+    <meta name="author" content="STY">
+    
+    <!-- Completely eliminate flash of wrong theme -->
+    <script>
+        (function() {
+            const THEME_KEY = "REDEFINE-THEME-STATUS";
+            const DARK = "dark", LIGHT = "light";
+            
+            // Get preferred theme
+            function getTheme() {
+                try {
+                    const saved = localStorage.getItem(THEME_KEY);
+                    if (saved) {
+                        const { isDark } = JSON.parse(saved);
+                        return isDark ? DARK : LIGHT;
+                    }
+                } catch (e) {}
+                
+                return matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+            }
+            
+            // Apply theme to document
+            function applyTheme(theme) {
+                const isDark = theme === DARK;
+                const root = document.documentElement;
+                
+                // Set classes for compatibility
+                root.classList.add(theme);
+                root.classList.remove(isDark ? LIGHT : DARK);
+                root.style.colorScheme = theme;
+            }
+            
+            // Initial application
+            const theme = getTheme();
+            applyTheme(theme);
+            
+            // Listen for system preference changes
+            matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+                // Only update if using system preference (no localStorage entry)
+                if (!localStorage.getItem(THEME_KEY)) {
+                    applyTheme(matches ? DARK : LIGHT);
+                }
+            });
+            
+            // Set body classes ASAP (before DOMContentLoaded)
+            (function() {
+                const addBodyClass = () => {
+                    const b = document.body;
+                    if (!b) return false;
+                    b.classList.add(theme + "-mode");
+                    return true;
+                };
+
+                // Try immediately
+                if (addBodyClass()) return;
+
+                // Observe until body exists
+                const mo = new MutationObserver(() => {
+                    if (addBodyClass()) mo.disconnect();
+                });
+                mo.observe(document.documentElement, { childList: true, subtree: true });
+            })();
+        })();
+    </script>
+    
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://ameitsu.github.io/2024/08/10/ameitsu-orchestra/ameistuorchestra vol-11/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AmeistuOrchestra vol-11 | 化学暑假作业——“废旧电池的回收：一个综述”">
+<meta property="og:url" content="http://ameitsu.github.io/2024/08/10/ameitsu-orchestra/AmeistuOrchestra%20vol-11/index.html">
+<meta property="og:site_name" content="Ameitsu Cyberpark">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://ameitsu.github.io/images/redefine-og.webp">
+<meta property="article:published_time" content="2024-08-10T11:36:40.000Z">
+<meta property="article:modified_time" content="2024-08-10T11:48:36.000Z">
+<meta property="article:author" content="Ameitsu">
+<meta property="article:tag" content="Ameitsu Orchestra">
+<meta property="article:tag" content="原创">
+<meta property="article:tag" content="水水水">
+<meta property="article:tag" content="高中牲STY">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ameitsu.github.io/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            AmeistuOrchestra vol-11 | 化学暑假作业——“废旧电池的回收：一个综述” | Ameitsu Cyberpark
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+        <link href="" rel="stylesheet">
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"ameitsu.github.io","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":true,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"side_tools":{"gear_rotation":true,"auto_expand":false},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Cynerpark Nichome II","subtitle":{"text":[],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":[{"icon":"fa-brands fa-github","url":null},{"icon":"fa-brands fa-twitter","url":null},{"icon":"fa-solid fa-at","url":"you@example.com"},{"icon":"fa-brands fa-telegram","url":null},{"icon":"/images/custom-icon.svg","url":null}],"qrs":[{"icon":"fa-brands fa-weixin","qr":null},{"icon":"/images/custom-icon.svg","qr":null}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1","theme":{"light":"default","dark":"dark"}}},"version":"2.9.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house","categories":"path:/categories icon:fa-solid fa-folder"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur","masonry":{"batch_size":12,"initial_batch_size":24}},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footer":{"runtime":true,"icon":"<i class=\"fa-solid fa-heart fa-beat\" style=\"--fa-animation-duration: 0.5s; color: #f54545\"></i>","start":"2023/1/21 19:30:00","statistics":true,"customize":null,"icp":{"enable":false,"number":null,"url":null}},"footerStart":"2023/1/21 19:30:00","mermaid":{"style":{"light":"default","dark":"dark"}}};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.i18n = {"search":"站内搜索您需要的内容...","toc":"目录","prev":"上一页","next":"下一页","prev_posts":"上一篇","next_posts":"下一篇","page":"第 %d 页","recent_posts":"最新文章","share":"分享","powered_by":"由 %s 驱动","theme":"主题","rss_feed":"RSS Feed","category":"分类","categories":"分类","tag":"标签","tags":"标签","post":"文章","posts":"文章","tagcloud":"标签云","comment":"评论","comments":"评论","top":"置顶","sticky":"置顶","go-back-home":"回到首页","masonry_loading":"照片加载中...","image_viewer":"图片查看器","close":"关闭","exif":{"title":"EXIF","cards":{"camera":"相机","lens":"镜头","exposure":"曝光","other":"其他"},"fields":{"make":"品牌","model":"机型","date_taken":"拍摄时间","lens_model":"镜头","focal_length":"焦距","focus_mode":"对焦模式","shutter":"快门","aperture":"光圈","iso":"感光度","exposure_program":"曝光程序","exposure_compensation":"曝光补偿","metering_mode":"测光模式","flash":"闪光灯","white_balance":"白平衡","latitude":"纬度","longitude":"经度","altitude":"海拔"},"status":{"loading":"加载中...","no_exif":"无 EXIF 信息","library_missing":"EXIF 库未加载","image_source_missing":"图片地址不可用","unavailable":"EXIF 不可用（可能被 CORS 阻止或缺少元数据）","flag_unavailable":"EXIF 不可用"}},"home":"首页","archive":"归档","archives":"归档","about":"关于","links":"链接","link":"链接","friends":"友情链接","friend":"友情链接","timeline":"时间轴","shuoshuo":"说说","bookmarks":"书签","site_uv":"访问人数","site_pv":"总访问量","read_more":"阅读全文","wordcount":"字","min2read":"分钟","changelog":"更新日志","status":"状态","runtime":"博客已运行","days":"天","hours":"小时","minutes":"分钟","seconds":"秒","optimized_by":"并由 Evan 进行优化","rights":"版权所有","site_posts":"共撰写了 %s 篇文章","site_wordcount":"共 %s 字","copyright":{"title":"标题","author":"作者","link":"链接","create_time":"创建于","update_time":"更新于","license_title":"版权声明","license_content":"本文章采用 %s 进行许可。","all_rights_reserved":"版权所有 &#169 %s，禁止转载。","public_domain":"本文为公有领域作品，可自由转载、引用。"},"ago":{"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"},"create_time":"创建","update_time":"更新","expired":"这篇文章最后更新于 %s 天前，内容可能已经过时。"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Ameitsu Cyberpark
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">41</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">12</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">112</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			
+			
+			<img src="https://cdnjson.com/images/2024/01/19/Ameitsu-Orchestra-Banner.png" alt="AmeistuOrchestra vol-11 | 化学暑假作业——“废旧电池的回收：一个综述”" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			
+			<div class="w-full flex items-center absolute bottom-0 justify-start">
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">AmeistuOrchestra vol-11 | 化学暑假作业——“废旧电池的回收：一个综述”</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] shrink-0 rounded-medium border border-border-color p-px">
+				<img src="/images/redefine-avatar.svg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">STY</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv5</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-08-10 19:36:40</span>
+        <span class="mobile">2024-08-10 19:36:40</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-08-10 19:48:36</span>
+            <span class="mobile">2024-08-10 19:48:36</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Ameitsu-Orchestra/">Ameitsu Orchestra</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%8E%9F%E5%88%9B/">原创</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E9%AB%98%E4%B8%AD%E7%89%B2STY/">高中牲STY</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Ameitsu-Orchestra/">Ameitsu Orchestra</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%B0%B4%E6%B0%B4%E6%B0%B4/">水水水</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<p>:::info<br>化学暑假实践作业是写一个关于废旧电池回收的文献综述。然后就有了这个玩意儿。看了那么多文献后，我有一个计划：去物理实验室偷电池，去化学实验室偷反应容器、浓硫酸和双氧水，去生物实验室偷萃取剂，齐活儿！<br>:::</p>
+<h1 id="废旧电池的回收：一个综述"><a href="#废旧电池的回收：一个综述" class="headerlink" title="废旧电池的回收：一个综述"></a>废旧电池的回收：一个综述</h1><h2 id="1-电池的历史、发展和废旧电池问题"><a href="#1-电池的历史、发展和废旧电池问题" class="headerlink" title="1.	电池的历史、发展和废旧电池问题"></a>1.	电池的历史、发展和废旧电池问题</h2><p>自从1799年伏特制作出第一种电池——伏特电堆——以来，电池已经服务人类了近两个世纪。<br>为使电池更加可靠和高效，无数研究者前仆后继。1836年，英国的丹尼尔对“伏特电堆”进行了改良：他使用稀H2SO4作电解液，解决了电池极化问题，制造出第一个不极化，能保持平衡电流的锌—铜电池。在1860年，法国的雷克兰士制作出了所谓的“湿电池”，其正极是MnO2和碳的混合物，负极棒和正极杯都被浸在作为电解液的NH4Cl溶液中。1887年，英国人赫勒森发明了最早的干电池。在电池领域的关键性进展中，以锂离子电池为代表的二次电池具有重要地位。这使得电池的体积有效减小，扩大了其使用的领域与产量。</p>
+<p>随着电池产量的增高，电池的废弃量也在增加：其中既有锌锰干电池等一次电池无法重复使用的因素，也有二次电池寿命耗尽的问题存在。废旧电池也逐渐成为环境保护与可持续发展中的一个重要议题。</p>
+<p>废旧电池既是危害，更是资源。例如作为锂离子电池的主要正极材料，LiCoO2得到了广泛的应用，但作为重金属盐，它可引起胃肠功能紊乱，耳聋、心肌缺血等症状。同时LiCoO2燃烧或受热分解时产生有毒的锂钴氧化物，会引起重金属污染，导致环境的 pH 值升高。与此同时，当下LiCoO2的价格接近十七万元每顿，而国内的LiCoO2供应存在缺口，需要进口矿石。若将废弃电池中的LiCoO2进行回收，LiCoO2的价格与供应问题将有望得到解决。因此，处理废旧电池迫在眉睫。</p>
+<h2 id="2-化学法处理废旧电池"><a href="#2-化学法处理废旧电池" class="headerlink" title="2.	化学法处理废旧电池"></a>2.	化学法处理废旧电池</h2><p>2.1锂离子电池<br>作为二次电池的重要种类，锂离子电池的回收一直是电池领域的热点。锂离子电池的核心目标是获取钴。分离出各种金属元素的常用工艺有酸碱溶解浸出法、化学沉淀和盐析法、离子交换法、萃取法以及电沉积法等，本文将着重介绍酸碱溶解浸出法。</p>
+<h3 id="2-1-1-酸碱浸出法研究现状"><a href="#2-1-1-酸碱浸出法研究现状" class="headerlink" title="2.1.1 酸碱浸出法研究现状"></a>2.1.1 酸碱浸出法研究现状</h3><p>在酸碱浸出法[1]中，Li等先用超声清洗分离集流体与活性物质，并使用高浓度盐酸浸出，沉淀回收钴；Liu 等采用有机溶剂浸泡极片，使集流体与活性材料分离，通过高温固相法重新合成LiCoO2；Lee 等使用两级热处理两级过筛后高温煅烧的方法预选活性物质，分别采用 HNO3 和HNO3 – H2O2 体系对筛后活性物质浸出；Wang等采用盐酸浸出，KMnO4氧化沉锰，丁二酮肟萃取镍，NaOH沉淀回收钴。但这些研究实际应用效果欠佳，一般不具备经济可行性。造成这一局面的原因一方面是废旧锂离子电池拆分过程效率低，集流体与活性物质分离过程能耗大，成本较高，环境污染严重；另一方面是LiMn2O4等材料的加入使分离其他金属元素的工艺也需要兼顾。</p>
+<h3 id="2-1-2-物理擦洗−稀酸搅拌浸出法-1"><a href="#2-1-2-物理擦洗−稀酸搅拌浸出法-1" class="headerlink" title="2.1.2 物理擦洗−稀酸搅拌浸出法[1]"></a>2.1.2 物理擦洗−稀酸搅拌浸出法[1]</h3><p>该工艺由陈亮等人提出，可回收废旧锂离子电池中95% 的钴、镍和锰以及铜和铁等常见金属材料。该工艺由活性物质与集流体分离、还原酸浸、浸出液的净化和三元锂离子电池正极材料前躯体的制备四步组成。<br>对于集流体分离，论文提出了将破碎后的电芯碎片加入热水中机械搅拌，过滤<br>烘干后进行第一次振动筛分并取筛上碎料的操作 。分离后即可将碎料与稀H2SO4中搅拌，并且最适宜的稀H2SO4浓度为0.5mol&#x2F;L。此时会有少量的铝和铜浸出，可直接回收，夹带出的材料可继续参与后续的回收操作。此步骤中发生的反应为</p>
+<p>2Al+3H2SO¬4 → Al2(SO4)3+3H2↑<br>4LiCoO2+6H2SO4 → 2Li2SO4+4CoSO4+6H2O+O2↑</p>
+<p>通过集流体分离获取活性物质后，废料即可进行还原酸浸。酸浸所需的试剂是H2SO4和H2O2溶液。研究者发现影响酸浸的因素有反应时间、反应温度、H2O2溶液浓度和液固比有关，且均与镍、钴和锰的浸出率成正比。最佳浸出条件如下：2.5 mol&#x2F;L H2SO4、2.0 mL H2O2&#x2F;g 粉料、120min、85℃、液固比 10:1。此时，钴、镍和锰的浸出率分别为 97%、98%和 96%，终点 pH 值为 0.5~0.8。该步骤发生的反应为</p>
+<p>2LiCoO2+3H2SO4+H2O2 → 2CoSO4+O2↑+ Li2SO4+4H2O</p>
+<p>完成酸浸后，进入浸出液净化步骤。其他研究表明，采用黄铁酸钠[NaFe33(SO4)2(OH)6]法除铁时，钴的回收率较高, 铁的除去率为99.9%，而钴、镍和锰的损失率均小于 1% ，因此是可行的方法。论文中又指出用N902 萃取剂萃取除铜方法，可除去料液中 99.5% 的铜。为了同时除去铝，应控制溶液pH为4.3左右。该步骤发生的反应为</p>
+<p>Fe2(SO4)3 + 12H2O + Na2SO4 → Na2Fe6(SO4)4(OH) 12↓+ 6H2SO4</p>
+<p>净化后，即可根据料液中钴、镍和锰的物质的量之比，配入适当的NiSO4、MnSO4或CoSO4，随后往溶液中添加NH4HSO4，采用共沉淀法制备镍钴锰碳酸盐前躯体。</p>
+<h3 id="2-1-3-全湿浸出法-2"><a href="#2-1-3-全湿浸出法-2" class="headerlink" title="2.1.3 全湿浸出法[2]"></a>2.1.3 全湿浸出法[2]</h3><p>全湿法是另一种酸碱浸出法的改良，由吴芳等人提出。该工艺的钴的直收率达到99％ 以上，并且可产出达到零级产品要求的Li2CO3。全湿法的流程为碱溶解、酸浸出、P204萃取净化、P507萃取分离钴和锂、H2SO4反萃回收CoSO4和萃余液沉积回收Li2CO3等六步。</p>
+<p>碱溶解的目的是去除并回收铝。原料中的铝以金属形态存在，用10％ NaOH 溶液溶解正极废料即可使两性金属铝以 NaAlO2的形式进入溶液，同时覆盖在铝箔上的疏松钴酸锂膜可以加速铝与 NaOH 的反应。LiCoO2 不溶于碱，全部进入碱浸渣，而 NaAlO2 全部进入碱浸液。此时用H2SO4中和NaAlO2溶液即可获得Al(OH)3沉淀。</p>
+<p>酸浸出和 P204萃取净化过程可以使铁和铜等杂质与含镍、锂和钴的物质分离。以固液比约为1:8～1:10配制浸出液，在使用2.0mol／L H2SO4、3mL／g H2O2溶液，于80℃浸出90min时，锂和钴就能完全进入酸浸出液。过滤后，调整浸出液 pH 值，用 P204萃取除杂。完成后Al、Fe、Zn、Mn、Ca 等杂质进入有机相Co、Li、Ni 等仍留在水相，便于后期处理。该步骤发生的反应为</p>
+<p>2LiCoO2＋3H2SO4＋H2O2 → 2CoSO4＋O2↑＋Li2SO4＋4H2O</p>
+<p>酸浸出后使用P507萃取分离钴和锂。控制pH为5.5，P507浓度1.0mol&#x2F;L，使用煤油作为稀释剂，皂化率为75％ 时，可基本使锂和钴萃取完成。共萃入有机相的少量锂可用 CoSO4＋H2SO4溶液洗涤除去。得到的反萃取液富含CoSO4，可用于电池生产。<br>溶剂萃取回收钴后的萃余液经浓缩后，加入饱和Na2CO3溶液使锂以Li2CO3的形式沉淀。滤饼用95°C左右的热水洗涤两次后，除去结晶母液和SO42-，再烘干，即可获得零级产品要求的Li2CO3。</p>
+<h3 id="2-1-4-溶剂萃取法-5"><a href="#2-1-4-溶剂萃取法-5" class="headerlink" title="2.1.4 溶剂萃取法[5]"></a>2.1.4 溶剂萃取法[5]</h3><p>该工艺由南俊民等人提出，可简化酸碱浸出法，并且使操作更简便。该工艺包含废旧电池预处理，Acorga M5640萃取回收铜，Cyanex272萃取回收钴三步。</p>
+<p>论文特别阐述了废旧电池在进行化学处理之前的操作。由于废旧电池往往带有剩余电量，所以在流程开始前需要放出额外电量。把这些单体电池放入一个有水和电子导电剂的钢制容器中通过使单体电池的正负电极短路而使电池完全放电。用专用机械设备把完全放电的单体电池外壳打开，并用磁选法分离出铁外壳。为防止电池内的LiPF6 有机溶液和水反应生成HF，应立即进行碱浸，同时可将铝浸出，利于在下一步生成Al(OH)3沉淀。此时发生反应</p>
+<p>LiPF6＋H2O → LiF＋POF3＋2HF<br>HF＋NaOH → NaF＋H2O<br>2Al＋2NaOH＋2H2O → 2NaAlO2＋3H2↑ </p>
+<p>在室温下按固液比1:10反应5h 以后即可浸出绝大部分的铝，而钴几乎无损失。为满足后面对钴和铜的萃取分离要求，研究者选取了H2SO4溶解碱浸后的剩余物质，并且实验表明：在室温下用4mol&#x2F;L H2SO4+H2O2溶液 ［ n（H2SO4）∶n（H2O2）＝3∶1］溶解废料在固液比为1:10反应时间大于2h 后钴的溶出率即可达到约97％。值得注意的是，H2O2可加速溶解过程。该步骤发生的反应有</p>
+<p>2NaAlO2＋H2SO4＋2H2O＝2Al(OH)3↓＋Na2SO4<br>2MCoO2＋3H2SO4＋H2O2＝ M2SO4＋2CoSO4＋O2↑（M为Li+或Na+）</p>
+<p>分离出铁、铝杂质之后，可开始萃取铜。Acorga M5640萃取剂中的肟结构对铜具有很高的选择性，这使得 Acorga M5640可在一定的酸度条件下成为铜的特效萃取剂。室温下使用萃取剂浓度为10%，萃取液 pH 值为1.0，油水相比为1:1，萃取时间10min，同时在室温下使用2mol／L 的H2SO4洗脱，按相比1:1洗脱两次平衡时间为震荡1min，可以使铜的回收率可达98％。</p>
+<p>选取浓度为1mol&#x2F;L 的 Cyanex272从萃取铜剩余液中萃取钴。其方法和萃取铜的操作类似。使用1mol&#x2F;L 的 Cyanex272萃取钴的适宜条件是在室温下、萃取剂的皂化率为10％、溶液的 pH 值5∙5、相比为1:1、反应时间为振荡1min时。反萃取则是室温下用2mol&#x2F;L 的H2SO4洗脱、相比为1:1、震荡时间1min、洗脱两次。钴回收率可达97％。</p>
+<p>回收铜、钴后的萃余液，通过加入Na2CO3的方法使锂沉淀下来回收，得到Li2CO3产品。</p>
+<h3 id="2-2磷酸铁锂-LiFePO4-电池-3"><a href="#2-2磷酸铁锂-LiFePO4-电池-3" class="headerlink" title="2.2磷酸铁锂[LiFePO4]电池[3]"></a>2.2磷酸铁锂[LiFePO4]电池[3]</h3><p>近年来，磷酸铁锂电池发展迅速。磷酸铁锂具有环保、比容高、价格低廉等特性，因此逐渐被重视。对于磷酸铁锂电池的回收，吴越等人的湿法冶金法可起到积极意义。该工艺由碱溶解、H2SO4浸出和铁的分离、HNO3浸出和铁的分离以及锂的分离等四步组成。</p>
+<p>碱溶解过程的目的是回收铝。使用5% 的NaOH溶液溶解正极材料可使铝箔在30min内完全溶解。此后再调节pH至9.0使铝以Al(OH)3的形式沉淀下来，并且其品质可达到化学试剂标准。H2SO4浸出步骤可以使滤渣中的铁和锂以离子的形式进入溶液。以<br>2 mol&#x2F;L H2SO4和30% H2O2的浓度及固液比为 1:10 的条件在 60 ℃下搅拌 2 h，过滤后用 NH3·H2O 和 5% NaOH溶液(体积比 1∶3)调节 pH 值，可使 Fe3+ 以 Fe(OH)3 沉淀下来。需要注意的是，该步骤中会有少量LiOH沉淀。沉淀物经灼烧即可获得高纯度Fe2O3。</p>
+<p>硝酸浸出工序能使磷酸铁沉淀，利用的是FePO4微溶于HNO3的原理。FePO4沉淀后，Li+会单独存在于溶液中。H+ 浓度、双氧水的含量、搅拌时间和搅拌的温度都对此过程有影响，经实验可得最佳条件为HNO3浓度为 3 mol&#x2F;L，双氧水的含量与固体滤渣比例为 3 mL 30% H2O2 &#x2F;1g固体滤渣。过滤后的滤渣仍然存在炭黑等杂质，加入H2SO4可以让磷酸铁溶解，再用NaOH使铁以Fe(OH)3的形式沉淀。<br>分离锂需要将锂转化为Li2CO3。需要向滤液中加入饱和Na2CO3溶液，并且控制温度为90°C。滤饼用热水洗涤两次后烘干。热法沉淀Li2CO3可达零级产品要求，一次沉锂率为 80%以上。</p>
+<h3 id="2-3铅电池-4"><a href="#2-3铅电池-4" class="headerlink" title="2.3铅电池[4]"></a>2.3铅电池[4]</h3><p>铅电池在生活中应用广泛，尤其是汽车内的铅酸蓄电池。铅电池的主要回收流程为解体、分类和再生。</p>
+<p>解体步骤中，将H2SO4放出后单独回收，机壳用破碎机解体，用比重法 选出塑料后，再分为极板、极柱、电池槽和盖等。分类时将除去塑料的含铅部件破碎成 60mm 以下的小块后分为 4类：铅粉，占总量的 64%，其中含铅 70%；铅泥，占5%，其中含铅约 3%；小块铅合金，占 7%，其中含铅26.5%；铅渣，占14%，其中含铅约0.5%。再生步骤有三种：第一种是将上述铅粉和制铅厂的烟尘一并处理，制成含锑 1.7%-1.9%的的电池用软铅再生利用；第二种是将铅泥供转炉处理；第三种将小块铅合金作金属配料。</p>
+<h3 id="2-4镍镉电池-4"><a href="#2-4镍镉电池-4" class="headerlink" title="2.4镍镉电池[4]"></a>2.4镍镉电池[4]</h3><p>镉是电池、颜料、塑料稳定剂、电镀和合金等方面的稀有金属，因此从废旧电池中回收镉也十分有益。国际上成熟的镍镉电池处理方法有两种：干法和湿法。<br>干法主要利用镉及其氧化物蒸气气压较高的特点和镍分离。一种工艺流程为先剥离电池表面覆盖物，然后在 900-1200°C下进行氧化焙烧，使之分离为镍烧渣和CdO浓缩液：镍烧渣作为钢铁冶炼原料使用；CdO浓缩液经浸出净化后制成镉盐。</p>
+<h3 id="2-5-锌锰干电池-4"><a href="#2-5-锌锰干电池-4" class="headerlink" title="2.5 锌锰干电池[4]"></a>2.5 锌锰干电池[4]</h3><p>锌锰干电池是日常生活中使用最广泛的电池之一，且由于锌锰干电池是一次电池，报废量大，因此对锌锰干电池回收的研究也十分完善。<br>北京科技大学的研究者们采用湿法工艺流程，能充分对干电池进行无害化、资源化处理，提高了废旧电池的利用率。此方法的锌的总回收率为83%，含汞废渣可送专门工厂处理，工业废水处理后可循环利用，减少二次污染。<br>中南工业大学蔡传算、黄茂春等人发明了从废锌锰干电池中提取二氧化锰及锌的方法。该发明是将废电池破碎后分选出的MnO2物料与金属锌渣或Zn2S精矿在H2SO4溶液中同时浸出，同时用铁强化浸出，提高了MnO2和锌的浸出率，并省去了常规方法的焙烧工序，提高了金属回收率，降低成本。<br>李寅高发明了一种干电池厂含氨的锌废水处理方法，处理线由贮液池、沉淀池、萃取器、除油器和中和池组成。贮液中的废水泵入带搅拌的沉淀槽中，边搅拌边加入氨水，使生成Zn(OH)2渣，静止，放清液陈化，沉淀槽中下沉的渣用离心机分离，清液用（C6-C18）混合伯胺有机萃取剂萃取，氨水反萃取，盐酸再生。</p>
+<h2 id="3-生物法处理废旧电池-6"><a href="#3-生物法处理废旧电池-6" class="headerlink" title="3.	生物法处理废旧电池[6]"></a>3.	生物法处理废旧电池[6]</h2><p>除了通过化学反应提取需要回收的物质外，借助微生物的生化反应也是可行的措施。生物法可以避免化学法的二次污染，同时也可处理有机废物。杜竹玮团队发现了一种能还原锰的细菌，可以辅助废旧电池回收。<br>海底沉积物中的嗜酸混合异养菌株是本团队的研究对象，该菌种可直接和间接还原锰。直接还原过程是锰在电子转移体作用下被还原，此时的电子转移体是有机物中的碳。该反应的方程式为</p>
+<p>24Mn+C12H22O11+48H+→24Mn2++12CO2↑+35H2O<br>Mn2++CO2+H2O→MnCO3+2H+</p>
+<p>间接还原是微生物分泌有反应活性的小分子如有机酸、硫醇、醌、酚以及其他具有还原性的无机代谢物与四价锰反应,或通 过 改 变 环 境 的pH等促进反应进行。<br>锰还原 异 养 微 生 物 利 用 废 旧 电 池 粉 末 中 Mn(Ⅳ) 作为代谢呼吸链最终电子受体,传递氧化有机物产生的电 子,消 耗 代 谢 产 生 的 酸,浸 出 回 收 金 属锰。驯化后微生物对重金属的耐受力提高,培养基中电池粉末含量低于 3%时,浸出率在 90%以上。 </p>
+<h2 id="4-结语"><a href="#4-结语" class="headerlink" title="4.	结语"></a>4.	结语</h2><p>目前对于废旧电池回收的研究已经日趋完善，工艺也在不断完善：从粗放的填埋式，到酸碱浸出法，再到生物法。在电池回收技术发展的基础上，我们也需注意电池以外的角度。例如，厂商应研发本身就利于回收处理的或寿命长的电池，以从源头缓解废旧电池问题，并提高资源的利用率。与此同时，提高人们对废旧电池回收的积极性也尤为重要，特别是通过政策等引导，使废旧电池基本能得到回收。无论如何，废旧电池的回收依然有光明的发展前景。</p>
+<h2 id="5-参考文献"><a href="#5-参考文献" class="headerlink" title="5.	参考文献"></a>5.	参考文献</h2><p>[1]陈亮,唐新村,张阳,等.从废旧锂离子电池中分离回收钴镍锰[J].中国有色金属学报,2011,21(05):1192-1198.DOI:10.19476&#x2F;j.ysxb.1004.0609.2011.05.038.<br>[2]吴芳.从废旧锂离子二次电池中回收钴和锂[J].中国有色金属学报,2004,(04):697-701.DOI:10.19476&#x2F;j.ysxb.1004.0609.2004.04.031.<br>[3]吴越,裴锋,贾蕗路,等.从废旧磷酸铁锂电池中回收铝、铁和锂[J].电源技术,2014,38(04):629-631.<br>[4]张胜涛,王林,韩涟漪,等.废弃电池的危害及其回收利用[J].电池工业,2002,(01):3-8.<br>[5]南俊民,韩东梅,崔明,等.溶剂萃取法从废旧锂离子电池中回收有价金属[J].电池,2004,(04):309-311.<br>[6]杜竹玮,李浩然.微生物还原浸出法回收废旧电池粉末中的金属锰[J].环境污染治理技术与设备,2005,(09):62-64.</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdnjson.com/images/2023/11/28/_20231127213638.jpg"
+                      alt="_20231127213638.jpg"
+                ></p>
+
+<script src="https://utteranc.es/client.js"
+        repo="ameitsu/ameitsu.github.io"
+        issue-term="title"
+        label="Comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> AmeistuOrchestra vol-11 | 化学暑假作业——“废旧电池的回收：一个综述”</li>
+        <li><strong>作者:</strong> STY</li>
+        <li><strong>创建于
+                :</strong> 2024-08-10 19:36:40</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2024-08-10 19:48:36
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://ameitsu.github.io/2024/08/10/ameitsu-orchestra/AmeistuOrchestra vol-11/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%8E%9F%E5%88%9B/">#原创</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E9%AB%98%E4%B8%AD%E7%89%B2STY/">#高中牲STY</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Ameitsu-Orchestra/">#Ameitsu Orchestra</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E6%B0%B4%E6%B0%B4%E6%B0%B4/">#水水水</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/2024/08/26/at-STY/Summer-Vacation-2024/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">at STY vol.16 | What have I done! （正常的语气.dll）</span>
+						<span class="post-nav-item">上一篇</span>
+					</span>
+				</a>
+			</div>
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2024/07/11/sightseeing/greenway/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">游记 vol.6 | A Flumen usque ad Flumen</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.js';
+
+      (function() {
+        const startPath = location.pathname;
+        const startTime = Date.now();
+        const retryDelay = 200;
+        const retryLimit = 5000;
+
+        const runWaline = () => {
+          if (location.pathname !== startPath) {
+            return;
+          }
+
+          const container = document.getElementById('waline');
+          if (!container) {
+            if (Date.now() - startTime < retryLimit) {
+              setTimeout(runWaline, retryDelay);
+            }
+            return;
+          }
+
+          if (window.redefineWalineInstance?.destroy) {
+            window.redefineWalineInstance.destroy();
+          }
+
+          container.innerHTML = '';
+          window.redefineWalineInstance = init({
+            el: '#waline',
+            serverURL: 'https://example.example.com',
+            path: location.pathname,
+            dark: 'body[class~="dark-mode"]',
+            reaction: false,
+            requiredMeta: ['nick', 'mail'],
+            emoji: [],
+                      lang: 'zh-CN',
+          });
+        };
+
+        runWaline();
+      })();
+    </script>
+
+
+
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">目录</div>
+		<div class="page-title">AmeistuOrchestra vol-11 | 化学暑假作业——“废旧电池的回收：一个综述”</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%9F%E6%97%A7%E7%94%B5%E6%B1%A0%E7%9A%84%E5%9B%9E%E6%94%B6%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%BB%BC%E8%BF%B0"><span class="nav-text">废旧电池的回收：一个综述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%94%B5%E6%B1%A0%E7%9A%84%E5%8E%86%E5%8F%B2%E3%80%81%E5%8F%91%E5%B1%95%E5%92%8C%E5%BA%9F%E6%97%A7%E7%94%B5%E6%B1%A0%E9%97%AE%E9%A2%98"><span class="nav-text">1.	电池的历史、发展和废旧电池问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%8C%96%E5%AD%A6%E6%B3%95%E5%A4%84%E7%90%86%E5%BA%9F%E6%97%A7%E7%94%B5%E6%B1%A0"><span class="nav-text">2.	化学法处理废旧电池</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-%E9%85%B8%E7%A2%B1%E6%B5%B8%E5%87%BA%E6%B3%95%E7%A0%94%E7%A9%B6%E7%8E%B0%E7%8A%B6"><span class="nav-text">2.1.1 酸碱浸出法研究现状</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-%E7%89%A9%E7%90%86%E6%93%A6%E6%B4%97%E2%88%92%E7%A8%80%E9%85%B8%E6%90%85%E6%8B%8C%E6%B5%B8%E5%87%BA%E6%B3%95-1"><span class="nav-text">2.1.2 物理擦洗−稀酸搅拌浸出法[1]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-%E5%85%A8%E6%B9%BF%E6%B5%B8%E5%87%BA%E6%B3%95-2"><span class="nav-text">2.1.3 全湿浸出法[2]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-4-%E6%BA%B6%E5%89%82%E8%90%83%E5%8F%96%E6%B3%95-5"><span class="nav-text">2.1.4 溶剂萃取法[5]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2%E7%A3%B7%E9%85%B8%E9%93%81%E9%94%82-LiFePO4-%E7%94%B5%E6%B1%A0-3"><span class="nav-text">2.2磷酸铁锂[LiFePO4]电池[3]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3%E9%93%85%E7%94%B5%E6%B1%A0-4"><span class="nav-text">2.3铅电池[4]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4%E9%95%8D%E9%95%89%E7%94%B5%E6%B1%A0-4"><span class="nav-text">2.4镍镉电池[4]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-%E9%94%8C%E9%94%B0%E5%B9%B2%E7%94%B5%E6%B1%A0-4"><span class="nav-text">2.5 锌锰干电池[4]</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E7%94%9F%E7%89%A9%E6%B3%95%E5%A4%84%E7%90%86%E5%BA%9F%E6%97%A7%E7%94%B5%E6%B1%A0-6"><span class="nav-text">3.	生物法处理废旧电池[6]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E7%BB%93%E8%AF%AD"><span class="nav-text">4.	结语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-text">5.	参考文献</span></a></li></ol></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2026&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">STY</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 112 篇文章
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.9.0</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container" role="dialog" aria-modal="true" aria-label="图片查看器">
+	<button class="image-viewer-close" type="button" aria-label="关闭">
+		<i class="fa-solid fa-xmark"></i>
+	</button>
+	<button class="image-viewer-prev" type="button" aria-label="上一页">
+		<i class="fa-solid fa-chevron-left"></i>
+	</button>
+	<div class="image-viewer-frame">
+		<img src="" alt="">
+	</div>
+	<div class="image-viewer-exif-panel hidden absolute left-1/2 bottom-20 -translate-x-1/2 w-[min(92vw,420px)] max-h-[60vh] overflow-hidden rounded-2xl bg-background-color-transparent-80 p-4 text-left shadow-redefine-flat backdrop-blur-md" role="dialog" aria-label="EXIF" aria-hidden="true">
+		<div class="flex items-center justify-between mb-3">
+			<span class="text-sm font-semibold text-first-text-color">EXIF</span>
+			<button class="image-viewer-exif-close flex h-8 w-8 items-center justify-center rounded-full bg-background-color-transparent-80 text-first-text-color transition hover:bg-background-color-transparent-40" type="button" aria-label="关闭">
+				<i class="fa-solid fa-xmark text-[0.65rem]"></i>
+			</button>
+		</div>
+		<div class="image-viewer-exif-cards grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[50vh] overflow-y-auto pr-1 scrollbar-hide"></div>
+		<template class="image-viewer-exif-card-template">
+			<div class="rounded-lg bg-background-color-transparent-40 px-3 py-2">
+				<div class="image-viewer-exif-card-header flex items-center gap-2 mb-1">
+					<i class="image-viewer-exif-card-icon fa-solid fa-circle-info text-xs text-third-text-color"></i>
+					<div class="image-viewer-exif-card-title text-xs font-semibold text-first-text-color"></div>
+				</div>
+				<div class="image-viewer-exif-card-items flex flex-col gap-1"></div>
+			</div>
+		</template>
+	</div>
+	<button class="image-viewer-exif-toggle flex items-center gap-2 hidden absolute left-1/2 bottom-6 -translate-x-1/2 rounded-full border border-border-color bg-background-color-transparent-80 px-4 py-2 text-first-text-color backdrop-blur-md transition hover:bg-background-color-transparent-40" type="button" aria-label="EXIF" aria-expanded="false">
+		<i class="fa-solid fa-circle-info text-xs"></i>
+		<span class="text-xs font-semibold uppercase tracking-wider">EXIF</span>
+	</button>
+	<button class="image-viewer-next" type="button" aria-label="下一页">
+		<i class="fa-solid fa-chevron-right"></i>
+	</button>
+</div>
+
+
+	
+
+</main>
+
+
+
+<script src="/js/build/libs/Swup.min.js"></script>
+
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    window.swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+
+    window.dispatchEvent(
+        new CustomEvent("redefine:swup:ready", {
+            detail: {
+                swup: window.swup,
+            },
+        }),
+    );
+</script>
+
+
+
+
+	
+<script src="/js/build/main.js" type="module"></script>
+
+
+
+    
+<script src="/js/build/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+
+	
+</body>
+
+</html>

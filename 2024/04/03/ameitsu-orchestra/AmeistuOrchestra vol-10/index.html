@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    
+    <meta name="author" content="STY">
+    
+    <!-- Completely eliminate flash of wrong theme -->
+    <script>
+        (function() {
+            const THEME_KEY = "REDEFINE-THEME-STATUS";
+            const DARK = "dark", LIGHT = "light";
+            
+            // Get preferred theme
+            function getTheme() {
+                try {
+                    const saved = localStorage.getItem(THEME_KEY);
+                    if (saved) {
+                        const { isDark } = JSON.parse(saved);
+                        return isDark ? DARK : LIGHT;
+                    }
+                } catch (e) {}
+                
+                return matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+            }
+            
+            // Apply theme to document
+            function applyTheme(theme) {
+                const isDark = theme === DARK;
+                const root = document.documentElement;
+                
+                // Set classes for compatibility
+                root.classList.add(theme);
+                root.classList.remove(isDark ? LIGHT : DARK);
+                root.style.colorScheme = theme;
+            }
+            
+            // Initial application
+            const theme = getTheme();
+            applyTheme(theme);
+            
+            // Listen for system preference changes
+            matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+                // Only update if using system preference (no localStorage entry)
+                if (!localStorage.getItem(THEME_KEY)) {
+                    applyTheme(matches ? DARK : LIGHT);
+                }
+            });
+            
+            // Set body classes ASAP (before DOMContentLoaded)
+            (function() {
+                const addBodyClass = () => {
+                    const b = document.body;
+                    if (!b) return false;
+                    b.classList.add(theme + "-mode");
+                    return true;
+                };
+
+                // Try immediately
+                if (addBodyClass()) return;
+
+                // Observe until body exists
+                const mo = new MutationObserver(() => {
+                    if (addBodyClass()) mo.disconnect();
+                });
+                mo.observe(document.documentElement, { childList: true, subtree: true });
+            })();
+        })();
+    </script>
+    
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://ameitsu.github.io/2024/04/03/ameitsu-orchestra/ameistuorchestra vol-10/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ameitsu Orchestra vol.10 | The day after tomorrow in a certain point of view">
+<meta property="og:url" content="http://ameitsu.github.io/2024/04/03/ameitsu-orchestra/AmeistuOrchestra%20vol-10/index.html">
+<meta property="og:site_name" content="Ameitsu Cyberpark">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://ameitsu.github.io/images/redefine-og.webp">
+<meta property="article:published_time" content="2024-04-03T13:33:11.000Z">
+<meta property="article:modified_time" content="2024-04-03T13:46:10.000Z">
+<meta property="article:author" content="Ameitsu">
+<meta property="article:tag" content="Ameitsu Orchestra">
+<meta property="article:tag" content="原创">
+<meta property="article:tag" content="水水水">
+<meta property="article:tag" content="高中牲STY">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ameitsu.github.io/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            Ameitsu Orchestra vol.10 | The day after tomorrow in a certain point of view | Ameitsu Cyberpark
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+        <link href="" rel="stylesheet">
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"ameitsu.github.io","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":true,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"side_tools":{"gear_rotation":true,"auto_expand":false},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Cynerpark Nichome II","subtitle":{"text":[],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":[{"icon":"fa-brands fa-github","url":null},{"icon":"fa-brands fa-twitter","url":null},{"icon":"fa-solid fa-at","url":"you@example.com"},{"icon":"fa-brands fa-telegram","url":null},{"icon":"/images/custom-icon.svg","url":null}],"qrs":[{"icon":"fa-brands fa-weixin","qr":null},{"icon":"/images/custom-icon.svg","qr":null}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1","theme":{"light":"default","dark":"dark"}}},"version":"2.9.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house","categories":"path:/categories icon:fa-solid fa-folder"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur","masonry":{"batch_size":12,"initial_batch_size":24}},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footer":{"runtime":true,"icon":"<i class=\"fa-solid fa-heart fa-beat\" style=\"--fa-animation-duration: 0.5s; color: #f54545\"></i>","start":"2023/1/21 19:30:00","statistics":true,"customize":null,"icp":{"enable":false,"number":null,"url":null}},"footerStart":"2023/1/21 19:30:00","mermaid":{"style":{"light":"default","dark":"dark"}}};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.i18n = {"search":"站内搜索您需要的内容...","toc":"目录","prev":"上一页","next":"下一页","prev_posts":"上一篇","next_posts":"下一篇","page":"第 %d 页","recent_posts":"最新文章","share":"分享","powered_by":"由 %s 驱动","theme":"主题","rss_feed":"RSS Feed","category":"分类","categories":"分类","tag":"标签","tags":"标签","post":"文章","posts":"文章","tagcloud":"标签云","comment":"评论","comments":"评论","top":"置顶","sticky":"置顶","go-back-home":"回到首页","masonry_loading":"照片加载中...","image_viewer":"图片查看器","close":"关闭","exif":{"title":"EXIF","cards":{"camera":"相机","lens":"镜头","exposure":"曝光","other":"其他"},"fields":{"make":"品牌","model":"机型","date_taken":"拍摄时间","lens_model":"镜头","focal_length":"焦距","focus_mode":"对焦模式","shutter":"快门","aperture":"光圈","iso":"感光度","exposure_program":"曝光程序","exposure_compensation":"曝光补偿","metering_mode":"测光模式","flash":"闪光灯","white_balance":"白平衡","latitude":"纬度","longitude":"经度","altitude":"海拔"},"status":{"loading":"加载中...","no_exif":"无 EXIF 信息","library_missing":"EXIF 库未加载","image_source_missing":"图片地址不可用","unavailable":"EXIF 不可用（可能被 CORS 阻止或缺少元数据）","flag_unavailable":"EXIF 不可用"}},"home":"首页","archive":"归档","archives":"归档","about":"关于","links":"链接","link":"链接","friends":"友情链接","friend":"友情链接","timeline":"时间轴","shuoshuo":"说说","bookmarks":"书签","site_uv":"访问人数","site_pv":"总访问量","read_more":"阅读全文","wordcount":"字","min2read":"分钟","changelog":"更新日志","status":"状态","runtime":"博客已运行","days":"天","hours":"小时","minutes":"分钟","seconds":"秒","optimized_by":"并由 Evan 进行优化","rights":"版权所有","site_posts":"共撰写了 %s 篇文章","site_wordcount":"共 %s 字","copyright":{"title":"标题","author":"作者","link":"链接","create_time":"创建于","update_time":"更新于","license_title":"版权声明","license_content":"本文章采用 %s 进行许可。","all_rights_reserved":"版权所有 &#169 %s，禁止转载。","public_domain":"本文为公有领域作品，可自由转载、引用。"},"ago":{"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"},"create_time":"创建","update_time":"更新","expired":"这篇文章最后更新于 %s 天前，内容可能已经过时。"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Ameitsu Cyberpark
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">41</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">12</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">112</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			
+			
+			<img src="https://cdnjson.com/images/2024/01/19/Ameitsu-Orchestra-Banner.png" alt="Ameitsu Orchestra vol.10 | The day after tomorrow in a certain point of view" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			
+			<div class="w-full flex items-center absolute bottom-0 justify-start">
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">Ameitsu Orchestra vol.10 | The day after tomorrow in a certain point of view</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] shrink-0 rounded-medium border border-border-color p-px">
+				<img src="/images/redefine-avatar.svg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">STY</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv5</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-04-03 21:33:11</span>
+        <span class="mobile">2024-04-03 21:33:11</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-04-03 21:46:10</span>
+            <span class="mobile">2024-04-03 21:46:10</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Ameitsu-Orchestra/">Ameitsu Orchestra</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%8E%9F%E5%88%9B/">原创</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E9%AB%98%E4%B8%AD%E7%89%B2STY/">高中牲STY</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Ameitsu-Orchestra/">Ameitsu Orchestra</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%B0%B4%E6%B0%B4%E6%B0%B4/">水水水</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<p>:::info<br>这是《后天》的观后感，还是英语作业。虽然STY觉滴这片子的确有经典的地方，但还是有一点不尽人意。反正全文体现不出来这个啊喵。<br>:::</p>
+<p>:::default<br>啥时候加点图吧……<br>:::</p>
+<p>:::success<br>🎆4️⃣0️⃣篇快乐🎉<br>:::</p>
+<h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><p>As one of the most famed disaster films, The day after tomorrow  have obsessed audiences who worries about a potential doomsday since 2004 —— yeah, of course along with that 2012, which is also directed by the same director, Roland Emmerich.  </p>
+<p>Set in the backdrop of a rapid decrease in temperature ironically caused by global warming, the film illustrated a familiar world devastated by never-before-seen blizzards. As people became more aware in global warming around 2004, therefore the film was praised of alerting people the deadly consequence of a global scale climate change. The special effect of the film, especially the panorama of the frozen New York City and the vast tornado clusters that wiped Los Angeles off the map, stunned the eyes of the audiences in the time when such technologies were indeed quite rare. Yet exactly 20 years later, as the global warming continues and global situations gradually altered, we might need to re-watch the film with today’s eyes.</p>
+<h1 id="The-story"><a href="#The-story" class="headerlink" title="The story"></a>The story</h1><p>To start with, it is apparent that this film is certainly another superhero-like story that emphasized heroism. Anyway, the plot can be divided into the following chapters:</p>
+<h2 id="I-Something-is-wrong"><a href="#I-Something-is-wrong" class="headerlink" title="I. Something is wrong!"></a>I. Something is wrong!</h2><p>Jack Hall, a paleoclimatologist, completed a model of the prehistoric climate change, and suggested the current rate of global warming might cause a disorder in the global ocean current system like the ancient case, directly leading to a rapid ice age. With snowfall in New Delhi, hailstone in Tokyo and showers in New York, the climate was malfunctioning then. </p>
+<h2 id="II-Tragedies-and-meaningless-waiting"><a href="#II-Tragedies-and-meaningless-waiting" class="headerlink" title="II. Tragedies and meaningless waiting"></a>II. Tragedies and meaningless waiting</h2><p>Within several days, most sectors of Los Angeles were wiped off the map by a cluster of tornados. Upcoming was the sudden plunge in temperature in the North Atlantic Drift. Then rain showered New York for three continuous days. The climate was undoubtedly ill. Everything happened proved Jack’s assumption, yet no one listened to him. </p>
+<h2 id="III-The-blizzard"><a href="#III-The-blizzard" class="headerlink" title="III. The blizzard"></a>III. The blizzard</h2><p>Three British military helicopters malfunctioned and downed above the highlands of Scotland, as the eye of an extraordinary snow storm hit the British Isles. It was -110°C there. The shower in New York turned into a blizzard. Lower Manhattan was submerged, trapping Jack’s son, Sam. Sam alongside with his friends sought shelter in the New York City Library, and had to burn books to stay warm. </p>
+<h2 id="IV-The-extraction"><a href="#IV-The-extraction" class="headerlink" title="IV. The extraction"></a>IV. The extraction</h2><p>Right before the meteorology lab was struck by the blizzard, Jack finished all tasks and determined to save his son. He succeeded though, yet one teammate of him sacrificed himself on the. </p>
+<h2 id="V-Aftermath"><a href="#V-Aftermath" class="headerlink" title="V. Aftermath"></a>V. Aftermath</h2><p>The entire northern hemisphere was buried by snow, therefore US citizens fled to Mexico. After the storm dissolved, the US government-in-exile sent forces to recover the survivors. The earth entered the second Ice Age.</p>
+<h1 id="Impressions"><a href="#Impressions" class="headerlink" title="Impressions"></a>Impressions</h1><h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>One of the most stunning aspects – and one of the most boring one - is that the film is based on a 100% truth: global warming. There’s a good reason why this can be both advantage and disadvantage: global warming seemed too far away from daily lives in many people’s perspective, therefore omitting its consequence, and that is what the film all about. A second Ice Age is over sensational however, yet the unexplored and deadly potential of the delicate climate system is well-illustrated.</p>
+<h2 id="Mankind’s-efforts"><a href="#Mankind’s-efforts" class="headerlink" title="Mankind’s efforts"></a>Mankind’s efforts</h2><p>In the film 2012, we witnessed how selfish humans were during disasters, yet in The day after tomorrow the noble sides of humans were greatly emphasized. While government officials denied Jack’s proposal to evacuate half of the US, groups of insightful researchers joined Jack and began to analyze the storm; Meteorologists continued their survey on seawater temperatures until they exhausted all supplies; Ambulances were sent even after the blizzard hit northern US. There are always people who care about mankind and it is an unquestionably truth rather than an artistic illustration. After all, we have been through the COVID-19, and we still memorize the ones who risked their lives for the lives of others.</p>
+<h2 id="The-catastrophe"><a href="#The-catastrophe" class="headerlink" title="The catastrophe"></a>The catastrophe</h2><p>The thing that hit earth wasn’t a normal blizzard at all - it is actually a snowing hurricane. The sheer scale of the blizzard definitely evoked audiences’ megaphobia. Furthermore, the eye of the blizzard reached the lowest temperature of -110°C, while currently the most freezing spot on the Earth was just -90°C. This contrast between reality and fiction obviously astonished viewers. Mother nature certainly can turn her back on us, though not as catastrophic as the blizzards in the film, yet we are constantly observing odd weather phenomena like the double el niño. Perhaps a catastrophe would really loom our delicate world one day.</p>
+<h2 id="The-world"><a href="#The-world" class="headerlink" title="The world"></a>The world</h2><p>In 2012, we have seen how all world landmarks became destroyed, how all the tectonic plates shifted in one day, how the two poles changed direction, in the hands of Roland Emmerich. And in The day after tomorrow we observed how Europe was covered under 4 meters of snow, how New York was submerged under sea ice, how the entire northern hemisphere became white. Americans fled to Mexico, which is an ironic scene compared with reality. Seeing the civilization, the place we live in and beloved ones coming to an end is assuredly more painful than being frozen in the storm.</p>
+<h1 id="Real-world-connections"><a href="#Real-world-connections" class="headerlink" title="Real-world connections"></a>Real-world connections</h1><h2 id="Global-warming"><a href="#Global-warming" class="headerlink" title="Global warming"></a>Global warming</h2><p>Disaster films’ directors tend to set the background with abnormal events, for instance super volcanoes and asteroid collisions. Nevertheless, this film is based on the phenomena that affected mankind for decades – global warming. Indeed, the climate system is changing. In Beijing alone, we experienced the lowest temperature in 60 years, the highest temperature since 1961 and the largest rainfall in the past 2 centuries in only two years. However, we are seeing changes. As renewable energy, anti-pollution movements and international cooperation roll out, we certainly have a promising future. It is more likely that the global scale blizzard won’t be formed, still, we have to cope with the chaotic weathers. </p>
+<h2 id="Inheriting-our-culture"><a href="#Inheriting-our-culture" class="headerlink" title="Inheriting our culture"></a>Inheriting our culture</h2><p>To stay warm, Jack’s son, Sam, reluctantly burned books with friends and remaining librarians. Sam was confused when he saw one of the librarians held the Guttenberg Bible tight with his hands, preventing it from being burnt. The librarian claimed that the book symbolized the new era of western culture as it is the first printed book in Europe and he could actually preserve a piece of the precious history with a tiny effort. That reminds people of the critical function of culture. As long as the culture’s bloodline continues, hope will be there with the people. That is part of the reason how China defeated Japanese invasion, how Simon Bolívar and San Martin liberated South America, how the Allies gained victory from the Axis in WWII……. Culture is an intangible and priceless thing that defined humanity, therefore inheriting it is our utmost mission for our next generation.</p>
+<h2 id="Responsibility-of-going-reverse"><a href="#Responsibility-of-going-reverse" class="headerlink" title="Responsibility of going reverse"></a>Responsibility of going reverse</h2><p>After New York froze, Jack resolutely packed his polar gear to start his expedition to that inaccessible city. Surely, he wanted to save his trapped son, however another reason  is that he needs to inspect the status of the northern lands. During that time, the eventual National Disaster Order had been issued, large numbers of US citizens were relocated into the south, even the US government members were transferred to Mexico, there seemed no reason of advancing reversely into the blizzard. Yet the responsibility within propelled Jack and his teammates to start the literally impossible mission. In the reality, during epidemics such as COVID-19 and various major earthquakes, courageous pioneers who risked their lives and rushed into affected zones for search-and-rescue missions are commonly seen.  Responsibility of going reverse is not an obligation for everyone, but when it comes to those critical moments, it is the internal bond that keeps humans united.</p>
+<h2 id="Flee-or-fight"><a href="#Flee-or-fight" class="headerlink" title="Flee or fight?"></a>Flee or fight?</h2><p>“Flee or fight” is originally a psychological term, which describes the rapid decision between doing something and keeping safe made by one’s instinct in case of emergency. In the film, hopeless survivors of the New York rain who gathered in the City Library met a dilemma: Though the library provided a shelter for them, the water outside began to freeze under low temperature, forming a viable path to escape the city. Therefore, most of the people started to leave the library. Yet Sam already received the warning from his father, saying that staying indoors is a lot safer. In the end, Sam and other people remaining indoors survived until Sam’s father arrived, while the ones who left earlier were all frozen. When meeting such occasions when you are forced to make tough choices, consider carefully between “flee” and “fight”. Always remember to survive the main trouble first, and in terms of the rest, just let it go.</p>
+<h2 id="Mankind-and-Earth"><a href="#Mankind-and-Earth" class="headerlink" title="Mankind and Earth"></a>Mankind and Earth</h2><p>Humans are among the species in the galaxy that dominated an entire planet. We believed that we could harness and exploit the planet that we stand on, as humans bridged rivers, rerouted waterways, transformed landscapes in millennia of exploration. Nevertheless, we sometimes underestimate the mighty force of mother nature. In the film, the US vice president rejected Jack’s proposal of combating with global warming as he believed that their economy was far more important. Productivity indeed is the internal power that shapes human society, even so, we should not override nature. After all, humans are just over-evolved apes, consuming our habitat is the worst thing we can ever do. </p>
+<h2 id="Trusting-someone’s-competence"><a href="#Trusting-someone’s-competence" class="headerlink" title="Trusting someone’s competence"></a>Trusting someone’s competence</h2><p>In the film, the vice president of US didn’t accept Jack’s plan, as he believed knowledge about economy and policies are better in this blizzard; Jack’s boss denied Jack’s access to super computers, as he thought Jack was only a guy who research ancient weather, not present ones; Sam failed a calculus test because he didn’t write any solutions, since the teacher couldn’t do calculus in his mind therefore, he anticipated Sam couldn’t and cheated. When someone claimed to have capabilities in something, just let him or her testify.</p>
+<h1 id="Film-related-trivial-stuff"><a href="#Film-related-trivial-stuff" class="headerlink" title="Film- related trivial stuff"></a>Film- related trivial stuff</h1><h2 id="Roland-Emmerich"><a href="#Roland-Emmerich" class="headerlink" title="Roland Emmerich"></a>Roland Emmerich</h2><p>He is the person who destroys Earth better than anyone. The day after tomorrow, 2012, and Moonfall are several of his disaster films. The day after tomorrow gathered people’s attention on urgent environment issues, and 2012 pictured a doomsday according to the Mayan calendar, and even spelled fear among people! And Moonfall …… that was totally an accident, as audiences are getting bored about seeing earth being rampaged time after time.</p>
+<h2 id="Heroism"><a href="#Heroism" class="headerlink" title="Heroism"></a>Heroism</h2><p>The film portraited one saint – Jack Hall. He seemed to know everything about the blizzard, forecasted long before its arrival, and could traverse ice-sealed Maryland, Pennsylvania and New Jersy. In a word, these feats just seemed unreal. In modern times, literally nothing can be done solo. Cooperation is the thing matters since we are humans that can assist each other. </p>
+<h2 id="Plot"><a href="#Plot" class="headerlink" title="Plot"></a>Plot</h2><p>Well, not complicated though. That is another reason of its success – simple to understand, so that viewers’ brains are able to enjoy the sound and visual effects. But the storyline is so typical that it can be applied on literally any similar films: a genius found something odd, then this genius told others but no one listened, and tragedy come, and everyone is saved by the genius. It would be better if there are more twists and jump-scares.</p>
+<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>Overall, The day after tomorrow is a thrilling film in terms of special effects, depth in content and imagination, even reflected numerous real-life issues. However, lacking ingenuity in plot and the emphasize on heroism are main targets of criticism. It truly outstands among all those disaster films. The end.</p>
+
+<script src="https://utteranc.es/client.js"
+        repo="ameitsu/ameitsu.github.io"
+        issue-term="title"
+        label="Comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> Ameitsu Orchestra vol.10 | The day after tomorrow in a certain point of view</li>
+        <li><strong>作者:</strong> STY</li>
+        <li><strong>创建于
+                :</strong> 2024-04-03 21:33:11</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2024-04-03 21:46:10
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://ameitsu.github.io/2024/04/03/ameitsu-orchestra/AmeistuOrchestra vol-10/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%8E%9F%E5%88%9B/">#原创</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E9%AB%98%E4%B8%AD%E7%89%B2STY/">#高中牲STY</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Ameitsu-Orchestra/">#Ameitsu Orchestra</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E6%B0%B4%E6%B0%B4%E6%B0%B4/">#水水水</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/2024/04/13/at-STY/%E6%96%87%E5%8C%96%E8%8A%82/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">at STY vol.14|某次文化节，和一些小事儿</span>
+						<span class="post-nav-item">上一篇</span>
+					</span>
+				</a>
+			</div>
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2024/03/31/ameitsu-orchestra/AmeistuOrchestra%20vol-9/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">Ameitsu Orchestra vol.9 | 说预判</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.js';
+
+      (function() {
+        const startPath = location.pathname;
+        const startTime = Date.now();
+        const retryDelay = 200;
+        const retryLimit = 5000;
+
+        const runWaline = () => {
+          if (location.pathname !== startPath) {
+            return;
+          }
+
+          const container = document.getElementById('waline');
+          if (!container) {
+            if (Date.now() - startTime < retryLimit) {
+              setTimeout(runWaline, retryDelay);
+            }
+            return;
+          }
+
+          if (window.redefineWalineInstance?.destroy) {
+            window.redefineWalineInstance.destroy();
+          }
+
+          container.innerHTML = '';
+          window.redefineWalineInstance = init({
+            el: '#waline',
+            serverURL: 'https://example.example.com',
+            path: location.pathname,
+            dark: 'body[class~="dark-mode"]',
+            reaction: false,
+            requiredMeta: ['nick', 'mail'],
+            emoji: [],
+                      lang: 'zh-CN',
+          });
+        };
+
+        runWaline();
+      })();
+    </script>
+
+
+
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">目录</div>
+		<div class="page-title">Ameitsu Orchestra vol.10 | The day after tomorrow in a certain point of view</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Intro"><span class="nav-text">Intro</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-story"><span class="nav-text">The story</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#I-Something-is-wrong"><span class="nav-text">I. Something is wrong!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#II-Tragedies-and-meaningless-waiting"><span class="nav-text">II. Tragedies and meaningless waiting</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#III-The-blizzard"><span class="nav-text">III. The blizzard</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IV-The-extraction"><span class="nav-text">IV. The extraction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#V-Aftermath"><span class="nav-text">V. Aftermath</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Impressions"><span class="nav-text">Impressions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Background"><span class="nav-text">Background</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mankind%E2%80%99s-efforts"><span class="nav-text">Mankind’s efforts</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-catastrophe"><span class="nav-text">The catastrophe</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-world"><span class="nav-text">The world</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Real-world-connections"><span class="nav-text">Real-world connections</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Global-warming"><span class="nav-text">Global warming</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Inheriting-our-culture"><span class="nav-text">Inheriting our culture</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Responsibility-of-going-reverse"><span class="nav-text">Responsibility of going reverse</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flee-or-fight"><span class="nav-text">Flee or fight?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mankind-and-Earth"><span class="nav-text">Mankind and Earth</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Trusting-someone%E2%80%99s-competence"><span class="nav-text">Trusting someone’s competence</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Film-related-trivial-stuff"><span class="nav-text">Film- related trivial stuff</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Roland-Emmerich"><span class="nav-text">Roland Emmerich</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Heroism"><span class="nav-text">Heroism</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Plot"><span class="nav-text">Plot</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Conclusion"><span class="nav-text">Conclusion</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2026&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">STY</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 112 篇文章
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.9.0</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container" role="dialog" aria-modal="true" aria-label="图片查看器">
+	<button class="image-viewer-close" type="button" aria-label="关闭">
+		<i class="fa-solid fa-xmark"></i>
+	</button>
+	<button class="image-viewer-prev" type="button" aria-label="上一页">
+		<i class="fa-solid fa-chevron-left"></i>
+	</button>
+	<div class="image-viewer-frame">
+		<img src="" alt="">
+	</div>
+	<div class="image-viewer-exif-panel hidden absolute left-1/2 bottom-20 -translate-x-1/2 w-[min(92vw,420px)] max-h-[60vh] overflow-hidden rounded-2xl bg-background-color-transparent-80 p-4 text-left shadow-redefine-flat backdrop-blur-md" role="dialog" aria-label="EXIF" aria-hidden="true">
+		<div class="flex items-center justify-between mb-3">
+			<span class="text-sm font-semibold text-first-text-color">EXIF</span>
+			<button class="image-viewer-exif-close flex h-8 w-8 items-center justify-center rounded-full bg-background-color-transparent-80 text-first-text-color transition hover:bg-background-color-transparent-40" type="button" aria-label="关闭">
+				<i class="fa-solid fa-xmark text-[0.65rem]"></i>
+			</button>
+		</div>
+		<div class="image-viewer-exif-cards grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[50vh] overflow-y-auto pr-1 scrollbar-hide"></div>
+		<template class="image-viewer-exif-card-template">
+			<div class="rounded-lg bg-background-color-transparent-40 px-3 py-2">
+				<div class="image-viewer-exif-card-header flex items-center gap-2 mb-1">
+					<i class="image-viewer-exif-card-icon fa-solid fa-circle-info text-xs text-third-text-color"></i>
+					<div class="image-viewer-exif-card-title text-xs font-semibold text-first-text-color"></div>
+				</div>
+				<div class="image-viewer-exif-card-items flex flex-col gap-1"></div>
+			</div>
+		</template>
+	</div>
+	<button class="image-viewer-exif-toggle flex items-center gap-2 hidden absolute left-1/2 bottom-6 -translate-x-1/2 rounded-full border border-border-color bg-background-color-transparent-80 px-4 py-2 text-first-text-color backdrop-blur-md transition hover:bg-background-color-transparent-40" type="button" aria-label="EXIF" aria-expanded="false">
+		<i class="fa-solid fa-circle-info text-xs"></i>
+		<span class="text-xs font-semibold uppercase tracking-wider">EXIF</span>
+	</button>
+	<button class="image-viewer-next" type="button" aria-label="下一页">
+		<i class="fa-solid fa-chevron-right"></i>
+	</button>
+</div>
+
+
+	
+
+</main>
+
+
+
+<script src="/js/build/libs/Swup.min.js"></script>
+
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    window.swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+
+    window.dispatchEvent(
+        new CustomEvent("redefine:swup:ready", {
+            detail: {
+                swup: window.swup,
+            },
+        }),
+    );
+</script>
+
+
+
+
+	
+<script src="/js/build/main.js" type="module"></script>
+
+
+
+    
+<script src="/js/build/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+
+	
+</body>
+
+</html>
