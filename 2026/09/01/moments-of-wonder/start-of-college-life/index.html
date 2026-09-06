@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    
+    <meta name="author" content="STY">
+    
+    <!-- Completely eliminate flash of wrong theme -->
+    <script>
+        (function() {
+            const THEME_KEY = "REDEFINE-THEME-STATUS";
+            const DARK = "dark", LIGHT = "light";
+            
+            // Get preferred theme
+            function getTheme() {
+                try {
+                    const saved = localStorage.getItem(THEME_KEY);
+                    if (saved) {
+                        const { isDark } = JSON.parse(saved);
+                        return isDark ? DARK : LIGHT;
+                    }
+                } catch (e) {}
+                
+                return matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+            }
+            
+            // Apply theme to document
+            function applyTheme(theme) {
+                const isDark = theme === DARK;
+                const root = document.documentElement;
+                
+                // Set classes for compatibility
+                root.classList.add(theme);
+                root.classList.remove(isDark ? LIGHT : DARK);
+                root.style.colorScheme = theme;
+            }
+            
+            // Initial application
+            const theme = getTheme();
+            applyTheme(theme);
+            
+            // Listen for system preference changes
+            matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+                // Only update if using system preference (no localStorage entry)
+                if (!localStorage.getItem(THEME_KEY)) {
+                    applyTheme(matches ? DARK : LIGHT);
+                }
+            });
+            
+            // Set body classes ASAP (before DOMContentLoaded)
+            (function() {
+                const addBodyClass = () => {
+                    const b = document.body;
+                    if (!b) return false;
+                    b.classList.add(theme + "-mode");
+                    return true;
+                };
+
+                // Try immediately
+                if (addBodyClass()) return;
+
+                // Observe until body exists
+                const mo = new MutationObserver(() => {
+                    if (addBodyClass()) mo.disconnect();
+                });
+                mo.observe(document.documentElement, { childList: true, subtree: true });
+            })();
+        })();
+    </script>
+    
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://ameitsu.github.io/2026/09/01/moments-of-wonder/start-of-college-life/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="好的好的我摇身一变成为大学生了 | Moments of Wonder vol.12">
+<meta property="og:url" content="http://ameitsu.github.io/2026/09/01/moments-of-wonder/start-of-college-life/index.html">
+<meta property="og:site_name" content="Ameitsu Cyberpark">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://ameitsu.github.io/images/redefine-og.webp">
+<meta property="article:published_time" content="2026-09-01T04:20:44.000Z">
+<meta property="article:modified_time" content="2026-09-06T11:45:10.980Z">
+<meta property="article:author" content="Ameitsu">
+<meta property="article:tag" content="原创">
+<meta property="article:tag" content="大学牲STY">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ameitsu.github.io/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgCPBK.ico" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgCPBK.ico">
+    <meta name="theme-color" content="#00FFFF">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgCPBK.ico">
+    <!--- Page Info-->
+    
+    <title>
+        
+            好的好的我摇身一变成为大学生了 | Moments of Wonder vol.12 | Ameitsu Cyberpark
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+        <link href="" rel="stylesheet">
+    
+    
+    
+    
+        
+<script src="/js/build/libs/anime.min.js"></script>
+
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"ameitsu.github.io","root":"/","language":"zh-CN","path":"search.json"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#00FFFF","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":true,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":true,"custom_message":null},"side_tools":{"gear_rotation":true,"auto_expand":false},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img%E6%96%B0%E8%83%8C%E6%99%AF.jpg","dark":"https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img%E6%96%B0%E8%83%8C%E6%99%AF.jpg"},"title":"Cyberpark Nichome II","subtitle":{"text":["STY的赛博后花园~","旁边的是站娘小盐"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":[{"icon":"fa-brands fa-github","url":"https://github.com/ameitsu"},{"icon":"fa-solid fa-at","url":"ameitsu@sina.com"},{"icon":"https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgbili.png","url":"https://space.bilibili.com/515002909?spm_id_from=333.1007.0.0"}],"qrs":[{"icon":"fa-brands fa-weixin","qr":null},{"icon":"/images/custom-icon.svg","qr":null}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":true,"version":"11.4.1","theme":{"light":"default","dark":"dark"}}},"version":"2.9.0","navbar":{"auto_hide":false,"color":{"left":"#1976D2","right":"#F06292","transparency":99},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"categories":{"path":"/categories","icon":"fa-solid fa-folder"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"about":{"path":"/about","icon":"fa-solid fa-user"},"chatbox":{"path":"/chatbox","icon":"fa-regular fa-comment"},"tags":{"path":"/tags","icon":"fa-solid fa-tags"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur","masonry":{"batch_size":12,"initial_batch_size":24}},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footer":{"runtime":true,"icon":"<i class=\"fa-solid fa-heart fa-beat\" style=\"--fa-animation-duration: 0.5s; color: #f54545\"></i>","start":"2023/1/21 19:30:00","statistics":true,"customize":"富强 民主 文明 和谐 自由 平等 公正 法治 爱国 敬业 诚信 友善","icp":{"enable":false,"number":null,"url":null}},"footerStart":"2023/1/21 19:30:00","mermaid":{"style":{"light":"default","dark":"dark"}}};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.i18n = {"search":"站内搜索您需要的内容...","toc":"目录","prev":"上一页","next":"下一页","prev_posts":"上一篇","next_posts":"下一篇","page":"第 %d 页","recent_posts":"最新文章","share":"分享","powered_by":"由 %s 驱动","theme":"主题","rss_feed":"RSS Feed","category":"分类","categories":"分类","tag":"标签","tags":"标签","post":"文章","posts":"文章","tagcloud":"标签云","comment":"评论","comments":"评论","top":"置顶","sticky":"置顶","go-back-home":"回到首页","masonry_loading":"照片加载中...","image_viewer":"图片查看器","close":"关闭","exif":{"title":"EXIF","cards":{"camera":"相机","lens":"镜头","exposure":"曝光","other":"其他"},"fields":{"make":"品牌","model":"机型","date_taken":"拍摄时间","lens_model":"镜头","focal_length":"焦距","focus_mode":"对焦模式","shutter":"快门","aperture":"光圈","iso":"感光度","exposure_program":"曝光程序","exposure_compensation":"曝光补偿","metering_mode":"测光模式","flash":"闪光灯","white_balance":"白平衡","latitude":"纬度","longitude":"经度","altitude":"海拔"},"status":{"loading":"加载中...","no_exif":"无 EXIF 信息","library_missing":"EXIF 库未加载","image_source_missing":"图片地址不可用","unavailable":"EXIF 不可用（可能被 CORS 阻止或缺少元数据）","flag_unavailable":"EXIF 不可用"}},"home":"首页","archive":"归档","archives":"归档","about":"关于","links":"链接","link":"链接","friends":"友情链接","friend":"友情链接","timeline":"时间轴","shuoshuo":"说说","bookmarks":"书签","site_uv":"访问人数","site_pv":"总访问量","read_more":"阅读全文","wordcount":"字","min2read":"分钟","changelog":"更新日志","status":"状态","runtime":"博客已运行","days":"天","hours":"小时","minutes":"分钟","seconds":"秒","optimized_by":"并由 Evan 进行优化","rights":"版权所有","site_posts":"共撰写了 %s 篇文章","site_wordcount":"共 %s 字","copyright":{"title":"标题","author":"作者","link":"链接","create_time":"创建于","update_time":"更新于","license_title":"版权声明","license_content":"本文章采用 %s 进行许可。","all_rights_reserved":"版权所有 &#169 %s，禁止转载。","public_domain":"本文为公有领域作品，可自由转载、引用。"},"ago":{"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"},"create_time":"创建","update_time":"更新","expired":"这篇文章最后更新于 %s 天前，内容可能已经过时。"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+
+<body>
+	<div class="progress-bar-container">
+	
+	<span class="scroll-progress-bar"></span>
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        Ameitsu Cyberpark
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({ loop: true })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [20, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                filter: ['blur(5px)', 'blur(0px)'],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 300 + 20 * i,
+            })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [0, -20],
+                opacity: [1, 0],
+                filter: ['blur(0px)', 'blur(5px)'],
+                easing: "easeInExpo",
+                duration: 1000,
+                delay: (el, i) => 15 * i,
+                complete: function() {
+                    hidePreloader();
+                }
+            }, '-=700');
+
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+                <a class="logo-image h-8 w-8 sm:w-10 sm:h-10 mr-3" href="/">
+                    <img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgCPBK.jpg" class="w-full h-full rounded-xs">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                Ameitsu Cyberpark
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories"
+                                        >
+                                    <i class="fa-solid fa-folder fa-fw"></i>
+                                    分类
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    归档
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/about"
+                                        >
+                                    <i class="fa-solid fa-user fa-fw"></i>
+                                    关于
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/chatbox"
+                                        >
+                                    <i class="fa-regular fa-comment fa-fw"></i>
+                                    CHATBOX
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/tags"
+                                        >
+                                    <i class="fa-solid fa-tags fa-fw"></i>
+                                    标签
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories"
+                        >
+                            <span>
+                                分类
+                            </span>
+                            
+                                <i class="fa-solid fa-folder fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                归档
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/about"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-solid fa-user fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/chatbox"
+                        >
+                            <span>
+                                CHATBOX
+                            </span>
+                            
+                                <i class="fa-regular fa-comment fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/tags"
+                        >
+                            <span>
+                                标签
+                            </span>
+                            
+                                <i class="fa-solid fa-tags fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">49</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">15</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">129</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			<div class="w-full flex items-center pt-6 justify-start">
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">好的好的我摇身一变成为大学生了 | Moments of Wonder vol.12</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] shrink-0 rounded-medium border border-border-color p-px">
+				<img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgSTY.jpg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">STY</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv6</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2026-09-01 12:20:44</span>
+        <span class="mobile">2026-09-01 12:20:44</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2026-09-06 19:45:10</span>
+            <span class="mobile">2026-09-06 19:45:10</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Moments-of-Wonder/">Moments of Wonder</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%8E%9F%E5%88%9B/">原创</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%A4%A7%E5%AD%A6%E7%89%B2STY/">大学牲STY</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>3.4k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>11 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116955566638384&bvid=BV1zGKt68E2f&cid=40148206383&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" width="100%" height="500" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img%E5%A4%B4%E5%9B%BE-MOW.png"
+                     
+                ></p>
+<h1 id="来报个到"><a href="#来报个到" class="headerlink" title="来报个到"></a>来报个到</h1><p>现在是2026年9月1日17时28分不知道多少秒（GMT+8），STY坐在北京信息科技大学某宿舍楼的某间屋子里。先别管我为什么突然闪现到了北信科，但反正现在我吃了糊弄级别的晚饭，准备待会儿去听一个冗长的会。也先别管为什么我和其他一百多个新生比大部队提前开学。</p>
+<p>反正就是STY在高考里成功考出了高中时期最乐色的一次成绩，居然比一模低了一大截，一般这种算是罕见个例，但STY算是碰上了。虽然211院校很多都能录上STY，但其实一丁点都不合算：STY以后必定要在北京工作，因为这样我就可以直接继承我爸妈的某一套房子，一辈子不用管房贷了；而论认可度而言，外地211在北京经常排不上号，京内的211挤满了为了稳定和方便自己抢保研名额的学霸，导致我进去了也没有太多活路。更何况今年的计科太™的恐怖了，我即使考了650也没比我现在多几个选择。与此同时，以我的成绩到北信科就是碾压级别的，直接去实验班，抢保研名额相当有优势，再加上北信科实力很强，在全北京的认可度很高，所以这种结果算是最好的了。我们就好好学，争取在大四一开学成功保研。</p>
+<p>但话说回来，既然北信科这么nb，那什么没有被评上211呢？还不是因为现代的北信科年纪™还没我大，那时候211都评完了……</p>
+<p>对于我和其他一百多个新生比大部队提前开学这件事，先按下不表。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgdivision.png"
+                     
+                ></p>
+<p>北信科的沙河校区选址有点尴尬。开车的话，这地方边上就是京新高速的西坨桥，从我家到这里不用四十分钟，我要是有什么急需的物资甚至能让母后进行亲妈快运。如果想坐公共交通去，那就有点儿小麻烦了。最稳妥的方案是坐地铁到沙河，之后骑车5km。对于骑车的路段，也可以坐公交，有几条昌平区的公交线路，甚至还有昌58临时支线这种几乎是给北信科定制的班车，但考虑到这惨不忍睹的发车间隔，啊还是算了吧。别人回家要跋山涉水坐十几个小时火车，那我这里回家好像也不太方便，就算是<strong>给你们致敬了</strong>。</p>
+<p>提前参加某活动的朋友们在9月1号报到，从7点到下午5点都可以来。我们家只能选最早的时间段来了，因为今天母后限号，我们必须在7点之前逃离五环内，幸亏我们家离五环只有两分钟车程。什么？你说她开车回来也会被罚？你这就不懂了，北京交警在处理违反限号的行为时，执行<strong>每月首次不罚</strong>的政策，这意味着母后可以安心地开着车全身而退。</p>
+<p>这几天还没算正式开学，但我们这拨人得有个地方住。所以学校给我们分配了临时住宿，STY喜提仨室友。似乎我们四个人一个赛一个内向，现在每个人都在玩自己的电子设备呢。</p>
+<p>母后不愧是当领导的，提前在手机上写了可能有1TB大的物品清单，上一周每天家门口都会堆着新到货快递的小山。反正现在STY算是在学校里有了自己的立身之地。早上我们花了快两个小时才把东西完全收拾完，顺手把宿舍内很多物件的尺寸进行了多角度测量，以便后期买配套产品。</p>
+<p>东西收完了，父王和母后在食堂蹭完饭并离开了，是时候到处转一转了。</p>
+<h1 id="Citywalk（不出校门版）"><a href="#Citywalk（不出校门版）" class="headerlink" title="Citywalk（不出校门版）"></a>Citywalk（不出校门版）</h1><p>现在还没有正式开学，教学楼什么的不太让进，所以咱去转一些公共设施吧！</p>
+<h2 id="食堂喵"><a href="#食堂喵" class="headerlink" title="食堂喵"></a>食堂喵</h2><p>学校有俩食堂。最明显的特色就是，学校自营的档口并不多，餐饮店倒是挺多，这么一来选项真的很多。学校食堂自营的档口能覆盖大部分饮食需求，算是个兜底服务，物美价廉<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="STY已经体验过三块钱吃撑的感觉了。
+">[1]</span></a></sup>那种的。而其他餐饮店的就属于定制化开小灶服务，时不常点一份换换口味。但是需要注意的是，早上只有自营窗口和我们的老朋友紫光园开门呢。</p>
+<h2 id="超市喵"><a href="#超市喵" class="headerlink" title="超市喵"></a>超市喵</h2><p>学校俩食堂旁边都各自伴生着一家超市。里面的物价和外边差不多，对于很多小零食和饮料居然比外边便宜一大截，现在知道大家都喜欢买点儿啥了吧……考虑到超市卖的各种食品相当多，那就相当于食堂的DLC了。</p>
+<h2 id="水池子喵"><a href="#水池子喵" class="headerlink" title="水池子喵"></a>水池子喵</h2><p>学校中间有一片水域，里面散养着大量荷花和水禽。水禽主要是<strong>鹅和鸭子</strong>，这两种生物在STY的语料库里叫做“我鸟”和“甲鸟”。我鸟一共有5只，甲鸟一共28只。那几只我鸟声音贼大，剩下的甲鸟一只赛一只肥。湖边还要一个住了四只兔兔的小屋子。之所以是兔子，因为北信科的英文缩写是BISTU，刚好凑出个“兔”的发音，所以学校的吉祥物就是兔几。</p>
+<h2 id="图书馆喵"><a href="#图书馆喵" class="headerlink" title="图书馆喵"></a>图书馆喵</h2><p>图书馆超级棒，设计很现代，光线很好，座位很充足。每个座位上都有台灯和插座，超赞的。图书馆五层全是计科的书，给孩子看高潮了，下面都湿了，于是我立刻前往厕所解决人生小事<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="指小便。同理可得，大便是解决人生大事。
+">[2]</span></a></sup>，刚才一口闷了半瓶茶。</p>
+<p>图书馆最不明所以的就是<strong>预约机制</strong>。最简单的，假如不需要预约就能选一个座位坐，那么预约机制就没有强制性，总有人图省事儿不去预约。真到了高峰期，很容易出现座位占用情况表上一大片空闲座位，结果一到地方发现人满为患。有次STY特地数了一下，在三层东区的164个座位中，共有44名同学使用，然而在预约系统上仅仅只有7个占用，可见37名同学都没有预约，占到了惊人的80%</p>
+<p>正如前文所述<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="这里的情况指的是后面宿舍生活的部分。大家不要学我一样，模仿C++先调用函数再定义……
+">[3]</span></a></sup>，我们宿舍里四个人都是i人，大家一天也说不了几句话，所以从某种程度上来说宿舍里很安静，学习什么的完全可以，不像有些宿舍一样嘈杂。但是我的朋友，咱宿舍的书桌有点小的过分了喵，还是去图书馆学习更好，这样你能一下霸占一整个超级无敌大桌子。</p>
+<h2 id="其他商业网点喵"><a href="#其他商业网点喵" class="headerlink" title="其他商业网点喵"></a>其他商业网点喵</h2><p>学校里有不少茶饮店，什么蜜雪、瑞幸、茶百道和一堆杂牌奶茶之类的。</p>
+<p>居然还要一个理发店，起步价只需24块钱哦~</p>
+<p>这些商业网点都在一栋叫做“数据中心”的楼里，据我所知本栋楼没有任何和数据有关的设施。这当然也不奇怪，这栋楼其实是数据中心的配楼。</p>
+<p>还是在数据中心里，楼上还有体育用品店和手机店，以及卖所谓“3D手办”的店……</p>
+<h1 id="宿舍生活"><a href="#宿舍生活" class="headerlink" title="宿舍生活"></a>宿舍生活</h1><p>鉴于我们是目前提前到校的，所以学校分配的都是临时住宿，过几天就全员换到正式宿舍去，也就意味着目前的舍友也是临时的。这也是我们一屋子四个人几乎一句话没说过的原因之一，毕竟你身边的这几位都不是你固定下来的室友呢。</p>
+<p>我总觉得在宿舍里学习不太自在，所以一般情况下都会跑到图书馆来。从宿舍到图书馆，骑车去只要5分钟，如果着急的话两分半就能到。光是骑车的部分，我能在30秒内冲过去。图书馆学习氛围都不错，我都愿意在那里学一天然后打地铺睡。比较神奇的是，图书馆顶上几层名义上现在没开学不开放，但完全可以坐电梯上去，几乎是空荡荡的一片。</p>
+<p>目前来说洗澡还是个问题。淋浴间的水龙头比显微镜的细准焦点螺旋还难弄，把开关打到正中间，也许会在几个普朗克时间内流温水，然后迅速切换为烫水或者冰水。没招了。但我不应该苛责浴室，因为有个别淋浴头可以<strong>无限出水</strong>！</p>
+<p>现在我还不知道宿舍什么时候熄灯。但可能最近几天不熄灯，因为理论上没有开学。如果你的床位和STY一样扼守电灯开关的话，那我建议你准备一根晾衣架，不晾衣服的时候放在上铺，晚上睡觉的时候就可以拿晾衣架把灯远程关掉</p>
+<h1 id="田忌赛马这一块"><a href="#田忌赛马这一块" class="headerlink" title="田忌赛马这一块"></a>田忌赛马这一块</h1><p>前几天STY等160人一块参加的是北信科的勤信荣誉学院遴选，反正咱就是选上了。</p>
+<p>先说说选上了最直接的好处吧。虽然现在咱们名义上被计算机学院除名了，但这其实代表着我在荣誉学院将<strong>猛猛学习横跨多个专业多个学科的知识</strong>，光是某一个学院的名头已经<strong>没法配上我</strong>了喵。课程内容非常体现学科融合，学生自己也有选课上的自由，比如同时学软件和硬件，这样可以有效规避我们计科学生没几年可能面临被AI挤走的风险。而且在荣誉学院你甚至可以在大二就给导师的课题打下手，早早积累科研经验，顺便让自己的简历看起来漂漂亮亮的。还有一点，大家明面上不怎么说，但大家都清楚荣誉学院有至少50%的保研率，而且这50%还是一项原则性要求，不是啥多年统计规律<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="目前荣誉学院最大的学长也就大三，因此也不可能有保研率的统计。">[4]</span></a></sup>。所以说STY的高考成绩差了一点，但最后成功在北信科搞到了最头部的资源，这种结局100%比上211好。毕竟前文已经提过如今的211超级无敌卷，STY进去没有活路的，<strong>更何况211学校的保研率也根本干不到50%去啊！</strong></p>
+<p>也许有人要说了：进北信科荣誉学院能有这么多福利，那对考了高分去了名校的学生看起来不太公平啊！<strong>不公平个der</strong>。最简单的，<strong>咱高考也不考计算机啊</strong>，STY从小学开始学千奇百怪的技术和编程语言，相当于就是提前付出了大量时间成本。更何况，荣誉学院遴选考核时的科目全都是学校里没人管，但全都考验素质的能力，如果这玩意儿你能过了那你和清北学生之间的差距仅仅就是你的高考分数没他们高。好像说是不能外泄，那概括点说，遴选考核的所有项目100%命中STY擅长的各种东西，尤其是编程、快速自学和外语。在有一个项目里，我甚至连教程都没翻，靠一点长期玩IT的直觉就完成了任务，提前四十多分钟离场。展示环节有中文和英文两次，对于中文的展示，我感觉底下仨评委压根没有看过我的简历和我刚讲的PPT；对于英语的展示，我只能说这仨评委老师的英语一个赛一个差，谜之口音听着跟español一样，看他们绞尽脑汁想一个词的样子我都忍不住给他们提示了。</p>
+<p>也甭管了。反正我们虽然有个天崩开局，但临开学前获得了超大的资源优势，所以也没什么好担心的了，好好学习吧宝宝。毕竟你再焦虑也<strong>不一定解出来高数题</strong>，就比如我刚做的这个：</p>
+<div class="latexlive-math"><math xmlns="http://www.w3.org/1998/Math/MathML" data-latex="&#x8BBE;&#x65B9;&#x7A0B; xy-sin(\pi y^2)=0&#x786E;&#x5B9A;&#x51FD;&#x6570;y=y(x),&#x6C42;y'|_{x=0,y=-1}" display="block">
+  <mi mathvariant="normal" data-latex="&#x8BBE;">&#x8BBE;</mi>
+  <mi mathvariant="normal" data-latex="&#x65B9;">&#x65B9;</mi>
+  <mi mathvariant="normal" data-latex="&#x7A0B;">&#x7A0B;</mi>
+  <mi data-latex="x">x</mi>
+  <mi data-latex="y">y</mi>
+  <mo data-latex="-">&#x2212;</mo>
+  <mi data-latex="s">s</mi>
+  <mi data-latex="i">i</mi>
+  <mi data-latex="n">n</mi>
+  <mo data-latex="(" stretchy="false">(</mo>
+  <mi data-latex="\pi">&#x3C0;</mi>
+  <msup data-latex="y^2">
+    <mi data-latex="y">y</mi>
+    <mn data-latex="2">2</mn>
+  </msup>
+  <mo data-latex=")" stretchy="false">)</mo>
+  <mo data-latex="=">=</mo>
+  <mn data-latex="0">0</mn>
+  <mi mathvariant="normal" data-latex="&#x786E;">&#x786E;</mi>
+  <mi mathvariant="normal" data-latex="&#x5B9A;">&#x5B9A;</mi>
+  <mi mathvariant="normal" data-latex="&#x51FD;">&#x51FD;</mi>
+  <mi mathvariant="normal" data-latex="&#x6570;">&#x6570;</mi>
+  <mi data-latex="y">y</mi>
+  <mo data-latex="=">=</mo>
+  <mi data-latex="y">y</mi>
+  <mo data-latex="(" stretchy="false">(</mo>
+  <mi data-latex="x">x</mi>
+  <mo data-latex=")" stretchy="false">)</mo>
+  <mo data-latex=",">,</mo>
+  <mi mathvariant="normal" data-latex="&#x6C42;">&#x6C42;</mi>
+  <msup>
+    <mi data-latex="y">y</mi>
+    <mo data-mjx-alternate="1" data-latex="'">&#x2032;</mo>
+  </msup>
+  <msub data-latex="|_{x=0,y=-1}">
+    <mo data-mjx-texclass="ORD" stretchy="false" data-latex="|">|</mo>
+    <mrow data-mjx-texclass="ORD" data-latex="{x=0,y=-1}">
+      <mi data-latex="x">x</mi>
+      <mo data-latex="=">=</mo>
+      <mn data-latex="0">0</mn>
+      <mo data-latex=",">,</mo>
+      <mi data-latex="y">y</mi>
+      <mo data-latex="=">=</mo>
+      <mo data-latex="-">&#x2212;</mo>
+      <mn data-latex="1">1</mn>
+    </mrow>
+  </msub>
+</math></div>
+
+<p>这道题就是隐函数求导，先把两边对x求导，别忘了把y看作f(x)，最后解出y’和y与x的关系，带入数值即可，但我一下算出来的是这玩意儿！</p>
+<div class="latexlive-math"><math xmlns="http://www.w3.org/1998/Math/MathML" data-latex="y'=\frac{cos(\pi \cdot y^2)\cdot 2\pi^2y-y}{x}" display="block">
+  <msup>
+    <mi data-latex="y">y</mi>
+    <mo data-mjx-alternate="1" data-latex="'">&#x2032;</mo>
+  </msup>
+  <mo data-latex="=">=</mo>
+  <mfrac data-latex="\frac{cos(\pi \cdot y^2)\cdot 2\pi^2y-y}{x}">
+    <mrow data-latex="cos(\pi \cdot y^2 )\cdot 2\pi^2 y-y">
+      <mi data-latex="c">c</mi>
+      <mi data-latex="o">o</mi>
+      <mi data-latex="s">s</mi>
+      <mo data-latex="(" stretchy="false">(</mo>
+      <mi data-latex="\pi">&#x3C0;</mi>
+      <mo data-latex="\cdot">&#x22C5;</mo>
+      <msup data-latex="y^2">
+        <mi data-latex="y">y</mi>
+        <mn data-latex="2">2</mn>
+      </msup>
+      <mo data-latex=")" stretchy="false">)</mo>
+      <mo data-latex="\cdot">&#x22C5;</mo>
+      <mn data-latex="2">2</mn>
+      <msup data-latex="\pi^2">
+        <mi data-latex="\pi">&#x3C0;</mi>
+        <mn data-latex="2">2</mn>
+      </msup>
+      <mi data-latex="y">y</mi>
+      <mo data-latex="-">&#x2212;</mo>
+      <mi data-latex="y">y</mi>
+    </mrow>
+    <mi data-latex="x">x</mi>
+  </mfrac>
+</math></div>
+
+<p>带入x&#x3D;0的话这辈子都成立不了！然而正确的导函数是酱紫的：</p>
+<div class="latexlive-math"><math xmlns="http://www.w3.org/1998/Math/MathML" data-latex="y'=\frac{y}{2\pi ycos(\pi \cdot y^2)-x}" display="block">
+  <msup>
+    <mi data-latex="y">y</mi>
+    <mo data-mjx-alternate="1" data-latex="'">&#x2032;</mo>
+  </msup>
+  <mo data-latex="=">=</mo>
+  <mfrac data-latex="\frac{y}{2\pi ycos(\pi \cdot y^2)-x}">
+    <mi data-latex="y">y</mi>
+    <mrow data-latex="2\pi ycos(\pi \cdot y^2 )-x">
+      <mn data-latex="2">2</mn>
+      <mi data-latex="\pi">&#x3C0;</mi>
+      <mi data-latex="y">y</mi>
+      <mi data-latex="c">c</mi>
+      <mi data-latex="o">o</mi>
+      <mi data-latex="s">s</mi>
+      <mo data-latex="(" stretchy="false">(</mo>
+      <mi data-latex="\pi">&#x3C0;</mi>
+      <mo data-latex="\cdot">&#x22C5;</mo>
+      <msup data-latex="y^2">
+        <mi data-latex="y">y</mi>
+        <mn data-latex="2">2</mn>
+      </msup>
+      <mo data-latex=")" stretchy="false">)</mo>
+      <mo data-latex="-">&#x2212;</mo>
+      <mi data-latex="x">x</mi>
+    </mrow>
+  </mfrac>
+</math></div>
+
+
+<center ><i><b><font size = 30>就酱！！！</font></i></b></center>
+
+
+
+
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="ameitsu/ameitsu.github.io"
+        issue-term="title"
+        label="Comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">STY已经体验过三块钱吃撑的感觉了。<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">指小便。同理可得，大便是解决人生大事。<a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">这里的情况指的是后面宿舍生活的部分。大家不要学我一样，模仿C++先调用函数再定义……<a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">目前荣誉学院最大的学长也就大三，因此也不可能有保研率的统计。<a href="#fnref:4" rev="footnote"> ↩</a></span></li></ol></div></div>
+		</div>
+
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%8E%9F%E5%88%9B/">#原创</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%A4%A7%E5%AD%A6%E7%89%B2STY/">#大学牲STY</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2026/08/23/moments-of-wonder/summervacation-2026/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">我去我怎么还有一周就要上大学了 | Moments of Wonder vol.11</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">目录</div>
+		<div class="page-title">好的好的我摇身一变成为大学生了 | Moments of Wonder vol.12</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%A5%E6%8A%A5%E4%B8%AA%E5%88%B0"><span class="nav-text">来报个到</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Citywalk%EF%BC%88%E4%B8%8D%E5%87%BA%E6%A0%A1%E9%97%A8%E7%89%88%EF%BC%89"><span class="nav-text">Citywalk（不出校门版）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A3%9F%E5%A0%82%E5%96%B5"><span class="nav-text">食堂喵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B6%85%E5%B8%82%E5%96%B5"><span class="nav-text">超市喵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B0%B4%E6%B1%A0%E5%AD%90%E5%96%B5"><span class="nav-text">水池子喵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%96%B5"><span class="nav-text">图书馆喵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%95%86%E4%B8%9A%E7%BD%91%E7%82%B9%E5%96%B5"><span class="nav-text">其他商业网点喵</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%BF%E8%88%8D%E7%94%9F%E6%B4%BB"><span class="nav-text">宿舍生活</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%B0%E5%BF%8C%E8%B5%9B%E9%A9%AC%E8%BF%99%E4%B8%80%E5%9D%97"><span class="nav-text">田忌赛马这一块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-text">注释</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+            <div class="customize-info my-1">富强 民主 文明 和谐 自由 平等 公正 法治 爱国 敬业 诚信 友善</div>
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2026&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">STY</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 129 篇文章
+                    </span>
+                    
+                        <span>
+                            共 275.1k 字
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.9.0</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container" role="dialog" aria-modal="true" aria-label="图片查看器">
+	<button class="image-viewer-close" type="button" aria-label="关闭">
+		<i class="fa-solid fa-xmark"></i>
+	</button>
+	<button class="image-viewer-prev" type="button" aria-label="上一页">
+		<i class="fa-solid fa-chevron-left"></i>
+	</button>
+	<div class="image-viewer-frame">
+		<img src="" alt="">
+	</div>
+	<div class="image-viewer-exif-panel hidden absolute left-1/2 bottom-20 -translate-x-1/2 w-[min(92vw,420px)] max-h-[60vh] overflow-hidden rounded-2xl bg-background-color-transparent-80 p-4 text-left shadow-redefine-flat backdrop-blur-md" role="dialog" aria-label="EXIF" aria-hidden="true">
+		<div class="flex items-center justify-between mb-3">
+			<span class="text-sm font-semibold text-first-text-color">EXIF</span>
+			<button class="image-viewer-exif-close flex h-8 w-8 items-center justify-center rounded-full bg-background-color-transparent-80 text-first-text-color transition hover:bg-background-color-transparent-40" type="button" aria-label="关闭">
+				<i class="fa-solid fa-xmark text-[0.65rem]"></i>
+			</button>
+		</div>
+		<div class="image-viewer-exif-cards grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[50vh] overflow-y-auto pr-1 scrollbar-hide"></div>
+		<template class="image-viewer-exif-card-template">
+			<div class="rounded-lg bg-background-color-transparent-40 px-3 py-2">
+				<div class="image-viewer-exif-card-header flex items-center gap-2 mb-1">
+					<i class="image-viewer-exif-card-icon fa-solid fa-circle-info text-xs text-third-text-color"></i>
+					<div class="image-viewer-exif-card-title text-xs font-semibold text-first-text-color"></div>
+				</div>
+				<div class="image-viewer-exif-card-items flex flex-col gap-1"></div>
+			</div>
+		</template>
+	</div>
+	<button class="image-viewer-exif-toggle flex items-center gap-2 hidden absolute left-1/2 bottom-6 -translate-x-1/2 rounded-full border border-border-color bg-background-color-transparent-80 px-4 py-2 text-first-text-color backdrop-blur-md transition hover:bg-background-color-transparent-40" type="button" aria-label="EXIF" aria-expanded="false">
+		<i class="fa-solid fa-circle-info text-xs"></i>
+		<span class="text-xs font-semibold uppercase tracking-wider">EXIF</span>
+	</button>
+	<button class="image-viewer-next" type="button" aria-label="下一页">
+		<i class="fa-solid fa-chevron-right"></i>
+	</button>
+</div>
+
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="站内搜索您需要的内容..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+
+<script src="/js/build/libs/Swup.min.js"></script>
+
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    window.swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+
+    window.dispatchEvent(
+        new CustomEvent("redefine:swup:ready", {
+            detail: {
+                swup: window.swup,
+            },
+        }),
+    );
+</script>
+
+
+
+
+	
+<script src="/js/build/main.js" type="module"></script>
+
+
+
+    
+<script src="/js/build/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+
+
+
+  
+<script src="/js/build/libs/Typed.min.js"></script>
+
+
+
+
+    
+        
+<script src="/js/build/libs/mermaid.min.js"></script>
+
+    
+
+
+
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+
+	
+</body>
+
+</html>
