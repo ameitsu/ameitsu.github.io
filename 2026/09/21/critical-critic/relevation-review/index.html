@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    
+    <meta name="author" content="STY">
+    
+    <!-- Completely eliminate flash of wrong theme -->
+    <script>
+        (function() {
+            const THEME_KEY = "REDEFINE-THEME-STATUS";
+            const DARK = "dark", LIGHT = "light";
+            
+            // Get preferred theme
+            function getTheme() {
+                try {
+                    const saved = localStorage.getItem(THEME_KEY);
+                    if (saved) {
+                        const { isDark } = JSON.parse(saved);
+                        return isDark ? DARK : LIGHT;
+                    }
+                } catch (e) {}
+                
+                return matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+            }
+            
+            // Apply theme to document
+            function applyTheme(theme) {
+                const isDark = theme === DARK;
+                const root = document.documentElement;
+                
+                // Set classes for compatibility
+                root.classList.add(theme);
+                root.classList.remove(isDark ? LIGHT : DARK);
+                root.style.colorScheme = theme;
+            }
+            
+            // Initial application
+            const theme = getTheme();
+            applyTheme(theme);
+            
+            // Listen for system preference changes
+            matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+                // Only update if using system preference (no localStorage entry)
+                if (!localStorage.getItem(THEME_KEY)) {
+                    applyTheme(matches ? DARK : LIGHT);
+                }
+            });
+            
+            // Set body classes ASAP (before DOMContentLoaded)
+            (function() {
+                const addBodyClass = () => {
+                    const b = document.body;
+                    if (!b) return false;
+                    b.classList.add(theme + "-mode");
+                    return true;
+                };
+
+                // Try immediately
+                if (addBodyClass()) return;
+
+                // Observe until body exists
+                const mo = new MutationObserver(() => {
+                    if (addBodyClass()) mo.disconnect();
+                });
+                mo.observe(document.documentElement, { childList: true, subtree: true });
+            })();
+        })();
+    </script>
+    
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://ameitsu.github.io/2026/09/21/critical-critic/relevation-review/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+        
+        <meta name="description" content="Ameitsu Cyberpark, STY的赛博后花园。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="咱们去商朝搞搞人祭你说好不好呀？ | Critical Critic vol.2">
+<meta property="og:url" content="http://ameitsu.github.io/2026/09/21/critical-critic/relevation-review/index.html">
+<meta property="og:site_name" content="Ameitsu Cyberpark">
+<meta property="og:description" content="Ameitsu Cyberpark, STY的赛博后花园。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgCPBK.jpg">
+<meta property="article:published_time" content="2026-09-21T04:18:59.000Z">
+<meta property="article:modified_time" content="2026-09-21T06:23:04.920Z">
+<meta property="article:author" content="Ameitsu">
+<meta property="article:tag" content="书评">
+<meta property="article:tag" content="原创">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgCPBK.jpg">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgCPBK.ico" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgCPBK.ico">
+    <meta name="theme-color" content="#00FFFF">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgCPBK.ico">
+    <!--- Page Info-->
+    
+    <title>
+        
+            咱们去商朝搞搞人祭你说好不好呀？ | Critical Critic vol.2 | Ameitsu Cyberpark
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+        <link href="" rel="stylesheet">
+    
+    
+    
+    
+        
+<script src="/js/build/libs/anime.min.js"></script>
+
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"ameitsu.github.io","root":"/","language":"zh-CN","path":"search.json"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":true,"title":"推荐阅读","limit":6,"mobile_limit":2,"placeholder":"https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img4.png","skip_dirs":[]}},"colors":{"primary":"#00FFFF","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":true,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":true,"custom_message":null},"side_tools":{"gear_rotation":true,"auto_expand":false},"open_graph":{"enable":true,"image":"https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgCPBK.jpg","description":"Ameitsu Cyberpark, STY的赛博后花园。"},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img%E6%96%B0%E8%83%8C%E6%99%AF.jpg","dark":"https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img%E6%96%B0%E8%83%8C%E6%99%AF.jpg"},"title":"Cyberpark Nichome II","subtitle":{"text":["STY的赛博后花园~","旁边的是站娘小盐"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":[{"icon":"fa-brands fa-github","url":"https://github.com/ameitsu"},{"icon":"fa-solid fa-at","url":"ameitsu@sina.com"},{"icon":"https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgbili.png","url":"https://space.bilibili.com/515002909?spm_id_from=333.1007.0.0"}],"qrs":[{"icon":"fa-brands fa-weixin","qr":null},{"icon":"/images/custom-icon.svg","qr":null}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":true,"version":"11.4.1","theme":{"light":"default","dark":"dark"}}},"version":"2.9.0","navbar":{"auto_hide":false,"color":{"left":"#1976D2","right":"#F06292","transparency":99},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"categories":{"path":"/categories","icon":"fa-solid fa-folder"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"about":{"path":"/about","icon":"fa-solid fa-user"},"chatbox":{"path":"/chatbox","icon":"fa-regular fa-comment"},"tags":{"path":"/tags","icon":"fa-solid fa-tags"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur","masonry":{"batch_size":12,"initial_batch_size":24}},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footer":{"runtime":true,"icon":"<i class=\"fa-solid fa-heart fa-beat\" style=\"--fa-animation-duration: 0.5s; color: #f54545\"></i>","start":"2023/1/21 19:30:00","statistics":true,"customize":"富强 民主 文明 和谐 自由 平等 公正 法治 爱国 敬业 诚信 友善","icp":{"enable":false,"number":null,"url":null}},"footerStart":"2023/1/21 19:30:00","mermaid":{"style":{"light":"default","dark":"dark"}}};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.i18n = {"search":"站内搜索您需要的内容...","toc":"目录","prev":"上一页","next":"下一页","prev_posts":"上一篇","next_posts":"下一篇","page":"第 %d 页","recent_posts":"最新文章","share":"分享","powered_by":"由 %s 驱动","theme":"主题","rss_feed":"RSS Feed","category":"分类","categories":"分类","tag":"标签","tags":"标签","post":"文章","posts":"文章","tagcloud":"标签云","comment":"评论","comments":"评论","top":"置顶","sticky":"置顶","go-back-home":"回到首页","masonry_loading":"照片加载中...","image_viewer":"图片查看器","close":"关闭","exif":{"title":"EXIF","cards":{"camera":"相机","lens":"镜头","exposure":"曝光","other":"其他"},"fields":{"make":"品牌","model":"机型","date_taken":"拍摄时间","lens_model":"镜头","focal_length":"焦距","focus_mode":"对焦模式","shutter":"快门","aperture":"光圈","iso":"感光度","exposure_program":"曝光程序","exposure_compensation":"曝光补偿","metering_mode":"测光模式","flash":"闪光灯","white_balance":"白平衡","latitude":"纬度","longitude":"经度","altitude":"海拔"},"status":{"loading":"加载中...","no_exif":"无 EXIF 信息","library_missing":"EXIF 库未加载","image_source_missing":"图片地址不可用","unavailable":"EXIF 不可用（可能被 CORS 阻止或缺少元数据）","flag_unavailable":"EXIF 不可用"}},"home":"首页","archive":"归档","archives":"归档","about":"关于","links":"链接","link":"链接","friends":"友情链接","friend":"友情链接","timeline":"时间轴","shuoshuo":"说说","bookmarks":"书签","site_uv":"访问人数","site_pv":"总访问量","read_more":"阅读全文","wordcount":"字","min2read":"分钟","changelog":"更新日志","status":"状态","runtime":"博客已运行","days":"天","hours":"小时","minutes":"分钟","seconds":"秒","optimized_by":"并由 Evan 进行优化","rights":"版权所有","site_posts":"共撰写了 %s 篇文章","site_wordcount":"共 %s 字","copyright":{"title":"标题","author":"作者","link":"链接","create_time":"创建于","update_time":"更新于","license_title":"版权声明","license_content":"本文章采用 %s 进行许可。","all_rights_reserved":"版权所有 &#169 %s，禁止转载。","public_domain":"本文为公有领域作品，可自由转载、引用。"},"ago":{"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"},"create_time":"创建","update_time":"更新","expired":"这篇文章最后更新于 %s 天前，内容可能已经过时。"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+
+<body>
+	<div class="progress-bar-container">
+	
+	<span class="scroll-progress-bar"></span>
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        Ameitsu Cyberpark
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({ loop: true })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [20, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                filter: ['blur(5px)', 'blur(0px)'],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 300 + 20 * i,
+            })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [0, -20],
+                opacity: [1, 0],
+                filter: ['blur(0px)', 'blur(5px)'],
+                easing: "easeInExpo",
+                duration: 1000,
+                delay: (el, i) => 15 * i,
+                complete: function() {
+                    hidePreloader();
+                }
+            }, '-=700');
+
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+                <a class="logo-image h-8 w-8 sm:w-10 sm:h-10 mr-3" href="/">
+                    <img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgCPBK.jpg" class="w-full h-full rounded-xs">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                Ameitsu Cyberpark
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories"
+                                        >
+                                    <i class="fa-solid fa-folder fa-fw"></i>
+                                    分类
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    归档
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/about"
+                                        >
+                                    <i class="fa-solid fa-user fa-fw"></i>
+                                    关于
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/chatbox"
+                                        >
+                                    <i class="fa-regular fa-comment fa-fw"></i>
+                                    CHATBOX
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/tags"
+                                        >
+                                    <i class="fa-solid fa-tags fa-fw"></i>
+                                    标签
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories"
+                        >
+                            <span>
+                                分类
+                            </span>
+                            
+                                <i class="fa-solid fa-folder fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                归档
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/about"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-solid fa-user fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/chatbox"
+                        >
+                            <span>
+                                CHATBOX
+                            </span>
+                            
+                                <i class="fa-regular fa-comment fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/tags"
+                        >
+                            <span>
+                                标签
+                            </span>
+                            
+                                <i class="fa-solid fa-tags fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">52</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">15</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">133</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			<div class="w-full flex items-center pt-6 justify-start">
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">咱们去商朝搞搞人祭你说好不好呀？ | Critical Critic vol.2</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] shrink-0 rounded-medium border border-border-color p-px">
+				<img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgSTY.jpg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">STY</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv6</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2026-09-21 12:18:59</span>
+        <span class="mobile">2026-09-21 12:18:59</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2026-09-21 14:23:04</span>
+            <span class="mobile">2026-09-21 14:23:04</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Critical-Critic/">Critical Critic</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%8E%9F%E5%88%9B/">原创</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E4%B9%A6%E8%AF%84/">书评</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>7.6k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>26 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgheader-CC.png"
+                     
+                ></p>
+<p>夏商周，尤其是前两个，真是神奇的时代。这是一个每个人都是谜语人的时代，以至于等到上世纪殷墟出土了比大一上学期高数卷子还多的甲骨文碎片后人们才能大概了解商朝的情况。鉴于甲骨的内容主要是关于占卜的，所以说这些文字资料虽然异常珍贵，但是并没有对商朝社会的完整详细的描绘，不过一些细节也能让我们看个大概。几年前，一部叫做《翦商》的巨著诞生了，趁着母后手里有着用不完的王府井图书大厦优惠券的机会，STY终于入手了。</p>
+<p>等会儿，我知道你一定要问STY不是学计科的嘛，咋有兴趣看这个。额……反正夏商的历史基本上要靠考古发现去推断，拿一点点考古证据去论证的过程像极了你一行行扣log一样，而且还不一定能有个清晰的结果，这和debug的过程也一样。无所谓了，咱们开始！</p>
+<div class="callout callout--simple info mb-4 rounded-small shadow-redefine-flat bg-(--callout-bg-color) p-3 pl-1 relative flex flex-row gap-2 items-center"><div role="none" class="rounded-full self-stretch w-0.5 bg-(--callout-primary-color) shrink-0 opacity-60"></div><div class="callout__content markdown-body flex-1 min-w-0"><p><strong>提示</strong></p>
+<ol>
+<li>本书从文明的发源开始下笔，到西周的孔子时代结束。但全书的重点明显是商朝，因此本文主要围绕商朝写，同时还有一定的夏朝和周朝内容。</li>
+<li>本文纯属娱乐性质，有兴趣的话建议阅读原书。</li>
+<li>商朝人有点残忍，所以本文难免有点R18G的内容</li>
+</ol></div></div>
+
+<h1 id="CHAPTER-1-文明之源"><a href="#CHAPTER-1-文明之源" class="headerlink" title="CHAPTER 1 文明之源"></a>CHAPTER 1 文明之源</h1><p>你醒了？你变没变女孩子倒是不好说，但你的确是一个<strong>原始人</strong>了。</p>
+<p>只不过，你马上就不用当原始人了，因为你打算建立自己的国家了。</p>
+<p>在远古时期，建立一个国家没什么太高的门槛，连一个独立宣言都不用，因为大家都不识字。</p>
+<p>首先，找一块土地肥沃靠近水源的土地。然后零散散修一些屋子，不用修城墙，不用挖护城河，但可以建造一些防洪堤坝。现在，你就是一个坐拥一座城市的人了！</p>
+<p>接着，拉周围几个村子入伙，在你的村子里建一个讨论室。还要关注文化事业，搞一些巫术占卜和离奇传说来笼络人心。但光做法也没用，一定要建立国防体系，维持正规军，一个成员村子被别人胖揍了以后大家的援军必须立刻前往救场。等国家发展壮大了，给你自己修一个毛坯房王宫，并且多举行人祭积阴德。</p>
+<p>也许几百年后你的后人会听说一个叫什么<strong>二里头</strong>的国家，叮嘱后人考虑去投奔他们。到时候你们国家就入股中国了。</p>
+<p>但是现在你还没必要想的那么远，当务之急是把你的美丽小城修得更高端大气上档次。别天天走土路了，修一些横向和纵向的大道。在路网的最中间修你的王宫，把王宫北面的空地当作贵族墓地和祭祀区。你作为国君，自己家死的人要埋在宫里面。王宫的构造很简单，就是用长条房子围出一块区域，中间建一座大殿。看起来王宫很空旷，那就对了，因为你要在院子里搞人祭。如果搞不了人祭，考虑用猪猪。还要在王宫南面修一些小作坊，生产陶器和青铜器之类的。陶器要着重于酒器生产，大家有充足的雨量酿酒。青铜作坊也要发展绿松石产业，这是重要的铜矿副产品。要高度重视青铜产业，方便你造出可靠的武器，用于镇压起义。当时的贫富差距非常大。一定要搞好王室和工匠的关系。工匠们能实现自治，不用你费心，也是你维持统治地位的关键依靠。最重要的是对青铜冶炼技术高度保密，不让周围城市知道。这样可以制造青铜器的稀缺性，让很多小国对你们城邦产生依赖，进而服从你的领导。</p>
+<p>你肯定也想把自己的国家做大做强。记住要先派人串通周围的国家，劝他们入伙。别到处瞎走，要着重在有盐矿和铜锡矿的地方扩张，同时大力发展青铜冶炼业，打造充足的兵器。别忘了促进农业发展，挖一堆仓库来储备粮食。</p>
+<h1 id="CHAPTER-2-青铜与祭祀"><a href="#CHAPTER-2-青铜与祭祀" class="headerlink" title="CHAPTER 2 青铜与祭祀"></a>CHAPTER 2 青铜与祭祀</h1><p>这是远古文明最重要的两个要素，作为国君的你一定不能放松。</p>
+<p>要想稳定发展青铜产业，要先找一处铜锡共生或者铜铅共生的矿山，这很考验运气。接着通过大量实践探索不同金属的最佳配比。在此过程中，应该发展一下铜、锡和铅的冶炼技术，得到纯金属。也可以在作坊里搞人祭让神明保佑你冶炼顺利。把一个倒霉蛋扔进炉子里<strong>祭天</strong>，据说这样就能得到高品质金属。</p>
+<p>人祭是古代影响因子最高的祭祀活动了，而且还有严格的步骤呢。第一步来挖个坑，在坑里铺上一层很薄的小石子和砂土。垫上20~30cm厚的黄土。把一些陶器打碎扔进去。然后在坑外鲨人。可以选择拦腰斩断、砍掉大腿或小腿以下的部分、斩首把头扔进去或者和动物煮完以后吃了再把骨头扔进去。确保尸体的脸部朝下。撒一层朱砂，再填上红褐色的土，重复前几步若干次。然后把青铜器掩埋。再按前面的步骤鲨一批人，填上炭灰土。最后一步是把正经的死者扔进去，用烧土块和陶器碎片把坑填满。</p>
+<p>如果找不到足够的人，拿动物祭祀也可以呢。用夯土围墙搭一个祭祀区，在区域内挖个大坑。找一些倒霉的猪猪、羊羊、牛牛、狗狗、兔兔、鱼鱼或者鹿鹿，把这些动物拦腰斩断或者斩首。准备漆木容器，放进大坑，然后把动物尸体恭敬地摆放在漆器上。如果有需要的话，重复几遍直到坑被填满。你也可以扔几个人进去当点缀。</p>
+<h1 id="CHAPTER-3-商族传奇"><a href="#CHAPTER-3-商族传奇" class="headerlink" title="CHAPTER 3 商族传奇"></a>CHAPTER 3 商族传奇</h1><p>现在，你变成了一个商族人。为了快速融入集体，要不考虑一下了解了解你们的文化风俗？</p>
+<p>你们老祖宗契是他妈妈简狄吃个鸟蛋之后生下来的，他连个爹都莫得，比另一个没爹的耶稣早了两千多年。商的名字来源于商丘，也就是说商丘这个地方将近四千年没改过名字。你别天天宅家里。得随时准备好搬家的准备，因为商族平均两代人迁徙一次。别忘了学学地理，熟悉北方的水系，方便在被别人揍的时候及时跑路。掌握放牛技术，因为商族就是干这个吃饭的。记着你们放的是水牛，不是黄牛！有了牛，考虑跟夏朝人学一下牛车的制造技术，这样就能赶着牛到处卖东西养家了。但你们也不完全是游牧民族，你们也会在放牧的同时种地。你们有些朋友，比如下七垣和岳石文化，未来你们仨一块儿收拾夏朝去。做个文化人，学习甲骨文，或者自己生造一些。学会如何驯养大象也是重要的技能。最关键的是，<strong>要崇拜鸟鸟</strong>，因此少吃禽类和蛋。</p>
+<h1 id="CHAPTER-4-商朝扩张记"><a href="#CHAPTER-4-商朝扩张记" class="headerlink" title="CHAPTER 4 商朝扩张记"></a>CHAPTER 4 商朝扩张记</h1><p>商朝人的老家在河南。但是地方好像不太够，所以要往四周扩张。</p>
+<p>商朝的很多殖民地基本上只是稍微听听商王的话，自己也有很大的自主权。但是为了闯出一片自己的天地，你得先发展壮大，成为一个贵族。</p>
+<p>想成为贵族也有可以模仿的路径。首先建立一个农业村落，具体方法前前文所述。然后维持一个正规军，发展畜牧业、渔业、手工业和商业，考虑搞一种特色产业，增强军事和经济实力。商朝王室没有常备军队，真要带兵打仗还要依靠你们贵族的军队。抽空和众人商讨出一部传统习惯法，因为商王没法直接管你们，所以你必须给自己的部族制定法律。完事儿了就设计一个酷炫的logo（族徽），并把它印在青铜器上。有了logo，你们才算是真正的部族。及时向商王进献宝贝和技术人员，积极派代表参加祭祀。这样，你就有了一支庞大的队伍来支撑征服事业了。</p>
+<p>你也许想先往南边走。我们这里有个<strong>盘龙城</strong>的案例可以供参考。到了南方，确保你心仪的土地上没有土著或者土著很菜鸡，然后在大江大河交汇处设立据点。确定选址后，建造城墙和宫殿。挖一条护城河，再额外修一条水道联通外边的大河，别忘了修一座码头。同时建造炼铜小作坊，找好矿石来源，无论是和土著以物易物还是自己挖矿。铸造好的青铜器往北方中原地区销售，这样可以赚大钱。但是，千万别搞人祭！因为人祭太血腥了，会把土著吓坏。你作为殖民者可是少数派，土著只要揭竿而起，商朝也救不了你。用青铜器祭祀就可以了。让土著融入青铜产业，给土著一些利益，大家合作共赢，建立命运共同体。南方邦国林立，因此战备工作必须要重视。但也不能惹是生非，要以自卫为主，否则赖以生存的和平环境就莫得了。想办法别让当地的文化习俗取代商文化，否则就会失去己方的精神力量。盘龙城的商文化被土著文化取代了，这也是盘龙城灭亡的一大原因。</p>
+<p>南方地区确实在远古时期十分蛮荒，那要不咱往北边去？我这儿还有个<strong>老牛坡</strong>的案例。你前往关中盆地，因为这里的土著（如倒霉羌人）还活在石器时代，你过去完全是降维打击。虽然关中的科技不太发达，但至少有不少聚落，可以沿途获得补给。别忘了寻找高品质铜矿。看到有哪个土著拿着绿松石就停下来打听石头的来源，因为绿松石一般和铜矿伴生。开采完矿石，在铜矿外建设初加工车间，将矿石冶炼为锭。在别的地方建立城市，在那里建设铸造车间，利用铜矿所在的输出的高品质金属生产青铜器。别担心，当地土著技术水平很低，你的军队可以不费吹灰之力把他们奴役，把他们的村子变成奴隶庄园。平时关注时事热点，如果某一代商朝王室的武德很充沛，可以考虑说服时任商王派兵西进，动员大量贵族军队来帮你。</p>
+<h1 id="CHAPTER-5-王室日常"><a href="#CHAPTER-5-王室日常" class="headerlink" title="CHAPTER 5 王室日常"></a>CHAPTER 5 王室日常</h1><p>假如你是商王，你的弟弟要征服羌族，你想让他帮你带点俘虏回来搞人祭，顺便买点岐山臊子面料理包、殷都城外老王家做的胡辣汤（王后也要喝）和干辣子。请用英文给他写一封邮件，200词左右，交代清楚你想要的俘虏数量和购物清单。注意语言的得体性和准确性。来，小盐，给大家露一手！</p>
+<blockquote>
+<p><strong>站娘有话说:</strong></p>
+<p><em>（被点到名，尾巴一僵，硬着头皮站起来）</em> 露、露一手就露一手！谁怕谁啊！</p>
+<hr>
+<p><strong>Subject: Captives and a Shopping List</strong></p>
+<p>Dear Brother,</p>
+<p>I hear you are marching west against the Qiang. While you are out there, please bring me back some captives — three hundred will do, and I would prefer them alive and unharmed, since we have a great many rituals to perform and the ancestors do appreciate a proper offering. Do handle them gently on the road; a bruised captive reflects poorly on the dynasty.</p>
+<p>Now, the shopping. Since you are passing through the western lands anyway: two baskets of Qishan noodles with sauce, a jar of Old Wang’s hulatang from outside the Yin capital — the Queen wants some too, so make it a large jar — and a good supply of dried chilies. Do not let the chilies get damp. You know how they get.</p>
+<p>Do not dawdle. The ancestors are waiting, and so am I.</p>
+<p>Your loving brother,<br>The King</p>
+<hr>
+<p><em>（拍桌，耳朵得意地抖动）</em> 一百七十来个词，俘虏数量、臊子面料理包、老王家胡辣汤、干辣子，一样没落喵！”祖先在等着，我也是”——这个落款我自己都觉得很妙。</p>
+<p>不过亲爱的，我得说一句正经的：商朝根本还没有古英语，臊子面也还没被发明出来。这封邮件发出去，大概会先被列祖列宗当成乱码。<em>（小声）</em> 但你要的”得体性和准确性”，我尽力了，剩下的锅归历史。</p>
+</blockquote>
+<p>额扯远了。商朝的时候连古英语都没有，而且臊子面什么的都还没有被发明。但商王真的很累！</p>
+<p>首先，迁都是家常便饭。商朝迁都不一定得考虑实际情况，只要他们觉得自己遭天谴了就要迁都。现在迁都需要批准法案，然后把国家机关的人全转移到新城里就可以了。但是古代王朝的人口高度集中在首都，你一迁都就实际上要带着几乎全国的人跟着走。由此可见，大家真不愿意迁都。</p>
+<p>为了让大家跟着你去，你得学习一些话术。正好，盘庚给我们了一些经验。一开篇，感谢列祖列宗为商朝现在的繁荣奠基。然后分析说现在商朝遇到啥大灾，上天没啥神迹，说明列祖列宗下定决心让我们离开这里。接着威胁手下人，说如果各位不服从，那么列祖列宗就要惩罚你们！理由也很拽，就是因为我已经让祭司告诉你们的祖先，让他们同意在你们不听话的情况下我的列祖列宗惩罚你们，你们一个个都跑不了。紧接着用一些和生活息息相关但非常古怪的比喻警告乱臣贼子。再放狠话，威胁手下人说如果他们不听话的话自己会先劓了你们然后屠了你们的亲人，直接给你们断子绝孙。最后再次感谢高祖王亥。</p>
+<p>假如有了和平发展的时机，也别松懈。大力发展你们王室家族的产业，因为商王收不了税，因此王室开销得你自己承担。收购庄园，派人放牧，在宫殿内开设青铜小作坊。稳固边疆，册封土著头目，也要及时敲打不听话的头目来杀鸡儆猴，必要的时候御驾亲征。也可以通过举行“步”的仪式来凝聚人心。</p>
+<p>商王也要经常祭祀祖先。挖一些祭祀坑。坑的朝向有两种，一种是南北向的，放青年男性殉葬者；另一种是东西向的，放青年女性和幼儿殉葬者。将殉葬者斩首（砍一刀意思下就行）、砍掉手指、砍掉大腿或者肢解。女性可以保留全尸。准备一些猪猪、狗狗、牛牛、羊羊、象象、狐狐、猴猴或河狸，宰了以后整齐地埋进坑里。</p>
+<p>王后也有一些事情要干，来参考一下妇好姐姐。王后去世后会得到一个叫“妣x”的名字，x代表地支。似乎没几个人在乎你的真名。你要给商王生孩子，生完孩子后即可获得“后母x”的称号，x还是地支。但是很多商王似乎只在乎你能不能给他生孩子。如果你的老公（商王）很爱你，留心他会不会在甲骨上写情书或者三天两头让巫师占卜你会不会一切平安。要加强军事训练，打造趁手兵器，很多王后其实也是大将。注意肩部保养，因为你要负责很多人祭仪式，而砍人环节需要手臂大幅度摆动，这会让肩膀酸痛。</p>
+<p>商王也有个别<strong>魔丸</strong>，比如说武乙。这人下令手下人制作一个象征天神的玩偶，然后自己和玩偶表演决斗，结果是自己胜出而玩偶被蹂躏。把人皮扎成袋子，装满血。放箭射击袋子，立刻血水四溅，象征天神被杀死。</p>
+<h1 id="CHAPTER-6-不问苍生问鬼神"><a href="#CHAPTER-6-不问苍生问鬼神" class="headerlink" title="CHAPTER 6 不问苍生问鬼神"></a>CHAPTER 6 不问苍生问鬼神</h1><p>假如你成为了商朝的有钱人，生前就得考虑怎么修墓地了。先挖一个墓穴和墓道。墓道是一个从地面向墓穴延伸的坡道，方便运输棺椁。在墓穴里挖出墓室，在墓室里修建椁室。在棺木上雕花，刷红漆，在椁室里摆上陪葬品和殉人。把墓里空余的空间都塞满殉葬者，至少好几百人。如果塞不下几百具尸体，那几百个头颅也可以。有能力的话，找一点让人意想不到的东西当陪葬品（如巨大的鲸鱼骨头），让几千年后的考古学家摸不着头脑。</p>
+<p>但大部分人没法这么土豪，占卜才是平常更有搞头的。以下是一些提高占卜准确度的方法。试着采用多种甲骨，别只惦记乌龟。有人试过人骨占卜，但好像效果不太好。商朝人已经实验过了，龟龟的甲骨效果最棒。如果你解读出的占卜结果可能让你的上司（如商王）炸毛，那就啥也别说，直接给他看，他自己会根据自己喜欢的方式解释。比如说商王武丁问祭司说妇好要生宝宝了，她是否会平安。祭司发现结果是不平安，但肯定也不敢跟大王说，所以干脆把甲骨给他看了。武丁看了以后偏说这是吉兆，当然了最后妇好也没出事儿……<strong>问题来了，谁是草台班子？</strong></p>
+<h1 id="CHAPTER-7-商朝公子哥"><a href="#CHAPTER-7-商朝公子哥" class="headerlink" title="CHAPTER 7 商朝公子哥"></a>CHAPTER 7 商朝公子哥</h1><p>以防你成为了养尊处优的商朝贵族后代，结果还啥也不懂，我给你整理了一些日常行为准则。你最重要的事情是要经常祭祀列祖列宗。不太用人祭，拿动物就行，具体操作见前文。如果真的需要人祭，就把一个倒霉的羌人剁了。可以出去打猎，比如射鹿。要经常关心自己的健康，留意耳鸣、多梦和心律不齐等症状。如果有这些问题，考虑占卜一下。你们公子哥们往往和商王自己沾亲带故。要多巴结王后，给她多送点好处。很多人也想通过你得到商王的引荐，记着时不常举办个招待会。可以多收礼，没人管。允不允许某人被引荐不是你说了算，也得占卜看看。</p>
+<p>公子哥也可以上大学。那时候只有王室有大学，所以你必须前往首都，王室大学在殷都。学好“舞钺”。这其实一种武术演练，上真刀真枪的，会有伤亡，所以一定要小心！生病了可以请病假，但不是跟老师说。你需要占卜，问一下上天你要不要上学。如果你的状态实在不好，让你的管家替你占卜。学校有“学商”和“学羌”的课程，就是学生们分成两组，cosplay商人和羌人干仗。哦我的老天爷啊，为什么商族一不乐意了就去揍羌族。大学里没有数学课，从高数到线代哪怕微积分啥都没有，可以松一口气了。学校有射箭课，甚至还要水战实操，培养水陆作战能力。训练射箭和近战的时候会有陪练。不是说这些人给你纠正动作，而是说这些人当活靶子被你砍。学校不一定提供活人，你可能需要自带。战俘什么的就可以。</p>
+<h1 id="CHAPTER-8-轻描淡写的血流成河"><a href="#CHAPTER-8-轻描淡写的血流成河" class="headerlink" title="CHAPTER 8 轻描淡写的血流成河"></a>CHAPTER 8 轻描淡写的血流成河</h1><p>商朝人的语言真的挺血腥的，你要不还是注意一下吧。</p>
+<ol>
+<li>伐：砍一个人。</li>
+<li>歼：砍两个人，泛指砍很多个人。</li>
+<li>职：等待。职在甲骨文里的字体由“戈”和“石”组成，即“磨砺兵器”，就是等着砍人的过程。</li>
+<li>戍：一个人扛着戈。指出征和戍卫。</li>
+<li>戎：战争。戎的字体由“矛”和“盾”组成。</li>
+<li>翦：用羽毛装饰的戈，指普遍和具有崇高意义的杀戮。</li>
+<li>王：王的字体是战斧的根部，象征军事权力是王权的根本。</li>
+<li>教：教学。教的字体中，左上部分是算筹，左下部分是小孩子，右边是大棒子，可见这个字的本义是大人拿大棒子督促孩子学数学。唉，怎么中国人对数学的恐惧从商朝就存在了……</li>
+<li>妥：抓着女性的头发，指一种人祭方式。</li>
+<li>册：切块，比如把倒霉的羌人切块。</li>
+<li>孚：用手抓着小孩，特指抓到人牲。</li>
+</ol>
+<h1 id="CHAPTER-9-周族传奇"><a href="#CHAPTER-9-周族传奇" class="headerlink" title="CHAPTER 9 周族传奇"></a>CHAPTER 9 周族传奇</h1><p>假如你成为了周族人，那就来了解一下你们的历史吧！</p>
+<p>你们是从羌人分出来的民族。鉴于商朝天天敲打羌人，你们周族又要和商朝混，那么怎么掂量你们和羌人之间的关系就很重要了。你们的始祖姜嫄又又又是一个能孤雌生殖的人。她踩到了上帝的脚印，然后就生了孩子。你们的首领之一“弃”（尊称为“后稷”）的生平。他是始祖姜嫄的孩子，姜嫄觉得这个奇怪的孩子不是福报而是凶兆，于是他妈就想办法丢弃他。但是有一系列神迹保护着这个孩子，他在被扔在小巷里时有牛羊给他喂奶，被扔在森林里有村民找他，被扔在冰上时有鸟飞过来给他保暖……他长大后学习农业，培育出优良品种，因此得到了“后稷”的名号。“后”就是首领的意思，“稷”指农业。平时学习商朝文化和语言文字，因为他们更先进。</p>
+<p>周族是搬家公司的守护神。周族人的迁徙史从后稷的儿子“不窋”开始。前文所述，商人喜欢抓羌人祭天，而羌族出身的周族正在发展壮大，不用多久就会被发现，于是不窋带着儿子“鞠”率领族人前往关中盆地北部的山脉地区避避风头。他们到了豳这个地方，在现在陕西的彬州。呆久了以后，他们改族姓为姬。 过了很久，商王想招募一个狗腿子，帮他们敲打西部的土著和抓羌人祭天，周族有这方面的意愿。在亶父的领导下，周族往周原地区迁移。</p>
+<p>在陕北，周族人过上了窑洞生活。他们学会了骑马和猎马技术，因为马肉会是一种主要的肉食来源。也会用石头或骨头造一堆农具，比如说铲子和镰刀。他们用高粱祭祀祖先后稷，因为稷也有高粱的意思。骑马放牧也是必修课，要保持高度机动性，因为你们周围的土著也不少。考虑收容逃难的商朝人，因为他们说不定会点儿像青铜器铸造一样的奇技淫巧。时不常南下去渭河南岸的商族城市获取简易的青铜制品。</p>
+<p>最后，周族来到了他们的应许之地，周原。这里有广阔的草场和森林，土壤肥沃，连种出来的苦菜都是甜的。人们协商划定各个宗族的土地范围，任命工程师（司徒和司空），让他们带领大家修建房屋。有人创作劳动号子，方便大家在修筑夯土墙的时候统一动作。为了不给土著生存空间，人们彻底砍伐所有树木。此时的周族还是商朝狗腿子，要帮商王抓倒霉羌人，比如说商王有需要的时候，周族要充当炮灰提前一步收拾土著。让首领娶一个商朝王室的女生当媳妇儿，树立合法性和向商朝表忠心。</p>
+<h1 id="CHAPTER-10-文王小故事"><a href="#CHAPTER-10-文王小故事" class="headerlink" title="CHAPTER 10 文王小故事"></a>CHAPTER 10 文王小故事</h1><p>文王是一个有活的人。比如说：</p>
+<ol>
+<li>文王沉迷算卦和占卜。</li>
+<li>文王他妈是中国胎教的创始人。</li>
+<li>文王是在猪圈里降生的。值得注意的是，文王家的猪圈直到文王成家后才停止行使厕所功能。</li>
+<li>文王是全中国第一个自己家被挖出来的帝王。</li>
+<li>文王是纣王的姑父。</li>
+</ol>
+<p>文王一直目睹纣王的暴行，同时又考虑到周族到处抓俘虏让他们树敌无数，于是就考虑反抗。文王在院子里挖了两座地窖，里面堆满了甲骨。他手劲极其灵巧，能在甲骨上咳刻出1毫米见方的文字。原来，文王想偷偷学商王的通灵之术，算算自己起兵反抗能不能顺应天理。文王很迷信，因为商王说是玄鸟（燕子）的化身，所以他就要躲在鸟看不到的地窖里占卜。他觉得<strong>燕子都是联网的</strong>，只要它们看到自己在偷偷学占卜就会报告给商王。</p>
+<p>但是这些只是文王的小秘密。他的主业还是抓俘虏。他的《易经》倒是梳理了不少抓俘虏的技巧，我给你总结了一下，以防身为周族人的你要跟着他去。</p>
+<ol>
+<li>一定要做好埋伏，理想的场地有郊野、沙地和泥地。</li>
+<li>袭击村子以后不要立刻撤走，要多等一会儿。等到幸存者出来逃生时再去活捉他们，记住，抓人牲是最重要的任务。</li>
+<li>摆点酒席，搞个鸿门宴来诱惑敌方。</li>
+<li>对于普通羌人，把他搞受伤了再俘虏。对于羌人酋长，就用猎王捕获他，防止他受伤，因为高价值目标会让商王很开心，不能出差错。</li>
+<li>如果看到有利用价值的俘虏，可以释放。</li>
+<li>押送俘虏的时候，务必要把双腿捆绑起来。也可以把俘虏从前到后串成一串。</li>
+<li>多抓俘虏就能从商朝那里多得工资。</li>
+<li>确保俘虏能吃上饭。</li>
+<li>随时警戒，因为周族到处抓人牲，所以他们和西部各大土著都结了怨。</li>
+</ol>
+<p>抓了俘虏以后，还有程序要做。先把俘虏押送到殷都。接着拜见商王，同时开始杀俘虏。此时要被献祭的动物会大叫，这是在向上天报告祭品强壮合格。祭司会礼仪性地洗手或者把酒洒在地上，然后商王用牛祭祀。最后一项是把俘虏剥皮，掏出俘虏的心脏。</p>
+<h1 id="EPILOGUE-翦商"><a href="#EPILOGUE-翦商" class="headerlink" title="EPILOGUE 翦商"></a>EPILOGUE 翦商</h1><p>我们提过了，翦指的是具有崇高意义的杀戮。</p>
+<p>通灵哥文王已经算出来了，商朝气数已尽，上天庇护周朝。</p>
+<p>周朝也并不强大，算上盟友也只能凑出五十多万人，而商朝有着百万之众。</p>
+<p>看起来很绝望，对吗？</p>
+<p>没多久就是牧野之战。当时天昏地暗，敌我不分，双方完全抛弃了人性。</p>
+<p>商朝的部队没多久就开始倒戈了，看来天意确实在周朝一方。殷都就此陷落。</p>
+<p>对了，老王的胡辣汤店肯定也跟着没了。</p>
+<p>殷都被付之一炬，深埋地下，变成了殷墟。没多远的地方，周朝新都洛邑拔地而起。</p>
+<p>周公出马，他要细细打理这片破碎的河山。他近乎丧心病狂地推行道德的观念，也许和当初他随文王去殷都时亲眼目睹人祭的事情有关。</p>
+<p>一切和人祭有关的物证都被粉碎，一切记录人祭的文献全被销毁。</p>
+<p>只剩茫茫多的白骨在地下诉说。</p>
+<p>人祭的幽灵一直萦绕着。还记得西门豹智斗老巫婆的故事吗？给河伯娶媳妇也是一种人祭，然而这竟然是六百多年之后的事情了。</p>
+<p>武王在周公的建议下分封天下，终于天下有了秩序。</p>
+<p>当孔子又一次梦见周公的时候，他会不会知道，作为商王后裔的他正在崇拜一个曾经要打压商族的人？</p>
+<p>谁知道呢，但已经无所谓了。百花齐放的东周也快到了。</p>
+<p><strong>无论如何，欢迎来到这个面貌一新的中国。</strong></p>
+<h1 id="我去我好像忘了评价"><a href="#我去我好像忘了评价" class="headerlink" title="我去我好像忘了评价"></a>我去我好像忘了评价</h1><p>那就快点来几条吧。</p>
+<p>《翦商》全书的风格很平实，充满了冷静的推断和数据支撑，让令人不寒而栗的上古时代跃然纸上。</p>
+<p>书中每一章都会辅以大量的考古现场示意图和详尽的解析，让读者体验如何以一种专业的视角观察看起来平平无奇的“铜疙瘩”</p>
+<p>商朝的历史必然少不了甲骨文，书中也配备了详细的解读，也许能让你粗通占卜技巧。对于周朝的《易经》等，那更是句句必有翻译和解析。</p>
+<p>总之，STY高度推荐《翦商》。</p>
+
+<center ><i><b><font size = 30>就酱！！！</font></i></b></center>
+
+
+
+
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="ameitsu/ameitsu.github.io"
+        issue-term="title"
+        label="Comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgfooter.png"
+                     
+                ></p>
+
+		</div>
+
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%8E%9F%E5%88%9B/">#原创</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E4%B9%A6%E8%AF%84/">#书评</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+  <div class="recommended-article px-2 sm:px-6 md:px-8">
+   <div class="recommended-desktop">
+    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>推荐阅读</span>
+    </div>
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/2025/09/26/miscellaneous/chatbox_archive_2/" title="Chatbox 存档2（101~200）" rel="bookmark">
+  <img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img4.png" alt="Chatbox 存档2（101~200）" class="!max-w-none">
+  <span class="title">Chatbox 存档2（101~200）</span>
+</a><a class="recommended-article-item" href="/2026/04/03/at-STY/cw_51/" title="Cyberpark Weekly vol.51 (@STY vol.75) | 高三下Part 1" rel="bookmark">
+  <img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img4.png" alt="Cyberpark Weekly vol.51 (@STY vol.75) | 高三下Part 1" class="!max-w-none">
+  <span class="title">Cyberpark Weekly vol.51 (@STY vol.75) | 高三下Part 1</span>
+</a><a class="recommended-article-item" href="/2023/07/03/ameitsu-orchestra/AmeitsuOrchestra%20vol-1/" title="Ameitsu Orchestra vol.1 | Descending Digital Dark Ages" rel="bookmark">
+  <img src="https://cdnjson.com/images/2024/01/19/Ameitsu-Orchestra-Banner.png" alt="Ameitsu Orchestra vol.1 | Descending Digital Dark Ages" class="!max-w-none">
+  <span class="title">Ameitsu Orchestra vol.1 | Descending Digital Dark Ages</span>
+</a><a class="recommended-article-item" href="/2024/04/03/ameitsu-orchestra/AmeistuOrchestra%20vol-10/" title="Ameitsu Orchestra vol.10 | The day after tomorrow in a certain point of view" rel="bookmark">
+  <img src="https://cdnjson.com/images/2024/01/19/Ameitsu-Orchestra-Banner.png" alt="Ameitsu Orchestra vol.10 | The day after tomorrow in a certain point of view" class="!max-w-none">
+  <span class="title">Ameitsu Orchestra vol.10 | The day after tomorrow in a certain point of view</span>
+</a><a class="recommended-article-item" href="/2023/11/19/ameitsu-orchestra/AmeistuOrchestra%20vol-4/" title="Ameitsu Orchestra vol.4 | STY奇文共赏之高一上学期的上学期" rel="bookmark">
+  <img src="https://cdnjson.com/images/2024/01/19/Ameitsu-Orchestra-Banner.png" alt="Ameitsu Orchestra vol.4 | STY奇文共赏之高一上学期的上学期" class="!max-w-none">
+  <span class="title">Ameitsu Orchestra vol.4 | STY奇文共赏之高一上学期的上学期</span>
+</a><a class="recommended-article-item" href="/2026/06/13/at-STY/cw_52/" title="Cyberpark Weekly vol.52 (@STY vol.76) | 高三下Part 2" rel="bookmark">
+  <img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img4.png" alt="Cyberpark Weekly vol.52 (@STY vol.76) | 高三下Part 2" class="!max-w-none">
+  <span class="title">Cyberpark Weekly vol.52 (@STY vol.76) | 高三下Part 2</span>
+</a></div>
+   </div>
+   <div class="recommended-mobile">
+   <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>推荐阅读</span>
+   </div>
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/2025/09/26/miscellaneous/chatbox_archive_2/" title="Chatbox 存档2（101~200）" rel="bookmark">
+  <img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img4.png" alt="Chatbox 存档2（101~200）" class="!max-w-none">
+  <span class="title">Chatbox 存档2（101~200）</span>
+</a><a class="recommended-article-item" href="/2026/04/03/at-STY/cw_51/" title="Cyberpark Weekly vol.51 (@STY vol.75) | 高三下Part 1" rel="bookmark">
+  <img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img4.png" alt="Cyberpark Weekly vol.51 (@STY vol.75) | 高三下Part 1" class="!max-w-none">
+  <span class="title">Cyberpark Weekly vol.51 (@STY vol.75) | 高三下Part 1</span>
+</a></div>
+   </div>
+  </div>
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2026/09/19/moments-of-wonder/19-th-birthday/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">19岁了喵。 | Moments of Wonder vol.14</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">目录</div>
+		<div class="page-title">咱们去商朝搞搞人祭你说好不好呀？ | Critical Critic vol.2</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CHAPTER-1-%E6%96%87%E6%98%8E%E4%B9%8B%E6%BA%90"><span class="nav-text">CHAPTER 1 文明之源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CHAPTER-2-%E9%9D%92%E9%93%9C%E4%B8%8E%E7%A5%AD%E7%A5%80"><span class="nav-text">CHAPTER 2 青铜与祭祀</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CHAPTER-3-%E5%95%86%E6%97%8F%E4%BC%A0%E5%A5%87"><span class="nav-text">CHAPTER 3 商族传奇</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CHAPTER-4-%E5%95%86%E6%9C%9D%E6%89%A9%E5%BC%A0%E8%AE%B0"><span class="nav-text">CHAPTER 4 商朝扩张记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CHAPTER-5-%E7%8E%8B%E5%AE%A4%E6%97%A5%E5%B8%B8"><span class="nav-text">CHAPTER 5 王室日常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CHAPTER-6-%E4%B8%8D%E9%97%AE%E8%8B%8D%E7%94%9F%E9%97%AE%E9%AC%BC%E7%A5%9E"><span class="nav-text">CHAPTER 6 不问苍生问鬼神</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CHAPTER-7-%E5%95%86%E6%9C%9D%E5%85%AC%E5%AD%90%E5%93%A5"><span class="nav-text">CHAPTER 7 商朝公子哥</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CHAPTER-8-%E8%BD%BB%E6%8F%8F%E6%B7%A1%E5%86%99%E7%9A%84%E8%A1%80%E6%B5%81%E6%88%90%E6%B2%B3"><span class="nav-text">CHAPTER 8 轻描淡写的血流成河</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CHAPTER-9-%E5%91%A8%E6%97%8F%E4%BC%A0%E5%A5%87"><span class="nav-text">CHAPTER 9 周族传奇</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CHAPTER-10-%E6%96%87%E7%8E%8B%E5%B0%8F%E6%95%85%E4%BA%8B"><span class="nav-text">CHAPTER 10 文王小故事</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#EPILOGUE-%E7%BF%A6%E5%95%86"><span class="nav-text">EPILOGUE 翦商</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%88%91%E5%8E%BB%E6%88%91%E5%A5%BD%E5%83%8F%E5%BF%98%E4%BA%86%E8%AF%84%E4%BB%B7"><span class="nav-text">我去我好像忘了评价</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+            <div class="customize-info my-1">富强 民主 文明 和谐 自由 平等 公正 法治 爱国 敬业 诚信 友善</div>
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2026&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">STY</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 133 篇文章
+                    </span>
+                    
+                        <span>
+                            共 288.2k 字
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.9.0</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container" role="dialog" aria-modal="true" aria-label="图片查看器">
+	<button class="image-viewer-close" type="button" aria-label="关闭">
+		<i class="fa-solid fa-xmark"></i>
+	</button>
+	<button class="image-viewer-prev" type="button" aria-label="上一页">
+		<i class="fa-solid fa-chevron-left"></i>
+	</button>
+	<div class="image-viewer-frame">
+		<img src="" alt="">
+	</div>
+	<div class="image-viewer-exif-panel hidden absolute left-1/2 bottom-20 -translate-x-1/2 w-[min(92vw,420px)] max-h-[60vh] overflow-hidden rounded-2xl bg-background-color-transparent-80 p-4 text-left shadow-redefine-flat backdrop-blur-md" role="dialog" aria-label="EXIF" aria-hidden="true">
+		<div class="flex items-center justify-between mb-3">
+			<span class="text-sm font-semibold text-first-text-color">EXIF</span>
+			<button class="image-viewer-exif-close flex h-8 w-8 items-center justify-center rounded-full bg-background-color-transparent-80 text-first-text-color transition hover:bg-background-color-transparent-40" type="button" aria-label="关闭">
+				<i class="fa-solid fa-xmark text-[0.65rem]"></i>
+			</button>
+		</div>
+		<div class="image-viewer-exif-cards grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[50vh] overflow-y-auto pr-1 scrollbar-hide"></div>
+		<template class="image-viewer-exif-card-template">
+			<div class="rounded-lg bg-background-color-transparent-40 px-3 py-2">
+				<div class="image-viewer-exif-card-header flex items-center gap-2 mb-1">
+					<i class="image-viewer-exif-card-icon fa-solid fa-circle-info text-xs text-third-text-color"></i>
+					<div class="image-viewer-exif-card-title text-xs font-semibold text-first-text-color"></div>
+				</div>
+				<div class="image-viewer-exif-card-items flex flex-col gap-1"></div>
+			</div>
+		</template>
+	</div>
+	<button class="image-viewer-exif-toggle flex items-center gap-2 hidden absolute left-1/2 bottom-6 -translate-x-1/2 rounded-full border border-border-color bg-background-color-transparent-80 px-4 py-2 text-first-text-color backdrop-blur-md transition hover:bg-background-color-transparent-40" type="button" aria-label="EXIF" aria-expanded="false">
+		<i class="fa-solid fa-circle-info text-xs"></i>
+		<span class="text-xs font-semibold uppercase tracking-wider">EXIF</span>
+	</button>
+	<button class="image-viewer-next" type="button" aria-label="下一页">
+		<i class="fa-solid fa-chevron-right"></i>
+	</button>
+</div>
+
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="站内搜索您需要的内容..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+
+<script src="/js/build/libs/Swup.min.js"></script>
+
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    window.swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+
+    window.dispatchEvent(
+        new CustomEvent("redefine:swup:ready", {
+            detail: {
+                swup: window.swup,
+            },
+        }),
+    );
+</script>
+
+
+
+
+	
+<script src="/js/build/main.js" type="module"></script>
+
+
+
+    
+<script src="/js/build/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+
+
+
+  
+<script src="/js/build/libs/Typed.min.js"></script>
+
+
+
+
+    
+        
+<script src="/js/build/libs/mermaid.min.js"></script>
+
+    
+
+
+
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+
+	
+</body>
+
+</html>
