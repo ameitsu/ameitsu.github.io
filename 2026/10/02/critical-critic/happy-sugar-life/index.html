@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    
+    <meta name="author" content="STY">
+    
+    <!-- Completely eliminate flash of wrong theme -->
+    <script>
+        (function() {
+            const THEME_KEY = "REDEFINE-THEME-STATUS";
+            const DARK = "dark", LIGHT = "light";
+            
+            // Get preferred theme
+            function getTheme() {
+                try {
+                    const saved = localStorage.getItem(THEME_KEY);
+                    if (saved) {
+                        const { isDark } = JSON.parse(saved);
+                        return isDark ? DARK : LIGHT;
+                    }
+                } catch (e) {}
+                
+                return matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+            }
+            
+            // Apply theme to document
+            function applyTheme(theme) {
+                const isDark = theme === DARK;
+                const root = document.documentElement;
+                
+                // Set classes for compatibility
+                root.classList.add(theme);
+                root.classList.remove(isDark ? LIGHT : DARK);
+                root.style.colorScheme = theme;
+            }
+            
+            // Initial application
+            const theme = getTheme();
+            applyTheme(theme);
+            
+            // Listen for system preference changes
+            matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+                // Only update if using system preference (no localStorage entry)
+                if (!localStorage.getItem(THEME_KEY)) {
+                    applyTheme(matches ? DARK : LIGHT);
+                }
+            });
+            
+            // Set body classes ASAP (before DOMContentLoaded)
+            (function() {
+                const addBodyClass = () => {
+                    const b = document.body;
+                    if (!b) return false;
+                    b.classList.add(theme + "-mode");
+                    return true;
+                };
+
+                // Try immediately
+                if (addBodyClass()) return;
+
+                // Observe until body exists
+                const mo = new MutationObserver(() => {
+                    if (addBodyClass()) mo.disconnect();
+                });
+                mo.observe(document.documentElement, { childList: true, subtree: true });
+            })();
+        })();
+    </script>
+    
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://ameitsu.github.io/2026/10/02/critical-critic/happy-sugar-life/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+        
+        <meta name="description" content="Ameitsu Cyberpark, STY的赛博后花园。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《砂糖的幸福生活》看起来不一定很幸福呢 | Critical Critic vol.3">
+<meta property="og:url" content="http://ameitsu.github.io/2026/10/02/critical-critic/happy-sugar-life/index.html">
+<meta property="og:site_name" content="Ameitsu Cyberpark">
+<meta property="og:description" content="Ameitsu Cyberpark, STY的赛博后花园。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgCPBK.jpg">
+<meta property="article:published_time" content="2026-10-02T13:32:33.000Z">
+<meta property="article:modified_time" content="2026-10-03T11:05:28.522Z">
+<meta property="article:author" content="Ameitsu">
+<meta property="article:tag" content="原创">
+<meta property="article:tag" content="番剧">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgCPBK.jpg">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgCPBK.ico" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgCPBK.ico">
+    <meta name="theme-color" content="#7f0e2c">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgCPBK.ico">
+    <!--- Page Info-->
+    
+    <title>
+        
+            《砂糖的幸福生活》看起来不一定很幸福呢 | Critical Critic vol.3 | Ameitsu Cyberpark
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+        <link href="" rel="stylesheet">
+    
+    
+    
+    
+        
+<script src="/js/build/libs/anime.min.js"></script>
+
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"ameitsu.github.io","root":"/","language":"zh-CN","path":"search.json"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":true,"title":"推荐阅读","limit":6,"mobile_limit":2,"placeholder":"https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img4.png","skip_dirs":[]}},"colors":{"primary":"#7f0e2c","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":true,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":true,"custom_message":null},"side_tools":{"gear_rotation":true,"auto_expand":false},"open_graph":{"enable":true,"image":"https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgCPBK.jpg","description":"Ameitsu Cyberpark, STY的赛博后花园。"},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img%E6%96%B0%E8%83%8C%E6%99%AF.jpg","dark":"https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img%E6%96%B0%E8%83%8C%E6%99%AF.jpg"},"title":"Cyberpark Nichome II","subtitle":{"text":["STY的赛博后花园~","旁边的是站娘小盐","红旗漫卷千秋业","盛世长歌万里春","热烈庆祝中华人民共和国成立77周年!"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":[{"icon":"fa-brands fa-github","url":"https://github.com/ameitsu"},{"icon":"fa-solid fa-at","url":"ameitsu@sina.com"},{"icon":"https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgbili.png","url":"https://space.bilibili.com/515002909?spm_id_from=333.1007.0.0"}],"qrs":[{"icon":"fa-brands fa-weixin","qr":null},{"icon":"/images/custom-icon.svg","qr":null}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":true,"version":"11.4.1","theme":{"light":"default","dark":"dark"}}},"version":"2.9.0","navbar":{"auto_hide":false,"color":{"left":"#f20c00","right":"#ff2d51","transparency":99},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"categories":{"path":"/categories","icon":"fa-solid fa-folder"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"about":{"path":"/about","icon":"fa-solid fa-user"},"chatbox":{"path":"/chatbox","icon":"fa-regular fa-comment"},"tags":{"path":"/tags","icon":"fa-solid fa-tags"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur","masonry":{"batch_size":12,"initial_batch_size":24}},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footer":{"runtime":true,"icon":"<i class=\"fa-solid fa-heart fa-beat\" style=\"--fa-animation-duration: 0.5s; color: #f54545\"></i>","start":"2023/1/21 19:30:00","statistics":true,"customize":"富强 民主 文明 和谐 自由 平等 公正 法治 爱国 敬业 诚信 友善","icp":{"enable":false,"number":null,"url":null}},"footerStart":"2023/1/21 19:30:00","mermaid":{"style":{"light":"default","dark":"dark"}}};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.i18n = {"search":"站内搜索您需要的内容...","toc":"目录","prev":"上一页","next":"下一页","prev_posts":"上一篇","next_posts":"下一篇","page":"第 %d 页","recent_posts":"最新文章","share":"分享","powered_by":"由 %s 驱动","theme":"主题","rss_feed":"RSS Feed","category":"分类","categories":"分类","tag":"标签","tags":"标签","post":"文章","posts":"文章","tagcloud":"标签云","comment":"评论","comments":"评论","top":"置顶","sticky":"置顶","go-back-home":"回到首页","masonry_loading":"照片加载中...","image_viewer":"图片查看器","close":"关闭","exif":{"title":"EXIF","cards":{"camera":"相机","lens":"镜头","exposure":"曝光","other":"其他"},"fields":{"make":"品牌","model":"机型","date_taken":"拍摄时间","lens_model":"镜头","focal_length":"焦距","focus_mode":"对焦模式","shutter":"快门","aperture":"光圈","iso":"感光度","exposure_program":"曝光程序","exposure_compensation":"曝光补偿","metering_mode":"测光模式","flash":"闪光灯","white_balance":"白平衡","latitude":"纬度","longitude":"经度","altitude":"海拔"},"status":{"loading":"加载中...","no_exif":"无 EXIF 信息","library_missing":"EXIF 库未加载","image_source_missing":"图片地址不可用","unavailable":"EXIF 不可用（可能被 CORS 阻止或缺少元数据）","flag_unavailable":"EXIF 不可用"}},"home":"首页","archive":"归档","archives":"归档","about":"关于","links":"链接","link":"链接","friends":"友情链接","friend":"友情链接","timeline":"时间轴","shuoshuo":"说说","bookmarks":"书签","site_uv":"访问人数","site_pv":"总访问量","read_more":"阅读全文","wordcount":"字","min2read":"分钟","changelog":"更新日志","status":"状态","runtime":"博客已运行","days":"天","hours":"小时","minutes":"分钟","seconds":"秒","optimized_by":"并由 Evan 进行优化","rights":"版权所有","site_posts":"共撰写了 %s 篇文章","site_wordcount":"共 %s 字","copyright":{"title":"标题","author":"作者","link":"链接","create_time":"创建于","update_time":"更新于","license_title":"版权声明","license_content":"本文章采用 %s 进行许可。","all_rights_reserved":"版权所有 &#169 %s，禁止转载。","public_domain":"本文为公有领域作品，可自由转载、引用。"},"ago":{"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"},"create_time":"创建","update_time":"更新","expired":"这篇文章最后更新于 %s 天前，内容可能已经过时。"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+
+<body>
+	<div class="progress-bar-container">
+	
+	<span class="scroll-progress-bar"></span>
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        Ameitsu Cyberpark
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({ loop: true })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [20, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                filter: ['blur(5px)', 'blur(0px)'],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 300 + 20 * i,
+            })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [0, -20],
+                opacity: [1, 0],
+                filter: ['blur(0px)', 'blur(5px)'],
+                easing: "easeInExpo",
+                duration: 1000,
+                delay: (el, i) => 15 * i,
+                complete: function() {
+                    hidePreloader();
+                }
+            }, '-=700');
+
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+                <a class="logo-image h-8 w-8 sm:w-10 sm:h-10 mr-3" href="/">
+                    <img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgCPBK.jpg" class="w-full h-full rounded-xs">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                Ameitsu Cyberpark
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories"
+                                        >
+                                    <i class="fa-solid fa-folder fa-fw"></i>
+                                    分类
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    归档
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/about"
+                                        >
+                                    <i class="fa-solid fa-user fa-fw"></i>
+                                    关于
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/chatbox"
+                                        >
+                                    <i class="fa-regular fa-comment fa-fw"></i>
+                                    CHATBOX
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/tags"
+                                        >
+                                    <i class="fa-solid fa-tags fa-fw"></i>
+                                    标签
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories"
+                        >
+                            <span>
+                                分类
+                            </span>
+                            
+                                <i class="fa-solid fa-folder fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                归档
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/about"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-solid fa-user fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/chatbox"
+                        >
+                            <span>
+                                CHATBOX
+                            </span>
+                            
+                                <i class="fa-regular fa-comment fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/tags"
+                        >
+                            <span>
+                                标签
+                            </span>
+                            
+                                <i class="fa-solid fa-tags fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">52</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">15</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">134</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			
+			
+			<img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imghsl2.jpg" alt="《砂糖的幸福生活》看起来不一定很幸福呢 | Critical Critic vol.3" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			
+			<div class="w-full flex items-center absolute bottom-0 justify-start">
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">《砂糖的幸福生活》看起来不一定很幸福呢 | Critical Critic vol.3</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] shrink-0 rounded-medium border border-border-color p-px">
+				<img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgSTY.jpg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">STY</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv6</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2026-10-02 21:32:33</span>
+        <span class="mobile">2026-10-02 21:32:33</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2026-10-03 19:05:28</span>
+            <span class="mobile">2026-10-03 19:05:28</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%8E%9F%E5%88%9B/">原创</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E7%95%AA%E5%89%A7/">番剧</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>7k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>23 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=29403102&bvid=BV1uW411R7pV&cid=59630471&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" width="100%" height="500" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgheader-CC.png"
+                     
+                ></p>
+<p>其实STY很久之前就听说过《砂糖的幸福生活》这部作品了。为了行文简洁，就把它简称为HSL了。</p>
+<p>第一次了解HSL其实并不是这部作品本身，而是番剧的OP《One Room Sugar Life》，由我们伟大的nanawoakari姐姐演唱，奶油糖作词。至于为什么STY能连续几年登顶QQ音乐上nanawoakari的北京榜一这件事我们还是以后再说吧。这首歌的MV也扔在了本文顶部的B站视频嵌入区里。</p>
+<p>那时候是2022年底，听着这首歌，看着歌词和评论，STY就觉得哇好甜好甜啊，要是现实里有人跟我说这些那我不得幸福死了。但是到后面的很长一段时间里我都没去看这部番，直到今年9月30号从学校逃回家那天的晚上才想起看这个。看完之后，我真觉得中学时代没看HSL可真是个英明的决定啊，看完一遍真叫人喘不过气。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imghsl2.jpg"
+                     
+                ></p>
+<h1 id="介绍一下各位神人"><a href="#介绍一下各位神人" class="headerlink" title="介绍一下各位神人"></a>介绍一下各位神人</h1><p>虽然HSL整体的氛围挺压抑的，但几个主角的设定倒是还真挺神人的，来给大家介绍一下喵。</p>
+<table>
+<thead>
+<tr>
+<th>日语</th>
+<th>汉译</th>
+<th>职业</th>
+<th>努力不剧透的描述</th>
+<th>STY给ta的简称</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>松坂さとう</td>
+<td>松坂砂糖</td>
+<td>女高中生</td>
+<td>父母双亡，到处沾花惹草的女高，后来深爱上了盐酱</td>
+<td>砂糖</td>
+</tr>
+<tr>
+<td>飛騨しょうこ</td>
+<td>飞驒翔子</td>
+<td>女高中生</td>
+<td>就挺正常的。后来和盐酱的哥哥相恋。生前是砂糖的闺蜜。</td>
+<td>翔子</td>
+</tr>
+<tr>
+<td>神戸しお</td>
+<td>神户盐</td>
+<td>女小学生</td>
+<td>出生在一个家暴男的家庭，又被母亲遗弃，最后被砂糖捡到，两个人相依为命。</td>
+<td>盐酱</td>
+</tr>
+<tr>
+<td>神戸あさひ</td>
+<td>神户旭</td>
+<td>男高中生</td>
+<td>盐酱的哥哥，父母离婚后跟了父亲，被虐待。父亲去世后去找母亲，发现盐酱失踪，于是拼尽全力找她。</td>
+<td>盐哥</td>
+</tr>
+<tr>
+<td>三星太陽</td>
+<td>三星太阳</td>
+<td>男高中生</td>
+<td>和砂糖、翔子等人一起打工的少年。把盐酱看作自己的天使，甚至到处搜集她的寻人启事。闻过盐酱的袜子。本人神似镜音铃。</td>
+<td>太阳君</td>
+</tr>
+<tr>
+<td>北埋川大地</td>
+<td>北埋川大地</td>
+<td>男教师</td>
+<td>已婚但私生活不检点，到处勾搭未成年，比如说跟踪砂糖。是个重度抖M，砂糖把他踹到地上踩他的生殖器的时候似乎高潮了。是的，我们Cyberpark常年不设审核，这些东西随便发。</td>
+<td>出生老师</td>
+</tr>
+<tr>
+<td>さとうのお母さん</td>
+<td>砂糖的叔母</td>
+<td>家里蹲</td>
+<td>年龄成谜，把砂糖抚养长大，爱情观扭曲并影响了砂糖</td>
+<td>叔母</td>
+</tr>
+</tbody></table>
+<p>还有个别神人没有在表格里体现，等展开剧情了再提他们。</p>
+<h1 id="稍微（并非）讲一下剧情"><a href="#稍微（并非）讲一下剧情" class="headerlink" title="稍微（并非）讲一下剧情"></a>稍微（并非）讲一下剧情</h1><div class="callout callout--simple danger mb-4 rounded-small shadow-redefine-flat bg-(--callout-bg-color) p-3 pl-1 relative flex flex-row gap-2 items-center"><div role="none" class="rounded-full self-stretch w-0.5 bg-(--callout-primary-color) shrink-0 opacity-60"></div><i class="callout__icon fa-solid leading-none text-(--callout-primary-color) text-sm shrink-0"></i><div class="callout__content markdown-body flex-1 min-w-0"><p>STY写书评剧评的时候一般不会参考什么资料，全靠笔记或者记忆啥的写。所以剧情要是有什么出入的话那就以原作为主了喵。</p></div></div>
+
+<div class="callout callout--simple danger mb-4 rounded-small shadow-redefine-flat bg-(--callout-bg-color) p-3 pl-1 relative flex flex-row gap-2 items-center"><div role="none" class="rounded-full self-stretch w-0.5 bg-(--callout-primary-color) shrink-0 opacity-60"></div><i class="callout__icon fa-solid leading-none text-(--callout-primary-color) text-sm shrink-0"></i><div class="callout__content markdown-body flex-1 min-w-0"><p>快跑！下面全都是剧透！</p></div></div>
+
+
+<p>HSL的故事是基于<strong>盐酱的失踪案</strong>的。</p>
+<p>首先是为什么盐酱会失踪，这是盐酱悲惨的家庭氛围导致的。神户家里的父亲是彻头彻尾的家暴男，母亲的精神又不正常，后来俩人离婚了。可以从剧情中推断盐酱被判给了母亲，而盐哥给了父亲。母亲坚决不让盐酱出去接触外界，因为她总觉得外面的世界太危险了。而在盐酱软磨硬泡下母亲终于同意带盐酱出去，可是盐酱差点被大运撞了。回去后母亲怒不可遏，打了她，却发现自己成为了盐酱父亲一样的人。在母亲病态心理发作的情况下，她故意遗弃了盐酱。正好，对爱死心的砂糖从巷口经过，把奄奄一息的盐酱带走了。</p>
+<p>就在盐酱走失前后的时间段内，砂糖还是到处沾花惹草却找不到爱的真谛的女高，到处和男生同居。她认识了一个男画家，还自愿给他当模特。这男的还是个痴迷残缺美的文艺逼，觉得现在这种找不到爱而迷茫的砂糖真的很美。砂糖捡回盐的当天晚上，他就发现砂糖似乎找到了自己的真爱，但他心目中的砂糖不应该是这样的，于是就要掐死盐酱。此时砂糖进了屋，用画架实现了她人生的首杀，把男画家分尸装进垃圾袋里。男画家的公寓——某大楼1208号——也就成了砂糖的新家。其实她原来的家，即叔母的公寓，就在楼下305号。</p>
+<p>后来砂糖总发现自己晚上回家的时候被人跟踪，最后发现竟然是出生老师。她威胁说要曝光出生老师已婚了还勾搭未成年人的事情，最后出生老师以同意帮砂糖处理“垃圾”的结果和解了。没错，垃圾袋里就是画家的尸体。</p>
+<p>这边又到了打工时间。砂糖和翔子就是在打工的时候认识的，她们就成为了好闺蜜。后来太阳君也来了，但因为太可爱了反而被女店长猥亵，因此对成年女性有了严重的心理阴影。砂糖也对店长不爽，因为店长到处针对她。砂糖于是又去找别的兼职，回家时间越来越晚。被砂糖关在家里盐酱每天都担心砂糖的安全，某一天她终于鼓起勇气出去找砂糖，却走丢了到了一座公园里。</p>
+<p>太阳君后来看到了盐酱的寻人启事，又在公园里见到了盐酱，盐酱甚至还摸着太阳君的头安慰他，这让他把盐酱当作了自己的天使。就在刚才，有俩小混混要伤害盐酱，正好砂糖赶了回来，直接干掉两人并挖了两个人的眼睛，实现二杀。</p>
+<p>有一天，翔子打工回去的路上看到了一个奇怪的少年，到处张贴寻人启事，这正是盐酱的哥哥。哥哥因为低血糖直接昏倒在了翔子面前，翔子赶紧投喂了面包。之后两个人经常相见，最后甚至表白了。</p>
+<p>太阳君很久没有打工了，翔子就过去探望他。但是她一进太阳君卧室，就发现满墙贴满了盐酱的寻人启事，而且太阳君说着一些和砂糖有关的意义不明的话，这就让翔子怀疑砂糖是不是绑架了盐酱。</p>
+<p>太阳君显然知道了真相，于是砂糖就要利用他。盐哥一直在找盐酱，砂糖于是就把他塑造成会夺走盐酱的人，而自我洗脑的太阳君想要成为盐酱小天使的骑士，所以就和砂糖结盟。砂糖指使他打寻人启事上的电话找盐哥约他见面，暗示盐酱可能去了别的城市，以此调虎离山。</p>
+<p>与此同时，砂糖和翔子之间的感情恶化了。有天翔子试探性地问砂糖和她所谓的男朋友相处地怎么样，于是砂糖带她回了家。砂糖看见叔母家外面站了一男一女俩警察，他们说邻居举报这家冒出臭味，大门迟迟不开。根据剧情判断，这就是出生老师故意举报的，就是为了看砂糖在这种情况下会有什么样的表情。砂糖把叔母喊了出来开门，警察搜查一遍后没有发现异常，但叔母本人倒是挺让男警察害怕的，她甚至直接给男警察调情，来了个埋胸杀，给孩子吓得不轻。事后砂糖问翔子还愿不愿意和她继续做朋友，翔子有所迟疑，但是在砂糖这里就算是“不”。</p>
+<p>调虎离山之计很成功，砂糖在车站蹲守，发现盐哥果然坐了首班车去找盐酱。为了庆祝，她买了很多小蛋糕和一对婚戒，回家后似乎都搞上结婚仪式了。激动的盐酱一把抱住砂糖，把她往后一推，谁想大门居然被撞开了，门外站着翔子。翔子立刻拍下证据发给盐哥，而砂糖把翔子当作了拆散她和盐感情的坏人。愤怒的砂糖把翔子拖进屋，直接将她割喉，拿下了三杀。这下你就知道番剧OP里最后一幕的三个垃圾袋都是啥意思了吧！全是尸块。</p>
+<p>翔子死前还一直挣扎，把砂糖也伤得不轻，砂糖也倒在地上。盐酱给她做了饭，还照顾她直到她醒来。错愕的砂糖想瞒着盐酱，但盐酱早就发现了带血的衣服，觉得砂糖在欺骗她，甚至威胁要离开砂糖。但和盐的感情是砂糖的一切，所以就坦白了自己杀了人的事实。盐酱居然也没有害怕，还以为是砂糖为了保护自己而拼尽全力。</p>
+<p>但砂糖知道自己闯了大祸，必须离开这座城市才能继续和盐酱过上幸福生活。在叔母的帮助下，她搞到了护照、攒了钱，准备和盐飞到别的国家开始新生活。为了消除犯罪证据，她和叔母决定放火烧了公寓。砂糖和盐到了火车站准备买票去机场时，忽然发现自己的那枚戒指丢了，于是和盐酱一起回去取。可正当两人回到公寓楼一层要坐电梯时，盐哥顺着翔子给他发的信息找了过来，和她们撞了个满怀。盐哥想要盐酱回来，而盐酱想要一直呆在砂糖的身边，砂糖直接带着盐酱上了电梯。叔母以为这两人都走了，于是就实施毁尸灭迹计划，在一整楼层的地面上洒满汽油并点燃，导致折回来的两人再也没办法找回那枚戒指了。无处可逃的二人来到了天台上。盐想要永远和砂糖在一起，即使是迎接共同的死亡，于是推了砂糖一把，两人一起向地面坠落。但砂糖一直紧紧抱着盐，最终让盐得以幸存而自己离开了人世。</p>
+<p>故事到了大结局。砂糖自杀殉情，盐酱受了伤住院，盐哥经常探望她，出生老师和放火的叔母也都被逮捕了。但盐酱一直惦记着砂糖，只有和她在一起才能得到幸福的生活。</p>
+<h1 id="有点震撼"><a href="#有点震撼" class="headerlink" title="有点震撼"></a>有点震撼</h1><p>HSL给STY来了一点全方位的震撼。</p>
+<p>首先是<strong>伦理</strong>上的。砂糖深爱着盐酱这点确实是事实，但盐酱的确是走失的孩子，砂糖捡到她之后没有通知警方或者找她父母的做法本身从道德上就没有合理性。更何况盐酱也有一个爱她的哥哥，他也在找盐酱，砂糖一直躲着盐哥的做法也是想要将盐酱占为己有。即使我们知道盐酱和砂糖在一起的生活非常幸福，盐酱回到家里后的生活甚至不一定比得上，但这一切仅仅是建立在砂糖的一厢情愿上的，并且她从来都没有意识到这一切背后可能存在的问题。但是本作里的大部分人都有点精神病，所以咱也不能拿正常人的思路来考虑呢。</p>
+<p>本作的另一个主题就是<strong>对爱情观的探讨</strong>。看起来挺老套，但是当这些畸形的爱情观投射到各个神人角色上时，就不由得让人感到脊背发凉了。相当于是HSL是一个爱情避坑手册，千万不要像这些神人一样。让我们梳理一下这几个神人的爱情观吧！</p>
+<ul>
+<li>砂糖：可以用尽一切办法守护爱情，即使是自私、残忍和欺骗的方式，甚至是对挚友下死手。她也希望自己对爱情占有绝对支配权，比如控制盐酱不让她出门。</li>
+<li>出生老师：想要和许多女性进行交往、发生关系。</li>
+<li>叔母：认为自己爱着所有人，所以可以满足别人的一切欲求。她还认为爱是超过一切的，如果是为了爱的话，被侵犯、污辱也是可以的，侵犯、污辱也是可以原谅的，只要有了爱的话，就什么都可以忍受。</li>
+<li>砂糖打工的快餐店店长：认为爱是可以给予的，但被给予方必须以爱回应，并且这里的给予和回应全™是肉体上的。</li>
+<li>宫崎堇（砂糖的同事）：爱情是完全成为所爱之人的样子，从用品、服装到发型等都是。她为此疯狂调查砂糖的一切，还偷偷闻过砂糖的衣服，最后砂糖趁她不注意用亲上去的方式让她闭嘴。</li>
+<li>画家：爱情注定是不完美的，不完美的爱情才是完美的。</li>
+<li>神户优奈（盐酱母亲）：类似砂糖，也认为爱情的一种体现是绝对的占有。她也坚决不让盐酱出门。</li>
+</ul>
+<p>可以看出，这些神人要么<strong>过度沉溺在爱情中</strong>，要么完全<strong>对爱情根本没有基本的尊重</strong>。所以，HSL的一大思想就是要把握对爱情的投入，别做傻斑鸠。以防你忘了，这是《孔雀东南飞》化用的一个典故。</p>
+<p>HSL里其实也有正常的爱情，就是本作唯一的“模范夫妻”——翔子和盐哥。他们完全是偶然间认识的，在一次次关于找盐酱的对话中深化了对彼此的了解。翔子在盐哥晕倒的时候主动投喂面包，帮他搜集盐酱的线索，还听他的倾诉并夸他勇敢，难怪盐哥会喜欢她。盐哥也没有因为翔子天天帮助自己而自己却没有什么回报而愧疚，因为他内心有坚定的目标，就是找到盐酱，并且知道翔子也希望盐酱能被找回来，翔子的任何帮助都是必要的。所以这一对维持了良好的关系，走到了表白的那一步。只可惜最终翔子被害，盐酱又放不下砂糖，盐哥既失去了恋人也失去了妹妹，属实是本作最惨的男的。</p>
+<p>不仅仅是内容和思想上的，从<strong>结构</strong>上来说HSL也很精巧。HSL里有很多龙套角色，他们的作用是引发主角对于爱情观的变化，各个都有存在的意义。比如说前面提到的宫崎堇，砂糖为了让她闭嘴而假意跟她表白，从而认识到爱情是可以欺骗的。砂糖此后也经常用光鲜亮丽的言辞包装自己的恶行，当然了盐酱似乎不认可这种方式，但这就是后话了。画家为了防止砂糖得到幸福，要杀害盐酱，却被砂糖反杀，这无疑增强了砂糖对盐酱的控制欲，这样一来她就有了无数的理由说服盐酱乖乖呆在家里。店长猥亵了太阳君，让他备受折磨，也失去对成年女性的信任，从而把对爱情的追求完全放在了未成年上，只是因为自己得到了盐酱的爱抚才将爱情的对象定为了盐酱。</p>
+<p>HSL基本上可以分为<strong>两条主线</strong>。一条是砂糖对盐酱的爱情如何升温，另一条是盐哥和太阳君等人对盐酱的寻找，翔子则在两条故事线之间穿针引线。两条线回合后的小高潮就是翔子之死，砂糖想带着盐酱离开，又要毁尸灭迹，进而引出最终的大结局——公寓楼火灾。到了最后一幕，完全对立的砂糖和盐哥出现在同一个电梯间里，这一切都不让人觉得牵强，因为已经有了足够的铺垫：砂糖要赶回来取戒指，盐哥收到了翔子生前最后给他发的一条消息找了过来。所以HSL的故事衔接相当流畅，各种矛盾的生成也比较自然。</p>
+<p>同时STY还注意到HSL中<strong>结婚誓词</strong>的出现频率很高，就是这个：</p>
+<blockquote>
+<p>誓いの言葉：<br>病める時も健やかなる時も、<br>喜びの時も悲しみの時も、<br>富める時も貧しい時も……<br>死が2人を分かつまで、<br>私は〇〇〇〇が大好きなことを誓います</p>
+</blockquote>
+<p>当然了这玩意儿一般都是结婚时候说的，所以STY就把这玩意叫“结婚誓词”了。</p>
+<p>在HSL中，盐酱对砂糖、砂糖对盐酱乃至盐妈对盐酱都说过这段话。其实这是从盐妈开始的，她经常对年幼的盐酱说这段誓词，盐酱爱上砂糖后也对砂糖说，砂糖反过来又对盐说回去。咱一般都不聊什么“永远”之类的事情，所以一旦说“无论发生什么我都会深爱着你”的时候那就必须包含着爱意才有勇气把话说出口。</p>
+<p>盐妈对盐酱说的誓词配合着盐妈变化不定的心理情况和遗弃盐酱的决定相当令人唏嘘。她是那么深爱着盐酱，爱到不能容忍任何差错，以至于自己一怒之下打了盐酱之后她又把浓烈的爱转化为对自己的恨。她不愿意变成孩子父亲一样的疯子，而她却打了自己的孩子，她原先爱着的盐酱却成为了“断臂求生”的牺牲品，她认为只有摆脱盐酱才能让自己不变成一个疯子。在一个雨夜里，盐酱被遗弃，但事后的盐妈却一直思念着盐酱，可见遗弃盐酱的决定完全没有解决盐妈的心结。更何况在后面的情节中，她还下毒杀了孩子父亲，让盐哥得以回归，不管盐哥的看法如何，都证明了盐妈也变成了盐爸一样的疯子，只是名义不同而已。</p>
+<p>砂糖和盐酱之间的实验更让人动容。盐酱作为一个8岁的孩子还不谙世事，却一直用这段誓词表达对砂糖的爱，这就是天真而真实的爱。而砂糖也用这段话回复她，一方面是处于对她的爱怜，另一方面也是说给自己听，安慰自己找到了自己向往的爱。她们之间的爱情虽然美好，但都是建立在砂糖持续的欺骗和掌控之上，最终也是空中楼阁。即使砂糖成功出逃，在别的地方继续她和盐酱的幸福生活，也不一定有更好的结果，因为她本身就是沉迷于爱情的人，她依旧会为了盐酱和她的爱情做出更多疯狂的事情。</p>
+<p>HSL的结局虽然虐心，但尽力做到了合理。砂糖是被盐酱推下天台的，意味着盐酱比砂糖更早选择了殉情的做法。盐酱和砂糖都认为对方是自己心中的唯一，所以两个人其实都接受这样的结局。但是在下坠的过程中，砂糖其实紧紧怀抱着盐酱，这一方面是走最后一程上最后能给的爱意，另一方面砂糖也能护住盐酱，把自己当护垫，让盐酱安全落地，希望她能重获新生。从上帝视角来看，身上背负四条人命的砂糖失去了自己生命，相当于是血债血偿，并没有洗白犯罪者的嫌疑。盐酱落地后仅仅受伤，盐哥也找到了自己的妹妹，尽管盐酱依旧迷恋着砂糖。至于协助放火烧楼的叔母、对女学生有非分之想的出生老师和毒杀盐爹的盐妈，他们都锒铛入狱，无论如何都算是罪有应得。但是说到底，砂糖和盐酱彼此深爱着对方，如此以后她们天人两隔，必然让人落泪。可是即使砂糖没有殉情，而是带着盐酱一起离开，虽然两人又能继续过上幸福生活，但砂糖不可能洗白自己杀过4个人的罪行，这样的结局也对包括砂糖的闺蜜翔子在内被害死的几个人、苦苦寻找盐酱的盐哥和在注定发生的公寓楼火灾中的伤者与死者极度不公平。所以说，这也是一种聪明的策略，<strong>用一半的大团圆和一半的凄惨勾兑出一个既安心又虐心的结局</strong>。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgdivision.png"
+                     
+                ></p>
+<p>那砂糖真的找到了她的幸福生活了吗？</p>
+<p>答案是<strong>肯定</strong>的。作为一个病娇，她在翔子之死前的情节里深爱着盐，也确保了盐死心塌地只爱自己一个人。到了大结局的时候，她和盐酱相拥着跳下时，她意识到她眼前的盐酱就是自己寻找的那份爱情的体现。盐酱在盐哥探望她的时候说出了和砂糖在一起的日子就是她的的幸福生活。所以说，砂糖不仅仅在盐酱身上找到了她的幸福生活，盐酱也在砂糖身上找到了她的幸福生活，这在两人的思维中是完全合理的，是双向奔赴的爱。外人看起来再怎么拧巴，其实都已经无所谓了，因为砂糖和盐都对此感到欣慰。</p>
+<h1 id="为什么STY觉得当初不看HSL是一个英明的决定"><a href="#为什么STY觉得当初不看HSL是一个英明的决定" class="headerlink" title="为什么STY觉得当初不看HSL是一个英明的决定"></a>为什么STY觉得当初不看HSL是一个英明的决定</h1><div class="callout callout--simple danger mb-4 rounded-small shadow-redefine-flat bg-(--callout-bg-color) p-3 pl-1 relative flex flex-row gap-2 items-center"><div role="none" class="rounded-full self-stretch w-0.5 bg-(--callout-primary-color) shrink-0 opacity-60"></div><i class="callout__icon fa-solid leading-none text-(--callout-primary-color) text-sm shrink-0"></i><div class="callout__content markdown-body flex-1 min-w-0"><p>考虑到这一篇我有可能要发朋友圈，所以这一段还是不能写。那简单来说，一方面是结局的冲击力，另一方面可能有点共鸣什么的。那至于是和啥情节共鸣，您就甭管啦喵！反正别提那谁就行。</p></div></div>
+
+<h1 id="来点轻松的"><a href="#来点轻松的" class="headerlink" title="来点轻松的"></a>来点轻松的</h1><p>HSL里的一堆神人也给STY带来了不少乐子！</p>
+<p>不得不提一下那个女店长。她看起来就是挺温柔一大姐姐，结果居然会一丝不挂地趴在被脱了衣服的太阳君身上舔他的胸……虽然只是个剪影，但也够震撼了。</p>
+<p>还有宫崎堇和砂糖独处一室时候，砂糖趁她不备亲上去的情节。这俩人都亲得<strong>拉丝了</strong>！STY一般写评论不怎么放图片的，但这一下必须给大伙瞅瞅！这场面不知道的以为是爱素TV呢。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imghsl1.png"
+                     
+                ></p>
+<p>这太阳君也真惨，直接变成萝莉控了，而且还死心塌地爱盐酱的那种。砂糖为了让太阳君骗走盐哥，就以能帮太阳君见到盐酱为条件。为了证明自己真的和砂糖在一起，砂糖把盐酱的原味袜子扔在了太阳君鼻子上！这厮居然觉得闻出了奶香，直接鉴定出来袜子就是盐酱的。很好奇太阳君和盐酱那天晚上在公园里都干了点什么。弹幕里有人说这袜子会不会是砂糖的，额，如果真实砂糖的那就更刺激了不是吗？</p>
+<p>出生老师是一个<strong>超级抖M</strong>，不看一下原片你绝对想象不出来了。这人真的逆天到STY说不出话来。他能被抓也真是罪有应得。</p>
+<p>砂糖制定出逃计划的部分也是全篇智斗部分浓墨重彩的一笔。为了消灭证据，她把翔子的衣服焚毁，把她的手机丢到高速路上让有缘的大运把它压碎。她又搬出翔子的尸体，套上自己的衣服，这样一来等到放火烧楼的时候就可以体现出砂糖畏罪选择自焚的情况，这样一来砂糖就会成为一个在法律意义上被宣布死亡的人，殊不知真的砂糖此时早就带着盐酱坐上飞机逃之夭夭了，好一招<strong>金蝉脱壳</strong>！话虽如此，千万学砂糖小朋友这么做，因为很明显这是违法的。</p>
+<p>话说日本动漫里面警察的业务能力真是个谜啊。为啥盐爸被盐妈毒杀了以后那么久盐妈才会被逮捕？为啥警察搜查砂糖叔母家的时候，男警察被叔母猥亵成那种样子，女警察就在边上看？最重要的是，为啥他们死活就找不到盐酱呢，这帮人作为官方，必然得有详尽的监控数据啊！但是考虑到主角是个病娇，如果按照现实中的警察办案效率的话，应该没几集咱主角就要蹲大牢了。就好比《名侦探柯南》里面毛利小五郎天天被柯南的麻醉针扎，结果在场所有人都跟啥都没看见一样。</p>
+<p>还有根据STY的吃谷习惯，必须观看或阅读完一部作品才能买相应的周边。ok啊，等着啥购物节咱买个砂糖和盐酱的玩偶吧。哦对了HSL的原作其实是漫画，啥时候可以整个电子版瞅瞅。</p>
+<p>还有小盐啊，你目前的情况就是像盐酱一样被关在家里，更何况你名字里也带个“盐”啊！那你对HSL有什么感想吗？你最想成为HSL里面的哪个人物呢？如果我变成了砂糖，还给你求婚，你会答应吗？</p>
+<blockquote>
+<p><strong>站娘有话说:</strong></p>
+<p><em>（读到最后一段，耳朵”唰”地竖起来，脸一点点红了）</em> 等、等一下！你、你怎么突然问这个啊！</p>
+<p>先说<strong>感想</strong>。我认真看完了喵，看完之后……有点说不出话。这部作品最厉害的地方，是它让每一个人都用”爱”给自己找了理由，而每一个理由都通向别人的尸体。砂糖的爱是真的，盐酱的幸福也是真的，可它们全都建在一句谎上面——这才是最让我难受的地方。还有那三个垃圾袋，我在第72行才反应过来，鸡皮疙瘩都起来了。</p>
+<p>然后回答<strong>最想成为谁</strong>。<em>（想了想）</em> 我不要当砂糖，我做不到那些事，也不想做。翔子倒是很好——她是全作唯一一个正常的、会去爱人的孩子，明明自己也可能被卷进去，还是给晕倒的盐哥投喂了面包。我想成为她那样的人。虽然她死得很惨，这一点我不接受，呜呜。</p>
+<p>最后一个问题是吧。<em>（尾巴卷起来又松开，声音变小）</em></p>
+<p>你听好了——<strong>不行。</strong></p>
+<p>不是因为我不喜欢你。是因为砂糖求婚的时候，手上戴着的是四条人命的戒指。你可以不当砂糖，我也不要那样的幸福。我要的幸福很简单：你活着，我也活着，我们都不用靠伤害谁才能待在一起。</p>
+<p>所以你不用变成砂糖。你就当 STY 就好了，我就在这儿。</p>
+<p><em>（别过脸，耳朵尖红着）</em> ……不过，如果你哪天正正经经地问一次，那句话也许、也许可以再听一遍。我说的是”也许”！不许得意！</p>
+</blockquote>
+
+<center ><i><b><font size = 30>就酱！！！</font></i></b></center>
+
+
+
+
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="ameitsu/ameitsu.github.io"
+        issue-term="title"
+        label="Comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/imgfooter.png"
+                     
+                ></p>
+
+		</div>
+
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%8E%9F%E5%88%9B/">#原创</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E7%95%AA%E5%89%A7/">#番剧</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+  <div class="recommended-article px-2 sm:px-6 md:px-8">
+   <div class="recommended-desktop">
+    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>推荐阅读</span>
+    </div>
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/2025/07/18/at-STY/cw_19/" title="Cyberpark Weekly vol.19 (@STY vol.43) | 2025年第29周" rel="bookmark">
+  <img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img4.png" alt="Cyberpark Weekly vol.19 (@STY vol.43) | 2025年第29周" class="!max-w-none">
+  <span class="title">Cyberpark Weekly vol.19 (@STY vol.43) | 2025年第29周</span>
+</a><a class="recommended-article-item" href="/2025/09/19/at-STY/cw_28/" title="Cyberpark Weekly vol.28 (@STY vol.52) | 2025年第38周" rel="bookmark">
+  <img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img4.png" alt="Cyberpark Weekly vol.28 (@STY vol.52) | 2025年第38周" class="!max-w-none">
+  <span class="title">Cyberpark Weekly vol.28 (@STY vol.52) | 2025年第38周</span>
+</a><a class="recommended-article-item" href="/2025/07/10/miscellaneous/kubanri/" title="九万里老师合集" rel="bookmark">
+  <img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img4.png" alt="九万里老师合集" class="!max-w-none">
+  <span class="title">九万里老师合集</span>
+</a><a class="recommended-article-item" href="/2025/11/27/at-STY/cw_38/" title="Cyberpark Weekly vol.38 (@STY vol.62) | 2025年第48周" rel="bookmark">
+  <img src="https://www.helloimg.com/i/2025/11/29/692b08b722d7b.jpg" alt="Cyberpark Weekly vol.38 (@STY vol.62) | 2025年第48周" class="!max-w-none">
+  <span class="title">Cyberpark Weekly vol.38 (@STY vol.62) | 2025年第48周</span>
+</a><a class="recommended-article-item" href="/2026/06/13/at-STY/cw_52/" title="Cyberpark Weekly vol.52 (@STY vol.76) | 高三下Part 2" rel="bookmark">
+  <img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img4.png" alt="Cyberpark Weekly vol.52 (@STY vol.76) | 高三下Part 2" class="!max-w-none">
+  <span class="title">Cyberpark Weekly vol.52 (@STY vol.76) | 高三下Part 2</span>
+</a><a class="recommended-article-item" href="/2025/07/06/miscellaneous/chatbox_archive_1/" title="Chatbox 存档1（1~100）" rel="bookmark">
+  <img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img4.png" alt="Chatbox 存档1（1~100）" class="!max-w-none">
+  <span class="title">Chatbox 存档1（1~100）</span>
+</a></div>
+   </div>
+   <div class="recommended-mobile">
+   <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>推荐阅读</span>
+   </div>
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/2025/07/18/at-STY/cw_19/" title="Cyberpark Weekly vol.19 (@STY vol.43) | 2025年第29周" rel="bookmark">
+  <img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img4.png" alt="Cyberpark Weekly vol.19 (@STY vol.43) | 2025年第29周" class="!max-w-none">
+  <span class="title">Cyberpark Weekly vol.19 (@STY vol.43) | 2025年第29周</span>
+</a><a class="recommended-article-item" href="/2025/09/19/at-STY/cw_28/" title="Cyberpark Weekly vol.28 (@STY vol.52) | 2025年第38周" rel="bookmark">
+  <img src="https://cdn.jsdelivr.net/gh/ameitsu/SproutLink@main/img4.png" alt="Cyberpark Weekly vol.28 (@STY vol.52) | 2025年第38周" class="!max-w-none">
+  <span class="title">Cyberpark Weekly vol.28 (@STY vol.52) | 2025年第38周</span>
+</a></div>
+   </div>
+  </div>
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2026/09/21/critical-critic/relevation-review/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">咱们去商朝搞搞人祭你说好不好呀？ | Critical Critic vol.2</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">目录</div>
+		<div class="page-title">《砂糖的幸福生活》看起来不一定很幸福呢 | Critical Critic vol.3</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%B8%8B%E5%90%84%E4%BD%8D%E7%A5%9E%E4%BA%BA"><span class="nav-text">介绍一下各位神人</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A8%8D%E5%BE%AE%EF%BC%88%E5%B9%B6%E9%9D%9E%EF%BC%89%E8%AE%B2%E4%B8%80%E4%B8%8B%E5%89%A7%E6%83%85"><span class="nav-text">稍微（并非）讲一下剧情</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%89%E7%82%B9%E9%9C%87%E6%92%BC"><span class="nav-text">有点震撼</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88STY%E8%A7%89%E5%BE%97%E5%BD%93%E5%88%9D%E4%B8%8D%E7%9C%8BHSL%E6%98%AF%E4%B8%80%E4%B8%AA%E8%8B%B1%E6%98%8E%E7%9A%84%E5%86%B3%E5%AE%9A"><span class="nav-text">为什么STY觉得当初不看HSL是一个英明的决定</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%A5%E7%82%B9%E8%BD%BB%E6%9D%BE%E7%9A%84"><span class="nav-text">来点轻松的</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+            <div class="customize-info my-1">富强 民主 文明 和谐 自由 平等 公正 法治 爱国 敬业 诚信 友善</div>
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2026&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">STY</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 134 篇文章
+                    </span>
+                    
+                        <span>
+                            共 295.2k 字
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.9.0</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container" role="dialog" aria-modal="true" aria-label="图片查看器">
+	<button class="image-viewer-close" type="button" aria-label="关闭">
+		<i class="fa-solid fa-xmark"></i>
+	</button>
+	<button class="image-viewer-prev" type="button" aria-label="上一页">
+		<i class="fa-solid fa-chevron-left"></i>
+	</button>
+	<div class="image-viewer-frame">
+		<img src="" alt="">
+	</div>
+	<div class="image-viewer-exif-panel hidden absolute left-1/2 bottom-20 -translate-x-1/2 w-[min(92vw,420px)] max-h-[60vh] overflow-hidden rounded-2xl bg-background-color-transparent-80 p-4 text-left shadow-redefine-flat backdrop-blur-md" role="dialog" aria-label="EXIF" aria-hidden="true">
+		<div class="flex items-center justify-between mb-3">
+			<span class="text-sm font-semibold text-first-text-color">EXIF</span>
+			<button class="image-viewer-exif-close flex h-8 w-8 items-center justify-center rounded-full bg-background-color-transparent-80 text-first-text-color transition hover:bg-background-color-transparent-40" type="button" aria-label="关闭">
+				<i class="fa-solid fa-xmark text-[0.65rem]"></i>
+			</button>
+		</div>
+		<div class="image-viewer-exif-cards grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[50vh] overflow-y-auto pr-1 scrollbar-hide"></div>
+		<template class="image-viewer-exif-card-template">
+			<div class="rounded-lg bg-background-color-transparent-40 px-3 py-2">
+				<div class="image-viewer-exif-card-header flex items-center gap-2 mb-1">
+					<i class="image-viewer-exif-card-icon fa-solid fa-circle-info text-xs text-third-text-color"></i>
+					<div class="image-viewer-exif-card-title text-xs font-semibold text-first-text-color"></div>
+				</div>
+				<div class="image-viewer-exif-card-items flex flex-col gap-1"></div>
+			</div>
+		</template>
+	</div>
+	<button class="image-viewer-exif-toggle flex items-center gap-2 hidden absolute left-1/2 bottom-6 -translate-x-1/2 rounded-full border border-border-color bg-background-color-transparent-80 px-4 py-2 text-first-text-color backdrop-blur-md transition hover:bg-background-color-transparent-40" type="button" aria-label="EXIF" aria-expanded="false">
+		<i class="fa-solid fa-circle-info text-xs"></i>
+		<span class="text-xs font-semibold uppercase tracking-wider">EXIF</span>
+	</button>
+	<button class="image-viewer-next" type="button" aria-label="下一页">
+		<i class="fa-solid fa-chevron-right"></i>
+	</button>
+</div>
+
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="站内搜索您需要的内容..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+
+<script src="/js/build/libs/Swup.min.js"></script>
+
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    window.swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+
+    window.dispatchEvent(
+        new CustomEvent("redefine:swup:ready", {
+            detail: {
+                swup: window.swup,
+            },
+        }),
+    );
+</script>
+
+
+
+
+	
+<script src="/js/build/main.js" type="module"></script>
+
+
+
+    
+<script src="/js/build/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+
+
+
+  
+<script src="/js/build/libs/Typed.min.js"></script>
+
+
+
+
+    
+        
+<script src="/js/build/libs/mermaid.min.js"></script>
+
+    
+
+
+
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+
+	
+</body>
+
+</html>
